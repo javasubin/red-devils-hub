@@ -3,4 +3,7 @@
 //  { date, file, count, mu, headline }  — SCHEMA.md 참고
 // ============================================================
 window.HUB_BRIEFINGS = [
+  { date: "2026-09-03", file: "briefings/epl-news-2026-09-03.html",
+    count: 19, mu: 6,
+    headline: "맨유, 왼쪽 수비 보강 없이 시즌 강행 · 프리미어리그 여름 지출 34.9억 파운드 사상 최대 · 에버턴 데드라인 데이 파행에 팬 반발" },
 ];
