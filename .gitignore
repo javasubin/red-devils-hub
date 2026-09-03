@@ -1,0 +1,20 @@
+# Obsidian / editor
+.obsidian/
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# temp
+*.tmp
+*.bak
+~$*
+*.log
+
+# tooling
+node_modules/
+.omc/
+scripts/.cache/
