@@ -41,8 +41,14 @@ node -e "global.window={};require('./data.js');const f=window.HUB.fixtures.filte
 ## 1. 기사 수집 — 2단계 필수
 
 ### 1-A. 검색 (WebSearch)
-고정 매체: **BBC Sport, The Guardian, Sky Sports, The Athletic, ESPN, The Independent, Manchester Evening News, manutd.com(공식)**.
-그 밖의 매체도 쓸 수 있으나 출처를 반드시 명시한다.
+고정 매체: **BBC Sport, Sky Sports, The Guardian, The Independent, ESPN, Manchester Evening News, The Athletic**. 그 밖의 매체도 쓸 수 있으나 출처를 반드시 명시한다.
+
+실행 경험(2026-09-03 첫 실행)에서 확인된 제약:
+- WebSearch의 `allowed_domains`에 bbc.com·theguardian.com·independent.co.uk·manchestereveningnews.co.uk 를 넣으면 API 400이 난다. **도메인 제한 없이 쿼리 문자열에 매체명을 넣어 검색한다** (예: `BBC Sport Manchester United`).
+- manutd.com(공식)은 뉴스 목록을 클라이언트에서 렌더링해 curl로는 기사 링크가 안 나온다. 검색 결과에 개별 기사 URL이 잡힐 때만 쓴다.
+- Sky Sports 목록 페이지는 `https://www.skysports.com/premier-league-news` 와 `https://www.skysports.com/manchester-united-news` 를 연다 (`/football/news`는 비어 있음).
+- 하루에 실제로 쓸 수 있는 매체는 2~3곳이 보통이다. 안 열리는 매체는 건너뛰고 보고에 적는다.
+- 검색 결과에 **지난 시즌 기사**가 섞인다(같은 상대와의 2월 경기 등). 쿼리에 `2026`을 넣고, 0-C에서 읽은 다음 경기 날짜·상대와 맞는지 확인한 뒤 싣는다.
 
 쿼리 예:
 - `Manchester United news today`
@@ -68,10 +74,24 @@ done
 
 **본문 → WebFetch.** prompt에 "기사 본문을 요약하고 핵심 인용문·수치를 그대로 포함해 달라"를 넣는다. 본문은 요약과 상세 번역의 재료다.
 
+**BBC Sport는 WebFetch가 막혀 있다**("unable to fetch from www.bbc.com"). BBC 기사 본문은 curl로 받아 `<p>` 문단만 뽑는다:
+
+```bash
+curl -sL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36" --max-time 25 "$URL" \
+  | node -e "let h='';process.stdin.on('data',d=>h+=d).on('end',()=>{const ps=[...h.matchAll(/<p[^>]*>([\s\S]*?)<\/p>/g)].map(m=>m[1].replace(/<[^>]+>/g,'').trim()).filter(t=>t.length>40);console.log(ps.join('\n\n'))})"
+```
+
+발행 시각: BBC는 `article:published_time` 메타가 없고 JSON-LD의 `datePublished`에 들어 있다. 메타 grep에 아래 패턴을 함께 돌린다.
+
+```bash
+curl -sL -A "Mozilla/5.0 ..." --max-time 25 "$URL" | grep -oE '"datePublished":"[^"]+"' | head -1
+```
+
 - fetch는 **3~4개씩 병렬**로 돌린다.
 - BBC Sport나 Sky Sports 같은 큰 사이트 한 곳을 열면 "Latest/Related" 목록에서 개별 기사 URL을 한꺼번에 확보할 수 있다.
 - **The Athletic은 유료.** 헤드라인과 자체 요약까지만 쓰고 상세 번역(`details.more`)은 넣지 않는다.
 - 발행 시각이 없으면 `{{PUBLISHED}}`에 날짜만 쓴다. 지어내지 않는다.
+- 썸네일 URL은 기사 og:image 값을 그대로 쓴다. 이미지 CDN(ichef.bbci.co.uk, e0.365dm.com 등)은 이 환경에서 직접 열리지 않을 수 있으니 바이트 검증은 하지 않는다.
 
 ---
 
@@ -81,6 +101,7 @@ done
 - **맨유 기사 최소 5건.** `mu`를 먼저 채우고 남은 자리를 리그 전체 소식으로 채운다.
 - **맨체스터 유나이티드가 주제인 기사는 내용과 무관하게 전부 `mu`로 보낸다.** 맨유 이적설도 `transfer`가 아니라 `mu`다.
 - 기사가 하나도 없는 카테고리는 **칩과 섹션을 통째로 지운다.**
+- 이적시장 마감 직후 주간에는 `match` 기사가 거의 없다. 억지로 채우지 말고 있는 만큼만 싣는다.
 
 | `data-cat` | 칩·섹션 제목 | 담는 것 |
 |---|---|---|
