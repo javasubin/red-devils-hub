@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!--
+================================================================================
+ RED DEVILS HUB — 브리핑 페이지 뼈대
+ ROUTINE.md 가 이 파일을 briefings/epl-news-YYYY-MM-DD.html 로 복사한 뒤
+ {{...}} 를 전부 채운다. 복사본에서는 이 주석 블록을 지운다.
+
+ [문서 단위 플레이스홀더]
+   {{DATE_KO}}      2026년 9월 4일 금요일   — 헤더 kicker
+   {{DATE_DOT}}     2026.09.04              — <title> 와 푸터
+   {{SRC_COUNT}}    6                       — 오늘 인용한 매체 수
+   {{SRC_LIST}}     BBC Sport · The Guardian · Sky Sports · ESPN
+   {{ART_COUNT}}    18                      — 전체 기사 수 (최대 20)
+   {{MU_COUNT}}     6                       — mu 카테고리 기사 수 (최소 5)
+   {{NEXT_LINE}}    다음 맨유 경기는 9월 6일 에버턴(Everton) 원정입니다.
+   {{DIGEST_1}}     오늘의 요약 1줄 — 항상 맨유
+   {{DIGEST_2}}     오늘의 요약 2줄 — 리그 전체
+   {{DIGEST_3}}     오늘의 요약 3줄 — 맨유 다음 경기 또는 그 밖의 눈에 띄는 소식
+
+ [칩 개수 플레이스홀더] 기사가 없는 카테고리는 칩과 섹션을 통째로 지운다.
+   {{N_ALL}} {{N_MU}} {{N_MATCH}} {{N_TRANSFER}} {{N_PEOPLE}} {{N_RULES}} {{N_ETC}}
+   {{N_GLOSSARY}}   용어 개수 (섹션 헤더에만 씀, 칩에는 숫자 없음)
+
+ [용어 사전 플레이스홀더] div.term 하나마다 한 벌씩. 그날 기사에 실제 나온 용어만.
+   {{TERM_KO}}      한국어 용어
+   {{TERM_EN}}      영문 표기
+   {{TERM_DESC}}    1~2문장 설명
+
+ [기사 카드 플레이스홀더] 카드 하나마다 한 벌씩 채운다.
+   {{TITLE_KO}}     한국어 제목
+   {{TITLE_EN}}     원문 제목
+   {{SOURCE}}       매체명 (여러 곳이면 "BBC Sport · Sky Sports")
+   {{PUBLISHED}}    2026.09.04 07:12 (英)
+   {{SUMMARY}}      2~3문장 요약
+   {{DETAIL_P1..3}} 상세 번역 문단 3~4개 (문단이 더 필요하면 <p> 를 늘린다)
+   {{ARTICLE_URL}}  개별 기사 URL (사이트 루트 금지)
+   {{THUMB_URL}}    og:image URL — 있을 때만
+   {{PH_COLOR}}     og:image 가 없을 때 플레이스홀더 색. 기사가 한 구단 얘기면
+                    clubs.js 의 해당 구단 color, 아니면 #DA291C
+
+ [섹션 헤더 — 필요한 것만, 이 순서 그대로]
+   <section id="mu"       data-cat="mu">       🔴 맨유
+   <section id="match"    data-cat="match">    ⚽ 매치위크
+   <section id="transfer" data-cat="transfer"> 🔄 이적·계약
+   <section id="people"   data-cat="people">   👤 선수·감독
+   <section id="rules"    data-cat="rules">    ⚖️ 규정·VAR·PSR
+   <section id="etc"      data-cat="etc">      📰 기타
+   <section id="glossary" data-cat="glossary"> 📖 오늘의 용어
+================================================================================
+-->
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<title>EPL 데일리 브리핑 — {{DATE_DOT}}</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="../briefing.css">
+<script src="../briefing.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="kicker">
+      <span class="dot"></span> {{DATE_KO}}
+      <a class="home" href="../index.html">← RED DEVILS HUB</a>
+    </div>
+    <h1>EPL 데일리 <span class="accent">브리핑</span></h1>
+    <p class="lede">해외 주요 매체 <b>{{SRC_COUNT}}곳</b>({{SRC_LIST}})에서 <b>기사 {{ART_COUNT}}건</b>을 모았습니다. 그중 <b>{{MU_COUNT}}건</b>이 맨체스터 유나이티드 소식입니다. {{NEXT_LINE}}</p>
+    <div class="digest">
+      <h2>오늘의 요약</h2>
+      <ol>
+        <li>{{DIGEST_1}}</li>
+        <li>{{DIGEST_2}}</li>
+        <li>{{DIGEST_3}}</li>
+      </ol>
+    </div>
+  </header>
+
+  <div class="bar">
+    <div class="bar-inner">
+      <div class="chips" role="group" aria-label="카테고리 필터">
+        <button class="chip" data-cat="all" aria-pressed="true">전체<span class="n">{{N_ALL}}</span></button>
+        <button class="chip" data-cat="mu" aria-pressed="false">🔴 맨유<span class="n">{{N_MU}}</span></button>
+        <button class="chip" data-cat="match" aria-pressed="false">⚽ 매치위크<span class="n">{{N_MATCH}}</span></button>
+        <button class="chip" data-cat="transfer" aria-pressed="false">🔄 이적·계약<span class="n">{{N_TRANSFER}}</span></button>
+        <button class="chip" data-cat="people" aria-pressed="false">👤 선수·감독<span class="n">{{N_PEOPLE}}</span></button>
+        <button class="chip" data-cat="rules" aria-pressed="false">⚖️ 규정·VAR·PSR<span class="n">{{N_RULES}}</span></button>
+        <button class="chip" data-cat="etc" aria-pressed="false">📰 기타<span class="n">{{N_ETC}}</span></button>
+        <button class="chip" data-cat="glossary" aria-pressed="false">📖 용어</button>
+      </div>
+    </div>
+  </div>
+
+  <section id="mu" data-cat="mu">
+    <div class="sec-head"><h2>🔴 맨유</h2><span class="count">{{N_MU}}건</span></div>
+
+    <!-- 카드 A — og:image 가 있는 기사 -->
+    <article class="art">
+      <div class="thumb"><img src="{{THUMB_URL}}" alt="" loading="lazy"></div>
+      <div class="art-body">
+        <h3>{{TITLE_KO}}</h3>
+        <p class="orig">{{TITLE_EN}}</p>
+        <div class="meta"><span class="src">{{SOURCE}}</span><span>·</span><span>{{PUBLISHED}}</span></div>
+        <p class="sum">{{SUMMARY}}</p>
+        <details class="more">
+          <summary><span class="caret">▶</span> 상세 번역 보기</summary>
+          <div class="detail-body">
+            <p>{{DETAIL_P1}}</p>
+            <p>{{DETAIL_P2}}</p>
+            <p>{{DETAIL_P3}}</p>
+          </div>
+        </details>
+        <a class="go" href="{{ARTICLE_URL}}" target="_blank" rel="noopener">원문 보기 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></a>
+      </div>
+    </article>
+
+    <!-- 카드 B — og:image 가 없는 기사. 썸네일 자리에 구단 색 플레이스홀더를 넣는다.
+         The Athletic 처럼 유료 기사면 details.more 블록을 통째로 지우고 요약만 남긴다. -->
+    <article class="art">
+      <div class="thumb ph" style="--ph:{{PH_COLOR}}"><span>{{SOURCE}}</span></div>
+      <div class="art-body">
+        <h3>{{TITLE_KO}}</h3>
+        <p class="orig">{{TITLE_EN}}</p>
+        <div class="meta"><span class="src">{{SOURCE}}</span><span>·</span><span>{{PUBLISHED}}</span></div>
+        <p class="sum">{{SUMMARY}}</p>
+        <details class="more">
+          <summary><span class="caret">▶</span> 상세 번역 보기</summary>
+          <div class="detail-body">
+            <p>{{DETAIL_P1}}</p>
+            <p>{{DETAIL_P2}}</p>
+            <p>{{DETAIL_P3}}</p>
+          </div>
+        </details>
+        <a class="go" href="{{ARTICLE_URL}}" target="_blank" rel="noopener">원문 보기 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></a>
+      </div>
+    </article>
+
+  </section>
+
+  <section id="glossary" data-cat="glossary">
+    <div class="sec-head"><h2>📖 오늘의 용어</h2><span class="count">{{N_GLOSSARY}}개</span></div>
+    <dl class="glossary">
+      <div class="term"><dt>{{TERM_KO}} <span>({{TERM_EN}})</span></dt><dd>{{TERM_DESC}}</dd></div>
+    </dl>
+  </section>
+
+  <footer>
+    <span class="brand">Claude</span>가 번역·정리한 프리미어리그 뉴스 · {{DATE_DOT}}<br>
+    원문 저작권은 각 매체에 있으며, 핵심 요약만 제공합니다.
+  </footer>
+
+</div>
+</body>
+</html>

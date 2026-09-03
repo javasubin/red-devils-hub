@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<title>구단 가이드 — RED DEVILS HUB</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+  :root {
+    --bg:#ffffff; --bg-soft:#f7f7f9; --card:#ffffff;
+    --text:#14141a; --text-mid:#4a4a57; --text-dim:#86868f;
+    --border:#e6e6ec; --border-soft:#f0f0f4;
+    --accent:#DA291C; --accent-soft:rgba(218,41,28,.08); --club:#DA291C;
+    --chip-bg:#f2f2f5; --bar-bg:rgba(255,255,255,.85);
+    --win:#16a34a; --draw:#8a8a94; --loss:#dc2626;
+    --shadow:0 1px 2px rgba(20,20,26,.04),0 10px 30px -14px rgba(20,20,26,.12);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg:#0e0e11; --bg-soft:#141419; --card:#16161b;
+      --text:#f0f0f3; --text-mid:#b6b6c0; --text-dim:#82828e;
+      --border:#26262e; --border-soft:#1e1e25;
+      --accent:#FF3B30; --accent-soft:rgba(255,59,48,.12); --club:#FF3B30;
+      --chip-bg:#1e1e25; --bar-bg:rgba(14,14,17,.85);
+      --win:#22c55e; --draw:#82828e; --loss:#f05252;
+      --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px -14px rgba(0,0,0,.7);
+    }
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text);
+    font-family:"Pretendard Variable","Pretendard",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Segoe UI","Noto Sans KR","Malgun Gothic",sans-serif;
+    font-size:15.5px; line-height:1.7; -webkit-font-smoothing:antialiased; letter-spacing:-0.01em; }
+  @media (prefers-color-scheme: dark) { body { background:radial-gradient(1200px 600px at 20% -10%, var(--accent-soft), transparent 60%), var(--bg); } }
+  a { color:inherit; }
+  .wrap { max-width:1100px; margin:0 auto; padding:0 32px; }
+
+  .top { position:sticky; top:0; z-index:30; background:var(--bar-bg); backdrop-filter:saturate(180%) blur(14px); -webkit-backdrop-filter:saturate(180%) blur(14px); border-bottom:1px solid var(--border-soft); }
+  .top-inner { display:flex; align-items:center; gap:14px; padding:12px 0; }
+  .brand { display:flex; align-items:center; gap:9px; font-weight:900; font-size:19px; letter-spacing:.02em; font-style:italic; text-decoration:none; white-space:nowrap; }
+  .brand img { width:26px; height:26px; object-fit:contain; }
+  .brand .accent { color:#DA291C; }   /* 브랜드는 구단 색을 따라가지 않는다 */
+  @media (prefers-color-scheme: dark) { .brand .accent { color:#FF3B30; } }
+  .top .crumb { color:var(--text-dim); font-size:12.5px; margin-left:6px; padding-left:14px; border-left:1px solid var(--border); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .top .sp { flex:1; }
+  .btn { border:1px solid var(--border); background:var(--chip-bg); color:var(--text-mid); font:inherit; font-size:13px; font-weight:600; padding:7px 14px; border-radius:999px; cursor:pointer; white-space:nowrap; transition:.15s; text-decoration:none; display:inline-flex; align-items:center; gap:6px; }
+  .btn:hover { color:var(--text); border-color:var(--text); }
+  .btn svg { width:14px; height:14px; }
+
+  .jserr { display:none; margin:14px 0 0; padding:10px 14px; border-radius:10px; border:1px solid var(--border); background:var(--accent-soft); color:var(--accent); font-size:12.5px; }
+  .jserr.on { display:block; }
+
+  /* 배지 */
+  .bdg { position:relative; flex:0 0 auto; display:inline-flex; align-items:center; justify-content:center; vertical-align:middle; }
+  .bdg img { width:100%; height:100%; object-fit:contain; display:block; }
+  .bdg i { display:none; position:absolute; inset:0; border-radius:50%; background:var(--bc,#8a8a94); color:#fff; font-style:normal; font-weight:800; letter-spacing:-0.03em; align-items:center; justify-content:center; font-size:calc(var(--bs,22px) * 0.36); }
+  .bdg.nb i { display:flex; }
+
+  .ctag { display:inline-flex; align-items:center; font-size:10.5px; font-weight:800; padding:2px 7px; border-radius:5px; line-height:1.5; background:var(--chip-bg); color:var(--text-mid); white-space:nowrap; }
+  .ctag.pl { background:rgba(56,0,60,.10); color:#7a0b78; } .ctag.ucl { background:rgba(37,99,235,.13); color:#2563eb; }
+  .ctag.uel { background:rgba(249,115,22,.15); color:#c2410c; } .ctag.uecl { background:rgba(22,163,74,.14); color:#15803d; }
+  .ctag.fac { background:rgba(124,58,237,.13); color:#6d28d9; } .ctag.efl { background:rgba(13,148,136,.14); color:#0f766e; }
+  .ctag.fr { background:var(--chip-bg); color:var(--text-dim); }
+  @media (prefers-color-scheme: dark) {
+    .ctag.pl { background:rgba(214,60,210,.16); color:#e879f5; } .ctag.uel { color:#fb923c; } .ctag.uecl { color:#4ade80; }
+    .ctag.fac { color:#a78bfa; } .ctag.efl { color:#2dd4bf; }
+  }
+  .fp { display:inline-block; width:17px; height:17px; line-height:17px; border-radius:4px; font-size:10px; font-weight:800; color:#fff; text-align:center; margin-right:3px; }
+  .fp.W { background:var(--win); } .fp.D { background:var(--draw); } .fp.L { background:var(--loss); }
+  .fp.n { background:transparent; border:1px dashed var(--border); }
+
+  /* 히어로 */
+  .hero { padding:48px 0 32px; display:grid; grid-template-columns:minmax(0,1fr) 400px; gap:40px; align-items:end; }
+  .kicker { display:flex; align-items:center; gap:10px; font-size:12px; font-weight:700; letter-spacing:.10em; text-transform:uppercase; color:var(--text-dim); margin-bottom:16px; flex-wrap:wrap; }
+  .kicker .nick { background:var(--accent-soft); color:var(--accent); border-radius:6px; padding:2px 9px; letter-spacing:.02em; text-transform:none; font-size:12px; }
+  .hero-h { display:flex; align-items:center; gap:18px; }
+  h1 { font-size:clamp(32px,4.6vw,50px); line-height:1.08; margin:0; font-weight:800; letter-spacing:-0.04em; }
+  h1 small { display:block; font-size:15px; font-weight:500; color:var(--text-dim); letter-spacing:0; margin-top:8px; }
+  .intro { font-size:16px; color:var(--text-mid); margin:22px 0 0; max-width:640px; }
+  .stats { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  .stat { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:15px 17px; box-shadow:var(--shadow); min-width:0; }
+  .stat .k { font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--text-dim); }
+  .stat .v { font-size:22px; font-weight:800; letter-spacing:-0.03em; line-height:1.2; margin-top:4px; font-variant-numeric:tabular-nums; overflow:hidden; text-overflow:ellipsis; }
+  .stat .v small { font-size:13px; font-weight:600; color:var(--text-dim); letter-spacing:0; margin-left:3px; }
+  .stat .sub { font-size:12px; color:var(--text-dim); margin-top:2px; }
+  .stat.wide { grid-column:1 / -1; }
+
+  section { margin-top:44px; }
+  .sec-h { display:flex; align-items:baseline; gap:12px; margin-bottom:18px; padding-bottom:12px; border-bottom:2px solid var(--text); }
+  .sec-h h2 { margin:0; font-size:20px; font-weight:800; letter-spacing:-0.03em; }
+  .sec-h .n { font-size:12px; color:var(--text-dim); margin-left:auto; }
+
+  /* 경기장 사진 */
+  .photo { background:var(--card); border-radius:18px; padding:14px; border:1px solid var(--border); box-shadow:var(--shadow); }
+  .photo img { display:block; width:100%; max-height:520px; object-fit:cover; border-radius:12px; }
+  .credit { font-size:12px; color:var(--text-dim); margin-top:10px; }
+
+  /* 경기 목록 */
+  .mlist { list-style:none; margin:0; padding:0; border:1px solid var(--border); border-radius:16px; overflow:hidden; background:var(--card); box-shadow:var(--shadow); }
+  .mlist li { border-bottom:1px solid var(--border-soft); }
+  .mlist li:last-child { border-bottom:none; }
+  .mrow { display:flex; align-items:center; gap:12px; padding:13px 18px; text-decoration:none; font-size:14.5px; transition:background .15s; }
+  a.mrow:hover { background:var(--bg-soft); }
+  .mrow .dt { flex:0 0 auto; width:96px; font-size:12.5px; color:var(--text-dim); font-variant-numeric:tabular-nums; }
+  .mrow .tags { flex:0 0 auto; }
+  .mrow .tm { flex:1; min-width:0; display:flex; align-items:center; gap:8px; font-weight:700; letter-spacing:-0.02em; }
+  .mrow .tm .nm { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .mrow .res { flex:0 0 auto; min-width:64px; text-align:right; font-weight:800; font-variant-numeric:tabular-nums; letter-spacing:-0.03em; }
+  .mrow .res.t { font-weight:600; font-size:13px; color:var(--text-mid); }
+  .mrow .rp { flex:0 0 auto; width:24px; height:24px; border-radius:7px; color:#fff; font-size:11.5px; font-weight:800; display:flex; align-items:center; justify-content:center; }
+  .mrow .rp.W { background:var(--win); } .mrow .rp.D { background:var(--draw); } .mrow .rp.L { background:var(--loss); }
+  .mrow .ha { font-size:10.5px; font-weight:800; padding:1px 6px; border-radius:5px; background:var(--chip-bg); color:var(--text-mid); }
+  .mrow .ha.home { background:var(--accent-soft); color:var(--accent); }
+
+  /* 핵심 선수 */
+  .chips { display:flex; flex-wrap:wrap; gap:10px; }
+  .chip { background:var(--card); border:1px solid var(--border); border-radius:999px; padding:9px 16px; box-shadow:var(--shadow); font-size:14px; display:flex; align-items:center; gap:9px; }
+  .chip .pos { font-size:10.5px; font-weight:800; letter-spacing:.04em; color:#fff; background:var(--club); border-radius:5px; padding:1px 6px; }
+  .chip b { font-weight:750; letter-spacing:-0.02em; }
+  .chip span { color:var(--text-dim); font-size:12.5px; }
+
+  /* 역사 타임라인 */
+  .tl { position:relative; padding-left:28px; }
+  .tl::before { content:""; position:absolute; left:8px; top:8px; bottom:8px; width:2px; background:var(--border); }
+  .tl-item { position:relative; padding:0 0 26px; }
+  .tl-item:last-child { padding-bottom:0; }
+  .tl-item::before { content:""; position:absolute; left:-24px; top:10px; width:10px; height:10px; border-radius:50%; background:var(--accent); box-shadow:0 0 0 4px var(--bg); }
+  .tl-y { font-size:12px; font-weight:800; color:var(--accent); letter-spacing:.06em; }
+  .tl-t { font-size:17px; font-weight:750; letter-spacing:-0.02em; margin:2px 0 6px; }
+  .tl-d { font-size:14.5px; color:var(--text-mid); max-width:720px; }
+
+  .para { font-size:15.5px; color:var(--text-mid); max-width:820px; margin:0; }
+  .watch { display:grid; grid-template-columns:1fr 1fr; gap:14px; counter-reset:wp; }
+  .wp { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:17px 19px; box-shadow:var(--shadow); font-size:14.5px; color:var(--text-mid); line-height:1.65; }
+  .wp::before { content:counter(wp, decimal-leading-zero); counter-increment:wp; display:block; font-size:12px; font-weight:800; color:var(--accent); letter-spacing:.1em; margin-bottom:8px; }
+  .note { font-size:12.5px; color:var(--text-dim); margin-top:14px; }
+
+  /* 요약 타일 (맨유 페이지) */
+  .sum { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-bottom:18px; }
+
+  /* 구단 인덱스 */
+  .idx { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:14px; }
+  .idx a { display:flex; align-items:center; gap:13px; padding:15px 17px; background:var(--card); border:1px solid var(--border); border-radius:16px; box-shadow:var(--shadow); text-decoration:none; transition:.15s; min-width:0; }
+  .idx a:hover { border-color:var(--accent); transform:translateY(-1px); }
+  .idx .rk { flex:0 0 auto; width:24px; text-align:right; font-size:12.5px; font-weight:800; color:var(--text-dim); font-variant-numeric:tabular-nums; }
+  .idx .t { min-width:0; }
+  .idx .t b { display:block; font-size:15px; font-weight:750; letter-spacing:-0.02em; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .idx .t small { display:block; font-size:12px; color:var(--text-dim); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+
+  /* 네비 */
+  .pager { display:flex; justify-content:space-between; gap:12px; margin-top:52px; padding-top:24px; border-top:1px solid var(--border); }
+  .pager a { flex:1 1 0; min-width:0; text-decoration:none; padding:15px 18px; border:1px solid var(--border); border-radius:14px; background:var(--card); transition:.15s; display:flex; align-items:center; gap:11px; }
+  .pager a:hover { border-color:var(--text); }
+  .pager a.dis { opacity:.35; pointer-events:none; }
+  .pager .lab { display:block; font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--text-dim); }
+  .pager .nm { display:block; font-size:15.5px; font-weight:750; letter-spacing:-0.02em; margin-top:1px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .pager a.next { flex-direction:row-reverse; text-align:right; }
+  .pager .tx { min-width:0; }
+  footer { margin-top:52px; padding:22px 0 52px; border-top:1px solid var(--border); font-size:12.5px; color:var(--text-dim); text-align:center; }
+  footer .b { color:var(--accent); font-weight:700; }
+  .empty { padding:26px 18px; text-align:center; color:var(--text-dim); font-size:14px; background:var(--card); border:1px solid var(--border); border-radius:16px; }
+  .miss { padding:70px 0; text-align:center; color:var(--text-dim); }
+
+  @media (max-width:900px) {
+    .wrap { padding:0 18px; }
+    .hero { grid-template-columns:1fr; gap:24px; padding-top:32px; }
+    .watch { grid-template-columns:1fr; }
+    .sum { grid-template-columns:1fr; }
+    .top .crumb { display:none; }
+    .mrow .dt { width:74px; }
+    .pager { flex-direction:column; }
+  }
+  @media (max-width:520px) {
+    .hero-h { gap:12px; }
+    .stats { grid-template-columns:1fr; }
+    .mrow { flex-wrap:wrap; gap:8px; }
+    .mrow .dt { width:auto; }
+  }
+</style>
+</head>
+<body>
+<div class="top"><div class="wrap top-inner">
+  <a class="brand" href="index.html" id="brand">RED <span class="accent">DEVILS</span> HUB</a>
+  <div class="crumb" id="crumb">구단 가이드</div>
+  <div class="sp"></div>
+  <a class="btn" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>대시보드</a>
+</div></div>
+
+<div class="wrap"><div class="jserr" id="jsErr"></div></div>
+<div class="wrap" id="main"></div>
+
+<script src="data.js"></script>
+<script src="clubs.js"></script>
+<script>
+(function () {
+  var H = window.HUB, root = document.getElementById('main');
+  if (!H) { root.innerHTML = '<div class="miss">data.js를 찾을 수 없습니다. <a href="index.html">대시보드로 돌아가기</a></div>'; return; }
+  var C = window.HUB_CLUBS || {};                 // clubs.js — 없어도 동작해야 한다
+  var MU = (H.meta && H.meta.team) || 'manchester-united';
+  var TEAMS = H.teams || {}, FX = H.fixtures || [], ST = H.standings || [];
+
+  window.addEventListener('error', function (e) {
+    var b = document.getElementById('jsErr');
+    if (b) { b.className = 'jserr on'; b.textContent = '스크립트 오류: ' + (e.message || e.type); }
+    document.title = 'JSERROR ' + (e.message || '');
+  });
+
+  // ---------- 유틸 ----------
+  function esc(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;'); }
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+  function kd(f) { return new Date(f.kickoff); }
+  function hhmm(d) { return pad(d.getHours()) + ':' + pad(d.getMinutes()); }
+  var DOW = ['일', '월', '화', '수', '목', '금', '토'];
+  function dateTxt(d) { return (d.getMonth() + 1) + '월 ' + d.getDate() + '일 (' + DOW[d.getDay()] + ')'; }
+  function num(n) { return (typeof n === 'number' && isFinite(n)) ? n.toLocaleString() : ''; }
+
+  var COMP_KO = { PL: '프리미어리그', UCL: '챔피언스리그', UEL: '유로파리그', UECL: '컨퍼런스리그', FAC: 'FA컵', EFL: '카라바오컵', FR: '친선경기', OTHER: '기타' };
+  var COMP_TAG = { PL: 'PL', UCL: 'UCL', UEL: 'UEL', UECL: 'UECL', FAC: 'FAC', EFL: 'EFL', FR: 'FR', OTHER: 'ETC' };
+  function compCls(c) { return (COMP_TAG[c] ? c : 'OTHER').toLowerCase(); }
+  function compTag(c) { return '<span class="ctag ' + compCls(c) + '">' + esc(COMP_TAG[c] || c || 'ETC') + '</span>'; }
+
+  function club(key) { return (key && C[key]) || {}; }
+  function koName(key, fallback) { var c = club(key); return c.ko || (TEAMS[key] && TEAMS[key].name) || fallback || key || '?'; }
+  function abbrOf(key, side) {
+    var c = club(key);
+    if (c.abbr) return String(c.abbr).toUpperCase();
+    var base = String((side && (side.short || side.name)) || (TEAMS[key] && TEAMS[key].short) || key || '?');
+    var words = base.replace(/[^A-Za-z ]/g, '').split(/\s+/).filter(Boolean);
+    if (words.length >= 2) return (words[0][0] + words[1].slice(0, 2)).toUpperCase();
+    return (words[0] || base).slice(0, 3).toUpperCase();
+  }
+  function badge(key, size, side) {
+    var t = TEAMS[key] || {}, c = club(key), s = size || 22, col = c.color || '#8a8a94';
+    var h = '<span class="bdg' + (t.badge ? '' : ' nb') + '" style="width:' + s + 'px;height:' + s + 'px;--bs:' + s + 'px;--bc:' + esc(col) + '">';
+    if (t.badge) h += '<img src="' + esc(t.badge) + '" alt="" loading="lazy" onerror="this.parentNode.classList.add(&quot;nb&quot;);this.remove();">';
+    return h + '<i>' + esc(abbrOf(key, side)) + '</i></span>';
+  }
+  function formPills(form) {
+    return (form || []).map(function (r) { return '<span class="fp ' + (r === 'W' || r === 'D' || r === 'L' ? r : 'n') + '">' + (r === '-' ? '' : esc(r)) + '</span>'; }).join('');
+  }
+  function scoreTxt(f) { return f.score ? (f.score.home + '-' + f.score.away) : ''; }
+  // 특정 팀 관점의 승·무·패
+  function resultFor(f, key) {
+    if (!f.score) return '';
+    if (f.winner === 'draw' || f.score.home === f.score.away) return 'D';
+    var home = f.home.key === key;
+    return ((f.winner === 'home') === home) ? 'W' : 'L';
+  }
+
+  // ---------- 구단 색을 페이지 강조색으로 ----------
+  function hex2rgb(h) {
+    h = String(h || '').trim().replace('#', '');
+    if (h.length === 3) h = h[0] + h[0] + h[1] + h[1] + h[2] + h[2];
+    if (!/^[0-9a-fA-F]{6}$/.test(h)) return null;
+    var n = parseInt(h, 16);
+    return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
+  }
+  function lum(c) {
+    var a = c.map(function (v) { v /= 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); });
+    return 0.2126 * a[0] + 0.7152 * a[1] + 0.0722 * a[2];
+  }
+  function mix(c, t, r) { return c.map(function (v, i) { return Math.round(v + (t[i] - v) * r); }); }
+  function rgbs(c) { return 'rgb(' + c.join(',') + ')'; }
+  function rgba(c, a) { return 'rgba(' + c.join(',') + ',' + a + ')'; }
+  // 남색·흰색처럼 배경과 붙는 색은 읽히게 보정한다 (어두우면 밝히고, 밝으면 어둡게)
+  function applyAccent(color) {
+    var rgb = hex2rgb(color);
+    if (!rgb) return;
+    var dark = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    var L = lum(rgb), acc = rgb;
+    if (dark && L < 0.20) acc = mix(rgb, [255, 255, 255], 0.5);
+    else if (!dark && L > 0.55) acc = mix(rgb, [0, 0, 0], 0.45);
+    var s = document.documentElement.style;
+    s.setProperty('--club', rgbs(rgb));
+    s.setProperty('--accent', rgbs(acc));
+    s.setProperty('--accent-soft', rgba(acc, dark ? 0.16 : 0.10));
+  }
+
+  // 알파벳(영문명) 순 구단 목록 — 이전·다음 페이저용
+  var KEYS = Object.keys(TEAMS).sort(function (a, b) {
+    var an = (TEAMS[a].name || a), bn = (TEAMS[b].name || b);
+    return an < bn ? -1 : an > bn ? 1 : 0;
+  });
+  var rankOf = {};
+  ST.forEach(function (t) { rankOf[t.key] = t.rank; });
+
+  var q = new URLSearchParams(location.search), key = q.get('club');
+  var muBadge = TEAMS[MU] && TEAMS[MU].badge;
+  if (muBadge) document.getElementById('brand').insertAdjacentHTML('afterbegin', '<img src="' + esc(muBadge) + '" alt="" onerror="this.remove()">');
+
+  try {
+    if (!key || !TEAMS[key]) renderIndex();
+    else renderClub(key);
+  } catch (e) {
+    root.innerHTML = '<div class="miss">페이지를 그리지 못했습니다: ' + esc(e && e.message) + '<br><a href="index.html">대시보드로 돌아가기</a></div>';
+    if (window.console) console.error(e);
+  }
+
+  // ---------- 구단 인덱스 (club 파라미터 없음) ----------
+  function renderIndex() {
+    document.title = '구단 가이드 — RED DEVILS HUB';
+    var order = KEYS.slice().sort(function (a, b) {
+      var ra = rankOf[a] || 99, rb = rankOf[b] || 99;
+      if (ra !== rb) return ra - rb;
+      return (TEAMS[a].name || a) < (TEAMS[b].name || b) ? -1 : 1;
+    });
+    var h = '<div class="hero" style="grid-template-columns:1fr;align-items:start"><div>';
+    h += '<div class="kicker">' + esc((H.meta && H.meta.season) || '') + ' 프리미어리그 · ' + order.length + '개 구단</div>';
+    h += '<h1>구단 가이드<small>리그 순위 순서. 구단을 고르면 홈구장·감독·역사·맨유와의 관계를 볼 수 있습니다.</small></h1>';
+    h += '</div></div>';
+    h += '<section style="margin-top:8px"><div class="sec-h"><h2>프리미어리그 20팀</h2><span class="n">' +
+      (Object.keys(C).length ? '' : 'clubs.js가 없어 영문명으로 표시합니다') + '</span></div><div class="idx">';
+    order.forEach(function (k) {
+      var nm = koName(k, TEAMS[k].name), sd = club(k).stadium, sub = [];
+      if (TEAMS[k].name && TEAMS[k].name !== nm) sub.push(TEAMS[k].name);   // 한국어명이 있을 때만 영문 병기
+      if (sd) sub.push(sd.ko || sd.name);
+      h += '<a href="club.html?club=' + encodeURIComponent(k) + '">' +
+        '<span class="rk">' + (rankOf[k] || '') + '</span>' + badge(k, 34) +
+        '<span class="t"><b>' + esc(nm) + '</b><small>' + esc(sub.join(' · ') || '프리미어리그') + '</small></span></a>';
+    });
+    h += '</div></section>';
+    h += '<footer><span class="b">RED DEVILS HUB</span> · 구단 가이드 · 순위는 BBC Sport 기준</footer>';
+    root.innerHTML = h;
+  }
+
+  // ---------- 구단 페이지 ----------
+  function renderClub(k) {
+    var c = club(k), t = TEAMS[k], isMu = (k === MU);
+    var name = koName(k, t.name), st = ST.filter(function (x) { return x.key === k; })[0];
+    if (c.color) applyAccent(c.color);
+    document.title = name + ' — 구단 가이드 · RED DEVILS HUB';
+    document.getElementById('crumb').textContent = '구단 가이드 · ' + name;
+
+    var h = '';
+    // 히어로
+    h += '<div class="hero"><div>';
+    h += '<div class="kicker">' + esc((H.meta && H.meta.season) || '') + ' 프리미어리그' +
+      (c.nick ? '<span class="nick">' + esc(c.nick) + '</span>' : '') +
+      (isMu ? '<span class="nick">우리 팀</span>' : '') + '</div>';
+    h += '<div class="hero-h">' + badge(k, 64) + '<h1>' + esc(name) + '<small>' + esc(t.name) +
+      (c.founded ? ' · ' + c.founded + '년 창단' : '') + (c.city ? ' · ' + esc(c.city) : '') + '</small></h1></div>';
+    if (c.intro) h += '<p class="intro">' + esc(c.intro) + '</p>';
+    else h += '<p class="intro">' + esc(t.name) + ' · 2026-27 프리미어리그 참가 구단입니다.' + (Object.keys(C).length ? '' : ' (clubs.js가 아직 없어 소개를 표시할 수 없습니다.)') + '</p>';
+    h += '</div><div class="stats">';
+    if (c.stadium) {
+      h += '<div class="stat"><div class="k">홈구장</div><div class="v" style="font-size:18px" title="' + esc(c.stadium.name || '') + '">' + esc(c.stadium.ko || c.stadium.name) + '</div><div class="sub">' +
+        (c.stadium.capacity ? num(c.stadium.capacity) + '석' : '') + (c.stadium.opened ? ' · ' + c.stadium.opened + '년 개장' : '') + '</div></div>';
+    }
+    if (c.manager) {
+      h += '<div class="stat"><div class="k">감독</div><div class="v" style="font-size:18px">' + esc(c.manager.ko || c.manager.name) + '</div><div class="sub">' +
+        esc(c.manager.name || '') + (c.manager.since ? ' · ' + c.manager.since + '년 부임' : '') + '</div></div>';
+    }
+    if (c.founded) h += '<div class="stat"><div class="k">창단</div><div class="v">' + c.founded + '<small>년</small></div><div class="sub">' + (c.city ? esc(c.city) : '') + '</div></div>';
+    if (st) {
+      h += '<div class="stat"><div class="k">이번 시즌 리그</div><div class="v">' + st.rank + '<small>위 · ' + st.points + '점</small></div>' +
+        '<div class="sub">' + st.played + '경기 ' + st.won + '승 ' + st.drawn + '무 ' + st.lost + '패</div>' +
+        '<div style="margin-top:8px">' + formPills(st.form) + '</div></div>';
+    }
+    if (!c.stadium && !c.manager && !c.founded && !st) h += '<div class="stat wide"><div class="k">정보</div><div class="v" style="font-size:17px">구단 상세 정보 없음</div><div class="sub">clubs.js에 항목이 추가되면 표시됩니다</div></div>';
+    h += '</div></div>';
+
+    // 경기장 사진
+    if (c.stadium && c.stadium.photo && c.stadium.photo.url) {
+      var p = c.stadium.photo;
+      // 사진이 깨지면 제목만 남지 않도록 섹션째 숨긴다
+      h += '<section class="photosec"><div class="sec-h"><h2>' + esc(c.stadium.ko || c.stadium.name) + '</h2><span class="n">' +
+        (c.stadium.capacity ? num(c.stadium.capacity) + '석' : '') + '</span></div>';
+      h += '<div class="photo"><img src="' + esc(p.url) + '" alt="' + esc(c.stadium.ko || c.stadium.name) + '" loading="lazy" onerror="var s=this.closest(&quot;.photosec&quot;); if (s) s.style.display=&quot;none&quot;;">';
+      h += '<div class="credit">사진: ' + esc(p.credit || '작자 미상') + ' · ' + esc(p.license || '') + ' · ' +
+        (p.source ? '<a href="' + esc(p.source) + '" target="_blank" rel="noopener">Wikimedia Commons</a>' : 'Wikimedia Commons') + '</div></div></section>';
+    }
+
+    // 맨유 페이지: 이번 시즌 일정 요약 / 다른 구단: 맨유와의 맞대결
+    h += isMu ? seasonSummary(st) : headToHead(k, name);
+
+    // 이 구단의 최근 리그 경기
+    h += recentSection(k, name);
+
+    // 핵심 선수
+    if (c.keyPlayers && c.keyPlayers.length) {
+      h += '<section><div class="sec-h"><h2>핵심 선수</h2><span class="n">' + c.keyPlayers.length + '명 · 시즌 개막 기준</span></div><div class="chips">';
+      c.keyPlayers.forEach(function (p) {
+        h += '<div class="chip">' + (p.pos ? '<span class="pos">' + esc(p.pos) + '</span>' : '') +
+          '<b>' + esc(p.ko || p.name) + '</b><span>' + esc(p.ko ? p.name : '') + '</span></div>';
+      });
+      h += '</div></section>';
+    }
+
+    // 역사
+    if (c.history && c.history.length) {
+      h += '<section><div class="sec-h"><h2>구단의 역사</h2><span class="n">' + c.history.length + '개 장면</span></div><div class="tl">';
+      c.history.forEach(function (x) {
+        h += '<div class="tl-item"><div class="tl-y">' + esc(x.y) + '</div><div class="tl-t">' + esc(x.t) + '</div><div class="tl-d">' + esc(x.d) + '</div></div>';
+      });
+      h += '</div></section>';
+    }
+
+    // 맨유와의 관계 (맨유 자신이면 정체성)
+    if (c.rivalry) {
+      h += '<section><div class="sec-h"><h2>' + (isMu ? '이 시즌의 맨유' : '맨유와의 관계') + '</h2></div>';
+      h += '<p class="para">' + esc(c.rivalry) + '</p></section>';
+    }
+
+    // 관전 포인트
+    if (c.watch && c.watch.length) {
+      h += '<section><div class="sec-h"><h2>이번 시즌 관전 포인트</h2><span class="n">' + (H.meta && H.meta.season || '') + '</span></div><div class="watch">';
+      c.watch.forEach(function (w) { h += '<div class="wp">' + esc(w) + '</div>'; });
+      h += '</div></section>';
+    }
+
+    // 이전·다음 구단 (영문명 알파벳 순)
+    var i = KEYS.indexOf(k), prev = KEYS[i - 1], next = KEYS[i + 1];
+    h += '<div class="pager">';
+    h += prev ? '<a href="club.html?club=' + encodeURIComponent(prev) + '">' + badge(prev, 30) + '<span class="tx"><span class="lab">← 이전 구단</span><span class="nm">' + esc(koName(prev, TEAMS[prev].name)) + '</span></span></a>'
+      : '<a class="dis"><span class="tx"><span class="lab">처음</span></span></a>';
+    h += next ? '<a class="next" href="club.html?club=' + encodeURIComponent(next) + '">' + badge(next, 30) + '<span class="tx"><span class="lab">다음 구단 →</span><span class="nm">' + esc(koName(next, TEAMS[next].name)) + '</span></span></a>'
+      : '<a class="dis next"><span class="tx"><span class="lab">마지막</span></span></a>';
+    h += '</div>';
+    h += '<footer><span class="b">RED DEVILS HUB</span> · 구단 가이드 · 경기·순위는 BBC Sport, 구단 정보는 clubs.js 기준 · <a href="club.html">전체 구단 보기</a></footer>';
+    root.innerHTML = h;
+  }
+
+  // 한 경기 줄. 스코어·승패·홈원정 모두 viewKey 팀 관점으로 쓴다
+  function matchRow(f, viewKey) {
+    var k = kd(f), home = f.home.key === viewKey, opp = home ? f.away : f.home;
+    var fin = f.status === 'post' || f.status === 'live', r = resultFor(f, viewKey);
+    var tag = f.url ? 'a' : 'div', attr = f.url ? ' href="' + esc(f.url) + '" target="_blank" rel="noopener"' : '';
+    var res = f.status === 'postponed' ? '<span class="res t">연기</span>'
+      : (fin ? '<span class="res">' + esc(home ? scoreTxt(f) : (f.score ? f.score.away + '-' + f.score.home : '')) + '</span>'
+        : '<span class="res t">' + hhmm(k) + '</span>');
+    return '<li><' + tag + ' class="mrow"' + attr + ' title="' + esc(f.home.name + ' ' + (fin ? scoreTxt(f) : 'vs') + ' ' + f.away.name) + '">' +
+      '<span class="dt">' + (k.getMonth() + 1) + '/' + k.getDate() + ' (' + DOW[k.getDay()] + ')</span>' +
+      '<span class="tags">' + compTag(f.comp) + '</span>' +
+      (fin ? '<span class="rp ' + (r || 'D') + '">' + esc(r) + '</span>' : '') +
+      '<span class="tm"><span class="ha' + (home ? ' home' : '') + '">' + (home ? '홈' : '원정') + '</span>' +
+      badge(opp.key, 22, opp) + '<span class="nm">' + esc(koName(opp.key, opp.name)) + '</span></span>' +
+      res + '</' + tag + '></li>';
+  }
+
+  // ---------- 맨유와의 맞대결 ----------
+  function headToHead(k, name) {
+    var list = FX.filter(function (f) {
+      return f.mu && ((f.home.key === k) || (f.away.key === k));
+    }).sort(function (a, b) { return kd(a) - kd(b); });
+    var h = '<section><div class="sec-h"><h2>이번 시즌 맨유와의 맞대결</h2><span class="n">' + list.length + '경기</span></div>';
+    if (!list.length) return h + '<div class="empty">이번 시즌 맞대결 일정이 아직 없습니다.</div></section>';
+    h += '<ul class="mlist">';
+    list.forEach(function (f) { h += matchRow(f, k); });
+    return h + '</ul><p class="note">승·무·패와 스코어는 ' + esc(name) + ' 기준입니다. 줄을 누르면 BBC 경기 페이지가 열립니다.</p></section>';
+  }
+
+  // ---------- 맨유 페이지: 이번 시즌 일정 요약 ----------
+  function seasonSummary(st) {
+    var upcoming = FX.filter(function (f) { return f.mu && f.status !== 'post' && f.status !== 'postponed'; }).slice(0, 3);
+    var h = '<section><div class="sec-h"><h2>이번 시즌 일정 요약</h2><span class="n">전 대회</span></div>';
+    h += '<div class="sum">';
+    h += '<div class="stat"><div class="k">리그 경기</div><div class="v">' + (st ? st.played : 0) + '<small>/ ' + ((H.meta && H.meta.matchweeks) || 38) + '</small></div><div class="sub">' +
+      (st ? st.won + '승 ' + st.drawn + '무 ' + st.lost + '패' : '') + '</div></div>';
+    h += '<div class="stat"><div class="k">승점</div><div class="v">' + (st ? st.points : 0) + '<small>점</small></div><div class="sub">' +
+      (st ? '득실 ' + (st.gd > 0 ? '+' + st.gd : st.gd) + ' · ' + st.rank + '위' : '') + '</div></div>';
+    h += '<div class="stat"><div class="k">최근 6경기</div><div class="v" style="font-size:17px">' + (st ? formPills(st.form) : '-') + '</div><div class="sub">리그 기준</div></div>';
+    h += '</div>';
+    if (upcoming.length) {
+      h += '<ul class="mlist">';
+      upcoming.forEach(function (f) { h += matchRow(f, MU); });
+      h += '</ul><p class="note">다음 3경기 · 시각은 브라우저 로컬(KST) 기준입니다.</p>';
+    } else {
+      h += '<div class="empty">남은 경기가 없습니다.</div>';
+    }
+    return h + '</section>';
+  }
+
+  // ---------- 이 구단의 최근 리그 경기 ----------
+  function recentSection(k, name) {
+    var list = FX.filter(function (f) {
+      return f.comp === 'PL' && f.status === 'post' && (f.home.key === k || f.away.key === k);
+    }).sort(function (a, b) { return kd(b) - kd(a); }).slice(0, 5);
+    var h = '<section><div class="sec-h"><h2>최근 경기</h2><span class="n">프리미어리그 · 최근 ' + list.length + '경기</span></div>';
+    if (!list.length) return h + '<div class="empty">아직 치른 리그 경기가 없습니다.</div></section>';
+    h += '<ul class="mlist">';
+    list.forEach(function (f) { h += matchRow(f, k); });
+    return h + '</ul></section>';
+  }
+})();
+</script>
+</body>
+</html>
