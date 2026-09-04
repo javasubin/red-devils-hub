@@ -2,6 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; img-src 'self' https: data:; connect-src 'self'; object-src 'none'; base-uri 'self'">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light dark">
 <title>RED DEVILS HUB — 2026-27</title>
@@ -461,7 +462,7 @@
     <ul class="arch-list" id="archList"></ul>
   </section>
 
-  <footer><span class="brand-f">RED DEVILS HUB</span> · BBC Sport 데이터로 매일 갱신되는 <span id="footTeam"></span>프리미어리그 대시보드 · 시간은 모두 로컬(KST) 기준</footer>
+  <footer><span class="brand-f">RED DEVILS HUB</span> · BBC Sport 데이터로 매일 갱신되는 <span id="footTeam"></span>프리미어리그 대시보드 · 시간은 모두 로컬(KST) 기준 · 방문 통계를 수집합니다(쿠키 없음, 개인 식별 없음)</footer>
 </div>
 
 <script src="data.js"></script>
@@ -1049,5 +1050,7 @@
   renderTeam();
 })();
 </script>
+<!-- 방문 집계 (analytics.js: 외부 코드 없는 이미지 픽셀) -->
+<script src="analytics.js" defer></script>
 </body>
 </html>

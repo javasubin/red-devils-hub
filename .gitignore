@@ -18,3 +18,6 @@ desktop.ini
 node_modules/
 .omc/
 scripts/.cache/
+
+# 로컬 운영 문서 (비공개)
+docs/
