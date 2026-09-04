@@ -1,11 +1,11 @@
 // ============================================================
 //  RED DEVILS HUB 데이터 — scripts/update-data.mjs 가 BBC Sport에서 생성합니다. 손으로 고치지 마세요.
-//  생성 2026-09-03T18:13:48+09:00 · 경기 395 · 순위표 20팀 · 득점 49명
+//  경기 395 · 순위표 20팀 · 득점 49명 (생성 시각은 meta.updatedAt)
 //  구조: SCHEMA.md
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-03T18:13:48+09:00",
+  "updatedAt": "2026-09-04T09:08:52+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -151,6 +151,9 @@ window.HUB = {
       "times": [
        "39'"
       ],
+      "types": [
+       "goal"
+      ],
       "type": "goal"
      }
     ]
@@ -192,12 +195,18 @@ window.HUB = {
       "times": [
        "31'"
       ],
+      "types": [
+       "goal"
+      ],
       "type": "goal"
      },
      {
       "name": "J. Zirkzee",
       "times": [
        "56'"
+      ],
+      "types": [
+       "goal"
       ],
       "type": "goal"
      },
@@ -206,6 +215,9 @@ window.HUB = {
       "times": [
        "63'"
       ],
+      "types": [
+       "goal"
+      ],
       "type": "goal"
      },
      {
@@ -213,12 +225,18 @@ window.HUB = {
       "times": [
        "72'"
       ],
+      "types": [
+       "goal"
+      ],
       "type": "goal"
      },
      {
       "name": "E. Williams",
       "times": [
        "84'"
+      ],
+      "types": [
+       "goal"
       ],
       "type": "goal"
      }
@@ -261,7 +279,11 @@ window.HUB = {
        "53'",
        "74'"
       ],
-      "type": "goal"
+      "types": [
+       "pen",
+       "goal"
+      ],
+      "type": "pen"
      }
     ],
     "away": [
@@ -269,6 +291,9 @@ window.HUB = {
       "name": "Arnau Ortiz",
       "times": [
        "5'"
+      ],
+      "types": [
+       "goal"
       ],
       "type": "goal"
      }
@@ -310,6 +335,9 @@ window.HUB = {
       "times": [
        "2'"
       ],
+      "types": [
+       "goal"
+      ],
       "type": "goal"
      }
     ],
@@ -318,6 +346,9 @@ window.HUB = {
       "name": "B. Mbeumo",
       "times": [
        "32'"
+      ],
+      "types": [
+       "goal"
       ],
       "type": "goal"
      }
@@ -359,6 +390,9 @@ window.HUB = {
       "times": [
        "16'"
       ],
+      "types": [
+       "goal"
+      ],
       "type": "goal"
      }
     ],
@@ -367,6 +401,9 @@ window.HUB = {
       "name": "B. Aaronson",
       "times": [
        "29'"
+      ],
+      "types": [
+       "goal"
       ],
       "type": "goal"
      }
@@ -408,12 +445,18 @@ window.HUB = {
       "times": [
        "2'"
       ],
+      "types": [
+       "goal"
+      ],
       "type": "goal"
      },
      {
       "name": "P. Dorgu",
       "times": [
        "51'"
+      ],
+      "types": [
+       "goal"
       ],
       "type": "goal"
      }
@@ -424,12 +467,18 @@ window.HUB = {
       "times": [
        "37'"
       ],
+      "types": [
+       "goal"
+      ],
       "type": "goal"
      },
      {
       "name": "A. Cissè",
       "times": [
        "57'"
+      ],
+      "types": [
+       "goal"
       ],
       "type": "goal"
      },
@@ -438,12 +487,18 @@ window.HUB = {
       "times": [
        "68'"
       ],
+      "types": [
+       "goal"
+      ],
       "type": "goal"
      },
      {
       "name": "R. Loftus-Cheek",
       "times": [
        "71'"
+      ],
+      "types": [
+       "goal"
       ],
       "type": "goal"
      }
@@ -485,6 +540,9 @@ window.HUB = {
       "times": [
        "15'"
       ],
+      "types": [
+       "goal"
+      ],
       "type": "goal"
      },
      {
@@ -492,12 +550,18 @@ window.HUB = {
       "times": [
        "23'"
       ],
+      "types": [
+       "goal"
+      ],
       "type": "goal"
      },
      {
       "name": "M. Ødegaard",
       "times": [
        "49'"
+      ],
+      "types": [
+       "goal"
       ],
       "type": "goal"
      }
@@ -540,12 +604,18 @@ window.HUB = {
       "times": [
        "17'"
       ],
+      "types": [
+       "goal"
+      ],
       "type": "goal"
      },
      {
       "name": "N. Mendy",
       "times": [
        "38'"
+      ],
+      "types": [
+       "goal"
       ],
       "type": "goal"
      }
@@ -588,12 +658,18 @@ window.HUB = {
       "times": [
        "42'"
       ],
+      "types": [
+       "goal"
+      ],
       "type": "goal"
      },
      {
       "name": "T. Barry",
       "times": [
        "53'"
+      ],
+      "types": [
+       "goal"
       ],
       "type": "goal"
      }
@@ -636,12 +712,18 @@ window.HUB = {
       "times": [
        "24'"
       ],
+      "types": [
+       "goal"
+      ],
       "type": "goal"
      },
      {
       "name": "J. Clarke",
       "times": [
        "90'"
+      ],
+      "types": [
+       "goal"
       ],
       "type": "goal"
      }
@@ -651,6 +733,9 @@ window.HUB = {
       "name": "N. Angulo",
       "times": [
        "39'"
+      ],
+      "types": [
+       "goal"
       ],
       "type": "goal"
      }
@@ -693,6 +778,9 @@ window.HUB = {
       "times": [
        "88'"
       ],
+      "types": [
+       "goal"
+      ],
       "type": "goal"
      }
     ]
@@ -733,6 +821,9 @@ window.HUB = {
       "times": [
        "12'"
       ],
+      "types": [
+       "goal"
+      ],
       "type": "goal"
      },
      {
@@ -740,12 +831,18 @@ window.HUB = {
       "times": [
        "33'"
       ],
+      "types": [
+       "goal"
+      ],
       "type": "goal"
      },
      {
       "name": "M. Kayode",
       "times": [
        "49'"
+      ],
+      "types": [
+       "goal"
       ],
       "type": "goal"
      }
@@ -788,12 +885,18 @@ window.HUB = {
       "times": [
        "8'"
       ],
-      "type": "goal"
+      "types": [
+       "og"
+      ],
+      "type": "og"
      },
      {
       "name": "M. De Cuyper",
       "times": [
        "18'"
+      ],
+      "types": [
+       "goal"
       ],
       "type": "goal"
      },
@@ -802,6 +905,10 @@ window.HUB = {
       "times": [
        "30'",
        "31'"
+      ],
+      "types": [
+       "goal",
+       "goal"
       ],
       "type": "goal"
      }
@@ -812,7 +919,10 @@ window.HUB = {
       "times": [
        "40'"
       ],
-      "type": "card"
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
      }
     ]
    },
@@ -852,12 +962,18 @@ window.HUB = {
       "times": [
        "84'"
       ],
+      "types": [
+       "goal"
+      ],
       "type": "goal"
      },
      {
       "name": "J. Gvardiol",
       "times": [
        "90'+1"
+      ],
+      "types": [
+       "goal"
       ],
       "type": "goal"
      }
@@ -867,6 +983,9 @@ window.HUB = {
       "name": "M. Tavernier",
       "times": [
        "26'"
+      ],
+      "types": [
+       "goal"
       ],
       "type": "goal"
      }
@@ -908,12 +1027,18 @@ window.HUB = {
       "times": [
        "5'"
       ],
+      "types": [
+       "goal"
+      ],
       "type": "goal"
      },
      {
       "name": "J. Willock",
       "times": [
        "57'"
+      ],
+      "types": [
+       "goal"
       ],
       "type": "goal"
      }
@@ -924,6 +1049,9 @@ window.HUB = {
       "times": [
        "55'"
       ],
+      "types": [
+       "goal"
+      ],
       "type": "goal"
      },
      {
@@ -931,7 +1059,10 @@ window.HUB = {
       "times": [
        "90'+9"
       ],
-      "type": "goal"
+      "types": [
+       "pen"
+      ],
+      "type": "pen"
      }
     ]
    },
@@ -971,12 +1102,18 @@ window.HUB = {
       "times": [
        "23'"
       ],
+      "types": [
+       "goal"
+      ],
       "type": "goal"
      },
      {
       "name": "Gonzalo García",
       "times": [
        "54'"
+      ],
+      "types": [
+       "goal"
       ],
       "type": "goal"
      }
@@ -987,6 +1124,9 @@ window.HUB = {
       "times": [
        "1'"
       ],
+      "types": [
+       "goal"
+      ],
       "type": "goal"
      },
      {
@@ -994,12 +1134,18 @@ window.HUB = {
       "times": [
        "41'"
       ],
+      "types": [
+       "goal"
+      ],
       "type": "goal"
      },
      {
       "name": "C. Palmer",
       "times": [
        "49'"
+      ],
+      "types": [
+       "goal"
       ],
       "type": "goal"
      }
@@ -1041,7 +1187,10 @@ window.HUB = {
       "times": [
        "56'"
       ],
-      "type": "goal"
+      "types": [
+       "og"
+      ],
+      "type": "og"
      }
     ],
     "away": [
@@ -1051,6 +1200,10 @@ window.HUB = {
        "17'",
        "84'"
       ],
+      "types": [
+       "goal",
+       "goal"
+      ],
       "type": "goal"
      },
      {
@@ -1058,6 +1211,10 @@ window.HUB = {
       "times": [
        "54'",
        "59'"
+      ],
+      "types": [
+       "goal",
+       "goal"
       ],
       "type": "goal"
      }
@@ -1099,12 +1256,18 @@ window.HUB = {
       "times": [
        "60'"
       ],
+      "types": [
+       "goal"
+      ],
       "type": "goal"
      },
      {
       "name": "Víctor Muñoz",
       "times": [
        "82'"
+      ],
+      "types": [
+       "goal"
       ],
       "type": "goal"
      }
@@ -1115,6 +1278,9 @@ window.HUB = {
       "times": [
        "24'"
       ],
+      "types": [
+       "goal"
+      ],
       "type": "goal"
      },
      {
@@ -1122,7 +1288,10 @@ window.HUB = {
       "times": [
        "70'"
       ],
-      "type": "goal"
+      "types": [
+       "pen"
+      ],
+      "type": "pen"
      }
     ]
    },
@@ -1162,6 +1331,9 @@ window.HUB = {
       "times": [
        "41'"
       ],
+      "types": [
+       "goal"
+      ],
       "type": "goal"
      }
     ],
@@ -1170,6 +1342,9 @@ window.HUB = {
       "name": "J. Tarkowski",
       "times": [
        "90'+1"
+      ],
+      "types": [
+       "goal"
       ],
       "type": "goal"
      }
@@ -1212,6 +1387,9 @@ window.HUB = {
       "times": [
        "82'"
       ],
+      "types": [
+       "goal"
+      ],
       "type": "goal"
      }
     ]
@@ -1253,12 +1431,18 @@ window.HUB = {
       "times": [
        "62'"
       ],
+      "types": [
+       "goal"
+      ],
       "type": "goal"
      },
      {
       "name": "Y. Wissa",
       "times": [
        "72'"
+      ],
+      "types": [
+       "goal"
       ],
       "type": "goal"
      }
@@ -1300,12 +1484,18 @@ window.HUB = {
       "times": [
        "4'"
       ],
+      "types": [
+       "goal"
+      ],
       "type": "goal"
      },
      {
       "name": "Pedro Neto",
       "times": [
        "14'"
+      ],
+      "types": [
+       "goal"
       ],
       "type": "goal"
      },
@@ -1314,12 +1504,18 @@ window.HUB = {
       "times": [
        "32'"
       ],
+      "types": [
+       "goal"
+      ],
       "type": "goal"
      },
      {
       "name": "C. Palmer",
       "times": [
        "74'"
+      ],
+      "types": [
+       "goal"
       ],
       "type": "goal"
      }
@@ -1330,6 +1526,9 @@ window.HUB = {
       "times": [
        "35'"
       ],
+      "types": [
+       "goal"
+      ],
       "type": "goal"
      },
      {
@@ -1337,12 +1536,18 @@ window.HUB = {
       "times": [
        "63'"
       ],
-      "type": "goal"
+      "types": [
+       "og"
+      ],
+      "type": "og"
      },
      {
       "name": "P. Groß",
       "times": [
        "90'+6"
+      ],
+      "types": [
+       "goal"
       ],
       "type": "goal"
      }
@@ -1384,6 +1589,9 @@ window.HUB = {
       "times": [
        "79'"
       ],
+      "types": [
+       "goal"
+      ],
       "type": "goal"
      }
     ],
@@ -1392,6 +1600,9 @@ window.HUB = {
       "name": "K. Schade",
       "times": [
        "41'"
+      ],
+      "types": [
+       "goal"
       ],
       "type": "goal"
      }
@@ -1432,6 +1643,9 @@ window.HUB = {
       "name": "W. Isidor",
       "times": [
        "75'"
+      ],
+      "types": [
+       "goal"
       ],
       "type": "goal"
      }
@@ -1476,6 +1690,11 @@ window.HUB = {
        "61'",
        "68'"
       ],
+      "types": [
+       "goal",
+       "pen",
+       "goal"
+      ],
       "type": "goal"
      },
      {
@@ -1483,12 +1702,18 @@ window.HUB = {
       "times": [
        "56'"
       ],
-      "type": "goal"
+      "types": [
+       "og"
+      ],
+      "type": "og"
      },
      {
       "name": "B. Mbeumo",
       "times": [
        "82'"
+      ],
+      "types": [
+       "goal"
       ],
       "type": "goal"
      }
@@ -1499,12 +1724,18 @@ window.HUB = {
       "times": [
        "29'"
       ],
+      "types": [
+       "goal"
+      ],
       "type": "goal"
      },
      {
       "name": "C. Akpom",
       "times": [
        "90'+1"
+      ],
+      "types": [
+       "goal"
       ],
       "type": "goal"
      }
@@ -1546,6 +1777,9 @@ window.HUB = {
       "name": "B. Saka",
       "times": [
        "59'"
+      ],
+      "types": [
+       "goal"
       ],
       "type": "goal"
      }

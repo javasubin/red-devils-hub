@@ -1,0 +1,53 @@
+name: update-data
+
+# BBC Sport에서 경기·순위·득점(data.js)과 경기 상세(matches/)를 받아 커밋합니다.
+# - 경기 시간대(UTC 11~23시 = 한국 20시~다음날 8시)에는 15분마다: 라인업 발표·진행 상황·최종 기록
+# - 매일 UTC 0시(한국 09시)에 전체 갱신
+# 실행 후 변경이 있을 때만 커밋하며, GitHub Pages가 자동으로 다시 배포합니다.
+
+on:
+  schedule:
+    - cron: "*/15 11-23 * * *"
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/update.yml"
+      - "scripts/update-data.mjs"
+      - "scripts/update-matches.mjs"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Refresh data.js (fixtures, table, scorers)
+        run: node scripts/update-data.mjs
+
+      - name: Refresh match details (lineups, events, stats)
+        run: node scripts/update-matches.mjs
+
+      - name: Commit and push if anything changed
+        run: |
+          git config user.name "red-devils-hub-bot"
+          git config user.email "red-devils-hub-bot@users.noreply.github.com"
+          git add data.js matches/
+          # meta.updatedAt 한 줄만 바뀐 경우는 커밋하지 않는다
+          if git diff --cached --quiet -I '"updatedAt":'; then
+            echo "no data changes"; exit 0
+          fi
+          git commit -m "data: $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M')"
+          git push

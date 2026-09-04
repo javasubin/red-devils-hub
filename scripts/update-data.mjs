@@ -71,10 +71,10 @@ async function fetchText(url, { retries = 2, timeoutMs = 25000, accept } = {}) {
 
 // BBC 페이지에 박힌 window.__INITIAL_DATA__ 파싱
 function initialData(html) {
-  const m = html.match(/window\.__INITIAL_DATA__="(.*?)";<\/script>/s);
+  // window.__INITIAL_DATA__="{...}" — JS 문자열 리터럴을 먼저 풀고(JSON.parse 1회) 그 결과를 JSON으로 다시 파싱
+  const m = html.match(/window\.__INITIAL_DATA__=("(?:[^"\\]|\\.)*");/s);
   if (!m) return null;
-  const s = m[1].replace(/\\"/g, "\"").replace(/\\\\/g, "\\");
-  return JSON.parse(s);
+  return JSON.parse(JSON.parse(m[1]));
 }
 function pickContainer(data, re) {
   const k = Object.keys(data.data || {}).find(k => re.test(k));
@@ -139,10 +139,12 @@ function sideOf(t) {
 }
 function scorersOf(t) {
   const out = [];
+  const kind = (s) => /own/i.test(s || "") ? "og" : /pen/i.test(s || "") ? "pen" : "goal";
   for (const a of t.actions || []) {
-    const times = (a.actions || []).map(x => x.timeLabel && x.timeLabel.value).filter(Boolean);
-    const types = (a.actions || []).map(x => x.type).filter(Boolean);
-    out.push({ name: a.playerName, times, type: a.actionType || (types[0] || "goal") });
+    const acts = (a.actions || []).filter(x => x.timeLabel && x.timeLabel.value);
+    const times = acts.map(x => x.timeLabel.value);
+    const types = acts.map(x => kind(x.type));           // 골마다 "goal" | "pen" | "og" (times와 같은 순서)
+    out.push({ name: a.playerName, times, types, type: types[0] || "goal" });
   }
   return out;
 }
@@ -265,7 +267,7 @@ async function main() {
 
   const header = `// ============================================================
 //  RED DEVILS HUB 데이터 — scripts/update-data.mjs 가 BBC Sport에서 생성합니다. 손으로 고치지 마세요.
-//  생성 ${HUB.meta.updatedAt} · 경기 ${fixtures.length} · 순위표 ${standings.length}팀 · 득점 ${scorers.length}명
+//  경기 ${fixtures.length} · 순위표 ${standings.length}팀 · 득점 ${scorers.length}명 (생성 시각은 meta.updatedAt)
 //  구조: SCHEMA.md
 // ============================================================
 `;

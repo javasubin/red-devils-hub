@@ -117,3 +117,48 @@ window.HUB_CLUBS = {
 
 - `clubs.js`의 감독·핵심 선수는 **2026-27 시즌 개막 기준**이며 시즌 중 변동은 손으로 갱신한다(스크립트는 손대지 않음).
 - 화면은 팀 이름·배지는 `HUB.teams`, 한국어명·색·구장·소개는 `HUB_CLUBS`에서 가져온다. 둘 중 하나가 없어도 깨지지 않게 폴백(영문명, 회색)한다.
+
+## 4. `matches/<fixtureId>.js` → `window.HUB_MATCHES[id]` · `matches/index.js` → `window.HUB_MATCH_INDEX`
+
+`scripts/update-matches.mjs`가 GitHub Actions(15분 주기)에서 생성한다. 대상: PL 전 경기 + 맨유 전 대회 경기.
+생성 시점: 킥오프 90분 전부터 종료 후까지(라인업·진행 상황), 종료 후 한 번 더(최종 기록, `final: true`). 파일이 없으면 "아직 자료 없음"이다.
+화면은 `<script src="matches/<id>.js">` 태그를 동적으로 붙여 읽는다(file:// 에서도 동작). 없는 파일은 onerror로 처리한다.
+
+```js
+window.HUB_MATCH_INDEX = {            // matches/index.js — 어떤 경기 파일이 있는지
+  "s-422vd3oj6haw9xll17akl4qvo": { status: "post", lineups: true, final: true, updatedAt: "2026-09-04T09:10:00+09:00" }
+};
+
+window.HUB_MATCHES = window.HUB_MATCHES || {};
+window.HUB_MATCHES["s-422vd3oj6haw9xll17akl4qvo"] = {
+  id: "s-422vd3oj6haw9xll17akl4qvo",
+  updatedAt: "2026-09-04T09:10:00+09:00",
+  status: "post", statusText: "FT", final: true,        // "pre" | "live" | "post"
+  kickoff: "2026-08-30T15:30:00Z", comp: "PL", compName: "Premier League",
+  lineups: true,                                          // 선발 발표 여부 (false면 home/away.starters 비어 있음)
+  home: {
+    key: "manchester-united", name: "Manchester United", short: "Man Utd", code: "MUN",
+    score: 5, manager: "Michael Carrick",
+    formation: "4-2-3-1",                                 // 미발표면 null
+    rows: [[1],[2,5,6,23],[18,37],[19,8,9],[10]],         // 골키퍼부터 등번호 행 배열 (피치 그림용)
+    starters: [ { n: 8, name: "Bruno Fernandes", pos: "MF", captain: true,
+                  goals: 3, assists: 1, mins: 90,
+                  cards: [ { type: "Y", min: "90'+3" } ],   // "Y" | "R" | "YR"(경고 누적 퇴장)
+                  off: { min: "73'", by: "N. Mazraoui" } } ],  // 교체 아웃 (없으면 없음)
+    subs:     [ { n: 3, name: "N. Mazraoui", pos: "DF", on: { min: "73'", for: "L. Shaw" }, goals: 0, assists: 0, mins: 17, cards: [] } ]
+  },
+  away: { /* 같은 구조 */ },
+  goals: [ { side: "home", player: "Bruno Fernandes", min: "40'", type: "goal" } ],   // type: "goal" | "pen" | "og"  (시간순)
+  timeline: [ { min: "40'", side: "home", type: "goal", player: "Bruno Fernandes" },  // goals + cards + subs 시간순 병합
+              { min: "73'", side: "home", type: "sub", player: "N. Mazraoui", extra: "L. Shaw" },
+              { min: "90'+3", side: "home", type: "Y", player: "S. Lammens" } ],
+  stats: {                                                // [홈, 원정]. 자료 없으면 null
+    possession: [60.4, 39.6], shots: [33, 7], onTarget: [11, 4], corners: [8, 2], fouls: [7, 11],
+    xg: [4.56, 1.21], saves: [3, 8], passes: [561, 302], passAcc: [89.5, 80.1]
+  },
+  officials: { referee: "Craig Pawson" }
+};
+```
+
+- `pos`는 BBC 포지션을 GK/DF/MF/FW로 줄인 값. 교체 명단(`subs`)의 `pos`는 실제 포지션을 알 수 없으면 "SUB".
+- 골 시간·유형은 일정 데이터(`data.js`의 `scorers`)와 같은 출처(BBC actions)다. 라인업이 없어도 `goals`·`stats`는 있을 수 있다.
