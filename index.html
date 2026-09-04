@@ -6,6 +6,7 @@
 <meta name="color-scheme" content="light dark">
 <title>RED DEVILS HUB — 2026-27</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="match-view.css">
 <style>
   :root {
     --bg:#ffffff; --bg-soft:#f7f7f9; --card:#ffffff;
@@ -152,6 +153,7 @@
   .nh-t .n { font-size:19px; font-weight:800; letter-spacing:-0.03em; line-height:1.25; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
   .nh-t .c { font-size:12px; color:var(--text-dim); line-height:1.4; }
   .live-tag { font-size:9.5px; font-weight:800; background:var(--accent); color:#fff; padding:1px 6px; border-radius:999px; letter-spacing:.06em; }
+  .live-sc { font-size:11px; font-weight:800; font-variant-numeric:tabular-nums; letter-spacing:-0.02em; color:var(--accent); background:var(--accent-soft); border:1px solid var(--mu-border); padding:1px 7px; border-radius:6px; }
   .ha { font-size:10px; font-weight:800; padding:1px 6px; border-radius:5px; background:var(--chip-bg); color:var(--text-mid); letter-spacing:-0.01em; }
   .ha.home { background:var(--accent-soft); color:var(--accent); }
   .dday { margin-left:auto; text-align:right; color:var(--accent); font-weight:800; font-size:24px; letter-spacing:-0.04em; line-height:1; flex:0 0 auto; white-space:nowrap; }
@@ -270,8 +272,9 @@
   .mw-nav button:hover:not(:disabled) { border-color:var(--text); }
   .mw-nav button:disabled { opacity:.3; cursor:default; }
   .sb { list-style:none; margin:0; padding:0; }
-  .sb li { display:flex; align-items:center; gap:8px; padding:9px 16px; border-bottom:1px solid var(--border-soft); font-size:13px; }
+  .sb li { border-bottom:1px solid var(--border-soft); }
   .sb li:last-child { border-bottom:none; }
+  .sb-r { display:flex; align-items:center; gap:8px; padding:9px 16px; font-size:13px; }
   .sb li.mu-row { background:var(--mu); box-shadow:inset 3px 0 0 var(--accent); }
   .sb .when { flex:0 0 auto; width:74px; font-size:11px; color:var(--text-dim); font-variant-numeric:tabular-nums; }
   .sb .side { flex:1 1 0; min-width:0; display:flex; align-items:center; gap:6px; }
@@ -448,6 +451,7 @@
 <script src="data.js"></script>
 <script src="clubs.js"></script>
 <script src="briefings.js"></script>
+<script src="match-view.js"></script>
 <script>
 (function () {
   var H = window.HUB;
@@ -479,8 +483,8 @@
   function dday(d) { var a = new Date(d); a.setHours(0, 0, 0, 0); return Math.round((a - today) / 86400000); }
   function ddayTxt(d) { var n = dday(d); return n === 0 ? 'D-DAY' : (n > 0 ? 'D-' + n : 'D+' + (-n)); }
 
-  var COMP_KO = { PL: '프리미어리그', UCL: '챔피언스리그', UEL: '유로파리그', UECL: '컨퍼런스리그', FAC: 'FA컵', EFL: '카라바오컵', FR: '친선경기', OTHER: '기타' };
-  var COMP_TAG = { PL: 'PL', UCL: 'UCL', UEL: 'UEL', UECL: 'UECL', FAC: 'FAC', EFL: 'EFL', FR: 'FR', OTHER: 'ETC' };
+  var COMP_KO = { PL: '프리미어리그', UCL: '챔피언스리그', UEL: '유로파리그', UECL: '컨퍼런스리그', FAC: 'FA컵', EFL: '리그컵(카라바오컵)', FR: '친선경기', OTHER: '기타' };
+  var COMP_TAG = { PL: 'PL', UCL: 'UCL', UEL: 'UEL', UECL: 'UECL', FAC: 'FA컵', EFL: '리그컵', FR: '친선', OTHER: '기타' };
   function compCls(c) { return (COMP_TAG[c] ? c : 'OTHER').toLowerCase(); }
   function compTag(c) { return '<span class="ctag ' + compCls(c) + '">' + esc(COMP_TAG[c] || c || 'ETC') + '</span>'; }
 
@@ -525,6 +529,65 @@
       if (el) el.innerHTML = '<div class="err">이 카드를 그리지 못했습니다: ' + esc(e && e.message) + '</div>';
       if (window.console) console.error('[' + id + ']', e);
     }
+  }
+
+  // ---------- 경기 상세 (match-view.js) ----------
+  var MV = window.HUB_MATCHVIEW || null;
+  var FX_BY_ID = {};
+  FX.forEach(function (f) { FX_BY_ID[f.id] = f; });
+  if (MV) MV.init(function () { if (nextMU) renderNextLineup(nextMU); });
+
+  // 줄(li)에 접었다 펴는 상세 패널을 붙인다. 줄 자체가 버튼 역할을 한다
+  function panelHtml(pre, f) {
+    return '<div class="mv-panel" id="' + pre + esc(f.id) + '" hidden></div>';
+  }
+  // 줄에 붙일 속성 (class는 호출한 쪽에서 합쳐 쓴다 — class를 두 번 쓰면 뒤엣것이 무시된다)
+  function rowAttrs(pre, f, extra) {
+    var t = f.home.name + ' vs ' + f.away.name + (extra ? ' · ' + extra : '') + ' · 눌러서 경기 상세 보기';
+    return ' role="button" tabindex="0" aria-expanded="false" aria-controls="' + pre + esc(f.id) + '"' +
+      ' data-fid="' + esc(f.id) + '" title="' + esc(t) + '"';
+  }
+  // 한 카드 안에서는 패널이 하나만 열려 있게 한다
+  function wireRows(listEl) {
+    if (!listEl || !MV) return;
+    function toggle(row) {
+      var li = row.parentNode, panel = li && li.querySelector('.mv-panel');
+      if (!panel) return;
+      var open = row.getAttribute('aria-expanded') === 'true';
+      Array.prototype.forEach.call(listEl.querySelectorAll('.mv-row[aria-expanded="true"]'), function (r) {
+        if (r === row) return;
+        r.setAttribute('aria-expanded', 'false');
+        var p = r.parentNode && r.parentNode.querySelector('.mv-panel');
+        if (p) p.hidden = true;
+      });
+      if (open) { row.setAttribute('aria-expanded', 'false'); panel.hidden = true; return; }
+      row.setAttribute('aria-expanded', 'true');
+      panel.hidden = false;
+      if (panel.getAttribute('data-done') === '1') return;
+      panel.setAttribute('data-done', '1');
+      panel.innerHTML = '<div class="mv-load">불러오는 중…</div>';
+      var id = row.getAttribute('data-fid');
+      MV.load(id, function (m) { MV.render(panel, FX_BY_ID[id] || null, m, {}); });
+    }
+    listEl.addEventListener('click', function (e) {
+      if (e.target.closest && e.target.closest('a')) return;      // 패널 안 링크는 그대로
+      var row = e.target.closest && e.target.closest('.mv-row');
+      if (row && listEl.contains(row)) toggle(row);
+    });
+    listEl.addEventListener('keydown', function (e) {
+      if (e.key !== 'Enter' && e.key !== ' ' && e.key !== 'Spacebar') return;
+      var row = e.target.closest && e.target.closest('.mv-row');
+      if (!row || !listEl.contains(row)) return;
+      e.preventDefault();
+      toggle(row);
+    });
+  }
+
+  // 다음 경기 카드의 선발 라인업 블록 (킥오프 1시간 전쯤 발표)
+  function renderNextLineup(f) {
+    var slot = document.getElementById('nextLineup');
+    if (!slot || !MV) return;
+    MV.load(f.id, function (m) { MV.render(slot, f, m, { mode: 'lineups', lineupsOpen: true }); });
   }
 
   // 파생 데이터
@@ -654,10 +717,14 @@
       (f.mw ? '<span class="ctag">MW ' + f.mw + '</span>' : (f.round ? '<span class="ctag">' + esc(f.round) + '</span>' : '')) +
       '<span class="ha' + (home ? ' home' : '') + '">' + (home ? '홈' : '원정') + '</span>' +
       (live ? '<span class="live-tag">LIVE</span>' : '') +
+      (live && f.score ? '<span class="live-sc">' + esc(scoreTxt(f)) + '</span>' : '') +
       '<span class="dday">' + (live ? 'LIVE' : ddayTxt(k)) + '<small>' + (live ? esc(f.statusText || '진행 중') : '킥오프') + '</small></span></div>';
     h += '<div class="nh-main"><div class="nh-b">' + badge(f.home.key, 32, f.home) + '<span class="vs">vs</span>' + badge(f.away.key, 32, f.away) + '</div>';
     h += '<div class="nh-t"><div class="n">' + esc(koName(opp.key, opp.name)) + '</div>';
     h += '<div class="c">' + (k.getMonth() + 1) + '월 ' + k.getDate() + '일 (' + DOW[k.getDay()] + ') ' + hhmm(k) + (f.timeUK ? ' <span style="opacity:.75">(현지 ' + esc(f.timeUK) + ')</span>' : '') + '</div></div></div></div>';
+
+    // 선발 라인업 (match-view.js가 matches/<id>.js를 읽어 채운다)
+    h += '<div class="mv-slot" id="nextLineup"></div>';
 
     var oc = club(opp.key), mc = club(MU);
     var venue = home ? ((mc.stadium && (mc.stadium.ko || mc.stadium.name)) || 'Old Trafford')
@@ -689,6 +756,7 @@
     }
     h += '</' + tag + '>';
     nb.innerHTML = h;
+    renderNextLineup(f);
   });
 
   // ---------- 다가오는 일정 (다음 경기 이후 4경기) ----------
@@ -809,18 +877,19 @@
     last5.forEach(function (f) {
       var home = f.home.key === MU, opp = home ? f.away : f.home, r = muRes(f), k = kd(f);
       var gs = goals(f.scorers && f.scorers[home ? 'home' : 'away']).map(function (s) { return s.name + ' ' + (s.times || []).join(','); }).join(' · ');
-      var tag = f.url ? 'a' : 'div', attr = f.url ? ' href="' + esc(f.url) + '" target="_blank" rel="noopener"' : '';
-      h += '<li><' + tag + ' class="rec-a"' + attr + ' title="' + esc(f.home.name + ' ' + scoreTxt(f) + ' ' + f.away.name) + '">' +
+      h += '<li><div class="rec-a mv-row"' + rowAttrs('mvr-', f, scoreTxt(f)) + '>' +
         '<span class="rp ' + (r || 'D') + '">' + esc(r) + '</span>' +
         '<span class="sc">' + esc(home ? scoreTxt(f) : (f.score ? f.score.away + '-' + f.score.home : '')) + '</span>' +
         badge(opp.key, 24, opp) +
         '<span class="op"><span class="n"><span class="nm">' + esc(koName(opp.key, opp.name)) + '</span><span class="ha' + (home ? ' home' : '') + '">' + (home ? '홈' : '원정') + '</span>' + compTag(f.comp) + '</span>' +
         '<span class="g">' + (gs ? esc(gs) : '득점 없음') + '</span></span>' +
         '<span class="dt">' + (k.getMonth() + 1) + '/' + k.getDate() + '<br>(' + DOW[k.getDay()] + ')</span>' +
-        '</' + tag + '></li>';
+        '<span class="mv-caret" aria-hidden="true">▾</span>' +
+        '</div>' + panelHtml('mvr-', f) + '</li>';
     });
     document.getElementById('recentList').innerHTML = h || '<li class="empty">아직 치른 경기가 없습니다.</li>';
   });
+  wireRows(document.getElementById('recentList'));
 
   // ---------- 매치위크 스코어보드 ----------
   var mwCur = (H.meta && H.meta.currentMw) || 1;
@@ -845,16 +914,19 @@
         }).filter(Boolean).join(' | ');
         var res = f.status === 'postponed' ? '<span class="res t">연기</span>'
           : (fin ? '<span class="res">' + esc(scoreTxt(f)) + '</span>' : '<span class="res t">' + hhmm(k) + '</span>');
-        h += '<li' + (mu ? ' class="mu-row"' : '') + ' title="' + esc(f.home.name + ' vs ' + f.away.name + (gs ? ' · ' + gs : '')) + '">' +
+        h += '<li' + (mu ? ' class="mu-row"' : '') + '>' +
+          '<div class="sb-r mv-row"' + rowAttrs('mvs-', f, gs) + '>' +
           '<span class="when">' + md(k) + ' (' + DOW[k.getDay()] + ')</span>' +
           '<span class="side h"><span class="nm">' + esc(shortOf(f.home)) + '</span>' + badge(f.home.key, 20, f.home) + '</span>' +
           res +
           '<span class="side"><span>' + badge(f.away.key, 20, f.away) + '</span><span class="nm">' + esc(shortOf(f.away)) + '</span></span>' +
-          '</li>';
+          '<span class="mv-caret" aria-hidden="true">▾</span>' +
+          '</div>' + panelHtml('mvs-', f) + '</li>';
       });
       document.getElementById('mwList').innerHTML = h || '<li class="empty">경기가 없습니다.</li>';
     });
   }
+  wireRows(document.getElementById('mwList'));
   document.getElementById('mwPrev').onclick = function () { setMw(mwCur - 1); };
   document.getElementById('mwNext').onclick = function () { setMw(mwCur + 1); };
   setMw(mwCur);

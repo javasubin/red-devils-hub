@@ -6,6 +6,7 @@
 <meta name="color-scheme" content="light dark">
 <title>구단 가이드 — RED DEVILS HUB</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="match-view.css">
 <style>
   :root {
     --bg:#ffffff; --bg-soft:#f7f7f9; --card:#ffffff;
@@ -191,6 +192,7 @@
 
 <script src="data.js"></script>
 <script src="clubs.js"></script>
+<script src="match-view.js"></script>
 <script>
 (function () {
   var H = window.HUB, root = document.getElementById('main');
@@ -214,8 +216,8 @@
   function dateTxt(d) { return (d.getMonth() + 1) + '월 ' + d.getDate() + '일 (' + DOW[d.getDay()] + ')'; }
   function num(n) { return (typeof n === 'number' && isFinite(n)) ? n.toLocaleString() : ''; }
 
-  var COMP_KO = { PL: '프리미어리그', UCL: '챔피언스리그', UEL: '유로파리그', UECL: '컨퍼런스리그', FAC: 'FA컵', EFL: '카라바오컵', FR: '친선경기', OTHER: '기타' };
-  var COMP_TAG = { PL: 'PL', UCL: 'UCL', UEL: 'UEL', UECL: 'UECL', FAC: 'FAC', EFL: 'EFL', FR: 'FR', OTHER: 'ETC' };
+  var COMP_KO = { PL: '프리미어리그', UCL: '챔피언스리그', UEL: '유로파리그', UECL: '컨퍼런스리그', FAC: 'FA컵', EFL: '리그컵(카라바오컵)', FR: '친선경기', OTHER: '기타' };
+  var COMP_TAG = { PL: 'PL', UCL: 'UCL', UEL: 'UEL', UECL: 'UECL', FAC: 'FA컵', EFL: '리그컵', FR: '친선', OTHER: '기타' };
   function compCls(c) { return (COMP_TAG[c] ? c : 'OTHER').toLowerCase(); }
   function compTag(c) { return '<span class="ctag ' + compCls(c) + '">' + esc(COMP_TAG[c] || c || 'ETC') + '</span>'; }
 
@@ -245,6 +247,49 @@
     if (f.winner === 'draw' || f.score.home === f.score.away) return 'D';
     var home = f.home.key === key;
     return ((f.winner === 'home') === home) ? 'W' : 'L';
+  }
+
+  // ---------- 경기 상세 (match-view.js) ----------
+  var MV = window.HUB_MATCHVIEW || null;
+  var FX_BY_ID = {};
+  FX.forEach(function (f) { FX_BY_ID[f.id] = f; });
+  if (MV) MV.init();
+
+  // 경기 줄을 누르면 그 아래에 상세 패널이 열린다 (목록 하나당 한 개만)
+  function wireRows(scope) {
+    if (!scope || !MV) return;
+    function toggle(row) {
+      var li = row.parentNode, panel = li && li.querySelector('.mv-panel');
+      if (!panel) return;
+      var list = row.closest('.mlist') || scope;
+      var open = row.getAttribute('aria-expanded') === 'true';
+      Array.prototype.forEach.call(list.querySelectorAll('.mv-row[aria-expanded="true"]'), function (r) {
+        if (r === row) return;
+        r.setAttribute('aria-expanded', 'false');
+        var p = r.parentNode && r.parentNode.querySelector('.mv-panel');
+        if (p) p.hidden = true;
+      });
+      if (open) { row.setAttribute('aria-expanded', 'false'); panel.hidden = true; return; }
+      row.setAttribute('aria-expanded', 'true');
+      panel.hidden = false;
+      if (panel.getAttribute('data-done') === '1') return;
+      panel.setAttribute('data-done', '1');
+      panel.innerHTML = '<div class="mv-load">불러오는 중…</div>';
+      var id = row.getAttribute('data-fid');
+      MV.load(id, function (m) { MV.render(panel, FX_BY_ID[id] || null, m, {}); });
+    }
+    scope.addEventListener('click', function (e) {
+      if (e.target.closest && e.target.closest('a')) return;      // 패널 안 링크는 그대로
+      var row = e.target.closest && e.target.closest('.mv-row');
+      if (row && scope.contains(row)) toggle(row);
+    });
+    scope.addEventListener('keydown', function (e) {
+      if (e.key !== 'Enter' && e.key !== ' ' && e.key !== 'Spacebar') return;
+      var row = e.target.closest && e.target.closest('.mv-row');
+      if (!row || !scope.contains(row)) return;
+      e.preventDefault();
+      toggle(row);
+    });
   }
 
   // ---------- 구단 색을 페이지 강조색으로 ----------
@@ -291,6 +336,7 @@
   try {
     if (!key || !TEAMS[key]) renderIndex();
     else renderClub(key);
+    wireRows(root);
   } catch (e) {
     root.innerHTML = '<div class="miss">페이지를 그리지 못했습니다: ' + esc(e && e.message) + '<br><a href="index.html">대시보드로 돌아가기</a></div>';
     if (window.console) console.error(e);
@@ -420,21 +466,23 @@
     root.innerHTML = h;
   }
 
-  // 한 경기 줄. 스코어·승패·홈원정 모두 viewKey 팀 관점으로 쓴다
+  // 한 경기 줄. 스코어·승패·홈원정 모두 viewKey 팀 관점으로 쓴다.
+  // 줄 자체가 버튼이고, 누르면 아래 패널에 경기 상세(골·카드·기록·라인업)가 열린다
   function matchRow(f, viewKey) {
     var k = kd(f), home = f.home.key === viewKey, opp = home ? f.away : f.home;
     var fin = f.status === 'post' || f.status === 'live', r = resultFor(f, viewKey);
-    var tag = f.url ? 'a' : 'div', attr = f.url ? ' href="' + esc(f.url) + '" target="_blank" rel="noopener"' : '';
     var res = f.status === 'postponed' ? '<span class="res t">연기</span>'
       : (fin ? '<span class="res">' + esc(home ? scoreTxt(f) : (f.score ? f.score.away + '-' + f.score.home : '')) + '</span>'
         : '<span class="res t">' + hhmm(k) + '</span>');
-    return '<li><' + tag + ' class="mrow"' + attr + ' title="' + esc(f.home.name + ' ' + (fin ? scoreTxt(f) : 'vs') + ' ' + f.away.name) + '">' +
+    return '<li><div class="mrow mv-row" role="button" tabindex="0" aria-expanded="false" aria-controls="mvc-' + esc(f.id) + '"' +
+      ' data-fid="' + esc(f.id) + '" title="' + esc(f.home.name + ' ' + (fin ? scoreTxt(f) : 'vs') + ' ' + f.away.name + ' · 눌러서 경기 상세 보기') + '">' +
       '<span class="dt">' + (k.getMonth() + 1) + '/' + k.getDate() + ' (' + DOW[k.getDay()] + ')</span>' +
       '<span class="tags">' + compTag(f.comp) + '</span>' +
       (fin ? '<span class="rp ' + (r || 'D') + '">' + esc(r) + '</span>' : '') +
       '<span class="tm"><span class="ha' + (home ? ' home' : '') + '">' + (home ? '홈' : '원정') + '</span>' +
       badge(opp.key, 22, opp) + '<span class="nm">' + esc(koName(opp.key, opp.name)) + '</span></span>' +
-      res + '</' + tag + '></li>';
+      res + '<span class="mv-caret" aria-hidden="true">▾</span></div>' +
+      '<div class="mv-panel" id="mvc-' + esc(f.id) + '" hidden></div></li>';
   }
 
   // ---------- 맨유와의 맞대결 ----------
@@ -446,7 +494,7 @@
     if (!list.length) return h + '<div class="empty">이번 시즌 맞대결 일정이 아직 없습니다.</div></section>';
     h += '<ul class="mlist">';
     list.forEach(function (f) { h += matchRow(f, k); });
-    return h + '</ul><p class="note">승·무·패와 스코어는 ' + esc(name) + ' 기준입니다. 줄을 누르면 BBC 경기 페이지가 열립니다.</p></section>';
+    return h + '</ul><p class="note">승·무·패와 스코어는 ' + esc(name) + ' 기준입니다. 줄을 누르면 골·카드·팀 기록·선발 라인업이 열립니다.</p></section>';
   }
 
   // ---------- 맨유 페이지: 이번 시즌 일정 요약 ----------

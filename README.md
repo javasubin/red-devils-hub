@@ -17,6 +17,10 @@ briefing.css          브리핑 페이지 공통 스타일
 briefing.js           브리핑 페이지 공통 스크립트 (카테고리 칩 필터)
 briefings/            날짜별 브리핑 HTML + _template.html
 scripts/update-data.mjs   BBC Sport를 파싱해 data.js를 다시 쓰는 스크립트
+scripts/update-matches.mjs  경기 상세(라인업·교체·카드·팀 통계)를 matches/<id>.js 로 쓰는 스크립트
+matches/              경기별 상세 파일 + index.js   ← 스크립트가 생성
+match-view.js/.css    경기 상세 패널(타임라인·통계·라인업) 공통 렌더러
+.github/workflows/update.yml  GitHub Actions: 15분 주기 데이터 갱신
 scripts/update-and-push.cmd  위 스크립트 실행 + 커밋·푸시 (작업 스케줄러용)
 scripts/check-briefing.mjs   브리핑 HTML 검사기 (ROUTINE 6단계)
 ROUTINE.md            브리핑을 만드는 매일 실행 절차 (Claude Code용)
@@ -31,6 +35,7 @@ BBC 구단 배지 SVG, 위키미디어 공용의 구장 사진, 그리고 기사
 두 갈래가 서로 독립적으로 돌아간다.
 
 - **경기·순위**: BBC Sport → `node scripts/update-data.mjs` → `data.js`. Claude가 관여하지 않는 순수 스크립트다.
+- **경기 상세**: BBC Sport → `node scripts/update-matches.mjs` → `matches/<id>.js`. 킥오프 90분 전부터 종료 후까지 라인업·득점·교체·카드·팀 통계를 받고, 끝난 경기는 최종 기록으로 한 번 더 받는다. 화면은 경기 줄을 눌렀을 때 그 파일만 읽는다.
 - **뉴스**: 해외 매체 → `ROUTINE.md` 절차를 Claude Code가 수행 → `briefings/epl-news-YYYY-MM-DD.html` + `briefings.js` 항목 추가.
 
 브리핑이 하나도 없어도 사이트는 정상 동작한다. 아카이브 영역만 비어 있다.
@@ -43,9 +48,18 @@ Node 22 이상이면 된다. `npm install` 없이 그대로 돌아간다.
 node scripts/update-data.mjs
 ```
 
-### 매일 자동 갱신 (Windows 작업 스케줄러)
+### 자동 갱신 (GitHub Actions — 기본)
 
-`scripts/update-and-push.cmd`가 갱신부터 푸시까지 한다. 바뀐 게 없으면 커밋하지 않고 조용히 끝난다.
+`.github/workflows/update.yml`이 GitHub에서 두 스크립트를 돌리고 변경이 있으면 커밋·푸시한다. PC가 꺼져 있어도 돌아간다.
+
+- 경기 시간대(한국 20시~다음날 08시)에는 **15분마다**: 라인업 발표(킥오프 약 1시간 전), 진행 중 스코어, 종료 후 최종 기록
+- 매일 **09시(KST)**: 전체 갱신
+- 저장소 Actions 탭에서 `update-data` 워크플로를 **Run workflow**로 수동 실행할 수도 있다
+- 커밋 메시지는 `data: YYYY-MM-DD HH:MM`, 작성자 `red-devils-hub-bot`
+
+### 수동 갱신 (Windows 작업 스케줄러 — 선택)
+
+GitHub Actions를 쓰지 않을 때의 대안이다. `scripts/update-and-push.cmd`가 갱신부터 푸시까지 한다. 바뀐 게 없으면 커밋하지 않고 조용히 끝난다.
 
 ```cmd
 schtasks /create /sc daily /st 09:00 /tn "RedDevilsHub" /tr "C:\red-devils-hub\scripts\update-and-push.cmd"
