@@ -103,11 +103,11 @@
   .cal-nav .sp { flex:1; }
   .legend { display:flex; gap:12px; font-size:11.5px; color:var(--text-dim); }
   .legend i { display:inline-block; width:10px; height:10px; border-radius:3px; margin-right:5px; vertical-align:-1px; }
-  .dows, .week { display:grid; grid-template-columns:repeat(7,1fr); }
+  .dows, .week { display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); }
   .dow { padding:11px 0 9px; text-align:center; font-size:11px; font-weight:700; color:var(--text-dim); letter-spacing:.12em; border-bottom:1px solid var(--border-soft); }
   .dow.sat { color:#3b82f6; } .dow.sun { color:var(--accent); }
   .week { position:relative; }
-  .cell { grid-row:1; min-height:150px; padding:9px 5px; border-right:1px solid var(--border-soft); border-bottom:1px solid var(--border-soft); display:flex; flex-direction:column; gap:3px; position:relative; transition:background .15s; min-width:0; }
+  .cell { grid-row:1; min-height:150px; min-width:0; overflow:hidden; padding:9px 5px; border-right:1px solid var(--border-soft); border-bottom:1px solid var(--border-soft); display:flex; flex-direction:column; gap:3px; position:relative; transition:background .15s; min-width:0; }
   .cell:hover { background:var(--bg-soft); }
   .cell:nth-child(7) { border-right:none; }
   .week:last-child .cell { border-bottom:none; }
@@ -262,7 +262,8 @@
   .rec .op { flex:1; min-width:0; padding-right:6px; }
   .rec .op .n { display:flex; align-items:center; gap:6px; font-weight:700; font-size:13.5px; letter-spacing:-0.02em; }
   .rec .op .n .nm { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
-  .rec .op .g { font-size:11.5px; color:var(--text-dim); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .rec .op .g { display:block; font-size:11.5px; color:var(--text-dim); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .rec .gline { display:none; }
   .rec .dt { flex:0 0 auto; font-size:11.5px; color:var(--text-dim); text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
 
   /* ---------- 매치위크 스코어보드 ---------- */
@@ -333,6 +334,14 @@
     .arch-head { white-space:normal; flex-basis:100%; }
     .arch-date { min-width:96px; font-size:14px; }
     .sb .when { width:60px; font-size:10px; }
+    .top-inner { gap:8px; }
+    .brand { font-size:16px; min-width:0; }
+    .brand .yr { display:none; }
+    .top .btn { padding:7px 9px; font-size:12px; white-space:nowrap; }
+    /* 최근 경기: 득점자를 둘째 줄 전체 폭으로 (압축 표기) */
+    .rec-a { flex-wrap:wrap; row-gap:2px; }
+    .rec .op .g { display:none; }
+    .rec .gline { display:block; flex-basis:100%; order:9; font-size:11.5px; color:var(--text-dim); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; padding-left:2px; }
   }
 </style>
 </head>
@@ -513,7 +522,8 @@
   }
   function isPL(key) { return !!(key && TEAMS[key]); }
   function clubHref(key) { return 'club.html?club=' + encodeURIComponent(key); }
-  function goals(list) { return (list || []).filter(function (s) { return !s.type || s.type === 'goal'; }); }
+  function goals(list) { return (list || []).filter(function (s) { return s && s.name; }); }
+  function goalMark(t) { return t === 'pen' ? '(PK)' : t === 'og' ? '(OG)' : ''; }
   function scoreTxt(f) { return f.score ? (f.score.home + '-' + f.score.away) : ''; }
   // 맨유 관점 결과
   function muRes(f) {
@@ -876,7 +886,9 @@
     var h = '';
     last5.forEach(function (f) {
       var home = f.home.key === MU, opp = home ? f.away : f.home, r = muRes(f), k = kd(f);
-      var gs = goals(f.scorers && f.scorers[home ? 'home' : 'away']).map(function (s) { return s.name + ' ' + (s.times || []).join(','); }).join(' · ');
+      var gl = goals(f.scorers && f.scorers[home ? 'home' : 'away']);
+      var gs = gl.map(function (s) { return s.name + ' ' + (s.times || []).map(function (t, i) { return t + goalMark(s.types && s.types[i]); }).join(','); }).join(' · ');
+      var gsShort = gl.map(function (s) { var n = (s.times || []).length || 1, og = (s.types || []).every(function (t) { return t === 'og'; }) && n; return s.name + (n > 1 ? ' ×' + n : '') + (og ? ' (OG)' : ''); }).join(' · ');
       h += '<li><div class="rec-a mv-row"' + rowAttrs('mvr-', f, scoreTxt(f)) + '>' +
         '<span class="rp ' + (r || 'D') + '">' + esc(r) + '</span>' +
         '<span class="sc">' + esc(home ? scoreTxt(f) : (f.score ? f.score.away + '-' + f.score.home : '')) + '</span>' +
@@ -885,6 +897,7 @@
         '<span class="g">' + (gs ? esc(gs) : '득점 없음') + '</span></span>' +
         '<span class="dt">' + (k.getMonth() + 1) + '/' + k.getDate() + '<br>(' + DOW[k.getDay()] + ')</span>' +
         '<span class="mv-caret" aria-hidden="true">▾</span>' +
+        '<span class="gline">' + (gsShort ? esc(gsShort) : '득점 없음') + '</span>' +
         '</div>' + panelHtml('mvr-', f) + '</li>';
     });
     document.getElementById('recentList').innerHTML = h || '<li class="empty">아직 치른 경기가 없습니다.</li>';
