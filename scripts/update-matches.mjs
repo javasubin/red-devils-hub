@@ -164,7 +164,8 @@ async function main() {
     const k = new Date(f.kickoff).getTime();
     return now >= k - PRE_MIN * 60000 && now <= k + POST_HOURS * 3600000;
   };
-  const wanted = HUB.fixtures.filter(f => (f.comp === "PL" || f.mu) && f.status !== "postponed").filter(f => {
+  const isFav = (f) => (f.fav && f.fav.length) || f.mu;   // 지원 팀 경기 (구버전 data.js는 mu만 있음)
+  const wanted = HUB.fixtures.filter(f => (f.comp === "PL" || isFav(f)) && f.status !== "postponed").filter(f => {
     if (OPT_IDS.length) return OPT_IDS.includes(f.id);
     if (OPT_ALL) return f.status === "post" || inWindow(f);
     if (inWindow(f)) return true;

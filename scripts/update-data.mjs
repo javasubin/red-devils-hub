@@ -16,8 +16,8 @@ const OUT = path.join(ROOT, "data.js");
 
 const CFG = {
   season: "2026-27",
-  team: "manchester-united",
-  teamUrn: "urn:bbc:sportsdata:football:team:manchester-united",
+  team: "manchester-united",                                   // 기본(초기 선택) 팀
+  teams: ["manchester-united", "tottenham-hotspur"],           // 지원 팀 — 컵·유럽 경기까지 수집하고 화면에서 선택 가능
   plUrn: "urn:bbc:sportsdata:football:tournament:premier-league",
   plRange: ["2026-08-01", "2027-05-31"],   // PL 경기 수집 범위
   teamRange: ["2026-07-01", "2027-06-30"], // 맨유 전 대회 수집 범위 (친선전·컵 결승 포함)
@@ -171,7 +171,8 @@ function normalizeEvent(e) {
     status, statusText: sc || (status === "pre" ? "Scheduled" : ""),
     score, winner,
     scorers: { home: scorersOf(e.home), away: scorersOf(e.away) },
-    mu: home.key === CFG.team || away.key === CFG.team,
+    mu: home.key === CFG.team || away.key === CFG.team,                       // 기본 팀 경기 여부 (하위 호환)
+    fav: CFG.teams.filter(t => t === home.key || t === away.key),              // 이 경기에 뛰는 지원 팀 키 목록
     url: e.onwardJourneyLink ? `https://www.bbc.com${e.onwardJourneyLink}` : null,
   };
 }
@@ -231,7 +232,7 @@ async function fetchScorers() {
 // ---------- 메인 ----------
 async function main() {
   const t0 = Date.now();
-  log(`RED DEVILS HUB 데이터 갱신 시작 — 시즌 ${CFG.season}, 팀 ${CFG.team}`);
+  log(`RED DEVILS HUB 데이터 갱신 시작 — 시즌 ${CFG.season}, 지원 팀 ${CFG.teams.join(", ")} (기본 ${CFG.team})`);
 
   const byId = new Map();
   const add = (list) => { let n = 0; for (const e of list) { if (!byId.has(e.id)) { byId.set(e.id, normalizeEvent(e)); n++; } } return n; };
@@ -240,13 +241,18 @@ async function main() {
     const evs = await fetchEventsRange(CFG.plUrn, m.start, m.end);
     log(`PL ${m.start.slice(0, 7)}: ${evs.length}경기 (신규 ${add(evs)})`);
   }
-  for (const m of monthsBetween(CFG.teamRange[0], CFG.teamRange[1])) {
-    const evs = await fetchEventsRange(CFG.teamUrn, m.start, m.end);
-    log(`MU ${m.start.slice(0, 7)}: ${evs.length}경기 (신규 ${add(evs)})`);
+  for (const team of CFG.teams) {
+    const urn = `urn:bbc:sportsdata:football:team:${team}`;
+    let n = 0, fresh = 0;
+    for (const m of monthsBetween(CFG.teamRange[0], CFG.teamRange[1])) {
+      const evs = await fetchEventsRange(urn, m.start, m.end);
+      n += evs.length; fresh += add(evs);
+    }
+    log(`${team}: 전 대회 ${n}경기 (PL 외 신규 ${fresh})`);
   }
   const fixtures = [...byId.values()].sort((a, b) => (a.kickoff || "").localeCompare(b.kickoff || "") || a.id.localeCompare(b.id));
   const mwInfo = assignMatchweeks(fixtures);
-  log(`경기 합계 ${fixtures.length} (PL ${mwInfo.plCount}, 맨유 ${fixtures.filter(f => f.mu).length}), 매치위크 최대 ${mwInfo.maxMw}, 현재 MW ${mwInfo.currentMw}`);
+  log(`경기 합계 ${fixtures.length} (PL ${mwInfo.plCount}, 지원 팀 경기 ${fixtures.filter(f => f.fav.length).length}), 매치위크 최대 ${mwInfo.maxMw}, 현재 MW ${mwInfo.currentMw}`);
   if (mwInfo.plCount < 300) throw new Error(`PL 경기 수가 비정상적으로 적습니다: ${mwInfo.plCount}`);
 
   const { standings, teams } = await fetchTable();
@@ -259,7 +265,7 @@ async function main() {
     meta: {
       updatedAt: kstNow(), season: CFG.season,
       seasonStart: CFG.plRange[0], seasonEnd: CFG.plRange[1],
-      team: CFG.team, matchweeks: CFG.matchweeks, source: "BBC Sport",
+      team: CFG.team, teams: CFG.teams, matchweeks: CFG.matchweeks, source: "BBC Sport",
       currentMw: mwInfo.currentMw,
     },
     teams, fixtures, standings, scorers,

@@ -1,15 +1,19 @@
 // ============================================================
 //  RED DEVILS HUB 데이터 — scripts/update-data.mjs 가 BBC Sport에서 생성합니다. 손으로 고치지 마세요.
-//  경기 395 · 순위표 20팀 · 득점 49명 (생성 시각은 meta.updatedAt)
+//  경기 404 · 순위표 20팀 · 득점 49명 (생성 시각은 meta.updatedAt)
 //  구조: SCHEMA.md
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-04T09:08:52+09:00",
+  "updatedAt": "2026-09-04T10:41:46+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
   "team": "manchester-united",
+  "teams": [
+   "manchester-united",
+   "tottenham-hotspur"
+  ],
   "matchweeks": 38,
   "source": "BBC Sport",
   "currentMw": 3
@@ -159,7 +163,57 @@ window.HUB = {
     ]
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": "https://www.bbc.com/sport/football/live/c15y5dg0e5et"
+  },
+  {
+   "id": "s-94f57nadhu29qbxde6n5t4ro4",
+   "comp": "FR",
+   "compName": "Club Friendlies",
+   "round": "Club Friendlies 1",
+   "mw": null,
+   "kickoff": "2026-07-22T16:00:00Z",
+   "dateUK": "2026-07-22",
+   "timeUK": "17:00",
+   "home": {
+    "key": "tottenham-hotspur",
+    "name": "Tottenham Hotspur",
+    "short": "Spurs"
+   },
+   "away": {
+    "key": "milton-keynes-dons",
+    "name": "MK Dons",
+    "short": "MK Dons"
+   },
+   "status": "post",
+   "statusText": "FT",
+   "score": {
+    "home": 1,
+    "away": 0
+   },
+   "winner": "home",
+   "scorers": {
+    "home": [
+     {
+      "name": "Mateus Fernandes",
+      "times": [
+       "3'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ],
+    "away": []
+   },
+   "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
+   "url": "https://www.bbc.com/sport/football/live/c1l14em6j3dt"
   },
   {
    "id": "s-2y6sd3jngksd7baglnsmdxpuc",
@@ -243,7 +297,203 @@ window.HUB = {
     ]
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": "https://www.bbc.com/sport/football/live/cvgjlr6ngzqt"
+  },
+  {
+   "id": "s-2x5uxi9yjd3krwm3xqs4efo5w",
+   "comp": "FR",
+   "compName": "Club Friendlies",
+   "round": "Club Friendlies 1",
+   "mw": null,
+   "kickoff": "2026-07-26T03:00:00Z",
+   "dateUK": "2026-07-26",
+   "timeUK": "04:00",
+   "home": {
+    "key": null,
+    "name": "Auckland",
+    "short": "Auckland"
+   },
+   "away": {
+    "key": "tottenham-hotspur",
+    "name": "Tottenham Hotspur",
+    "short": "Spurs"
+   },
+   "status": "post",
+   "statusText": "FT",
+   "score": {
+    "home": 0,
+    "away": 2
+   },
+   "winner": "away",
+   "scorers": {
+    "home": [],
+    "away": [
+     {
+      "name": "D. Scarlett",
+      "times": [
+       "12'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "Richarlison",
+      "times": [
+       "70'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ]
+   },
+   "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
+   "url": "https://www.bbc.com/sport/football/live/ckg4xpg8rkgt"
+  },
+  {
+   "id": "s-ao31tw40hjt0vqxnkya886b6c",
+   "comp": "USC",
+   "compName": "Sydney Super Cup",
+   "round": "Finals",
+   "mw": null,
+   "kickoff": "2026-07-29T09:45:00Z",
+   "dateUK": "2026-07-29",
+   "timeUK": "10:45",
+   "home": {
+    "key": "tottenham-hotspur",
+    "name": "Tottenham Hotspur",
+    "short": "Spurs"
+   },
+   "away": {
+    "key": null,
+    "name": "Sydney",
+    "short": "Sydney"
+   },
+   "status": "post",
+   "statusText": "PENS",
+   "score": {
+    "home": 1,
+    "away": 1
+   },
+   "winner": "home",
+   "scorers": {
+    "home": [
+     {
+      "name": "M. Tel",
+      "times": [
+       "29'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ],
+    "away": [
+     {
+      "name": "T. Sekine",
+      "times": [
+       "54'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ]
+   },
+   "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
+   "url": "https://www.bbc.com/sport/football/live/c86np7j9x5jt"
+  },
+  {
+   "id": "s-anf1g924yr39rk12ut4lgyrys",
+   "comp": "USC",
+   "compName": "Sydney Super Cup",
+   "round": "Finals",
+   "mw": null,
+   "kickoff": "2026-08-01T09:45:00Z",
+   "dateUK": "2026-08-01",
+   "timeUK": "10:45",
+   "home": {
+    "key": "chelsea",
+    "name": "Chelsea",
+    "short": "Chelsea"
+   },
+   "away": {
+    "key": "tottenham-hotspur",
+    "name": "Tottenham Hotspur",
+    "short": "Spurs"
+   },
+   "status": "post",
+   "statusText": "FT",
+   "score": {
+    "home": 1,
+    "away": 2
+   },
+   "winner": "away",
+   "scorers": {
+    "home": [
+     {
+      "name": "Estêvão",
+      "times": [
+       "21'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ],
+    "away": [
+     {
+      "name": "S. Tonali",
+      "times": [
+       "17'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "K. Danso",
+      "times": [
+       "49'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "Richarlison",
+      "times": [
+       "90'+2"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ]
+   },
+   "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
+   "url": "https://www.bbc.com/sport/football/live/cvg09wr9yd7t"
   },
   {
    "id": "s-atv0a0e6fy0e7scgtlrnsn5zo",
@@ -300,7 +550,68 @@ window.HUB = {
     ]
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": "https://www.bbc.com/sport/football/live/c62xn53ndy1t"
+  },
+  {
+   "id": "s-am0d5e0r3rgwhbqmwl92rj8r8",
+   "comp": "FR",
+   "compName": "Club Friendlies",
+   "round": "Club Friendlies 1",
+   "mw": null,
+   "kickoff": "2026-08-08T14:00:00Z",
+   "dateUK": "2026-08-08",
+   "timeUK": "15:00",
+   "home": {
+    "key": "tottenham-hotspur",
+    "name": "Tottenham Hotspur",
+    "short": "Spurs"
+   },
+   "away": {
+    "key": "getafe",
+    "name": "Getafe",
+    "short": "Getafe"
+   },
+   "status": "post",
+   "statusText": "FT",
+   "score": {
+    "home": 1,
+    "away": 1
+   },
+   "winner": "draw",
+   "scorers": {
+    "home": [
+     {
+      "name": "C. Gallagher",
+      "times": [
+       "70'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ],
+    "away": [
+     {
+      "name": "Alberto Risco",
+      "times": [
+       "66'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ]
+   },
+   "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
+   "url": "https://www.bbc.com/sport/football/live/c87n4j4l9l7t"
   },
   {
    "id": "s-7xbmps3o6zxuzhpz19vpymql0",
@@ -355,6 +666,9 @@ window.HUB = {
     ]
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": "https://www.bbc.com/sport/football/live/cdx7rvr4z3yt"
   },
   {
@@ -410,7 +724,69 @@ window.HUB = {
     ]
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": "https://www.bbc.com/sport/football/live/cme8lej566lgt"
+  },
+  {
+   "id": "s-2dll7oi8ou55pav09fzg9ql1w",
+   "comp": "FR",
+   "compName": "Club Friendlies",
+   "round": "Club Friendlies 1",
+   "mw": null,
+   "kickoff": "2026-08-15T14:00:00Z",
+   "dateUK": "2026-08-15",
+   "timeUK": "15:00",
+   "home": {
+    "key": "tottenham-hotspur",
+    "name": "Tottenham Hotspur",
+    "short": "Spurs"
+   },
+   "away": {
+    "key": "hoffenheim",
+    "name": "Hoffenheim",
+    "short": "Hoffenheim"
+   },
+   "status": "post",
+   "statusText": "FT",
+   "score": {
+    "home": 3,
+    "away": 0
+   },
+   "winner": "home",
+   "scorers": {
+    "home": [
+     {
+      "name": "Richarlison",
+      "times": [
+       "35'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "M. Moore",
+      "times": [
+       "59'",
+       "79'"
+      ],
+      "types": [
+       "goal",
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ],
+    "away": []
+   },
+   "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
+   "url": "https://www.bbc.com/sport/football/live/cmvgwk4j7w21t"
   },
   {
    "id": "s-1db3eest4jp8jb7p9up2q1ij8",
@@ -505,7 +881,88 @@ window.HUB = {
     ]
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": "https://www.bbc.com/sport/football/live/cmy0j1846rnwt"
+  },
+  {
+   "id": "s-8j7ynaeka181distnllrv7lzo",
+   "comp": "FR",
+   "compName": "Club Friendlies",
+   "round": "Club Friendlies 1",
+   "mw": null,
+   "kickoff": "2026-08-16T11:00:00Z",
+   "dateUK": "2026-08-16",
+   "timeUK": "12:00",
+   "home": {
+    "key": "tottenham-hotspur",
+    "name": "Tottenham Hotspur",
+    "short": "Spurs"
+   },
+   "away": {
+    "key": "hoffenheim",
+    "name": "Hoffenheim",
+    "short": "Hoffenheim"
+   },
+   "status": "post",
+   "statusText": "FT",
+   "score": {
+    "home": 2,
+    "away": 2
+   },
+   "winner": "draw",
+   "scorers": {
+    "home": [
+     {
+      "name": "B. Davies",
+      "times": [
+       "20'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "L. Williams-Barnett",
+      "times": [
+       "45'+2"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ],
+    "away": [
+     {
+      "name": "A. Hložek",
+      "times": [
+       "16'"
+      ],
+      "types": [
+       "pen"
+      ],
+      "type": "pen"
+     },
+     {
+      "name": "V. Gendrey",
+      "times": [
+       "55'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ]
+   },
+   "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
+   "url": "https://www.bbc.com/sport/football/live/cke85l8rqey5t"
   },
   {
    "id": "s-3vbv2xjkan2xyjoah3kjz7uok",
@@ -569,6 +1026,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": "https://www.bbc.com/sport/football/live/cmy0jjenxx24t"
   },
   {
@@ -623,6 +1081,9 @@ window.HUB = {
     "away": []
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": "https://www.bbc.com/sport/football/live/cv629k5zr2jxt"
   },
   {
@@ -677,6 +1138,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": "https://www.bbc.com/sport/football/live/cjn5nd1qr5qpt"
   },
   {
@@ -742,6 +1204,7 @@ window.HUB = {
     ]
    },
    "mu": false,
+   "fav": [],
    "url": "https://www.bbc.com/sport/football/live/ckeqe8025qygt"
   },
   {
@@ -786,6 +1249,7 @@ window.HUB = {
     ]
    },
    "mu": false,
+   "fav": [],
    "url": "https://www.bbc.com/sport/football/live/cm4gkdpw5qq7t"
   },
   {
@@ -850,6 +1314,9 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
    "url": "https://www.bbc.com/sport/football/live/cj75g01qn51dt"
   },
   {
@@ -927,6 +1394,7 @@ window.HUB = {
     ]
    },
    "mu": false,
+   "fav": [],
    "url": "https://www.bbc.com/sport/football/live/c6wyqd9zkd9wt"
   },
   {
@@ -992,6 +1460,7 @@ window.HUB = {
     ]
    },
    "mu": false,
+   "fav": [],
    "url": "https://www.bbc.com/sport/football/live/c6n4ney5dex4t"
   },
   {
@@ -1067,6 +1536,7 @@ window.HUB = {
     ]
    },
    "mu": false,
+   "fav": [],
    "url": "https://www.bbc.com/sport/football/live/ck78gpd0yp38t"
   },
   {
@@ -1152,7 +1622,106 @@ window.HUB = {
     ]
    },
    "mu": false,
+   "fav": [],
    "url": "https://www.bbc.com/sport/football/live/cqp8xg4jy4r3t"
+  },
+  {
+   "id": "s-1ezeagdpksz0khz2rqv2u4h78",
+   "comp": "EFL",
+   "compName": "League Cup",
+   "round": "2nd Round",
+   "mw": null,
+   "kickoff": "2026-08-26T18:45:00Z",
+   "dateUK": "2026-08-26",
+   "timeUK": "19:45",
+   "home": {
+    "key": "tottenham-hotspur",
+    "name": "Tottenham Hotspur",
+    "short": "Spurs"
+   },
+   "away": {
+    "key": "charlton-athletic",
+    "name": "Charlton Athletic",
+    "short": "Charlton"
+   },
+   "status": "post",
+   "statusText": "FT",
+   "score": {
+    "home": 5,
+    "away": 1
+   },
+   "winner": "home",
+   "scorers": {
+    "home": [
+     {
+      "name": "M. Moore",
+      "times": [
+       "41'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "D. Solanke",
+      "times": [
+       "45'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "K. Danso",
+      "times": [
+       "67'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "Sávio",
+      "times": [
+       "82'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "B. Davies",
+      "times": [
+       "85'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ],
+    "away": [
+     {
+      "name": "L. Jones",
+      "times": [
+       "87'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ]
+   },
+   "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
+   "url": "https://www.bbc.com/sport/football/live/cm4gkndvg477t"
   },
   {
    "id": "s-410ybn3q7p02h3ow44jopvl78",
@@ -1221,6 +1790,7 @@ window.HUB = {
     ]
    },
    "mu": false,
+   "fav": [],
    "url": "https://www.bbc.com/sport/football/live/c84gwgggzpv4t"
   },
   {
@@ -1296,6 +1866,7 @@ window.HUB = {
     ]
    },
    "mu": false,
+   "fav": [],
    "url": "https://www.bbc.com/sport/football/live/c6zjzygmnddnt"
   },
   {
@@ -1351,6 +1922,7 @@ window.HUB = {
     ]
    },
    "mu": false,
+   "fav": [],
    "url": "https://www.bbc.com/sport/football/live/ckm2qnyv5l51t"
   },
   {
@@ -1395,6 +1967,7 @@ window.HUB = {
     ]
    },
    "mu": false,
+   "fav": [],
    "url": "https://www.bbc.com/sport/football/live/ck87vgrep8det"
   },
   {
@@ -1449,6 +2022,9 @@ window.HUB = {
     ]
    },
    "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
    "url": "https://www.bbc.com/sport/football/live/crjw5316vlzgt"
   },
   {
@@ -1554,6 +2130,7 @@ window.HUB = {
     ]
    },
    "mu": false,
+   "fav": [],
    "url": "https://www.bbc.com/sport/football/live/ck86x9wxl3x8t"
   },
   {
@@ -1609,6 +2186,7 @@ window.HUB = {
     ]
    },
    "mu": false,
+   "fav": [],
    "url": "https://www.bbc.com/sport/football/live/cmq8jxqj2vpet"
   },
   {
@@ -1653,6 +2231,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": "https://www.bbc.com/sport/football/live/cq8e3lw3rk3pt"
   },
   {
@@ -1742,6 +2321,9 @@ window.HUB = {
     ]
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": "https://www.bbc.com/sport/football/live/cmkg8vx8wxept"
   },
   {
@@ -1786,6 +2368,7 @@ window.HUB = {
     ]
    },
    "mu": false,
+   "fav": [],
    "url": "https://www.bbc.com/sport/football/live/cr93ep2n2ppdt"
   },
   {
@@ -1816,6 +2399,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": "https://www.bbc.com/sport/football/live/c6vgy8x2z08et"
   },
   {
@@ -1846,6 +2430,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": "https://www.bbc.com/sport/football/live/c6jrx89l5eejt"
   },
   {
@@ -1876,6 +2461,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": "https://www.bbc.com/sport/football/live/c6wyzwjel44lt"
   },
   {
@@ -1906,6 +2492,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": "https://www.bbc.com/sport/football/live/cxr5031vq5npt"
   },
   {
@@ -1936,6 +2523,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": "https://www.bbc.com/sport/football/live/c6zxz89ewxlyt"
   },
   {
@@ -1966,6 +2554,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": "https://www.bbc.com/sport/football/live/c6dj4d7xzjzkt"
   },
   {
@@ -1996,6 +2585,9 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
    "url": "https://www.bbc.com/sport/football/live/c50m31j84m8xt"
   },
   {
@@ -2026,6 +2618,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": "https://www.bbc.com/sport/football/live/c5n4kmv1j7z4t"
   },
   {
@@ -2056,6 +2649,9 @@ window.HUB = {
     "away": []
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": "https://www.bbc.com/sport/football/live/crwyzggqgw5yt"
   },
   {
@@ -2086,6 +2682,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": "https://www.bbc.com/sport/football/live/ck1wx0010el5t"
   },
   {
@@ -2116,6 +2713,9 @@ window.HUB = {
     "away": []
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": null
   },
   {
@@ -2146,6 +2746,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -2176,6 +2777,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -2206,6 +2808,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -2236,6 +2839,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -2266,6 +2870,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -2296,6 +2901,9 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
    "url": null
   },
   {
@@ -2326,6 +2934,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -2356,6 +2965,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -2386,6 +2996,9 @@ window.HUB = {
     "away": []
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": null
   },
   {
@@ -2416,6 +3029,40 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
+   "url": null
+  },
+  {
+   "id": "s-aww81ttqs5kz81yzm5tuf5p90",
+   "comp": "EFL",
+   "compName": "League Cup",
+   "round": "3rd Round",
+   "mw": null,
+   "kickoff": "2026-09-15T19:00:00Z",
+   "dateUK": "2026-09-15",
+   "timeUK": "20:00",
+   "home": {
+    "key": "liverpool",
+    "name": "Liverpool",
+    "short": "Liverpool"
+   },
+   "away": {
+    "key": "tottenham-hotspur",
+    "name": "Tottenham Hotspur",
+    "short": "Spurs"
+   },
+   "status": "pre",
+   "statusText": "Scheduled",
+   "score": null,
+   "winner": null,
+   "scorers": {
+    "home": [],
+    "away": []
+   },
+   "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
    "url": null
   },
   {
@@ -2446,6 +3093,9 @@ window.HUB = {
     "away": []
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": null
   },
   {
@@ -2476,6 +3126,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -2506,6 +3157,9 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
    "url": null
   },
   {
@@ -2536,6 +3190,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -2566,6 +3221,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -2596,6 +3252,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -2626,6 +3283,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -2656,6 +3314,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -2686,6 +3345,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -2716,6 +3376,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -2746,6 +3407,9 @@ window.HUB = {
     "away": []
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": null
   },
   {
@@ -2776,6 +3440,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -2806,6 +3471,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -2836,6 +3502,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -2866,6 +3533,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -2896,6 +3564,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -2926,6 +3595,10 @@ window.HUB = {
     "away": []
    },
    "mu": true,
+   "fav": [
+    "manchester-united",
+    "tottenham-hotspur"
+   ],
    "url": null
   },
   {
@@ -2956,6 +3629,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -2986,6 +3660,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -3016,6 +3691,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -3046,6 +3722,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -3076,6 +3753,9 @@ window.HUB = {
     "away": []
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": null
   },
   {
@@ -3106,6 +3786,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -3136,6 +3817,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -3166,6 +3848,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -3196,6 +3879,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -3226,6 +3910,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -3256,6 +3941,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -3286,6 +3972,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -3316,6 +4003,9 @@ window.HUB = {
     "away": []
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": null
   },
   {
@@ -3346,6 +4036,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -3376,6 +4067,9 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
    "url": null
   },
   {
@@ -3406,6 +4100,9 @@ window.HUB = {
     "away": []
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": null
   },
   {
@@ -3436,6 +4133,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -3466,6 +4164,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -3496,6 +4195,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -3526,6 +4226,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -3556,6 +4257,9 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
    "url": null
   },
   {
@@ -3586,6 +4290,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -3616,6 +4321,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -3646,6 +4352,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -3676,6 +4383,9 @@ window.HUB = {
     "away": []
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": null
   },
   {
@@ -3706,6 +4416,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -3736,6 +4447,9 @@ window.HUB = {
     "away": []
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": null
   },
   {
@@ -3766,6 +4480,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -3796,6 +4511,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -3826,6 +4542,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -3856,6 +4573,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -3886,6 +4604,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -3916,6 +4635,9 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
    "url": null
   },
   {
@@ -3946,6 +4668,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -3976,6 +4699,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -4006,6 +4730,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -4036,6 +4761,9 @@ window.HUB = {
     "away": []
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": null
   },
   {
@@ -4066,6 +4794,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -4096,6 +4825,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -4126,6 +4856,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -4156,6 +4887,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -4186,6 +4918,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -4216,6 +4949,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -4246,6 +4980,9 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
    "url": null
   },
   {
@@ -4276,6 +5013,9 @@ window.HUB = {
     "away": []
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": null
   },
   {
@@ -4306,6 +5046,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -4336,6 +5077,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -4366,6 +5108,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -4396,6 +5139,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -4426,6 +5170,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -4456,6 +5201,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -4486,6 +5232,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -4516,6 +5263,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -4546,6 +5294,9 @@ window.HUB = {
     "away": []
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": null
   },
   {
@@ -4576,6 +5327,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -4606,6 +5358,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -4636,6 +5389,9 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
    "url": null
   },
   {
@@ -4666,6 +5422,9 @@ window.HUB = {
     "away": []
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": null
   },
   {
@@ -4696,6 +5455,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -4726,6 +5486,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -4756,6 +5517,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -4786,6 +5548,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -4816,6 +5579,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -4846,6 +5610,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -4876,6 +5641,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -4906,6 +5672,9 @@ window.HUB = {
     "away": []
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": null
   },
   {
@@ -4936,6 +5705,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -4966,6 +5736,9 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
    "url": null
   },
   {
@@ -4996,6 +5769,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -5026,6 +5800,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -5056,6 +5831,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -5086,6 +5862,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -5116,6 +5893,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -5146,6 +5924,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -5176,6 +5955,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -5206,6 +5986,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -5236,6 +6017,9 @@ window.HUB = {
     "away": []
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": null
   },
   {
@@ -5266,6 +6050,9 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
    "url": null
   },
   {
@@ -5296,6 +6083,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -5326,6 +6114,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -5356,6 +6145,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -5386,6 +6176,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -5416,6 +6207,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -5446,6 +6238,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -5476,6 +6269,9 @@ window.HUB = {
     "away": []
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": null
   },
   {
@@ -5506,6 +6302,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -5536,6 +6333,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -5566,6 +6364,9 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
    "url": null
   },
   {
@@ -5596,6 +6397,9 @@ window.HUB = {
     "away": []
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": null
   },
   {
@@ -5626,6 +6430,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -5656,6 +6461,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -5686,6 +6492,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -5716,6 +6523,9 @@ window.HUB = {
     "away": []
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": null
   },
   {
@@ -5746,6 +6556,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -5776,6 +6587,9 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
    "url": null
   },
   {
@@ -5806,6 +6620,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -5836,6 +6651,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -5866,6 +6682,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -5896,6 +6713,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -5926,6 +6744,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -5956,6 +6775,9 @@ window.HUB = {
     "away": []
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": null
   },
   {
@@ -5986,6 +6808,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -6016,6 +6839,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -6046,6 +6870,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -6076,6 +6901,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -6106,6 +6932,9 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
    "url": null
   },
   {
@@ -6136,6 +6965,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -6166,6 +6996,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -6196,6 +7027,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -6226,6 +7058,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -6256,6 +7089,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -6286,6 +7120,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -6316,6 +7151,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -6346,6 +7182,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -6376,6 +7213,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -6406,6 +7244,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -6436,6 +7275,9 @@ window.HUB = {
     "away": []
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": null
   },
   {
@@ -6466,6 +7308,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -6496,6 +7339,9 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
    "url": null
   },
   {
@@ -6526,6 +7372,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -6556,6 +7403,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -6586,6 +7434,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -6616,6 +7465,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -6646,6 +7496,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -6676,6 +7527,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -6706,6 +7558,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -6736,6 +7589,9 @@ window.HUB = {
     "away": []
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": null
   },
   {
@@ -6766,6 +7622,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -6796,6 +7653,9 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
    "url": null
   },
   {
@@ -6826,6 +7686,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -6856,6 +7717,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -6886,6 +7748,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -6916,6 +7779,9 @@ window.HUB = {
     "away": []
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": null
   },
   {
@@ -6946,6 +7812,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -6976,6 +7843,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -7006,6 +7874,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -7036,6 +7905,9 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
    "url": null
   },
   {
@@ -7066,6 +7938,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -7096,6 +7969,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -7126,6 +8000,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -7156,6 +8031,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -7186,6 +8062,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -7216,6 +8093,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -7246,6 +8124,9 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
    "url": null
   },
   {
@@ -7276,6 +8157,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -7306,6 +8188,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -7336,6 +8219,9 @@ window.HUB = {
     "away": []
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": null
   },
   {
@@ -7366,6 +8252,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -7396,6 +8283,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -7426,6 +8314,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -7456,6 +8345,9 @@ window.HUB = {
     "away": []
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": null
   },
   {
@@ -7486,6 +8378,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -7516,6 +8409,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -7546,6 +8440,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -7576,6 +8471,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -7606,6 +8502,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -7636,6 +8533,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -7666,6 +8564,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -7696,6 +8595,9 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
    "url": null
   },
   {
@@ -7726,6 +8628,9 @@ window.HUB = {
     "away": []
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": null
   },
   {
@@ -7756,6 +8661,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -7786,6 +8692,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -7816,6 +8723,9 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
    "url": null
   },
   {
@@ -7846,6 +8756,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -7876,6 +8787,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -7906,6 +8818,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -7936,6 +8849,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -7966,6 +8880,9 @@ window.HUB = {
     "away": []
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": null
   },
   {
@@ -7996,6 +8913,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -8026,6 +8944,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -8056,6 +8975,9 @@ window.HUB = {
     "away": []
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": null
   },
   {
@@ -8086,6 +9008,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -8116,6 +9039,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -8146,6 +9070,9 @@ window.HUB = {
     "away": []
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": null
   },
   {
@@ -8176,6 +9103,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -8206,6 +9134,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -8236,6 +9165,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -8266,6 +9196,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -8296,6 +9227,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -8326,6 +9258,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -8356,6 +9289,9 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
    "url": null
   },
   {
@@ -8386,6 +9322,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -8416,6 +9353,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -8446,6 +9384,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -8476,6 +9415,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -8506,6 +9446,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -8536,6 +9477,9 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
    "url": null
   },
   {
@@ -8566,6 +9510,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -8596,6 +9541,9 @@ window.HUB = {
     "away": []
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": null
   },
   {
@@ -8626,6 +9574,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -8656,6 +9605,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -8686,6 +9636,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -8716,6 +9667,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -8746,6 +9698,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -8776,6 +9729,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -8806,6 +9760,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -8836,6 +9791,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -8866,6 +9822,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -8896,6 +9853,9 @@ window.HUB = {
     "away": []
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": null
   },
   {
@@ -8926,6 +9886,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -8956,6 +9917,9 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
    "url": null
   },
   {
@@ -8986,6 +9950,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -9016,6 +9981,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -9046,6 +10012,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -9076,6 +10043,9 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
    "url": null
   },
   {
@@ -9106,6 +10076,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -9136,6 +10107,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -9166,6 +10138,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -9196,6 +10169,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -9226,6 +10200,9 @@ window.HUB = {
     "away": []
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": null
   },
   {
@@ -9256,6 +10233,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -9286,6 +10264,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -9316,6 +10295,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -9346,6 +10326,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -9376,6 +10357,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -9406,6 +10388,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -9436,6 +10419,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -9466,6 +10450,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -9496,6 +10481,9 @@ window.HUB = {
     "away": []
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": null
   },
   {
@@ -9526,6 +10514,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -9556,6 +10545,9 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
    "url": null
   },
   {
@@ -9586,6 +10578,9 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
    "url": null
   },
   {
@@ -9616,6 +10611,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -9646,6 +10642,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -9676,6 +10673,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -9706,6 +10704,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -9736,6 +10735,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -9766,6 +10766,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -9796,6 +10797,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -9826,6 +10828,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -9856,6 +10859,9 @@ window.HUB = {
     "away": []
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": null
   },
   {
@@ -9886,6 +10892,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -9916,6 +10923,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -9946,6 +10954,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -9976,6 +10985,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -10006,6 +11016,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -10036,6 +11047,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -10066,6 +11078,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -10096,6 +11109,9 @@ window.HUB = {
     "away": []
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": null
   },
   {
@@ -10126,6 +11142,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -10156,6 +11173,9 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
    "url": null
   },
   {
@@ -10186,6 +11206,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -10216,6 +11237,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -10246,6 +11268,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -10276,6 +11299,9 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
    "url": null
   },
   {
@@ -10306,6 +11332,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -10336,6 +11363,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -10366,6 +11394,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -10396,6 +11425,9 @@ window.HUB = {
     "away": []
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": null
   },
   {
@@ -10426,6 +11458,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -10456,6 +11489,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -10486,6 +11520,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -10516,6 +11551,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -10546,6 +11582,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -10576,6 +11613,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -10606,6 +11644,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -10636,6 +11675,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -10666,6 +11706,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -10696,6 +11737,9 @@ window.HUB = {
     "away": []
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": null
   },
   {
@@ -10726,6 +11770,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -10756,6 +11801,9 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
    "url": null
   },
   {
@@ -10786,6 +11834,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -10816,6 +11865,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -10846,6 +11896,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -10876,6 +11927,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -10906,6 +11958,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -10936,6 +11989,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -10966,6 +12020,9 @@ window.HUB = {
     "away": []
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": null
   },
   {
@@ -10996,6 +12053,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -11026,6 +12084,9 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
    "url": null
   },
   {
@@ -11056,6 +12117,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -11086,6 +12148,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -11116,6 +12179,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -11146,6 +12210,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -11176,6 +12241,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -11206,6 +12272,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -11236,6 +12303,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -11266,6 +12334,9 @@ window.HUB = {
     "away": []
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": null
   },
   {
@@ -11296,6 +12367,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -11326,6 +12398,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -11356,6 +12429,9 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
    "url": null
   },
   {
@@ -11386,6 +12462,9 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
    "url": null
   },
   {
@@ -11416,6 +12495,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -11446,6 +12526,9 @@ window.HUB = {
     "away": []
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": null
   },
   {
@@ -11476,6 +12559,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -11506,6 +12590,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -11536,6 +12621,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -11566,6 +12652,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -11596,6 +12683,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -11626,6 +12714,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -11656,6 +12745,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -11686,6 +12776,9 @@ window.HUB = {
     "away": []
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": null
   },
   {
@@ -11716,6 +12809,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -11746,6 +12840,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -11776,6 +12871,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -11806,6 +12902,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -11836,6 +12933,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -11866,6 +12964,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -11896,6 +12995,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -11926,6 +13026,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -11956,6 +13057,9 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
    "url": null
   },
   {
@@ -11986,6 +13090,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -12016,6 +13121,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -12046,6 +13152,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -12076,6 +13183,9 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
    "url": null
   },
   {
@@ -12106,6 +13216,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -12136,6 +13247,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -12166,6 +13278,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -12196,6 +13309,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -12226,6 +13340,9 @@ window.HUB = {
     "away": []
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": null
   },
   {
@@ -12256,6 +13373,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -12286,6 +13404,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -12316,6 +13435,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -12346,6 +13466,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -12376,6 +13497,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -12406,6 +13528,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -12436,6 +13559,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -12466,6 +13590,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -12496,6 +13621,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -12526,6 +13652,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -12556,6 +13683,10 @@ window.HUB = {
     "away": []
    },
    "mu": true,
+   "fav": [
+    "manchester-united",
+    "tottenham-hotspur"
+   ],
    "url": null
   },
   {
@@ -12586,6 +13717,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -12616,6 +13748,9 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
    "url": null
   },
   {
@@ -12646,6 +13781,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -12676,6 +13812,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -12706,6 +13843,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -12736,6 +13874,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -12766,6 +13905,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -12796,6 +13936,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   },
   {
@@ -12826,6 +13967,9 @@ window.HUB = {
     "away": []
    },
    "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": null
   },
   {
@@ -12856,6 +14000,7 @@ window.HUB = {
     "away": []
    },
    "mu": false,
+   "fav": [],
    "url": null
   }
  ],

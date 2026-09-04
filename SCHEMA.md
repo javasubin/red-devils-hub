@@ -11,7 +11,8 @@
 팀 키(`key`)는 BBC의 팀 슬러그를 그대로 쓴다. 2026-27 시즌 20팀:
 `arsenal` `aston-villa` `afc-bournemouth` `brentford` `brighton-and-hove-albion` `chelsea` `coventry-city` `crystal-palace` `everton` `fulham` `hull-city` `ipswich-town` `leeds-united` `liverpool` `manchester-city` `manchester-united` `newcastle-united` `nottingham-forest` `sunderland` `tottenham-hotspur`
 
-응원팀 키: `manchester-united` (`HUB.meta.team`).
+지원 팀(화면에서 선택 가능): `HUB.meta.teams` = `["manchester-united", "tottenham-hotspur"]`. 기본 팀: `HUB.meta.team` = `manchester-united`.
+화면은 선택된 팀 키를 `TEAM`으로 들고(주소 `?team=<key>` → 없으면 localStorage → 없으면 기본 팀), 팀에 따라 달라지는 모든 것을 `TEAM`으로 계산한다. 지원 팀이 아닌 키가 오면 기본 팀으로 되돌린다.
 
 ---
 
@@ -23,7 +24,8 @@ window.HUB = {
     updatedAt: "2026-09-03T09:00:00+09:00",   // 스크립트 실행 시각 (KST ISO)
     season: "2026-27",
     seasonStart: "2026-08-01", seasonEnd: "2027-05-31", // 스크립트가 훑는 범위
-    team: "manchester-united",
+    team: "manchester-united",             // 기본(초기 선택) 팀
+    teams: ["manchester-united", "tottenham-hotspur"],   // 지원 팀 — 이 팀들의 컵·유럽 경기까지 fixtures에 포함
     matchweeks: 38,
     source: "BBC Sport",
     currentMw: 3          // 아직 결과가 안 난 PL 경기 중 가장 이른 매치위크 (시즌 종료 후엔 38)
@@ -36,7 +38,7 @@ window.HUB = {
     // ... 20팀
   },
 
-  // 경기 — PL 380경기 전체 + 맨유가 뛰는 다른 대회 경기. 날짜순 오름차순.
+  // 경기 — PL 380경기 전체 + 지원 팀들이 뛰는 다른 대회 경기. 날짜순 오름차순.
   fixtures: [
     {
       id: "s-456r7l56tjgjsbqaqmgdm9zis",   // BBC 이벤트 id
@@ -53,7 +55,8 @@ window.HUB = {
       score: null,                         // 경기 후·진행 중: { home: 2, away: 1 }
       winner: null,                        // "home" | "away" | "draw" | null
       scorers: { home: [], away: [] },     // [{ name: "B. Saka", times: ["59'"] }] — BBC가 준 경우만
-      mu: true,                            // 맨유 경기 여부
+      mu: true,                            // 기본 팀(맨유) 경기 여부 — 하위 호환용. 새 코드는 fav 를 쓴다
+      fav: ["manchester-united"],          // 이 경기에 뛰는 지원 팀 키 목록 (둘 다 뛰면 2개, 없으면 [])
       url: "https://www.bbc.com/sport/football/live/c6vgy8x2z08et"   // BBC 경기 페이지 (없으면 null)
     }
   ],
@@ -76,8 +79,8 @@ window.HUB = {
 ```
 
 파생 규칙 (화면 쪽에서 계산):
-- 맨유 다음 경기 = `fixtures.filter(f => f.mu && f.status !== "post")` 중 kickoff가 가장 이른 것 (연기 경기는 kickoff 미정이면 제외).
-- 맨유 최근 경기 = `f.mu && f.status === "post"` 를 kickoff 내림차순 5개.
+- 선택 팀 다음 경기 = `fixtures.filter(f => f.fav.includes(TEAM) && f.status !== "post")` 중 kickoff가 가장 이른 것 (연기 경기는 kickoff 미정이면 제외).
+- 선택 팀 최근 경기 = `f.fav.includes(TEAM) && f.status === "post"` 를 kickoff 내림차순 5개.
 - 매치위크 스코어보드 = `comp === "PL" && mw === meta.currentMw` 10경기.
 - 시즌 진행 = PL 380경기 중 `status === "post"` 비율, 매치위크 단위 표시.
 
@@ -85,13 +88,21 @@ window.HUB = {
 
 ```js
 window.HUB_BRIEFINGS = [
-  // 최신이 맨 앞. 루틴이 unshift 한다.
-  { date: "2026-09-04", file: "briefings/epl-news-2026-09-04.html",
-    count: 18,        // 기사 수
-    mu: 6,            // 그중 맨유 카테고리 기사 수
-    headline: "아모림, 에버턴전 앞두고 로테이션 시사 · 이적시장 마감 정리 · PSR 개정안 통과" }
+  // 최신이 맨 앞. 루틴이 unshift 한다. 날짜당 항목 하나, 그 안에 팀별 파일.
+  { date: "2026-09-05",
+    files: {
+      "manchester-united": { file: "briefings/epl-news-2026-09-05-manchester-united.html", count: 19, team: 6,
+                             headline: "카릭, 에버턴전 앞두고 로테이션 시사 · 이적시장 마감 정리 · PSR 개정안 통과" },
+      "tottenham-hotspur": { file: "briefings/epl-news-2026-09-05-tottenham-hotspur.html", count: 18, team: 5,
+                             headline: "데 제르비, 첫 북런던 더비 준비 · 이적시장 마감 정리 · PSR 개정안 통과" }
+    } },
+  // 구버전(2026-09-03까지): { date, file, count, mu, headline } — 화면은 이 형태도 manchester-united 항목으로 읽는다.
+  { date: "2026-09-03", file: "briefings/epl-news-2026-09-03.html", count: 19, mu: 6, headline: "…" }
 ];
 ```
+
+- `count` 전체 기사 수, `team` 그 팀 섹션 기사 수(5 이상), `headline` 헤드라인 2~3개(` · ` 연결, 첫 번째는 그 팀 소식).
+- 화면은 선택 팀(`TEAM`)의 파일만 보여준다. 그날 그 팀 파일이 없으면 그 날짜는 목록에서 뺀다.
 
 ## 3. `clubs.js` → `window.HUB_CLUBS`
 
@@ -108,7 +119,11 @@ window.HUB_CLUBS = {
     keyPlayers: [ { name: "Bruno Fernandes", ko: "브루누 페르난데스", pos: "MF" } ],   // 3~5명
     intro: "구단 소개 2~3문장(한국어).",
     history: [ { y: 1999, t: "트레블", d: "한 문단 설명" } ],        // 3~5개, 연도순
-    rivalry: "맨유와의 관계·라이벌리·기억할 만한 맞대결 한 문단(한국어). 맨유 자신은 정체성 설명.",
+    relations: {                                   // 지원 팀별 "그 팀과의 관계" 문단 — 화면은 relations[TEAM]을 보여준다
+      "manchester-united": "맨유와의 관계·라이벌리·기억할 만한 맞대결 한 문단(한국어).",
+      "tottenham-hotspur": "토트넘과의 관계 한 문단(한국어)."
+    },
+    seasonNote: "(지원 팀 자신의 항목에만) 이번 시즌 이 팀의 과제·맥락 한 문단. 자기 페이지에서 relations 대신 표시.",
     watch: [ "이번 시즌 관전 포인트 1", "포인트 2", "포인트 3" ]      // 2026-27 시즌 기준
   },
   // ... 20팀
@@ -116,11 +131,12 @@ window.HUB_CLUBS = {
 ```
 
 - `clubs.js`의 감독·핵심 선수는 **2026-27 시즌 개막 기준**이며 시즌 중 변동은 손으로 갱신한다(스크립트는 손대지 않음).
+- 지원 팀을 추가할 때: `scripts/update-data.mjs`의 `CFG.teams`에 키 추가 → 20개 구단의 `relations[<새 팀>]` 문단과 새 팀 항목의 `seasonNote` 작성 → `ROUTINE.md` 지원 팀 목록·매체 추가.
 - 화면은 팀 이름·배지는 `HUB.teams`, 한국어명·색·구장·소개는 `HUB_CLUBS`에서 가져온다. 둘 중 하나가 없어도 깨지지 않게 폴백(영문명, 회색)한다.
 
 ## 4. `matches/<fixtureId>.js` → `window.HUB_MATCHES[id]` · `matches/index.js` → `window.HUB_MATCH_INDEX`
 
-`scripts/update-matches.mjs`가 GitHub Actions(15분 주기)에서 생성한다. 대상: PL 전 경기 + 맨유 전 대회 경기.
+`scripts/update-matches.mjs`가 GitHub Actions(15분 주기)에서 생성한다. 대상: PL 전 경기 + 지원 팀들의 전 대회 경기.
 생성 시점: 킥오프 90분 전부터 종료 후까지(라인업·진행 상황), 종료 후 한 번 더(최종 기록, `final: true`). 파일이 없으면 "아직 자료 없음"이다.
 화면은 `<script src="matches/<id>.js">` 태그를 동적으로 붙여 읽는다(file:// 에서도 동작). 없는 파일은 onerror로 처리한다.
 
