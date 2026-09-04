@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-05T03:12:45+09:00",
+  "updatedAt": "2026-09-05T04:09:08+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -38,6 +38,11 @@ window.HUB = {
    "name": "Chelsea",
    "short": "Chelsea",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/chelsea.b96b403b5f.svg"
+  },
+  "liverpool": {
+   "name": "Liverpool",
+   "short": "Liverpool",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/liverpool.34999937ef.svg"
   },
   "brentford": {
    "name": "Brentford",
@@ -78,11 +83,6 @@ window.HUB = {
    "name": "Ipswich Town",
    "short": "Ipswich",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/ipswich-town.016f53d3e1.svg"
-  },
-  "liverpool": {
-   "name": "Liverpool",
-   "short": "Liverpool",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/liverpool.34999937ef.svg"
   },
   "afc-bournemouth": {
    "name": "Bournemouth",
@@ -2390,13 +2390,27 @@ window.HUB = {
     "name": "Liverpool",
     "short": "Liverpool"
    },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
+   "status": "live",
+   "statusText": "9'",
+   "score": {
+    "home": 0,
+    "away": 1
+   },
    "winner": null,
    "scorers": {
     "home": [],
-    "away": []
+    "away": [
+     {
+      "name": "A. Isak",
+      "times": [
+       "6'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ]
    },
    "mu": false,
    "fav": [],
@@ -14103,6 +14117,30 @@ window.HUB = {
   },
   {
    "rank": 5,
+   "key": "liverpool",
+   "name": "Liverpool",
+   "short": "Liverpool",
+   "played": 3,
+   "won": 1,
+   "drawn": 2,
+   "lost": 0,
+   "gf": 5,
+   "ga": 4,
+   "gd": 1,
+   "points": 5,
+   "form": [
+    "-",
+    "-",
+    "-",
+    "-",
+    "D",
+    "D"
+   ],
+   "zone": "UEFA Europa League",
+   "rankPrev": 10
+  },
+  {
+   "rank": 6,
    "key": "brentford",
    "name": "Brentford",
    "short": "Brentford",
@@ -14122,11 +14160,11 @@ window.HUB = {
     "W",
     "D"
    ],
-   "zone": "UEFA Europa League",
+   "zone": "",
    "rankPrev": 3
   },
   {
-   "rank": 6,
+   "rank": 7,
    "key": "newcastle-united",
    "name": "Newcastle United",
    "short": "Newcastle",
@@ -14150,7 +14188,7 @@ window.HUB = {
    "rankPrev": 11
   },
   {
-   "rank": 7,
+   "rank": 8,
    "key": "everton",
    "name": "Everton",
    "short": "Everton",
@@ -14174,7 +14212,7 @@ window.HUB = {
    "rankPrev": 4
   },
   {
-   "rank": 8,
+   "rank": 9,
    "key": "leeds-united",
    "name": "Leeds United",
    "short": "Leeds",
@@ -14198,7 +14236,7 @@ window.HUB = {
    "rankPrev": 9
   },
   {
-   "rank": 9,
+   "rank": 10,
    "key": "brighton-and-hove-albion",
    "name": "Brighton & Hove Albion",
    "short": "Brighton",
@@ -14222,7 +14260,7 @@ window.HUB = {
    "rankPrev": 1
   },
   {
-   "rank": 10,
+   "rank": 11,
    "key": "manchester-united",
    "name": "Manchester United",
    "short": "Man Utd",
@@ -14246,7 +14284,7 @@ window.HUB = {
    "rankPrev": 17
   },
   {
-   "rank": 11,
+   "rank": 12,
    "key": "sunderland",
    "name": "Sunderland",
    "short": "Sunderland",
@@ -14270,17 +14308,17 @@ window.HUB = {
    "rankPrev": 14
   },
   {
-   "rank": 12,
+   "rank": 13,
    "key": "ipswich-town",
    "name": "Ipswich Town",
    "short": "Ipswich",
-   "played": 2,
+   "played": 3,
    "won": 1,
    "drawn": 0,
-   "lost": 1,
+   "lost": 2,
    "gf": 4,
-   "ga": 6,
-   "gd": -2,
+   "ga": 7,
+   "gd": -3,
    "points": 3,
    "form": [
     "-",
@@ -14292,30 +14330,6 @@ window.HUB = {
    ],
    "zone": "",
    "rankPrev": 7
-  },
-  {
-   "rank": 13,
-   "key": "liverpool",
-   "name": "Liverpool",
-   "short": "Liverpool",
-   "played": 2,
-   "won": 0,
-   "drawn": 2,
-   "lost": 0,
-   "gf": 4,
-   "ga": 4,
-   "gd": 0,
-   "points": 2,
-   "form": [
-    "-",
-    "-",
-    "-",
-    "-",
-    "D",
-    "D"
-   ],
-   "zone": "",
-   "rankPrev": 10
   },
   {
    "rank": 14,
