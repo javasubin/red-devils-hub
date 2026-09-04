@@ -20,7 +20,6 @@ scripts/update-data.mjs   BBC Sport를 파싱해 data.js를 다시 쓰는 스크
 scripts/update-matches.mjs  경기 상세(라인업·교체·카드·팀 통계)를 matches/<id>.js 로 쓰는 스크립트
 matches/              경기별 상세 파일 + index.js   ← 스크립트가 생성
 match-view.js/.css    경기 상세 패널(타임라인·통계·라인업) 공통 렌더러
-analytics.js          방문 집계(GoatCounter 이미지 픽셀, 외부 코드 없음). CODE가 비어 있으면 동작 안 함
 .github/workflows/update.yml  GitHub Actions: 15분 주기 데이터 갱신
 scripts/update-and-push.cmd  위 스크립트 실행 + 커밋·푸시 (작업 스케줄러용)
 scripts/check-briefing.mjs   브리핑 HTML 검사기 (ROUTINE 6단계)

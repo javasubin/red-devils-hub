@@ -2,7 +2,6 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; img-src 'self' https: data:; connect-src 'self'; object-src 'none'; base-uri 'self'">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light dark">
 <title>구단 가이드 — RED DEVILS HUB</title>
@@ -503,7 +502,7 @@
     h += next ? '<a class="next" href="' + esc(link('club.html?club=' + encodeURIComponent(next))) + '">' + badge(next, 30) + '<span class="tx"><span class="lab">다음 구단 →</span><span class="nm">' + esc(koName(next, TEAMS[next].name)) + '</span></span></a>'
       : '<a class="dis next"><span class="tx"><span class="lab">마지막</span></span></a>';
     h += '</div>';
-    h += '<footer><span class="b">RED DEVILS HUB</span> · 구단 가이드 · 경기·순위는 BBC Sport, 구단 정보는 clubs.js 기준 · <a href="' + esc(link('club.html')) + '">전체 구단 보기</a> · 방문 통계를 수집합니다(쿠키 없음, 개인 식별 없음)</footer>';
+    h += '<footer><span class="b">RED DEVILS HUB</span> · 구단 가이드 · 경기·순위는 BBC Sport, 구단 정보는 clubs.js 기준 · <a href="' + esc(link('club.html')) + '">전체 구단 보기</a></footer>';
     root.innerHTML = h;
   }
 
@@ -572,7 +571,5 @@
   }
 })();
 </script>
-<!-- 방문 집계 (analytics.js: 외부 코드 없는 이미지 픽셀) -->
-<script src="analytics.js" defer></script>
 </body>
 </html>
