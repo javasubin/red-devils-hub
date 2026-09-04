@@ -1,5 +1,35 @@
-/* match-view.css — 경기 상세 패널 (index.html · club.html 공용)
+/* match-view.css — 응원 팀 드롭다운 + 경기 상세 패널 (index.html · club.html 공용)
    페이지의 :root 토큰(--bg, --card, --text, --accent …)을 그대로 쓴다. 라이트·다크 모두 대응. */
+
+/* ---------- 응원 팀 드롭다운 (HUB_TEAM.mount) ---------- */
+.tsw { position:relative; flex:0 0 auto; }
+.tsw-b { display:inline-flex; align-items:center; gap:7px; border:1px solid var(--border); background:var(--chip-bg); color:var(--text);
+  font:inherit; font-size:13px; font-weight:700; letter-spacing:-0.02em; padding:5px 9px 5px 7px; border-radius:999px; cursor:pointer; transition:.15s; white-space:nowrap; }
+.tsw-b:hover { border-color:var(--text-dim); }
+.tsw.on .tsw-b { border-color:var(--accent); background:var(--accent-soft); }
+.tsw-cur { display:inline-flex; align-items:center; gap:7px; min-width:0; }
+.tsw-nm { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; max-width:88px; }
+.tsw-ca { width:13px; height:13px; flex:0 0 auto; color:var(--text-dim); }
+.tsw.on .tsw-ca { transform:rotate(180deg); color:var(--accent); }
+
+.tsw-m { position:absolute; top:calc(100% + 8px); left:0; z-index:60; min-width:246px; padding:6px;
+  background:var(--card); border:1px solid var(--border); border-radius:14px; box-shadow:var(--shadow), 0 18px 40px -18px rgba(0,0,0,.45); }
+.tsw-m[hidden] { display:none; }
+.tsw-o { display:flex; align-items:center; gap:10px; width:100%; padding:8px 10px; border:0; border-radius:10px;
+  background:transparent; color:var(--text); font:inherit; text-align:left; cursor:pointer; }
+.tsw-o:hover { background:var(--bg-soft); }
+.tsw-o.on { background:var(--accent-soft); }
+.tsw-o .t { min-width:0; flex:1; }
+.tsw-o .t b { display:block; font-size:13.5px; font-weight:750; letter-spacing:-0.02em; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.tsw-o .t small { display:block; font-size:11px; color:var(--text-dim); }
+.tsw-o .ck { flex:0 0 auto; font-size:12px; font-weight:800; color:var(--accent); opacity:0; }
+.tsw-o.on .ck { opacity:1; }
+.tsw-o.on .t b { color:var(--accent); }
+@media (max-width:640px) {
+  .tsw-b { padding:5px 7px 5px 6px; gap:5px; }
+  .tsw-nm { display:none; }                                /* 좁은 화면에선 배지 + 화살표만 */
+  .tsw-m { left:auto; right:0; min-width:0; width:min(252px, calc(100vw - 28px)); }
+}
 
 /* ---------- 펼치는 줄 ---------- */
 .mv-row { cursor:pointer; }
@@ -19,10 +49,11 @@
 .mv-none a, .mv-err a { color:var(--accent); font-weight:700; }
 
 /* ---------- 패널 본문 ---------- */
-.mv { padding:14px 16px 16px; font-size:13px; color:var(--text);
-  --mv-mu:#DA291C;                       /* 맨유 강조색 — 구단 페이지에서 --accent가 바뀌어도 붉게 */
-  --pitch-line:rgba(20,20,26,.16); }
-@media (prefers-color-scheme: dark) { .mv { --mv-mu:#FF3B30; --pitch-line:rgba(255,255,255,.22); } }
+/* 선택된 지원 팀 강조색 — 구단 페이지에서 --accent가 바뀌어도 팀 색을 지킨다. HUB_TEAM이 :root에 덮어쓴다 */
+:root { --mv-team:#DA291C; }
+@media (prefers-color-scheme: dark) { :root { --mv-team:#FF3B30; } }
+.mv { padding:14px 16px 16px; font-size:13px; color:var(--text); --pitch-line:rgba(20,20,26,.16); }
+@media (prefers-color-scheme: dark) { .mv { --pitch-line:rgba(255,255,255,.22); } }
 .mv * { box-sizing:border-box; }
 /* 호스트 페이지의 목록 스타일(.rec li · .sb li · .mlist li)이 패널 안까지 내려오지 않게 막는다 */
 .mv ul { list-style:none; margin:0; padding:0; }
@@ -38,7 +69,7 @@
 .mv-tm { display:flex; align-items:center; gap:8px; min-width:0; }
 .mv-tm.h { justify-content:flex-end; text-align:right; }
 .mv .mv-tm .nm { font-weight:750; font-size:13.5px; letter-spacing:-0.02em; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
-.mv .mv-tm.mu .nm { color:var(--mv-mu); }
+.mv .mv-tm.fav .nm { color:var(--mv-team); }
 .mv-mid { text-align:center; flex:0 0 auto; }
 .mv-sc { font-size:22px; font-weight:800; letter-spacing:-0.04em; line-height:1.1; font-variant-numeric:tabular-nums; white-space:nowrap; }
 .mv-sc.t { font-size:15px; font-weight:750; color:var(--text-mid); }
@@ -63,7 +94,7 @@
 .mv-ev .ic { flex:0 0 auto; font-size:11px; line-height:1; }
 .mv-ev .pl { font-weight:650; font-size:12.5px; letter-spacing:-0.02em; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
 .mv-ev .ex { font-size:10.5px; color:var(--text-dim); white-space:nowrap; }
-.mv-ev.mu .pl { color:var(--mv-mu); }
+.mv-ev.fav .pl { color:var(--mv-team); }
 .mv-ev.goal .pl { font-weight:800; }
 .mv-tag { flex:0 0 auto; font-size:8.5px; font-weight:800; letter-spacing:.02em; padding:0 4px; border-radius:4px; background:var(--chip-bg); color:var(--text-mid); line-height:1.6; }
 .mv-cd { display:inline-block; width:8px; height:11px; border-radius:2px; flex:0 0 auto; }

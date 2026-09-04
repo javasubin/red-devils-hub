@@ -1,24 +1,39 @@
 <!DOCTYPE html>
 <!--
 ================================================================================
- RED DEVILS HUB — 브리핑 페이지 뼈대
- ROUTINE.md 가 이 파일을 briefings/epl-news-YYYY-MM-DD.html 로 복사한 뒤
- {{...}} 를 전부 채운다. 복사본에서는 이 주석 블록을 지운다.
+ RED DEVILS HUB — 브리핑 페이지 뼈대 (팀 하나당 파일 하나)
+
+ ROUTINE.md 가 이 파일을 지원 팀 수만큼
+ briefings/epl-news-YYYY-MM-DD-<팀키>.html 로 복사한 뒤 {{...}} 를 전부 채운다.
+ 복사본에서는 이 주석 블록을 지운다.
+
+ 한 파일은 한 팀의 브리핑이다.
+ - 맨 위 team 섹션 = 그 팀 기사 (5건 이상). 파일마다 다르다.
+ - 나머지 섹션(매치위크·이적·선수·규정·기타·용어) = 리그 공통. 같은 날짜의 모든 팀 파일에서 내용이 같다.
+
+ [팀 플레이스홀더] 한 파일 안에서 값이 하나로 고정된다. 값은 ROUTINE.md 0-C 의 지원 팀 표에서 가져온다.
+   {{TEAM_KEY}}       manchester-united        — <html data-team>, 팀 기사의 data-clubs
+   {{TEAM_BADGE}}     🔴                       — 팀 이모지 배지 (칩·섹션 헤더)
+   {{TEAM_SHORT_KO}}  맨유                     — 짧은 한국어 이름 (칩·섹션 헤더·<title>)
+   {{TEAM_NAME_KO}}   맨체스터 유나이티드      — clubs.js 의 ko (lede 에서 첫 등장)
+   {{TEAM_NAME_EN}}   Manchester United        — clubs.js 의 name (lede 영문 병기)
+   팀 색(clubs.js 의 color — 맨유 #DA291C · 토트넘 #132257)은 본문에 토큰이 없다.
+   아래 {{PH_COLOR}} 의 기본값으로만 쓴다.
 
  [문서 단위 플레이스홀더]
    {{DATE_KO}}      2026년 9월 4일 금요일   — 헤더 kicker
    {{DATE_DOT}}     2026.09.04              — <title> 와 푸터
    {{SRC_COUNT}}    6                       — 오늘 인용한 매체 수
    {{SRC_LIST}}     BBC Sport · The Guardian · Sky Sports · ESPN
-   {{ART_COUNT}}    18                      — 전체 기사 수 (최대 20)
-   {{MU_COUNT}}     6                       — mu 카테고리 기사 수 (최소 5)
+   {{ART_COUNT}}    18                      — 이 파일의 전체 기사 수 (최대 25)
+   {{TEAM_COUNT}}   6                       — team 섹션 기사 수 (최소 5)
    {{NEXT_LINE}}    다음 맨유 경기는 9월 6일 에버턴(Everton) 원정입니다.
-   {{DIGEST_1}}     오늘의 요약 1줄 — 항상 맨유
+   {{DIGEST_1}}     오늘의 요약 1줄 — 항상 이 파일의 팀 소식
    {{DIGEST_2}}     오늘의 요약 2줄 — 리그 전체
-   {{DIGEST_3}}     오늘의 요약 3줄 — 맨유 다음 경기 또는 그 밖의 눈에 띄는 소식
+   {{DIGEST_3}}     오늘의 요약 3줄 — 이 팀의 다음 경기
 
  [칩 개수 플레이스홀더] 기사가 없는 카테고리는 칩과 섹션을 통째로 지운다.
-   {{N_ALL}} {{N_MU}} {{N_MATCH}} {{N_TRANSFER}} {{N_PEOPLE}} {{N_RULES}} {{N_ETC}}
+   {{N_ALL}} {{N_TEAM}} {{N_MATCH}} {{N_TRANSFER}} {{N_PEOPLE}} {{N_RULES}} {{N_ETC}}
    {{N_GLOSSARY}}   용어 개수 (섹션 헤더에만 씀, 칩에는 숫자 없음)
 
  [용어 사전 플레이스홀더] div.term 하나마다 한 벌씩. 그날 기사에 실제 나온 용어만.
@@ -36,10 +51,18 @@
    {{ARTICLE_URL}}  개별 기사 URL (사이트 루트 금지)
    {{THUMB_URL}}    og:image URL — 있을 때만
    {{PH_COLOR}}     og:image 가 없을 때 플레이스홀더 색. 기사가 한 구단 얘기면
-                    clubs.js 의 해당 구단 color, 아니면 #DA291C
+                    clubs.js 의 해당 구단 color, 아니면 이 파일 팀의 color
+   {{CLUB_KEYS}}    data-clubs 값 — 아래 설명
 
- [섹션 헤더 — 필요한 것만, 이 순서 그대로]
-   <section id="mu"       data-cat="mu">       🔴 맨유
+ [data-clubs] 카드마다 반드시 붙인다. 나중에 화면이 구단별로 걸러 쓰기 위한 값이다.
+   그 기사가 다루는 구단 키(clubs.js 의 키)를 쉼표로 잇는다. 공백 없이.
+     data-clubs="manchester-united"             한 구단 기사
+     data-clubs="manchester-united,everton"     맞대결·이적 등 두 구단 이상
+     data-clubs=""                              특정 구단이 없는 리그 전체 기사 (규정·통계 등)
+   team 섹션 카드는 값에 반드시 {{TEAM_KEY}} 를 포함한다.
+
+ [섹션 헤더 — 필요한 것만, 이 순서 그대로. team 이 항상 맨 위]
+   <section id="team"     data-cat="team">     {{TEAM_BADGE}} {{TEAM_SHORT_KO}}
    <section id="match"    data-cat="match">    ⚽ 매치위크
    <section id="transfer" data-cat="transfer"> 🔄 이적·계약
    <section id="people"   data-cat="people">   👤 선수·감독
@@ -48,12 +71,12 @@
    <section id="glossary" data-cat="glossary"> 📖 오늘의 용어
 ================================================================================
 -->
-<html lang="ko">
+<html lang="ko" data-team="{{TEAM_KEY}}">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light dark">
-<title>EPL 데일리 브리핑 — {{DATE_DOT}}</title>
+<title>EPL 데일리 브리핑 · {{TEAM_SHORT_KO}} — {{DATE_DOT}}</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="stylesheet" href="../briefing.css">
 <script src="../briefing.js" defer></script>
@@ -67,7 +90,7 @@
       <a class="home" href="../index.html">← RED DEVILS HUB</a>
     </div>
     <h1>EPL 데일리 <span class="accent">브리핑</span></h1>
-    <p class="lede">해외 주요 매체 <b>{{SRC_COUNT}}곳</b>({{SRC_LIST}})에서 <b>기사 {{ART_COUNT}}건</b>을 모았습니다. 그중 <b>{{MU_COUNT}}건</b>이 맨체스터 유나이티드 소식입니다. {{NEXT_LINE}}</p>
+    <p class="lede">해외 주요 매체 <b>{{SRC_COUNT}}곳</b>({{SRC_LIST}})에서 <b>기사 {{ART_COUNT}}건</b>을 모았습니다. 그중 <b>{{TEAM_COUNT}}건</b>이 {{TEAM_NAME_KO}}({{TEAM_NAME_EN}}) 소식입니다. {{NEXT_LINE}}</p>
     <div class="digest">
       <h2>오늘의 요약</h2>
       <ol>
@@ -82,7 +105,7 @@
     <div class="bar-inner">
       <div class="chips" role="group" aria-label="카테고리 필터">
         <button class="chip" data-cat="all" aria-pressed="true">전체<span class="n">{{N_ALL}}</span></button>
-        <button class="chip" data-cat="mu" aria-pressed="false">🔴 맨유<span class="n">{{N_MU}}</span></button>
+        <button class="chip" data-cat="team" aria-pressed="false">{{TEAM_BADGE}} {{TEAM_SHORT_KO}}<span class="n">{{N_TEAM}}</span></button>
         <button class="chip" data-cat="match" aria-pressed="false">⚽ 매치위크<span class="n">{{N_MATCH}}</span></button>
         <button class="chip" data-cat="transfer" aria-pressed="false">🔄 이적·계약<span class="n">{{N_TRANSFER}}</span></button>
         <button class="chip" data-cat="people" aria-pressed="false">👤 선수·감독<span class="n">{{N_PEOPLE}}</span></button>
@@ -93,11 +116,11 @@
     </div>
   </div>
 
-  <section id="mu" data-cat="mu">
-    <div class="sec-head"><h2>🔴 맨유</h2><span class="count">{{N_MU}}건</span></div>
+  <section id="team" data-cat="team">
+    <div class="sec-head"><h2>{{TEAM_BADGE}} {{TEAM_SHORT_KO}}</h2><span class="count">{{N_TEAM}}건</span></div>
 
     <!-- 카드 A — og:image 가 있는 기사 -->
-    <article class="art">
+    <article class="art" data-clubs="{{CLUB_KEYS}}">
       <div class="thumb"><img src="{{THUMB_URL}}" alt="" loading="lazy"></div>
       <div class="art-body">
         <h3>{{TITLE_KO}}</h3>
@@ -118,7 +141,7 @@
 
     <!-- 카드 B — og:image 가 없는 기사. 썸네일 자리에 구단 색 플레이스홀더를 넣는다.
          The Athletic 처럼 유료 기사면 details.more 블록을 통째로 지우고 요약만 남긴다. -->
-    <article class="art">
+    <article class="art" data-clubs="{{CLUB_KEYS}}">
       <div class="thumb ph" style="--ph:{{PH_COLOR}}"><span>{{SOURCE}}</span></div>
       <div class="art-body">
         <h3>{{TITLE_KO}}</h3>

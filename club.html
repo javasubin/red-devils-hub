@@ -136,7 +136,7 @@
   .wp::before { content:counter(wp, decimal-leading-zero); counter-increment:wp; display:block; font-size:12px; font-weight:800; color:var(--accent); letter-spacing:.1em; margin-bottom:8px; }
   .note { font-size:12.5px; color:var(--text-dim); margin-top:14px; }
 
-  /* 요약 타일 (맨유 페이지) */
+  /* 요약 타일 (선택 팀 자신의 페이지) */
   .sum { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-bottom:18px; }
 
   /* 구단 인덱스 */
@@ -158,7 +158,8 @@
   .pager a.next { flex-direction:row-reverse; text-align:right; }
   .pager .tx { min-width:0; }
   footer { margin-top:52px; padding:22px 0 52px; border-top:1px solid var(--border); font-size:12.5px; color:var(--text-dim); text-align:center; }
-  footer .b { color:var(--accent); font-weight:700; }
+  footer .b { color:#DA291C; font-weight:700; }   /* 브랜드 이름은 구단·팀 색을 따라가지 않는다 */
+  @media (prefers-color-scheme: dark) { footer .b { color:#FF3B30; } }
   .empty { padding:26px 18px; text-align:center; color:var(--text-dim); font-size:14px; background:var(--card); border:1px solid var(--border); border-radius:16px; }
   .miss { padding:70px 0; text-align:center; color:var(--text-dim); }
 
@@ -171,6 +172,12 @@
     .mrow .dt { width:74px; }
     .pager { flex-direction:column; }
   }
+  @media (max-width:640px) {
+    .top-inner { gap:8px; }
+    .brand { font-size:16px; min-width:0; }
+    .brand img { width:23px; height:23px; }
+    .top .btn { padding:7px 10px; font-size:12px; }
+  }
   @media (max-width:520px) {
     .hero-h { gap:12px; }
     .stats { grid-template-columns:1fr; }
@@ -182,9 +189,10 @@
 <body>
 <div class="top"><div class="wrap top-inner">
   <a class="brand" href="index.html" id="brand">RED <span class="accent">DEVILS</span> HUB</a>
+  <span class="crumb" id="teamNow" title="응원팀은 홈에서 바꿀 수 있습니다"></span>
   <div class="crumb" id="crumb">구단 가이드</div>
   <div class="sp"></div>
-  <a class="btn" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>대시보드</a>
+  <a class="btn" id="hubLink" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>대시보드</a>
 </div></div>
 
 <div class="wrap"><div class="jserr" id="jsErr"></div></div>
@@ -198,8 +206,21 @@
   var H = window.HUB, root = document.getElementById('main');
   if (!H) { root.innerHTML = '<div class="miss">data.js를 찾을 수 없습니다. <a href="index.html">대시보드로 돌아가기</a></div>'; return; }
   var C = window.HUB_CLUBS || {};                 // clubs.js — 없어도 동작해야 한다
-  var MU = (H.meta && H.meta.team) || 'manchester-united';
+  var T = window.HUB_TEAM || null;                // match-view.js — 응원 팀 선택
+  var DEF = (H.meta && H.meta.team) || 'manchester-united';
+  var TEAM = T ? T.get() : DEF;                   // 선택된 지원 팀. 바뀌면 render()가 다시 그린다
   var TEAMS = H.teams || {}, FX = H.fixtures || [], ST = H.standings || [];
+
+  function isFav(f) { return T ? T.isFav(f, TEAM) : !!(f && f.mu); }
+  function teamKo() { return T ? T.label(TEAM) : '맨유'; }         // 짧은 이름 (맨유 · 토트넘)
+  function link(u) { return T ? T.href(u) : u; }                   // 링크에 ?team= 유지
+  // 받침이 있으면 "과", 없으면 "와" — "맨유와의 관계" · "토트넘과의 관계"
+  function wa(s) {
+    s = String(s || '');
+    var c = s.charCodeAt(s.length - 1);
+    return (c >= 0xAC00 && c <= 0xD7A3 && (c - 0xAC00) % 28 !== 0) ? '과' : '와';
+  }
+  function teamWa() { var k = teamKo(); return k + wa(k); }        // "맨유와" · "토트넘과"
 
   window.addEventListener('error', function (e) {
     var b = document.getElementById('jsErr');
@@ -216,8 +237,8 @@
   function dateTxt(d) { return (d.getMonth() + 1) + '월 ' + d.getDate() + '일 (' + DOW[d.getDay()] + ')'; }
   function num(n) { return (typeof n === 'number' && isFinite(n)) ? n.toLocaleString() : ''; }
 
-  var COMP_KO = { PL: '프리미어리그', UCL: '챔피언스리그', UEL: '유로파리그', UECL: '컨퍼런스리그', FAC: 'FA컵', EFL: '리그컵(카라바오컵)', FR: '친선경기', OTHER: '기타' };
-  var COMP_TAG = { PL: 'PL', UCL: 'UCL', UEL: 'UEL', UECL: 'UECL', FAC: 'FA컵', EFL: '리그컵', FR: '친선', OTHER: '기타' };
+  var COMP_KO = { PL: '프리미어리그', UCL: '챔피언스리그', UEL: '유로파리그', UECL: '컨퍼런스리그', FAC: 'FA컵', EFL: '리그컵(카라바오컵)', USC: '슈퍼컵', FR: '친선경기', OTHER: '기타' };
+  var COMP_TAG = { PL: 'PL', UCL: 'UCL', UEL: 'UEL', UECL: 'UECL', FAC: 'FA컵', EFL: '리그컵', USC: '슈퍼컵', FR: '친선', OTHER: '기타' };
   function compCls(c) { return (COMP_TAG[c] ? c : 'OTHER').toLowerCase(); }
   function compTag(c) { return '<span class="ctag ' + compCls(c) + '">' + esc(COMP_TAG[c] || c || 'ETC') + '</span>'; }
 
@@ -307,14 +328,18 @@
   function mix(c, t, r) { return c.map(function (v, i) { return Math.round(v + (t[i] - v) * r); }); }
   function rgbs(c) { return 'rgb(' + c.join(',') + ')'; }
   function rgba(c, a) { return 'rgba(' + c.join(',') + ',' + a + ')'; }
-  // 남색·흰색처럼 배경과 붙는 색은 읽히게 보정한다 (어두우면 밝히고, 밝으면 어둡게)
+  // 남색·흰색처럼 배경과 붙는 색은 읽히게 보정한다 (팀 색 보정과 같은 규칙을 쓴다)
   function applyAccent(color) {
     var rgb = hex2rgb(color);
     if (!rgb) return;
     var dark = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
-    var L = lum(rgb), acc = rgb;
-    if (dark && L < 0.20) acc = mix(rgb, [255, 255, 255], 0.5);
-    else if (!dark && L > 0.55) acc = mix(rgb, [0, 0, 0], 0.45);
+    var acc;
+    if (T && T.color) acc = T.color.lift(rgb, dark);
+    else {
+      var L = lum(rgb); acc = rgb;
+      if (dark && L < 0.20) acc = mix(rgb, [255, 255, 255], 0.5);
+      else if (!dark && L > 0.55) acc = mix(rgb, [0, 0, 0], 0.45);
+    }
     var s = document.documentElement.style;
     s.setProperty('--club', rgbs(rgb));
     s.setProperty('--accent', rgbs(acc));
@@ -330,21 +355,33 @@
   ST.forEach(function (t) { rankOf[t.key] = t.rank; });
 
   var q = new URLSearchParams(location.search), key = q.get('club');
-  var muBadge = TEAMS[MU] && TEAMS[MU].badge;
-  if (muBadge) document.getElementById('brand').insertAdjacentHTML('afterbegin', '<img src="' + esc(muBadge) + '" alt="" onerror="this.remove()">');
+  var brandBadge = TEAMS[DEF] && TEAMS[DEF].badge;      // 브랜드 배지는 사이트 정체성이라 고정
+  if (brandBadge) document.getElementById('brand').insertAdjacentHTML('afterbegin', '<img src="' + esc(brandBadge) + '" alt="" onerror="this.remove()">');
+  var teamNow = document.getElementById("teamNow"); if (teamNow && T) teamNow.textContent = "응원팀 · " + T.label(TEAM);
 
-  try {
-    if (!key || !TEAMS[key]) renderIndex();
-    else renderClub(key);
-    wireRows(root);
-  } catch (e) {
-    root.innerHTML = '<div class="miss">페이지를 그리지 못했습니다: ' + esc(e && e.message) + '<br><a href="index.html">대시보드로 돌아가기</a></div>';
-    if (window.console) console.error(e);
+  // 팀이 바뀌면 페이지를 통째로 다시 그린다 (새로고침 없음)
+  function render() {
+    TEAM = T ? T.get() : DEF;
+    document.getElementById('brand').setAttribute('href', link('index.html'));
+    document.getElementById('hubLink').setAttribute('href', link('index.html'));
+    try {
+      if (!key || !TEAMS[key]) renderIndex();
+      else renderClub(key);
+    } catch (e) {
+      root.innerHTML = '<div class="miss">페이지를 그리지 못했습니다: ' + esc(e && e.message) + '<br><a href="' + esc(link('index.html')) + '">대시보드로 돌아가기</a></div>';
+      if (window.console) console.error(e);
+    }
   }
+  wireRows(root);                                       // 위임 리스너는 #main에 한 번만 건다
+  if (T) T.onChange(render);
+  render();
 
   // ---------- 구단 인덱스 (club 파라미터 없음) ----------
   function renderIndex() {
     document.title = '구단 가이드 — RED DEVILS HUB';
+    document.getElementById('crumb').textContent = '구단 가이드';
+    var tc = club(TEAM).color;                            // 구단을 안 고른 목록 화면은 응원 팀 색으로
+    if (tc) applyAccent(tc);
     var order = KEYS.slice().sort(function (a, b) {
       var ra = rankOf[a] || 99, rb = rankOf[b] || 99;
       if (ra !== rb) return ra - rb;
@@ -352,7 +389,7 @@
     });
     var h = '<div class="hero" style="grid-template-columns:1fr;align-items:start"><div>';
     h += '<div class="kicker">' + esc((H.meta && H.meta.season) || '') + ' 프리미어리그 · ' + order.length + '개 구단</div>';
-    h += '<h1>구단 가이드<small>리그 순위 순서. 구단을 고르면 홈구장·감독·역사·맨유와의 관계를 볼 수 있습니다.</small></h1>';
+    h += '<h1>구단 가이드<small>리그 순위 순서. 구단을 고르면 홈구장·감독·역사·' + esc(teamWa()) + '의 관계를 볼 수 있습니다.</small></h1>';
     h += '</div></div>';
     h += '<section style="margin-top:8px"><div class="sec-h"><h2>프리미어리그 20팀</h2><span class="n">' +
       (Object.keys(C).length ? '' : 'clubs.js가 없어 영문명으로 표시합니다') + '</span></div><div class="idx">';
@@ -360,7 +397,7 @@
       var nm = koName(k, TEAMS[k].name), sd = club(k).stadium, sub = [];
       if (TEAMS[k].name && TEAMS[k].name !== nm) sub.push(TEAMS[k].name);   // 한국어명이 있을 때만 영문 병기
       if (sd) sub.push(sd.ko || sd.name);
-      h += '<a href="club.html?club=' + encodeURIComponent(k) + '">' +
+      h += '<a href="' + esc(link('club.html?club=' + encodeURIComponent(k))) + '">' +
         '<span class="rk">' + (rankOf[k] || '') + '</span>' + badge(k, 34) +
         '<span class="t"><b>' + esc(nm) + '</b><small>' + esc(sub.join(' · ') || '프리미어리그') + '</small></span></a>';
     });
@@ -371,7 +408,7 @@
 
   // ---------- 구단 페이지 ----------
   function renderClub(k) {
-    var c = club(k), t = TEAMS[k], isMu = (k === MU);
+    var c = club(k), t = TEAMS[k], isTeam = (k === TEAM);
     var name = koName(k, t.name), st = ST.filter(function (x) { return x.key === k; })[0];
     if (c.color) applyAccent(c.color);
     document.title = name + ' — 구단 가이드 · RED DEVILS HUB';
@@ -382,7 +419,7 @@
     h += '<div class="hero"><div>';
     h += '<div class="kicker">' + esc((H.meta && H.meta.season) || '') + ' 프리미어리그' +
       (c.nick ? '<span class="nick">' + esc(c.nick) + '</span>' : '') +
-      (isMu ? '<span class="nick">우리 팀</span>' : '') + '</div>';
+      (isTeam ? '<span class="nick">우리 팀</span>' : '') + '</div>';
     h += '<div class="hero-h">' + badge(k, 64) + '<h1>' + esc(name) + '<small>' + esc(t.name) +
       (c.founded ? ' · ' + c.founded + '년 창단' : '') + (c.city ? ' · ' + esc(c.city) : '') + '</small></h1></div>';
     if (c.intro) h += '<p class="intro">' + esc(c.intro) + '</p>';
@@ -416,8 +453,8 @@
         (p.source ? '<a href="' + esc(p.source) + '" target="_blank" rel="noopener">Wikimedia Commons</a>' : 'Wikimedia Commons') + '</div></div></section>';
     }
 
-    // 맨유 페이지: 이번 시즌 일정 요약 / 다른 구단: 맨유와의 맞대결
-    h += isMu ? seasonSummary(st) : headToHead(k, name);
+    // 선택 팀 자신의 페이지: 이번 시즌 일정 요약 / 다른 구단: 선택 팀과의 맞대결
+    h += isTeam ? seasonSummary(st) : headToHead(k, name);
 
     // 이 구단의 최근 리그 경기
     h += recentSection(k, name);
@@ -441,10 +478,13 @@
       h += '</div></section>';
     }
 
-    // 맨유와의 관계 (맨유 자신이면 정체성)
-    if (c.rivalry) {
-      h += '<section><div class="sec-h"><h2>' + (isMu ? '이 시즌의 맨유' : '맨유와의 관계') + '</h2></div>';
-      h += '<p class="para">' + esc(c.rivalry) + '</p></section>';
+    // 선택 팀과의 관계 (그 팀 자신의 페이지면 이번 시즌 이야기). 구버전 clubs.js는 rivalry(맨유 기준)를 쓴다
+    var rel = (c.relations && c.relations[TEAM]) || (TEAM === 'manchester-united' ? c.rivalry : '');
+    var own = c.seasonNote || (TEAM === 'manchester-united' ? c.rivalry : '');
+    var para = isTeam ? own : rel;
+    if (para) {
+      h += '<section><div class="sec-h"><h2>' + esc(isTeam ? ('이 시즌의 ' + teamKo()) : (teamWa() + '의 관계')) + '</h2></div>';
+      h += '<p class="para">' + esc(para) + '</p></section>';
     }
 
     // 관전 포인트
@@ -457,12 +497,12 @@
     // 이전·다음 구단 (영문명 알파벳 순)
     var i = KEYS.indexOf(k), prev = KEYS[i - 1], next = KEYS[i + 1];
     h += '<div class="pager">';
-    h += prev ? '<a href="club.html?club=' + encodeURIComponent(prev) + '">' + badge(prev, 30) + '<span class="tx"><span class="lab">← 이전 구단</span><span class="nm">' + esc(koName(prev, TEAMS[prev].name)) + '</span></span></a>'
+    h += prev ? '<a href="' + esc(link('club.html?club=' + encodeURIComponent(prev))) + '">' + badge(prev, 30) + '<span class="tx"><span class="lab">← 이전 구단</span><span class="nm">' + esc(koName(prev, TEAMS[prev].name)) + '</span></span></a>'
       : '<a class="dis"><span class="tx"><span class="lab">처음</span></span></a>';
-    h += next ? '<a class="next" href="club.html?club=' + encodeURIComponent(next) + '">' + badge(next, 30) + '<span class="tx"><span class="lab">다음 구단 →</span><span class="nm">' + esc(koName(next, TEAMS[next].name)) + '</span></span></a>'
+    h += next ? '<a class="next" href="' + esc(link('club.html?club=' + encodeURIComponent(next))) + '">' + badge(next, 30) + '<span class="tx"><span class="lab">다음 구단 →</span><span class="nm">' + esc(koName(next, TEAMS[next].name)) + '</span></span></a>'
       : '<a class="dis next"><span class="tx"><span class="lab">마지막</span></span></a>';
     h += '</div>';
-    h += '<footer><span class="b">RED DEVILS HUB</span> · 구단 가이드 · 경기·순위는 BBC Sport, 구단 정보는 clubs.js 기준 · <a href="club.html">전체 구단 보기</a></footer>';
+    h += '<footer><span class="b">RED DEVILS HUB</span> · 구단 가이드 · 경기·순위는 BBC Sport, 구단 정보는 clubs.js 기준 · <a href="' + esc(link('club.html')) + '">전체 구단 보기</a></footer>';
     root.innerHTML = h;
   }
 
@@ -485,21 +525,21 @@
       '<div class="mv-panel" id="mvc-' + esc(f.id) + '" hidden></div></li>';
   }
 
-  // ---------- 맨유와의 맞대결 ----------
+  // ---------- 선택 팀과의 맞대결 ----------
   function headToHead(k, name) {
     var list = FX.filter(function (f) {
-      return f.mu && ((f.home.key === k) || (f.away.key === k));
+      return isFav(f) && ((f.home.key === k) || (f.away.key === k));
     }).sort(function (a, b) { return kd(a) - kd(b); });
-    var h = '<section><div class="sec-h"><h2>이번 시즌 맨유와의 맞대결</h2><span class="n">' + list.length + '경기</span></div>';
+    var h = '<section><div class="sec-h"><h2>이번 시즌 ' + esc(teamWa()) + '의 맞대결</h2><span class="n">' + list.length + '경기</span></div>';
     if (!list.length) return h + '<div class="empty">이번 시즌 맞대결 일정이 아직 없습니다.</div></section>';
     h += '<ul class="mlist">';
     list.forEach(function (f) { h += matchRow(f, k); });
     return h + '</ul><p class="note">승·무·패와 스코어는 ' + esc(name) + ' 기준입니다. 줄을 누르면 골·카드·팀 기록·선발 라인업이 열립니다.</p></section>';
   }
 
-  // ---------- 맨유 페이지: 이번 시즌 일정 요약 ----------
+  // ---------- 선택 팀 자신의 페이지: 이번 시즌 일정 요약 ----------
   function seasonSummary(st) {
-    var upcoming = FX.filter(function (f) { return f.mu && f.status !== 'post' && f.status !== 'postponed'; }).slice(0, 3);
+    var upcoming = FX.filter(function (f) { return isFav(f) && f.status !== 'post' && f.status !== 'postponed'; }).slice(0, 3);
     var h = '<section><div class="sec-h"><h2>이번 시즌 일정 요약</h2><span class="n">전 대회</span></div>';
     h += '<div class="sum">';
     h += '<div class="stat"><div class="k">리그 경기</div><div class="v">' + (st ? st.played : 0) + '<small>/ ' + ((H.meta && H.meta.matchweeks) || 38) + '</small></div><div class="sub">' +
@@ -510,7 +550,7 @@
     h += '</div>';
     if (upcoming.length) {
       h += '<ul class="mlist">';
-      upcoming.forEach(function (f) { h += matchRow(f, MU); });
+      upcoming.forEach(function (f) { h += matchRow(f, TEAM); });
       h += '</ul><p class="note">다음 3경기 · 시각은 브라우저 로컬(KST) 기준입니다.</p>';
     } else {
       h += '<div class="empty">남은 경기가 없습니다.</div>';

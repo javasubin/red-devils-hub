@@ -12,10 +12,14 @@
     --bg:#ffffff; --bg-soft:#f7f7f9; --card:#ffffff;
     --text:#14141a; --text-mid:#4a4a57; --text-dim:#86868f;
     --border:#e6e6ec; --border-soft:#f0f0f4;
-    --accent:#DA291C; --accent-soft:rgba(218,41,28,.08);
-    --chip-bg:#f2f2f5;
-    --today:#fff4f3; --mu:#fdf1f0; --mu-border:#f5c9c5;
+    /* 팀 색 토큰 — HUB_TEAM.applyTheme()이 선택된 팀 색으로 :root에 덮어쓴다. 아래는 스크립트 전 기본값(맨유) */
+    --accent:#DA291C; --accent-soft:rgba(218,41,28,.08); --accent-2:#e7746b;
+    --accent-glow:rgba(218,41,28,.08); --accent-glow2:rgba(218,41,28,.16);
+    --fav-bg:rgba(218,41,28,.07); --fav-border:rgba(218,41,28,.35);
     --gbar-bg:rgba(218,41,28,.10); --gbar-border:rgba(218,41,28,.35);
+    --chip-bg:#f2f2f5;
+    /* 팀과 무관하게 고정 — 사이트 이름·일요일·오류 배너 */
+    --brand:#DA291C; --sun:#dc2626; --err:#DA291C; --err-bg:#fdf1f0; --err-border:#f5c9c5;
     --bar-bg:rgba(255,255,255,.85);
     --win:#16a34a; --draw:#8a8a94; --loss:#dc2626;
     --z-ucl:#2563eb; --z-uel:#f97316; --z-uecl:#16a34a; --z-rel:#dc2626;
@@ -26,10 +30,12 @@
       --bg:#0e0e11; --bg-soft:#141419; --card:#16161b;
       --text:#f0f0f3; --text-mid:#b6b6c0; --text-dim:#82828e;
       --border:#26262e; --border-soft:#1e1e25;
-      --accent:#FF3B30; --accent-soft:rgba(255,59,48,.12);
-      --chip-bg:#1e1e25;
-      --today:#231517; --mu:#24181b; --mu-border:#4a2a2f;
+      --accent:#FF3B30; --accent-soft:rgba(255,59,48,.12); --accent-2:#ff8a83;
+      --accent-glow:rgba(255,59,48,.10); --accent-glow2:rgba(255,59,48,.20);
+      --fav-bg:rgba(255,59,48,.15); --fav-border:rgba(255,59,48,.45);
       --gbar-bg:rgba(255,59,48,.16); --gbar-border:rgba(255,59,48,.45);
+      --chip-bg:#1e1e25;
+      --brand:#FF3B30; --sun:#f05252; --err:#FF3B30; --err-bg:#24181b; --err-border:#4a2a2f;
       --bar-bg:rgba(14,14,17,.85);
       --win:#22c55e; --draw:#82828e; --loss:#f05252;
       --z-ucl:#3b82f6; --z-uel:#fb923c; --z-uecl:#22c55e; --z-rel:#f05252;
@@ -40,7 +46,7 @@
   body { margin:0; background:var(--bg); color:var(--text);
     font-family:"Pretendard Variable","Pretendard",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Segoe UI","Noto Sans KR","Malgun Gothic",sans-serif;
     font-size:15px; line-height:1.55; -webkit-font-smoothing:antialiased; letter-spacing:-0.01em; font-feature-settings:"tnum" 1, "ss05" 1; }
-  @media (prefers-color-scheme: dark) { body { background:radial-gradient(1200px 600px at 20% -10%, rgba(255,59,48,.07), transparent 60%), var(--bg); } }
+  @media (prefers-color-scheme: dark) { body { background:radial-gradient(1200px 600px at 20% -10%, var(--accent-glow), transparent 60%), var(--bg); } }
   a { color:inherit; }
   .wrap { max-width:1680px; margin:0 auto; padding:0 32px; }
 
@@ -49,7 +55,7 @@
   .top-inner { display:flex; align-items:center; gap:14px; padding:12px 0; }
   .brand { display:flex; align-items:center; gap:9px; font-weight:900; font-size:19px; letter-spacing:.02em; font-style:italic; text-decoration:none; white-space:nowrap; }
   .brand img { width:26px; height:26px; object-fit:contain; }
-  .brand .accent { color:var(--accent); }
+  .brand .accent { color:var(--brand); }
   .brand .yr { font-size:11px; font-weight:700; letter-spacing:.06em; color:var(--text-dim); border:1px solid var(--border); padding:2px 7px; border-radius:6px; margin-left:4px; font-style:normal; }
   .top .meta { color:var(--text-dim); font-size:12.5px; margin-left:6px; padding-left:14px; border-left:1px solid var(--border); white-space:nowrap; }
   .top .sp { flex:1; }
@@ -60,9 +66,9 @@
   .btn .ic { width:14px; height:14px; }
 
   /* 오류 배너 */
-  .jserr { display:none; margin:12px 0 0; padding:10px 14px; border-radius:10px; border:1px solid var(--mu-border); background:var(--mu); color:var(--accent); font-size:12.5px; }
+  .jserr { display:none; margin:12px 0 0; padding:10px 14px; border-radius:10px; border:1px solid var(--err-border); background:var(--err-bg); color:var(--err); font-size:12.5px; }
   .jserr.on { display:block; }
-  .err { padding:14px 16px; font-size:12.5px; color:var(--accent); background:var(--mu); border:1px solid var(--mu-border); border-radius:10px; margin:8px; }
+  .err { padding:14px 16px; font-size:12.5px; color:var(--err); background:var(--err-bg); border:1px solid var(--err-border); border-radius:10px; margin:8px; }
 
   /* 배지 */
   .bdg { position:relative; flex:0 0 auto; display:inline-flex; align-items:center; justify-content:center; vertical-align:middle; }
@@ -105,7 +111,7 @@
   .legend i { display:inline-block; width:10px; height:10px; border-radius:3px; margin-right:5px; vertical-align:-1px; }
   .dows, .week { display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); }
   .dow { padding:11px 0 9px; text-align:center; font-size:11px; font-weight:700; color:var(--text-dim); letter-spacing:.12em; border-bottom:1px solid var(--border-soft); }
-  .dow.sat { color:#3b82f6; } .dow.sun { color:var(--accent); }
+  .dow.sat { color:#3b82f6; } .dow.sun { color:var(--sun); }
   .week { position:relative; }
   .cell { grid-row:1; min-height:150px; min-width:0; overflow:hidden; padding:9px 5px; border-right:1px solid var(--border-soft); border-bottom:1px solid var(--border-soft); display:flex; flex-direction:column; gap:3px; position:relative; transition:background .15s; min-width:0; }
   .cell:hover { background:var(--bg-soft); }
@@ -115,7 +121,7 @@
   .cell.today { background:radial-gradient(220px 120px at 30% 0%, var(--accent-soft), transparent 70%); }
   .cell .d { font-size:14px; font-weight:700; color:var(--text-mid); font-variant-numeric:tabular-nums; display:flex; align-items:center; gap:5px; letter-spacing:-0.02em; white-space:nowrap; margin-bottom:var(--rsv,0px); }
   .cell.today .d { color:var(--accent); }
-  .cell.sun .d { color:var(--accent); } .cell.sat .d { color:#3b82f6; }
+  .cell.sun .d { color:var(--sun); } .cell.sat .d { color:#3b82f6; }
   .today-tag { font-size:9.5px; font-weight:700; background:var(--accent); color:#fff; padding:1px 5px; border-radius:999px; line-height:1.5; }
   .mx { display:flex; flex-direction:column; gap:2px; min-width:0; }
   .mrow { display:flex; flex-wrap:wrap; align-items:center; gap:2px; font-size:9.5px; line-height:1.5; padding:1px; border-radius:4px; color:var(--text-mid); min-width:0; }
@@ -124,8 +130,8 @@
   .mrow .sc { flex:0 0 auto; font-weight:800; font-variant-numeric:tabular-nums; color:var(--text); font-size:9px; letter-spacing:-0.04em; }
   .mrow .tgw { flex:0 0 100%; line-height:1; margin-bottom:2px; }
   .mrow .tgw .ctag { font-size:8px; padding:1px 4px; line-height:1.4; }
-  .mrow.mu { background:var(--mu); color:var(--accent); font-weight:700; box-shadow:inset 2px 0 0 var(--accent); }
-  .mrow.mu .sc { color:var(--accent); }
+  .mrow.fav { background:var(--fav-bg); color:var(--accent); font-weight:700; box-shadow:inset 2px 0 0 var(--accent); }
+  .mrow.fav .sc { color:var(--accent); }
   .cell:not(.open) .mrow.xtra { display:none; }
   .more { align-self:flex-start; margin-top:1px; border:1px solid var(--border); background:var(--chip-bg); color:var(--text-dim); font:inherit; font-size:9.5px; font-weight:700; padding:1px 6px; border-radius:999px; cursor:pointer; }
   .more:hover { border-color:var(--text-dim); color:var(--text); }
@@ -142,7 +148,7 @@
   .next-hero { padding:13px 14px; margin:-4px -4px 0; border-radius:14px; border:1px solid var(--border-soft); position:relative; overflow:hidden; isolation:isolate;
     background:linear-gradient(135deg, var(--accent-soft), transparent 70%); }
   .next-hero::after { content:""; position:absolute; right:-30px; top:50%; width:160px; height:160px; margin-top:-80px; z-index:-1; border-radius:50%;
-    background:radial-gradient(circle, rgba(218,41,28,.16), transparent 65%); animation:breath 3.6s ease-in-out infinite; }
+    background:radial-gradient(circle, var(--accent-glow2), transparent 65%); animation:breath 3.6s ease-in-out infinite; }
   @keyframes breath { 0%,100% { transform:scale(.9); opacity:.6; } 50% { transform:scale(1.1); opacity:1; } }
   @media (prefers-reduced-motion: reduce) { .next-hero::after, .track i.now { animation:none; } }
   .nh-top { display:flex; align-items:center; gap:5px; flex-wrap:wrap; }
@@ -153,7 +159,7 @@
   .nh-t .n { font-size:19px; font-weight:800; letter-spacing:-0.03em; line-height:1.25; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
   .nh-t .c { font-size:12px; color:var(--text-dim); line-height:1.4; }
   .live-tag { font-size:9.5px; font-weight:800; background:var(--accent); color:#fff; padding:1px 6px; border-radius:999px; letter-spacing:.06em; }
-  .live-sc { font-size:11px; font-weight:800; font-variant-numeric:tabular-nums; letter-spacing:-0.02em; color:var(--accent); background:var(--accent-soft); border:1px solid var(--mu-border); padding:1px 7px; border-radius:6px; }
+  .live-sc { font-size:11px; font-weight:800; font-variant-numeric:tabular-nums; letter-spacing:-0.02em; color:var(--accent); background:var(--accent-soft); border:1px solid var(--fav-border); padding:1px 7px; border-radius:6px; }
   .ha { font-size:10px; font-weight:800; padding:1px 6px; border-radius:5px; background:var(--chip-bg); color:var(--text-mid); letter-spacing:-0.01em; }
   .ha.home { background:var(--accent-soft); color:var(--accent); }
   .dday { margin-left:auto; text-align:right; color:var(--accent); font-weight:800; font-size:24px; letter-spacing:-0.04em; line-height:1; flex:0 0 auto; white-space:nowrap; }
@@ -195,11 +201,11 @@
   .ss-pct span { font-size:11px; color:var(--text-dim); }
   .track { position:relative; height:26px; margin:4px 0 6px; }
   .track .rail { position:absolute; left:0; right:0; top:50%; height:4px; margin-top:-2px; border-radius:2px; background:var(--border); }
-  .track .fill { position:absolute; left:0; top:50%; height:4px; margin-top:-2px; border-radius:2px; background:linear-gradient(90deg, var(--accent), #ff6b62); }
+  .track .fill { position:absolute; left:0; top:50%; height:4px; margin-top:-2px; border-radius:2px; background:linear-gradient(90deg, var(--accent), var(--accent-2)); }
   .track i { position:absolute; top:50%; width:7px; height:7px; margin:-3.5px 0 0 -3.5px; border-radius:50%; background:var(--text-dim); opacity:.45; box-sizing:border-box; cursor:default; }
   .track i.done { background:var(--accent); opacity:1; }
   .track i.now { width:13px; height:13px; margin:-6.5px 0 0 -6.5px; background:var(--bg); border:3px solid var(--accent); opacity:1; box-shadow:0 0 0 4px var(--accent-soft); animation:pulse 1.8s ease-in-out infinite; z-index:2; }
-  @keyframes pulse { 0%,100%{ box-shadow:0 0 0 4px var(--accent-soft);} 50%{ box-shadow:0 0 0 8px rgba(218,41,28,.08);} }
+  @keyframes pulse { 0%,100%{ box-shadow:0 0 0 4px var(--accent-soft);} 50%{ box-shadow:0 0 0 8px var(--accent-glow);} }
   .track i:hover::after { content:attr(data-t); position:absolute; bottom:calc(100% + 8px); left:50%; transform:translateX(-50%); white-space:nowrap; font-size:11px; background:var(--text); color:var(--bg); padding:4px 8px; border-radius:6px; z-index:5; }
   .ss-foot { display:flex; justify-content:space-between; font-size:11.5px; color:var(--text-dim); }
   .ss-foot b { color:var(--text-mid); font-weight:600; }
@@ -231,8 +237,8 @@
   .tbl .ch.up { color:var(--win); } .tbl .ch.dn { color:var(--loss); }
   .tbl .pt { font-weight:800; font-size:13.5px; letter-spacing:-0.02em; padding-right:4px; }
   .tbl .fm { white-space:nowrap; text-align:right; padding-right:6px; }
-  .tbl tr.mu-row { background:var(--mu); }
-  .tbl tr.mu-row .nm { color:var(--accent); font-weight:800; }
+  .tbl tr.fav-row { background:var(--fav-bg); }
+  .tbl tr.fav-row .nm { color:var(--accent); font-weight:800; }
   .fp { display:inline-block; width:13px; height:13px; line-height:13px; border-radius:3px; font-size:8.5px; font-weight:800; color:#fff; text-align:center; margin-left:2px; vertical-align:middle; }
   .fp.W { background:var(--win); } .fp.D { background:var(--draw); } .fp.L { background:var(--loss); }
   .fp.n { background:transparent; border:1px dashed var(--border); }
@@ -276,14 +282,14 @@
   .sb li { border-bottom:1px solid var(--border-soft); }
   .sb li:last-child { border-bottom:none; }
   .sb-r { display:flex; align-items:center; gap:8px; padding:9px 16px; font-size:13px; }
-  .sb li.mu-row { background:var(--mu); box-shadow:inset 3px 0 0 var(--accent); }
+  .sb li.fav-row { background:var(--fav-bg); box-shadow:inset 3px 0 0 var(--accent); }
   .sb .when { flex:0 0 auto; width:74px; font-size:11px; color:var(--text-dim); font-variant-numeric:tabular-nums; }
   .sb .side { flex:1 1 0; min-width:0; display:flex; align-items:center; gap:6px; }
   .sb .side.h { justify-content:flex-end; text-align:right; }
   .sb .side .nm { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-weight:600; letter-spacing:-0.02em; }
   .sb .res { flex:0 0 auto; min-width:46px; text-align:center; font-weight:800; font-variant-numeric:tabular-nums; letter-spacing:-0.03em; font-size:14px; }
   .sb .res.t { font-size:12px; font-weight:700; color:var(--text-mid); }
-  .sb li.mu-row .nm, .sb li.mu-row .res { color:var(--accent); }
+  .sb li.fav-row .nm, .sb li.fav-row .res { color:var(--accent); }
 
   /* ---------- 아카이브 ---------- */
   .archive { margin:22px 0 0; }
@@ -298,7 +304,7 @@
   .empty { padding:26px 18px; text-align:center; color:var(--text-dim); font-size:13.5px; }
 
   footer { margin-top:40px; padding:22px 0 44px; border-top:1px solid var(--border); font-size:12.5px; color:var(--text-dim); text-align:center; }
-  footer .brand-f { color:var(--accent); font-weight:700; }
+  footer .brand-f { color:var(--brand); font-weight:700; }
 
   /* 달력 칸은 화면이 줄어드는 만큼 글자도 한 단계씩 줄인다 (레이아웃 분기와 별개) */
   @media (max-width:1520px) {
@@ -349,9 +355,10 @@
 
 <div class="top"><div class="wrap top-inner">
   <a class="brand" href="index.html" id="brand">RED <span class="accent">DEVILS</span> HUB<span class="yr" id="yrTag"></span></a>
+  <div class="tsw" id="teamSw"></div>
   <div class="meta" id="metaTxt"></div>
   <div class="sp"></div>
-  <a class="btn" href="club.html"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>구단 가이드</a>
+  <a class="btn" id="guideLink" href="club.html"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>구단 가이드</a>
 </div></div>
 
 <div class="wrap">
@@ -367,7 +374,7 @@
         <button class="btn" id="todayBtn" style="margin-left:6px">오늘</button>
         <div class="sp"></div>
         <div class="legend">
-          <span><i style="background:var(--mu);box-shadow:inset 2px 0 0 var(--accent)"></i>맨유 경기</span>
+          <span><i style="background:var(--fav-bg);box-shadow:inset 2px 0 0 var(--accent)"></i><span id="legendTeam">경기</span></span>
           <span><i style="background:var(--gbar-bg);border:1px solid var(--gbar-border)"></i>매치위크</span>
           <span><i style="background:rgba(37,99,235,.2);border:1px solid var(--z-ucl)"></i>컵·유럽</span>
           <span><i style="background:var(--accent);border-radius:50%;width:8px;height:8px"></i>브리핑</span>
@@ -380,7 +387,7 @@
     <aside class="col2">
 
       <section class="card" id="nextCard">
-        <div class="card-h"><h2>다음 경기 · 맨유</h2><span class="sub" id="nextSub"></span></div>
+        <div class="card-h"><h2 id="nextTitle">다음 경기</h2><span class="sub" id="nextSub"></span></div>
         <div class="card-b" id="nextBody"></div>
       </section>
 
@@ -430,7 +437,7 @@
   <!-- 최근 경기 + 매치위크 스코어보드 -->
   <div class="row2">
     <section class="card" id="recentCard">
-      <div class="card-h"><h2>맨유 최근 경기</h2><span class="sub" id="recentSub"></span></div>
+      <div class="card-h"><h2 id="recentTitle">최근 경기</h2><span class="sub" id="recentSub"></span></div>
       <div class="form-strip" id="formStrip"></div>
       <ul class="rec" id="recentList"></ul>
     </section>
@@ -454,7 +461,7 @@
     <ul class="arch-list" id="archList"></ul>
   </section>
 
-  <footer><span class="brand-f">RED DEVILS HUB</span> · BBC Sport 데이터로 매일 갱신되는 맨유·프리미어리그 대시보드 · 시간은 모두 로컬(KST) 기준</footer>
+  <footer><span class="brand-f">RED DEVILS HUB</span> · BBC Sport 데이터로 매일 갱신되는 <span id="footTeam"></span>프리미어리그 대시보드 · 시간은 모두 로컬(KST) 기준</footer>
 </div>
 
 <script src="data.js"></script>
@@ -467,8 +474,16 @@
   if (!H) { document.body.innerHTML = '<p style="padding:40px;text-align:center">data.js를 찾을 수 없습니다.</p>'; return; }
   var C = window.HUB_CLUBS || {};             // clubs.js — 없을 수 있음
   var BR = window.HUB_BRIEFINGS || [];        // briefings.js — 비어 있을 수 있음
-  var MU = (H.meta && H.meta.team) || 'manchester-united';
+  var T = window.HUB_TEAM || null;            // match-view.js — 응원 팀 선택
+  var DEF = (H.meta && H.meta.team) || 'manchester-united';
+  var TEAM = T ? T.get() : DEF;               // 선택된 지원 팀. 바뀌면 renderTeam()이 다시 그린다
   var FX = H.fixtures || [], TEAMS = H.teams || {}, MWN = (H.meta && H.meta.matchweeks) || 38;
+
+  // 팀에 따라 달라지는 것들 — 지원 팀 정보가 없는 옛 데이터에서도 동작하게 폴백을 둔다
+  function isFav(f) { return T ? T.isFav(f, TEAM) : !!(f && f.mu); }
+  function teamKo() { return T ? T.label(TEAM) : '맨유'; }                    // 짧은 이름 (맨유 · 토트넘)
+  function teamFull() { return T ? T.name(TEAM) : '맨체스터 유나이티드'; }
+  function link(u) { return T ? T.href(u) : u; }                              // 링크에 ?team= 유지
 
   // 예기치 못한 오류는 배너로 드러낸다 (조용히 죽지 않게)
   window.addEventListener('error', function (e) {
@@ -492,8 +507,8 @@
   function dday(d) { var a = new Date(d); a.setHours(0, 0, 0, 0); return Math.round((a - today) / 86400000); }
   function ddayTxt(d) { var n = dday(d); return n === 0 ? 'D-DAY' : (n > 0 ? 'D-' + n : 'D+' + (-n)); }
 
-  var COMP_KO = { PL: '프리미어리그', UCL: '챔피언스리그', UEL: '유로파리그', UECL: '컨퍼런스리그', FAC: 'FA컵', EFL: '리그컵(카라바오컵)', FR: '친선경기', OTHER: '기타' };
-  var COMP_TAG = { PL: 'PL', UCL: 'UCL', UEL: 'UEL', UECL: 'UECL', FAC: 'FA컵', EFL: '리그컵', FR: '친선', OTHER: '기타' };
+  var COMP_KO = { PL: '프리미어리그', UCL: '챔피언스리그', UEL: '유로파리그', UECL: '컨퍼런스리그', FAC: 'FA컵', EFL: '리그컵(카라바오컵)', USC: '슈퍼컵', FR: '친선경기', OTHER: '기타' };
+  var COMP_TAG = { PL: 'PL', UCL: 'UCL', UEL: 'UEL', UECL: 'UECL', FAC: 'FA컵', EFL: '리그컵', USC: '슈퍼컵', FR: '친선', OTHER: '기타' };
   function compCls(c) { return (COMP_TAG[c] ? c : 'OTHER').toLowerCase(); }
   function compTag(c) { return '<span class="ctag ' + compCls(c) + '">' + esc(COMP_TAG[c] || c || 'ETC') + '</span>'; }
 
@@ -521,15 +536,15 @@
     return h;
   }
   function isPL(key) { return !!(key && TEAMS[key]); }
-  function clubHref(key) { return 'club.html?club=' + encodeURIComponent(key); }
+  function clubHref(key) { return link('club.html?club=' + encodeURIComponent(key)); }
   function goals(list) { return (list || []).filter(function (s) { return s && s.name; }); }
   function goalMark(t) { return t === 'pen' ? '(PK)' : t === 'og' ? '(OG)' : ''; }
   function scoreTxt(f) { return f.score ? (f.score.home + '-' + f.score.away) : ''; }
-  // 맨유 관점 결과
-  function muRes(f) {
+  // 선택 팀 관점 결과
+  function favRes(f) {
     if (!f.score) return '';
     if (f.winner === 'draw' || f.score.home === f.score.away) return 'D';
-    var home = f.home.key === MU;
+    var home = f.home.key === TEAM;
     return ((f.winner === 'home') === home) ? 'W' : 'L';
   }
   function safe(id, fn) {
@@ -545,7 +560,7 @@
   var MV = window.HUB_MATCHVIEW || null;
   var FX_BY_ID = {};
   FX.forEach(function (f) { FX_BY_ID[f.id] = f; });
-  if (MV) MV.init(function () { if (nextMU) renderNextLineup(nextMU); });
+  if (MV) MV.init(function () { if (nextFav) renderNextLineup(nextFav); });
 
   // 줄(li)에 접었다 펴는 상세 패널을 붙인다. 줄 자체가 버튼 역할을 한다
   function panelHtml(pre, f) {
@@ -600,46 +615,82 @@
     MV.load(f.id, function (m) { MV.render(slot, f, m, { mode: 'lineups', lineupsOpen: true }); });
   }
 
-  // 파생 데이터
+  // ---------- 파생 데이터 (팀과 무관) ----------
   var PL = FX.filter(function (f) { return f.comp === 'PL'; });
   var MWS = {};                                        // mw -> 경기 목록
   PL.forEach(function (f) { (MWS[f.mw] = MWS[f.mw] || []).push(f); });
-  var MU_FX = FX.filter(function (f) { return f.mu; });
-  var nextMU = null, liveMU = null;
-  MU_FX.forEach(function (f) {
-    if (f.status === 'live' && !liveMU) liveMU = f;
-    if (!nextMU && f.status !== 'post' && f.status !== 'postponed') nextMU = f;
-  });
-  if (liveMU) nextMU = liveMU;
-  var briefByDate = {};
-  BR.forEach(function (b) { if (b && b.date) briefByDate[b.date] = b; });
 
-  // ---------- 상단 메타 ----------
+  // ---------- 파생 데이터 (선택 팀에 따라 다시 계산) ----------
+  var FAV_FX = [], nextFav = null, briefs = [], briefByDate = {};
+  // 브리핑 항목을 선택 팀 기준으로 정규화. 구버전 { date, file, count, mu } 는 맨유 항목으로 읽는다
+  function briefFor(b, key) {
+    if (!b || !b.date) return null;
+    var e = b.files && b.files[key];
+    if (e && e.file) return { date: b.date, file: e.file, count: e.count, team: e.team, headline: e.headline };
+    if (!b.files && b.file && key === 'manchester-united') return { date: b.date, file: b.file, count: b.count, team: b.mu, headline: b.headline };
+    return null;                                       // 그 날짜에 이 팀 브리핑이 없으면 목록에서 뺀다
+  }
+  function calcTeam() {
+    FAV_FX = FX.filter(isFav);
+    nextFav = null;
+    var live = null;
+    FAV_FX.forEach(function (f) {
+      if (f.status === 'live' && !live) live = f;
+      if (!nextFav && f.status !== 'post' && f.status !== 'postponed') nextFav = f;
+    });
+    if (live) nextFav = live;
+    briefs = []; briefByDate = {};
+    BR.forEach(function (b) {
+      var e = briefFor(b, TEAM);
+      if (e) { briefs.push(e); briefByDate[e.date] = e; }
+    });
+    briefs.sort(function (a, b) { return a.date < b.date ? 1 : -1; });
+    sortDays();                                        // 달력 칸 순서도 선택 팀 기준으로 다시 잡는다
+  }
+
+  // ---------- 상단 메타 (팀과 무관) ----------
   safe('metaTxt', function () {
     var u = String((H.meta && H.meta.updatedAt) || '');
     document.getElementById('metaTxt').textContent = u ? ('갱신 ' + u.slice(0, 16).replace('T', ' ').replace(/-/g, '.')) : '';
     document.getElementById('yrTag').textContent = (H.meta && H.meta.season) || '';
-    var b = TEAMS[MU] && TEAMS[MU].badge;
+    var b = TEAMS[DEF] && TEAMS[DEF].badge;            // 브랜드 배지는 사이트 정체성이라 고정
     if (b) document.getElementById('brand').insertAdjacentHTML('afterbegin', '<img src="' + esc(b) + '" alt="" onerror="this.remove()">');
     document.title = 'RED DEVILS HUB — ' + ((H.meta && H.meta.season) || '');
+    if (T) T.mount(document.getElementById('teamSw'));
   });
 
+  // ---------- 팀 이름이 들어가는 문구·링크 ----------
+  function renderChrome() {
+    var ko = teamKo();
+    document.getElementById('nextTitle').textContent = '다음 경기 · ' + ko;
+    document.getElementById('recentTitle').textContent = ko + ' 최근 경기';
+    document.getElementById('legendTeam').textContent = ko + ' 경기';
+    document.getElementById('footTeam').textContent = ko + '·';
+    document.getElementById('brand').setAttribute('href', link('index.html'));
+    document.getElementById('guideLink').setAttribute('href', link('club.html'));
+  }
+
   // ---------- 달력 ----------
-  var byDay = {};                                       // 로컬 날짜 -> 경기 목록
+  var byDay = {};                                       // 로컬 날짜 -> 경기 목록 (순서는 sortDays가 정한다)
   FX.forEach(function (f) { (byDay[ldate(f)] = byDay[ldate(f)] || []).push(f); });
-  Object.keys(byDay).forEach(function (k) { byDay[k].sort(function (a, b) { return kd(a) - kd(b); }); });
+  // 선택 팀 경기를 칸 맨 위로 올린다 — 다섯 번째부터는 "+N" 안에 접히기 때문. 나머지는 킥오프 순
+  function sortDays() {
+    Object.keys(byDay).forEach(function (k) {
+      byDay[k].sort(function (a, b) { return (isFav(b) - isFav(a)) || (kd(a) - kd(b)); });
+    });
+  }
 
   var cur = new Date(today.getFullYear(), today.getMonth(), 1);
   var calEl = document.getElementById('cal');
 
-  // 달력 한 줄: [홈 약칭] 스코어·시각 [원정 약칭] — 맨유는 붉게, 컵·유럽은 대회 태그를 붙인다
+  // 달력 한 줄: [홈 약칭] 스코어·시각 [원정 약칭] — 선택 팀은 팀 색으로, 컵·유럽은 대회 태그를 붙인다
   function mrow(f, hidden) {
-    var mu = !!f.mu, fin = f.status === 'post' || f.status === 'live';
+    var fav = isFav(f), fin = f.status === 'post' || f.status === 'live';
     var mid = f.status === 'postponed' ? '연기' : (fin ? scoreTxt(f) : hhmm(kd(f)));
-    var tag = (mu && f.comp !== 'PL') ? '<span class="tgw">' + compTag(f.comp) + '</span>' : '';
+    var tag = (fav && f.comp !== 'PL') ? '<span class="tgw">' + compTag(f.comp) + '</span>' : '';
     var t = esc(f.home.name + ' vs ' + f.away.name + ' · ' + (COMP_KO[f.comp] || f.comp) + (f.mw ? ' MW' + f.mw : '') + ' · ' + hhmm(kd(f)) + ' (현지 ' + (f.timeUK || '') + ')' + (fin ? ' · ' + scoreTxt(f) : ''));
     // 칸이 좁아 팀은 3글자 약칭으로 쓰고, 전체 이름은 title 툴팁에 담는다
-    return '<div class="mrow' + (mu ? ' mu' : '') + (hidden ? ' xtra' : '') + '" title="' + t + '">' + tag +
+    return '<div class="mrow' + (fav ? ' fav' : '') + (hidden ? ' xtra' : '') + '" title="' + t + '">' + tag +
       '<span class="hn">' + esc(abbrOf(f.home.key, f.home)) + '</span>' +
       '<span class="sc">' + esc(mid) + '</span>' +
       '<span class="an">' + esc(abbrOf(f.away.key, f.away)) + '</span></div>';
@@ -691,7 +742,7 @@
           body += '</div>';
           if (day.list.length > 4) body += '<button class="more" data-n="' + (day.list.length - 4) + '">+' + (day.list.length - 4) + '</button>';
         }
-        if (day.br) body += '<a class="brief" href="' + esc(day.br.file) + '" title="' + esc(day.br.headline || '') + '">브리핑</a>';
+        if (day.br) body += '<a class="brief" href="' + esc(link(day.br.file)) + '" title="' + esc(day.br.headline || '') + '">브리핑</a>';
         wk += '<div class="' + cls + '" style="grid-column:' + (ci + 1) + ';--rsv:' + rsv + 'px">' + body + '</div>';
       });
       order.forEach(function (mw) {
@@ -703,7 +754,6 @@
     }
     calEl.innerHTML = html;
   }
-  safe('cal', renderCal);
   document.getElementById('prevM').onclick = function () { cur.setMonth(cur.getMonth() - 1); safe('cal', renderCal); };
   document.getElementById('nextM').onclick = function () { cur.setMonth(cur.getMonth() + 1); safe('cal', renderCal); };
   document.getElementById('todayBtn').onclick = function () { cur = new Date(today.getFullYear(), today.getMonth(), 1); safe('cal', renderCal); };
@@ -714,11 +764,11 @@
     if (bar) { e.preventDefault(); setMw(parseInt(bar.getAttribute('data-mw'), 10)); document.getElementById('mwCard').scrollIntoView({ behavior: 'smooth', block: 'center' }); }
   });
 
-  // ---------- 다음 경기 (맨유) ----------
-  safe('nextBody', function () {
+  // ---------- 다음 경기 (선택 팀) ----------
+  function renderNext() {
     var nb = document.getElementById('nextBody');
-    if (!nextMU) { nb.innerHTML = '<div class="empty">남은 경기가 없습니다.</div>'; document.getElementById('nextSub').textContent = ''; return; }
-    var f = nextMU, home = f.home.key === MU, opp = home ? f.away : f.home, k = kd(f);
+    if (!nextFav) { nb.innerHTML = '<div class="empty">남은 경기가 없습니다.</div>'; document.getElementById('nextSub').textContent = ''; return; }
+    var f = nextFav, home = f.home.key === TEAM, opp = home ? f.away : f.home, k = kd(f);
     var live = f.status === 'live';
     document.getElementById('nextSub').textContent = (COMP_KO[f.comp] || f.comp) + (f.mw ? ' · MW ' + f.mw : '');
 
@@ -736,8 +786,8 @@
     // 선발 라인업 (match-view.js가 matches/<id>.js를 읽어 채운다)
     h += '<div class="mv-slot" id="nextLineup"></div>';
 
-    var oc = club(opp.key), mc = club(MU);
-    var venue = home ? ((mc.stadium && (mc.stadium.ko || mc.stadium.name)) || 'Old Trafford')
+    var oc = club(opp.key), mc = club(TEAM);
+    var venue = home ? ((mc.stadium && (mc.stadium.ko || mc.stadium.name)) || '')
       : ((oc.stadium && (oc.stadium.ko || oc.stadium.name)) || '');
     h += '<ul class="kick">';
     h += '<li><span class="k">킥오프</span><span class="v">' + (k.getMonth() + 1) + '/' + k.getDate() + ' (' + DOW[k.getDay()] + ') ' + hhmm(k) + '<small>현지 ' + esc(f.timeUK || '-') + '</small></span></li>';
@@ -767,17 +817,17 @@
     h += '</' + tag + '>';
     nb.innerHTML = h;
     renderNextLineup(f);
-  });
+  }
 
   // ---------- 다가오는 일정 (다음 경기 이후 4경기) ----------
-  safe('upcoming', function () {
+  function renderUpcoming() {
     var el = document.getElementById('upcoming'), uh = '', cnt = 0, seen = false;
-    MU_FX.forEach(function (f) {
+    FAV_FX.forEach(function (f) {
       if (cnt >= 4 || f.status === 'post') return;
-      if (nextMU && f.id === nextMU.id) { seen = true; return; }
-      if (nextMU && !seen) return;
+      if (nextFav && f.id === nextFav.id) { seen = true; return; }
+      if (nextFav && !seen) return;
       cnt++;
-      var k = kd(f), home = f.home.key === MU, opp = home ? f.away : f.home, linked = isPL(opp.key);
+      var k = kd(f), home = f.home.key === TEAM, opp = home ? f.away : f.home, linked = isPL(opp.key);
       var tag = linked ? 'a' : 'div', attr = linked ? ' href="' + clubHref(opp.key) + '"' : '';
       uh += '<li><' + tag + ' class="up-a"' + attr + '>' + badge(opp.key, 24, opp) +
         '<span class="nm">' + esc(koName(opp.key, opp.name)) + '<small>' + compTag(f.comp) + ' ' + (home ? '홈' : '원정') + (f.mw ? ' · MW ' + f.mw : (f.round ? ' · ' + esc(f.round) : '')) + '</small></span>' +
@@ -785,10 +835,10 @@
         '<span class="in">' + ddayTxt(k) + '</span></' + tag + '></li>';
     });
     el.innerHTML = uh || '<li class="empty">남은 일정이 없습니다.</li>';
-  });
+  }
 
   // ---------- 시즌 진행 ----------
-  safe('seasonBody', function () {
+  function renderSeason() {
     var doneMw = 0, mwDone = {};
     for (var i = 1; i <= MWN; i++) {
       var l = MWS[i] || [];
@@ -797,8 +847,8 @@
     }
     var curMw = (H.meta && H.meta.currentMw) || 1;
     var pct = Math.round(doneMw / MWN * 100);
-    var muSt = (H.standings || []).filter(function (s) { return s.key === MU; })[0];
-    var muPlayed = muSt ? muSt.played : PL.filter(function (f) { return f.status === 'post' && (f.home.key === MU || f.away.key === MU); }).length;
+    var favSt = (H.standings || []).filter(function (s) { return s.key === TEAM; })[0];
+    var favPlayed = favSt ? favSt.played : PL.filter(function (f) { return f.status === 'post' && (f.home.key === TEAM || f.away.key === TEAM); }).length;
 
     var h = '<div class="ss-top"><div class="ss-num">' + doneMw + '<small>/ ' + MWN + ' 매치위크</small></div><div class="ss-pct"><b>' + pct + '%</b><span>완료</span></div></div>';
     h += '<div class="track"><div class="rail"></div><div class="fill" style="width:' + Math.max(0, (doneMw - 0.5) / MWN * 100).toFixed(2) + '%"></div>';
@@ -813,22 +863,22 @@
     h += '<div class="ss-foot"><span><b>MW1</b> ' + (a ? md(kd(a)) : '') + '</span><span><b>MW' + MWN + '</b> ' + (z ? md(kd(z)) : '') + '</span></div>';
     var cl = MWS[curMw] || [], c0 = cl[0], c1 = cl[cl.length - 1];
     h += '<div class="ss-line"><span class="k">NEXT</span><span class="v">MW ' + curMw + '</span><span>' + (c0 ? esc(md(kd(c0)) + '–' + md(kd(c1))) : '') + '</span><span class="r">남은 매치위크 ' + (MWN - doneMw) + '</span></div>';
-    h += '<div class="ss-line"><span class="k">맨유</span><span class="v">리그 ' + muPlayed + ' / ' + MWN + '경기</span><span class="r">' + (muSt ? muSt.points + '점 · ' + muSt.rank + '위' : '') + '</span></div>';
+    h += '<div class="ss-line"><span class="k">' + esc(teamKo()) + '</span><span class="v">리그 ' + favPlayed + ' / ' + MWN + '경기</span><span class="r">' + (favSt ? favSt.points + '점 · ' + favSt.rank + '위' : '') + '</span></div>';
     document.getElementById('seasonBody').innerHTML = h;
     document.getElementById('seasonSub').textContent = doneMw + ' / ' + MWN + ' 완료';
-  });
+  }
 
   // ---------- 순위표 ----------
-  safe('tblT', function () {
+  function renderStand() {
     var ZONE = { 'UEFA Champions League': 'var(--z-ucl)', 'UEFA Europa League': 'var(--z-uel)', 'UEFA Conference League': 'var(--z-uecl)', 'Relegation': 'var(--z-rel)' };
     var S = H.standings || [];
     var h = '<thead><tr><th></th><th></th><th class="l">팀</th><th></th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>PTS</th><th style="text-align:right;padding-right:6px">최근 6경기</th></tr></thead><tbody>';
     S.forEach(function (t) {
-      var isMu = t.key === MU, z = ZONE[t.zone] || 'transparent';
+      var isFavTeam = t.key === TEAM, z = ZONE[t.zone] || 'transparent';
       var dch = (typeof t.rankPrev === 'number') ? (t.rankPrev - t.rank) : 0;
       var ch = dch > 0 ? '<span class="ch up">▲' + dch + '</span>' : (dch < 0 ? '<span class="ch dn">▼' + (-dch) + '</span>' : '<span class="ch">–</span>');
       var fm = (t.form || []).map(function (r) { return '<span class="fp ' + (r === 'W' || r === 'D' || r === 'L' ? r : 'n') + '">' + (r === '-' ? '' : esc(r)) + '</span>'; }).join('');
-      h += '<tr' + (isMu ? ' class="mu-row"' : '') + '>' +
+      h += '<tr' + (isFavTeam ? ' class="fav-row"' : '') + '>' +
         '<td class="pos">' + t.rank + '</td>' +
         '<td class="zb"><i style="background:' + z + '"></i></td>' +
         '<td class="tm"><a href="' + clubHref(t.key) + '" title="' + esc(t.name) + ' 구단 가이드">' + badge(t.key, 18, t) + '<span class="nm">' + esc(koName(t.key, t.name)) + '</span></a></td>' +
@@ -840,30 +890,29 @@
     document.getElementById('tblT').innerHTML = h + '</tbody>';
     var pl = PL.filter(function (f) { return f.status === 'post'; }).length;
     document.getElementById('asofTxt').textContent = pl + '경기 기준';
-  });
+  }
 
-  safe('tblS', function () {
-    var SC = (H.scorers || []).slice();
-    function draw(byAssist) {
-      var list = SC.slice().sort(function (a, b) {
-        return byAssist ? ((b.assists - a.assists) || (b.goals - a.goals)) : ((b.goals - a.goals) || (b.assists - a.assists));
-      }).slice(0, 20);
-      var h = '<thead><tr><th></th><th class="l">선수</th><th>팀</th><th>득점</th><th>AST</th><th>출전</th></tr></thead><tbody>';
-      list.forEach(function (p, i) {
-        var isMu = p.team === MU;
-        h += '<tr' + (isMu ? ' class="mu-row"' : '') + '>' +
-          '<td class="pos">' + (i + 1) + '</td>' +
-          '<td class="tm"><span class="t"><span class="nm">' + esc(p.name) + '</span></span></td>' +
-          '<td>' + (isPL(p.team) ? '<a href="' + clubHref(p.team) + '" title="' + esc(p.teamShort || p.team) + '">' + badge(p.team, 17, { short: p.teamShort }) + '</a>' : badge(p.team, 17, { short: p.teamShort })) + '</td>' +
-          '<td class="pt">' + p.goals + '</td><td>' + p.assists + '</td><td>' + p.played + '</td></tr>';
-      });
-      document.getElementById('tblS').innerHTML = h + '</tbody>';
-    }
-    draw(false);
+  // ---------- 득점·어시스트 ----------
+  var byAssist = false;
+  function renderScorers() {
+    var list = (H.scorers || []).slice().sort(function (a, b) {
+      return byAssist ? ((b.assists - a.assists) || (b.goals - a.goals)) : ((b.goals - a.goals) || (b.assists - a.assists));
+    }).slice(0, 20);
+    var h = '<thead><tr><th></th><th class="l">선수</th><th>팀</th><th>득점</th><th>AST</th><th>출전</th></tr></thead><tbody>';
+    list.forEach(function (p, i) {
+      h += '<tr' + (p.team === TEAM ? ' class="fav-row"' : '') + '>' +
+        '<td class="pos">' + (i + 1) + '</td>' +
+        '<td class="tm"><span class="t"><span class="nm">' + esc(p.name) + '</span></span></td>' +
+        '<td>' + (isPL(p.team) ? '<a href="' + clubHref(p.team) + '" title="' + esc(p.teamShort || p.team) + '">' + badge(p.team, 17, { short: p.teamShort }) + '</a>' : badge(p.team, 17, { short: p.teamShort })) + '</td>' +
+        '<td class="pt">' + p.goals + '</td><td>' + p.assists + '</td><td>' + p.played + '</td></tr>';
+    });
+    document.getElementById('tblS').innerHTML = h + '</tbody>';
+  }
+  (function () {
     var bg = document.getElementById('sortG'), ba = document.getElementById('sortA');
-    bg.onclick = function () { bg.setAttribute('aria-pressed', 'true'); ba.setAttribute('aria-pressed', 'false'); draw(false); };
-    ba.onclick = function () { ba.setAttribute('aria-pressed', 'true'); bg.setAttribute('aria-pressed', 'false'); draw(true); };
-  });
+    bg.onclick = function () { byAssist = false; bg.setAttribute('aria-pressed', 'true'); ba.setAttribute('aria-pressed', 'false'); safe('tblS', renderScorers); };
+    ba.onclick = function () { byAssist = true; ba.setAttribute('aria-pressed', 'true'); bg.setAttribute('aria-pressed', 'false'); safe('tblS', renderScorers); };
+  })();
 
   // 탭
   var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
@@ -874,18 +923,18 @@
     };
   });
 
-  // ---------- 맨유 최근 경기 ----------
-  safe('recentList', function () {
-    var done = MU_FX.filter(function (f) { return f.status === 'post'; }).sort(function (a, b) { return kd(b) - kd(a); });
+  // ---------- 선택 팀 최근 경기 ----------
+  function renderRecent() {
+    var done = FAV_FX.filter(function (f) { return f.status === 'post'; }).sort(function (a, b) { return kd(b) - kd(a); });
     var last5 = done.slice(0, 5);
     document.getElementById('recentSub').textContent = '전 대회 · 최근 ' + last5.length + '경기';
     var fs = document.getElementById('formStrip');
     fs.innerHTML = last5.length
-      ? '<span class="k">FORM</span>' + last5.slice().reverse().map(function (f) { var r = muRes(f); return '<span class="fp ' + (r || 'n') + '" title="' + esc((f.home.key === MU ? f.away.name : f.home.name) + ' ' + scoreTxt(f)) + '">' + esc(r) + '</span>'; }).join('')
+      ? '<span class="k">FORM</span>' + last5.slice().reverse().map(function (f) { var r = favRes(f); return '<span class="fp ' + (r || 'n') + '" title="' + esc((f.home.key === TEAM ? f.away.name : f.home.name) + ' ' + scoreTxt(f)) + '">' + esc(r) + '</span>'; }).join('')
       : '<span class="k">FORM</span><span style="font-size:12px;color:var(--text-dim)">기록 없음</span>';
     var h = '';
     last5.forEach(function (f) {
-      var home = f.home.key === MU, opp = home ? f.away : f.home, r = muRes(f), k = kd(f);
+      var home = f.home.key === TEAM, opp = home ? f.away : f.home, r = favRes(f), k = kd(f);
       var gl = goals(f.scorers && f.scorers[home ? 'home' : 'away']);
       var gs = gl.map(function (s) { return s.name + ' ' + (s.times || []).map(function (t, i) { return t + goalMark(s.types && s.types[i]); }).join(','); }).join(' · ');
       var gsShort = gl.map(function (s) { var n = (s.times || []).length || 1, og = (s.types || []).every(function (t) { return t === 'og'; }) && n; return s.name + (n > 1 ? ' ×' + n : '') + (og ? ' (OG)' : ''); }).join(' · ');
@@ -901,7 +950,7 @@
         '</div>' + panelHtml('mvr-', f) + '</li>';
     });
     document.getElementById('recentList').innerHTML = h || '<li class="empty">아직 치른 경기가 없습니다.</li>';
-  });
+  }
   wireRows(document.getElementById('recentList'));
 
   // ---------- 매치위크 스코어보드 ----------
@@ -921,13 +970,13 @@
         : '경기 없음';
       var h = '';
       l.forEach(function (f) {
-        var mu = !!f.mu, fin = f.status === 'post' || f.status === 'live', k = kd(f);
+        var fav = isFav(f), fin = f.status === 'post' || f.status === 'live', k = kd(f);
         var gs = ['home', 'away'].map(function (s) {
           return goals(f.scorers && f.scorers[s]).map(function (x) { return x.name + ' ' + (x.times || []).join(','); }).join(', ');
         }).filter(Boolean).join(' | ');
         var res = f.status === 'postponed' ? '<span class="res t">연기</span>'
           : (fin ? '<span class="res">' + esc(scoreTxt(f)) + '</span>' : '<span class="res t">' + hhmm(k) + '</span>');
-        h += '<li' + (mu ? ' class="mu-row"' : '') + '>' +
+        h += '<li' + (fav ? ' class="fav-row"' : '') + '>' +
           '<div class="sb-r mv-row"' + rowAttrs('mvs-', f, gs) + '>' +
           '<span class="when">' + md(k) + ' (' + DOW[k.getDay()] + ')</span>' +
           '<span class="side h"><span class="nm">' + esc(shortOf(f.home)) + '</span>' + badge(f.home.key, 20, f.home) + '</span>' +
@@ -942,41 +991,62 @@
   wireRows(document.getElementById('mwList'));
   document.getElementById('mwPrev').onclick = function () { setMw(mwCur - 1); };
   document.getElementById('mwNext').onclick = function () { setMw(mwCur + 1); };
-  setMw(mwCur);
 
-  // ---------- 최신 브리핑 ----------
-  safe('latestBody', function () {
-    var list = BR.slice().sort(function (a, b) { return a.date < b.date ? 1 : -1; });
-    var lb = list[0];
+  // ---------- 최신 브리핑 (선택 팀 것만) ----------
+  function renderLatest() {
+    var lb = briefs[0];
+    var card = document.getElementById('latestCard');
     if (!lb) {
-      document.getElementById('latestCard').style.display = 'none';
+      card.style.display = 'none';
       document.querySelector('.col3').classList.add('solo');   // 순위표가 컬럼을 다 쓰게
+      document.getElementById('latestSub').textContent = '';
+      document.getElementById('latestBody').innerHTML = '';
       return;
     }
+    card.style.display = '';
+    document.querySelector('.col3').classList.remove('solo');
     var p = String(lb.date).split('-'), ld = new Date(+p[0], +p[1] - 1, +p[2]);
     var ago = Math.round((today - ld) / 86400000);
     document.getElementById('latestSub').textContent = ago === 0 ? '오늘' : (ago === 1 ? '어제' : ago + '일 전');
     document.getElementById('latestBody').innerHTML =
       '<div class="latest-date">' + esc(lb.date).replace(/-/g, '.') + ' (' + DOW[ld.getDay()] + ')</div>' +
       '<div class="latest-head">' + esc(lb.headline || '') + '</div>' +
-      '<div class="latest-meta">기사 ' + (lb.count || 0) + '건 · 맨유 ' + (lb.mu || 0) + '건</div>' +
-      '<a class="btn primary" href="' + esc(lb.file) + '">브리핑 열기 <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>';
-  });
+      '<div class="latest-meta">기사 ' + (lb.count || 0) + '건 · ' + esc(teamKo()) + ' ' + (lb.team || 0) + '건</div>' +
+      '<a class="btn primary" href="' + esc(link(lb.file)) + '">브리핑 열기 <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>';
+  }
 
   // ---------- 브리핑 아카이브 ----------
-  safe('archList', function () {
-    var list = BR.slice().sort(function (a, b) { return a.date < b.date ? 1 : -1; });
-    document.getElementById('archSub').textContent = list.length + '건';
-    var h = '';
-    list.forEach(function (b) {
+  function renderArchive() {
+    document.getElementById('archSub').textContent = briefs.length + '건';
+    var ko = teamKo(), h = '';
+    briefs.forEach(function (b) {
       var p = String(b.date).split('-'), d = new Date(+p[0], +p[1] - 1, +p[2]);
       h += '<li><div class="arch-date">' + esc(b.date).replace(/-/g, '.') + '<small>' + DOW[d.getDay()] + '요일</small></div>' +
         '<div class="arch-head">' + esc(b.headline || '') + '</div>' +
-        '<div class="arch-meta">기사 ' + (b.count || 0) + '건 · 맨유 ' + (b.mu || 0) + '건</div>' +
-        '<a class="btn primary" href="' + esc(b.file) + '">열기</a></li>';
+        '<div class="arch-meta">기사 ' + (b.count || 0) + '건 · ' + esc(ko) + ' ' + (b.team || 0) + '건</div>' +
+        '<a class="btn primary" href="' + esc(link(b.file)) + '">열기</a></li>';
     });
     document.getElementById('archList').innerHTML = h || '<li class="empty">아직 브리핑이 없습니다.</li>';
-  });
+  }
+
+  // ---------- 팀이 바뀌면 팀에 걸린 것만 다시 그린다 (새로고침 없음) ----------
+  function renderTeam() {
+    TEAM = T ? T.get() : DEF;
+    calcTeam();
+    renderChrome();
+    safe('cal', renderCal);
+    safe('nextBody', renderNext);
+    safe('upcoming', renderUpcoming);
+    safe('seasonBody', renderSeason);
+    safe('tblT', renderStand);
+    safe('tblS', renderScorers);
+    safe('recentList', renderRecent);
+    setMw(mwCur);
+    safe('latestBody', renderLatest);
+    safe('archList', renderArchive);
+  }
+  if (T) T.onChange(renderTeam);
+  renderTeam();
 })();
 </script>
 </body>

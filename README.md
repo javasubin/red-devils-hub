@@ -11,11 +11,11 @@
 index.html            대시보드 (달력 · 다음 경기 · 시즌 진행 · 순위표 · 스코어보드 · 브리핑 아카이브)
 club.html             구단 가이드 템플릿 — club.html?club=arsenal
 data.js               일정 · 결과 · 순위표 · 득점 순위   ← 스크립트가 생성 (손으로 편집하지 않음)
-briefings.js          브리핑 목록 (날짜 · 파일 · 기사 수 · 헤드라인)
+briefings.js          브리핑 목록 (날짜 → 팀별 파일 · 기사 수 · 헤드라인)
 clubs.js              20개 구단 정보 (한국어명 · 색 · 구장 · 역사 · 관전 포인트)
 briefing.css          브리핑 페이지 공통 스타일
 briefing.js           브리핑 페이지 공통 스크립트 (카테고리 칩 필터)
-briefings/            날짜별 브리핑 HTML + _template.html
+briefings/            날짜·팀별 브리핑 HTML (epl-news-YYYY-MM-DD-<팀키>.html) + _template.html
 scripts/update-data.mjs   BBC Sport를 파싱해 data.js를 다시 쓰는 스크립트
 scripts/update-matches.mjs  경기 상세(라인업·교체·카드·팀 통계)를 matches/<id>.js 로 쓰는 스크립트
 matches/              경기별 상세 파일 + index.js   ← 스크립트가 생성
@@ -36,7 +36,7 @@ BBC 구단 배지 SVG, 위키미디어 공용의 구장 사진, 그리고 기사
 
 - **경기·순위**: BBC Sport → `node scripts/update-data.mjs` → `data.js`. Claude가 관여하지 않는 순수 스크립트다.
 - **경기 상세**: BBC Sport → `node scripts/update-matches.mjs` → `matches/<id>.js`. 킥오프 90분 전부터 종료 후까지 라인업·득점·교체·카드·팀 통계를 받고, 끝난 경기는 최종 기록으로 한 번 더 받는다. 화면은 경기 줄을 눌렀을 때 그 파일만 읽는다.
-- **뉴스**: 해외 매체 → `ROUTINE.md` 절차를 Claude Code가 수행 → `briefings/epl-news-YYYY-MM-DD.html` + `briefings.js` 항목 추가.
+- **뉴스**: 해외 매체 → `ROUTINE.md` 절차를 Claude Code가 수행 → 지원 팀마다 `briefings/epl-news-YYYY-MM-DD-<팀키>.html` + `briefings.js`에 날짜 항목 하나(팀별 파일을 함께 담는다) 추가.
 
 브리핑이 하나도 없어도 사이트는 정상 동작한다. 아카이브 영역만 비어 있다.
 
@@ -77,6 +77,14 @@ ROUTINE.md대로 오늘 브리핑 만들어줘
 ```
 
 `ROUTINE.md`에 날짜 계산부터 기사 수집, HTML 생성, 검증, 커밋·푸시까지 전부 적혀 있다.
+
+한 번 돌리면 **지원 팀마다 파일이 하나씩** 나온다(`data.js`의 `HUB.meta.teams` — 지금은 맨유·토트넘).
+파일 이름은 `briefings/epl-news-YYYY-MM-DD-<팀키>.html`이다. 리그 전체 소식(매치위크·이적·계약·선수·감독·규정·기타)은
+한 번만 모아 그날 모든 팀 파일에 똑같이 넣고, 맨 위 팀 섹션만 파일마다 다르다(그 팀 기사 5건 이상).
+카드마다 `data-clubs="<구단 키>"`가 붙어 있어 나중에 화면에서 구단별로 걸러 쓸 수 있다.
+
+대시보드의 브리핑 아카이브는 **화면에서 고른 팀**의 파일만 보여준다. 팀을 바꾸면 같은 날짜라도 다른 파일이 열린다.
+
 기사를 읽고 번역하는 과정에서 웹 검색과 페이지 열기를 많이 쓰므로 **유료 Claude 플랜이 필요하다.**
 브리핑을 만들지 않아도 대시보드는 `data.js`만으로 동작한다.
 
