@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-05T06:10:27+09:00",
+  "updatedAt": "2026-09-05T06:25:23+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -2390,13 +2390,13 @@ window.HUB = {
     "name": "Liverpool",
     "short": "Liverpool"
    },
-   "status": "post",
-   "statusText": "FT",
+   "status": "live",
+   "statusText": "53'",
    "score": {
     "home": 0,
     "away": 2
    },
-   "winner": "away",
+   "winner": null,
    "scorers": {
     "home": [],
     "away": [
