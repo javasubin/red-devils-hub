@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-05T05:40:49+09:00",
+  "updatedAt": "2026-09-05T05:51:36+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -2390,29 +2390,13 @@ window.HUB = {
     "name": "Liverpool",
     "short": "Liverpool"
    },
-   "status": "live",
-   "statusText": "82'",
-   "score": {
-    "home": 0,
-    "away": 2
-   },
+   "status": "pre",
+   "statusText": "Scheduled",
+   "score": null,
    "winner": null,
    "scorers": {
     "home": [],
-    "away": [
-     {
-      "name": "A. Isak",
-      "times": [
-       "6'",
-       "9'"
-      ],
-      "types": [
-       "goal",
-       "goal"
-      ],
-      "type": "goal"
-     }
-    ]
+    "away": []
    },
    "mu": false,
    "fav": [],
