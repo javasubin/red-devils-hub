@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-05T21:13:13+09:00",
+  "updatedAt": "2026-09-05T21:32:06+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -2438,7 +2438,7 @@ window.HUB = {
     "short": "Bournemouth"
    },
    "status": "live",
-   "statusText": "43'",
+   "statusText": "HT",
    "score": {
     "home": 1,
     "away": 2
