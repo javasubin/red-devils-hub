@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-05T20:50:39+09:00",
+  "updatedAt": "2026-09-05T21:13:13+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -2438,14 +2438,25 @@ window.HUB = {
     "short": "Bournemouth"
    },
    "status": "live",
-   "statusText": "20'",
+   "statusText": "43'",
    "score": {
-    "home": 0,
-    "away": 1
+    "home": 1,
+    "away": 2
    },
    "winner": null,
    "scorers": {
-    "home": [],
+    "home": [
+     {
+      "name": "H. Barnes",
+      "times": [
+       "37'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ],
     "away": [
      {
       "name": "M. Tavernier",
@@ -2456,6 +2467,16 @@ window.HUB = {
        "goal"
       ],
       "type": "goal"
+     },
+     {
+      "name": "M. Thiaw",
+      "times": [
+       "35'"
+      ],
+      "types": [
+       "og"
+      ],
+      "type": "og"
      }
     ]
    },
@@ -14212,8 +14233,8 @@ window.HUB = {
    "won": 1,
    "drawn": 1,
    "lost": 1,
-   "gf": 4,
-   "ga": 3,
+   "gf": 5,
+   "ga": 4,
    "gd": 1,
    "points": 4,
    "form": [
@@ -14260,8 +14281,8 @@ window.HUB = {
    "won": 1,
    "drawn": 1,
    "lost": 1,
-   "gf": 3,
-   "ga": 3,
+   "gf": 4,
+   "ga": 4,
    "gd": 0,
    "points": 4,
    "form": [
