@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-06T00:50:58+09:00",
+  "updatedAt": "2026-09-06T01:11:01+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -2513,13 +2513,13 @@ window.HUB = {
     "name": "Sunderland",
     "short": "Sunderland"
    },
-   "status": "live",
-   "statusText": "73'",
+   "status": "post",
+   "statusText": "FT",
    "score": {
     "home": 1,
-    "away": 0
+    "away": 1
    },
-   "winner": null,
+   "winner": "draw",
    "scorers": {
     "home": [
      {
@@ -2533,7 +2533,18 @@ window.HUB = {
       "type": "goal"
      }
     ],
-    "away": []
+    "away": [
+     {
+      "name": "E. Le Fée",
+      "times": [
+       "82'"
+      ],
+      "types": [
+       "pen"
+      ],
+      "type": "pen"
+     }
+    ]
    },
    "mu": false,
    "fav": [],
@@ -2558,13 +2569,13 @@ window.HUB = {
     "name": "Leeds United",
     "short": "Leeds"
    },
-   "status": "live",
-   "statusText": "79'",
+   "status": "post",
+   "statusText": "FT",
    "score": {
     "home": 1,
     "away": 1
    },
-   "winner": null,
+   "winner": "draw",
    "scorers": {
     "home": [
      {
@@ -2614,13 +2625,13 @@ window.HUB = {
     "name": "Crystal Palace",
     "short": "C Palace"
    },
-   "status": "live",
-   "statusText": "77'",
+   "status": "post",
+   "statusText": "FT",
    "score": {
     "home": 2,
-    "away": 2
+    "away": 3
    },
-   "winner": null,
+   "winner": "away",
    "scorers": {
     "home": [
      {
@@ -2656,6 +2667,16 @@ window.HUB = {
        "goal"
       ],
       "type": "goal"
+     },
+     {
+      "name": "B. Chilwell",
+      "times": [
+       "77'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
      }
     ]
    },
@@ -2682,13 +2703,13 @@ window.HUB = {
     "name": "Coventry City",
     "short": "Coventry"
    },
-   "status": "live",
-   "statusText": "80'",
+   "status": "post",
+   "statusText": "FT",
    "score": {
     "home": 1,
     "away": 0
    },
-   "winner": null,
+   "winner": "home",
    "scorers": {
     "home": [
      {
@@ -2727,13 +2748,13 @@ window.HUB = {
     "name": "Tottenham Hotspur",
     "short": "Spurs"
    },
-   "status": "live",
-   "statusText": "80'",
+   "status": "post",
+   "statusText": "FT",
    "score": {
     "home": 0,
     "away": 0
    },
-   "winner": null,
+   "winner": "draw",
    "scorers": {
     "home": [],
     "away": []
@@ -14176,12 +14197,12 @@ window.HUB = {
     "-",
     "-",
     "-",
-    "-",
+    "W",
     "W",
     "W"
    ],
    "zone": "UEFA Champions League",
-   "rankPrev": 1
+   "rankPrev": 8
   },
   {
    "rank": 2,
@@ -14229,7 +14250,7 @@ window.HUB = {
     "W"
    ],
    "zone": "UEFA Champions League",
-   "rankPrev": 3
+   "rankPrev": 5
   },
   {
    "rank": 4,
@@ -14253,7 +14274,7 @@ window.HUB = {
     "W"
    ],
    "zone": "UEFA Champions League",
-   "rankPrev": 4
+   "rankPrev": 6
   },
   {
    "rank": 5,
@@ -14272,12 +14293,12 @@ window.HUB = {
     "-",
     "-",
     "-",
-    "-",
     "W",
+    "D",
     "D"
    ],
    "zone": "UEFA Europa League",
-   "rankPrev": 6
+   "rankPrev": 3
   },
   {
    "rank": 6,
@@ -14301,7 +14322,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 5
+   "rankPrev": 10
   },
   {
    "rank": 7,
@@ -14325,7 +14346,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 7
+   "rankPrev": 11
   },
   {
    "rank": 8,
@@ -14344,8 +14365,8 @@ window.HUB = {
     "-",
     "-",
     "-",
-    "-",
     "W",
+    "D",
     "D"
    ],
    "zone": "",
@@ -14368,12 +14389,12 @@ window.HUB = {
     "-",
     "-",
     "-",
-    "-",
     "W",
-    "L"
+    "L",
+    "D"
    ],
    "zone": "",
-   "rankPrev": 10
+   "rankPrev": 1
   },
   {
    "rank": 10,
@@ -14397,7 +14418,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 8
+   "rankPrev": 4
   },
   {
    "rank": 11,
@@ -14416,12 +14437,12 @@ window.HUB = {
     "-",
     "-",
     "-",
-    "-",
     "L",
-    "W"
+    "W",
+    "D"
    ],
    "zone": "",
-   "rankPrev": 12
+   "rankPrev": 14
   },
   {
    "rank": 12,
@@ -14445,7 +14466,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 11
+   "rankPrev": 17
   },
   {
    "rank": 13,
@@ -14464,12 +14485,12 @@ window.HUB = {
     "-",
     "-",
     "-",
-    "-",
     "L",
-    "L"
+    "L",
+    "W"
    ],
    "zone": "",
-   "rankPrev": 18
+   "rankPrev": 16
   },
   {
    "rank": 14,
@@ -14493,7 +14514,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 13
+   "rankPrev": 7
   },
   {
    "rank": 15,
@@ -14517,7 +14538,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 14
+   "rankPrev": 13
   },
   {
    "rank": 16,
@@ -14536,8 +14557,8 @@ window.HUB = {
     "-",
     "-",
     "-",
-    "-",
     "L",
+    "D",
     "D"
    ],
    "zone": "",
@@ -14560,12 +14581,12 @@ window.HUB = {
     "-",
     "-",
     "-",
-    "-",
     "L",
-    "L"
+    "L",
+    "D"
    ],
    "zone": "",
-   "rankPrev": 20
+   "rankPrev": 19
   },
   {
    "rank": 18,
@@ -14584,12 +14605,12 @@ window.HUB = {
     "-",
     "-",
     "-",
-    "-",
+    "L",
     "L",
     "L"
    ],
    "zone": "Relegation",
-   "rankPrev": 16
+   "rankPrev": 12
   },
   {
    "rank": 19,
@@ -14613,7 +14634,7 @@ window.HUB = {
     "L"
    ],
    "zone": "Relegation",
-   "rankPrev": 19
+   "rankPrev": 20
   },
   {
    "rank": 20,
@@ -14632,12 +14653,12 @@ window.HUB = {
     "-",
     "-",
     "-",
-    "-",
+    "L",
     "L",
     "L"
    ],
    "zone": "Relegation",
-   "rankPrev": 17
+   "rankPrev": 18
   }
  ],
  "scorers": [
