@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-06T01:26:27+09:00",
+  "updatedAt": "2026-09-06T01:39:44+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -24,15 +24,15 @@ window.HUB = {
    "short": "Man City",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/manchester-city.30c4b22e90.svg"
   },
-  "arsenal": {
-   "name": "Arsenal",
-   "short": "Arsenal",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/arsenal.5a62ec890e.svg"
-  },
   "hull-city": {
    "name": "Hull City",
    "short": "Hull City",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/hull-city.7187a4b4b5.svg"
+  },
+  "arsenal": {
+   "name": "Arsenal",
+   "short": "Arsenal",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/arsenal.5a62ec890e.svg"
   },
   "chelsea": {
    "name": "Chelsea",
@@ -99,6 +99,11 @@ window.HUB = {
    "short": "N Forest",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/nottingham-forest.f0fc0fc962.svg"
   },
+  "aston-villa": {
+   "name": "Aston Villa",
+   "short": "A Villa",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/aston-villa.7462c0d498.svg"
+  },
   "tottenham-hotspur": {
    "name": "Tottenham Hotspur",
    "short": "Spurs",
@@ -108,11 +113,6 @@ window.HUB = {
    "name": "Fulham",
    "short": "Fulham",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/fulham.d16ec60bd3.svg"
-  },
-  "aston-villa": {
-   "name": "Aston Villa",
-   "short": "A Villa",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/aston-villa.7462c0d498.svg"
   },
   "coventry-city": {
    "name": "Coventry City",
@@ -2784,9 +2784,12 @@ window.HUB = {
     "name": "Aston Villa",
     "short": "A Villa"
    },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
+   "status": "live",
+   "statusText": "9'",
+   "score": {
+    "home": 0,
+    "away": 0
+   },
    "winner": null,
    "scorers": {
     "home": [],
@@ -14202,10 +14205,34 @@ window.HUB = {
     "W"
    ],
    "zone": "UEFA Champions League",
-   "rankPrev": 8
+   "rankPrev": 1
   },
   {
    "rank": 2,
+   "key": "hull-city",
+   "name": "Hull City",
+   "short": "Hull City",
+   "played": 3,
+   "won": 2,
+   "drawn": 1,
+   "lost": 0,
+   "gf": 3,
+   "ga": 0,
+   "gd": 3,
+   "points": 7,
+   "form": [
+    "-",
+    "-",
+    "-",
+    "-",
+    "W",
+    "W"
+   ],
+   "zone": "UEFA Champions League",
+   "rankPrev": 3
+  },
+  {
+   "rank": 3,
    "key": "arsenal",
    "name": "Arsenal",
    "short": "Arsenal",
@@ -14229,30 +14256,6 @@ window.HUB = {
    "rankPrev": 2
   },
   {
-   "rank": 3,
-   "key": "hull-city",
-   "name": "Hull City",
-   "short": "Hull City",
-   "played": 2,
-   "won": 2,
-   "drawn": 0,
-   "lost": 0,
-   "gf": 3,
-   "ga": 0,
-   "gd": 3,
-   "points": 6,
-   "form": [
-    "-",
-    "-",
-    "-",
-    "-",
-    "W",
-    "W"
-   ],
-   "zone": "UEFA Champions League",
-   "rankPrev": 5
-  },
-  {
    "rank": 4,
    "key": "chelsea",
    "name": "Chelsea",
@@ -14274,7 +14277,7 @@ window.HUB = {
     "W"
    ],
    "zone": "UEFA Champions League",
-   "rankPrev": 6
+   "rankPrev": 4
   },
   {
    "rank": 5,
@@ -14298,7 +14301,7 @@ window.HUB = {
     "D"
    ],
    "zone": "UEFA Europa League",
-   "rankPrev": 3
+   "rankPrev": 6
   },
   {
    "rank": 6,
@@ -14322,7 +14325,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 10
+   "rankPrev": 5
   },
   {
    "rank": 7,
@@ -14346,7 +14349,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 11
+   "rankPrev": 7
   },
   {
    "rank": 8,
@@ -14394,7 +14397,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 1
+   "rankPrev": 10
   },
   {
    "rank": 10,
@@ -14418,7 +14421,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 4
+   "rankPrev": 8
   },
   {
    "rank": 11,
@@ -14442,7 +14445,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 14
+   "rankPrev": 12
   },
   {
    "rank": 12,
@@ -14466,7 +14469,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 17
+   "rankPrev": 11
   },
   {
    "rank": 13,
@@ -14490,7 +14493,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 16
+   "rankPrev": 18
   },
   {
    "rank": 14,
@@ -14514,7 +14517,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 7
+   "rankPrev": 13
   },
   {
    "rank": 15,
@@ -14538,7 +14541,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 13
+   "rankPrev": 14
   },
   {
    "rank": 16,
@@ -14566,6 +14569,30 @@ window.HUB = {
   },
   {
    "rank": 17,
+   "key": "aston-villa",
+   "name": "Aston Villa",
+   "short": "A Villa",
+   "played": 3,
+   "won": 0,
+   "drawn": 1,
+   "lost": 2,
+   "gf": 0,
+   "ga": 5,
+   "gd": -5,
+   "points": 1,
+   "form": [
+    "-",
+    "-",
+    "-",
+    "-",
+    "L",
+    "L"
+   ],
+   "zone": "",
+   "rankPrev": 19
+  },
+  {
+   "rank": 18,
    "key": "tottenham-hotspur",
    "name": "Tottenham Hotspur",
    "short": "Spurs",
@@ -14585,11 +14612,11 @@ window.HUB = {
     "L",
     "D"
    ],
-   "zone": "",
-   "rankPrev": 19
+   "zone": "Relegation",
+   "rankPrev": 20
   },
   {
-   "rank": 18,
+   "rank": 19,
    "key": "fulham",
    "name": "Fulham",
    "short": "Fulham",
@@ -14610,31 +14637,7 @@ window.HUB = {
     "L"
    ],
    "zone": "Relegation",
-   "rankPrev": 12
-  },
-  {
-   "rank": 19,
-   "key": "aston-villa",
-   "name": "Aston Villa",
-   "short": "A Villa",
-   "played": 2,
-   "won": 0,
-   "drawn": 0,
-   "lost": 2,
-   "gf": 0,
-   "ga": 5,
-   "gd": -5,
-   "points": 0,
-   "form": [
-    "-",
-    "-",
-    "-",
-    "-",
-    "L",
-    "L"
-   ],
-   "zone": "Relegation",
-   "rankPrev": 20
+   "rankPrev": 16
   },
   {
    "rank": 20,
@@ -14658,7 +14661,7 @@ window.HUB = {
     "L"
    ],
    "zone": "Relegation",
-   "rankPrev": 18
+   "rankPrev": 17
   }
  ],
  "scorers": [
