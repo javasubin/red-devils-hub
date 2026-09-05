@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-05T23:50:55+09:00",
+  "updatedAt": "2026-09-06T00:10:22+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -2514,7 +2514,7 @@ window.HUB = {
     "short": "Sunderland"
    },
    "status": "live",
-   "statusText": "45'+4",
+   "statusText": "HT",
    "score": {
     "home": 0,
     "away": 0
@@ -2548,7 +2548,7 @@ window.HUB = {
     "short": "Leeds"
    },
    "status": "live",
-   "statusText": "HT",
+   "statusText": "51'",
    "score": {
     "home": 0,
     "away": 1
@@ -2593,7 +2593,7 @@ window.HUB = {
     "short": "C Palace"
    },
    "status": "live",
-   "statusText": "HT",
+   "statusText": "49'",
    "score": {
     "home": 2,
     "away": 1
@@ -2659,7 +2659,7 @@ window.HUB = {
     "short": "Coventry"
    },
    "status": "live",
-   "statusText": "HT",
+   "statusText": "52'",
    "score": {
     "home": 1,
     "away": 0
@@ -2704,7 +2704,7 @@ window.HUB = {
     "short": "Spurs"
    },
    "status": "live",
-   "statusText": "HT",
+   "statusText": "53'",
    "score": {
     "home": 0,
     "away": 0
