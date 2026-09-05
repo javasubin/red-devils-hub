@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-05T23:24:25+09:00",
+  "updatedAt": "2026-09-05T23:37:35+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -79,11 +79,6 @@ window.HUB = {
    "short": "Man Utd",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/manchester-united.80807495b5.svg"
   },
-  "fulham": {
-   "name": "Fulham",
-   "short": "Fulham",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/fulham.d16ec60bd3.svg"
-  },
   "ipswich-town": {
    "name": "Ipswich Town",
    "short": "Ipswich",
@@ -99,10 +94,15 @@ window.HUB = {
    "short": "N Forest",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/nottingham-forest.f0fc0fc962.svg"
   },
-  "coventry-city": {
-   "name": "Coventry City",
-   "short": "Coventry",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/coventry-city.2b26ca0838.svg"
+  "fulham": {
+   "name": "Fulham",
+   "short": "Fulham",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/fulham.d16ec60bd3.svg"
+  },
+  "crystal-palace": {
+   "name": "Crystal Palace",
+   "short": "C Palace",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/crystal-palace.9e5ab01a7b.svg"
   },
   "tottenham-hotspur": {
    "name": "Tottenham Hotspur",
@@ -114,10 +114,10 @@ window.HUB = {
    "short": "A Villa",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/aston-villa.7462c0d498.svg"
   },
-  "crystal-palace": {
-   "name": "Crystal Palace",
-   "short": "C Palace",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/crystal-palace.9e5ab01a7b.svg"
+  "coventry-city": {
+   "name": "Coventry City",
+   "short": "Coventry",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/coventry-city.2b26ca0838.svg"
   }
  },
  "fixtures": [
@@ -2513,12 +2513,9 @@ window.HUB = {
     "name": "Sunderland",
     "short": "Sunderland"
    },
-   "status": "live",
-   "statusText": "23'",
-   "score": {
-    "home": 0,
-    "away": 0
-   },
+   "status": "pre",
+   "statusText": "Scheduled",
+   "score": null,
    "winner": null,
    "scorers": {
     "home": [],
@@ -2547,27 +2544,13 @@ window.HUB = {
     "name": "Leeds United",
     "short": "Leeds"
    },
-   "status": "live",
-   "statusText": "24'",
-   "score": {
-    "home": 0,
-    "away": 1
-   },
+   "status": "pre",
+   "statusText": "Scheduled",
+   "score": null,
    "winner": null,
    "scorers": {
     "home": [],
-    "away": [
-     {
-      "name": "J. Bogle",
-      "times": [
-       "15'"
-      ],
-      "types": [
-       "goal"
-      ],
-      "type": "goal"
-     }
-    ]
+    "away": []
    },
    "mu": false,
    "fav": [],
@@ -2592,26 +2575,12 @@ window.HUB = {
     "name": "Crystal Palace",
     "short": "C Palace"
    },
-   "status": "live",
-   "statusText": "23'",
-   "score": {
-    "home": 1,
-    "away": 0
-   },
+   "status": "pre",
+   "statusText": "Scheduled",
+   "score": null,
    "winner": null,
    "scorers": {
-    "home": [
-     {
-      "name": "J. King",
-      "times": [
-       "11'"
-      ],
-      "types": [
-       "goal"
-      ],
-      "type": "goal"
-     }
-    ],
+    "home": [],
     "away": []
    },
    "mu": false,
@@ -2637,12 +2606,9 @@ window.HUB = {
     "name": "Coventry City",
     "short": "Coventry"
    },
-   "status": "live",
-   "statusText": "22'",
-   "score": {
-    "home": 0,
-    "away": 0
-   },
+   "status": "pre",
+   "statusText": "Scheduled",
+   "score": null,
    "winner": null,
    "scorers": {
     "home": [],
@@ -2671,12 +2637,9 @@ window.HUB = {
     "name": "Tottenham Hotspur",
     "short": "Spurs"
    },
-   "status": "live",
-   "statusText": "23'",
-   "score": {
-    "home": 0,
-    "away": 0
-   },
+   "status": "pre",
+   "statusText": "Scheduled",
+   "score": null,
    "winner": null,
    "scorers": {
     "home": [],
@@ -14109,13 +14072,13 @@ window.HUB = {
    "name": "Manchester City",
    "short": "Man City",
    "played": 3,
-   "won": 2,
-   "drawn": 1,
+   "won": 3,
+   "drawn": 0,
    "lost": 0,
-   "gf": 6,
+   "gf": 7,
    "ga": 2,
-   "gd": 4,
-   "points": 7,
+   "gd": 5,
+   "points": 9,
    "form": [
     "-",
     "-",
@@ -14393,30 +14356,6 @@ window.HUB = {
   },
   {
    "rank": 13,
-   "key": "fulham",
-   "name": "Fulham",
-   "short": "Fulham",
-   "played": 3,
-   "won": 1,
-   "drawn": 0,
-   "lost": 2,
-   "gf": 3,
-   "ga": 4,
-   "gd": -1,
-   "points": 3,
-   "form": [
-    "-",
-    "-",
-    "-",
-    "-",
-    "L",
-    "L"
-   ],
-   "zone": "",
-   "rankPrev": 16
-  },
-  {
-   "rank": 14,
    "key": "ipswich-town",
    "name": "Ipswich Town",
    "short": "Ipswich",
@@ -14440,7 +14379,7 @@ window.HUB = {
    "rankPrev": 13
   },
   {
-   "rank": 15,
+   "rank": 14,
    "key": "afc-bournemouth",
    "name": "Bournemouth",
    "short": "Bournemouth",
@@ -14464,7 +14403,7 @@ window.HUB = {
    "rankPrev": 14
   },
   {
-   "rank": 16,
+   "rank": 15,
    "key": "nottingham-forest",
    "name": "Nottingham Forest",
    "short": "N Forest",
@@ -14488,17 +14427,17 @@ window.HUB = {
    "rankPrev": 15
   },
   {
-   "rank": 17,
-   "key": "coventry-city",
-   "name": "Coventry City",
-   "short": "Coventry",
+   "rank": 16,
+   "key": "fulham",
+   "name": "Fulham",
+   "short": "Fulham",
    "played": 3,
    "won": 0,
    "drawn": 1,
    "lost": 2,
-   "gf": 0,
-   "ga": 4,
-   "gd": -4,
+   "gf": 3,
+   "ga": 5,
+   "gd": -2,
    "points": 1,
    "form": [
     "-",
@@ -14509,7 +14448,31 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 17
+   "rankPrev": 16
+  },
+  {
+   "rank": 17,
+   "key": "crystal-palace",
+   "name": "Crystal Palace",
+   "short": "C Palace",
+   "played": 3,
+   "won": 0,
+   "drawn": 1,
+   "lost": 2,
+   "gf": 2,
+   "ga": 7,
+   "gd": -5,
+   "points": 1,
+   "form": [
+    "-",
+    "-",
+    "-",
+    "-",
+    "L",
+    "L"
+   ],
+   "zone": "",
+   "rankPrev": 18
   },
   {
    "rank": 18,
@@ -14561,16 +14524,16 @@ window.HUB = {
   },
   {
    "rank": 20,
-   "key": "crystal-palace",
-   "name": "Crystal Palace",
-   "short": "C Palace",
+   "key": "coventry-city",
+   "name": "Coventry City",
+   "short": "Coventry",
    "played": 3,
    "won": 0,
    "drawn": 0,
    "lost": 3,
-   "gf": 1,
-   "ga": 7,
-   "gd": -6,
+   "gf": 0,
+   "ga": 5,
+   "gd": -5,
    "points": 0,
    "form": [
     "-",
@@ -14581,7 +14544,7 @@ window.HUB = {
     "L"
    ],
    "zone": "Relegation",
-   "rankPrev": 18
+   "rankPrev": 17
   }
  ],
  "scorers": [
