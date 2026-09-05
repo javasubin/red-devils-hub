@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-05T22:09:59+09:00",
+  "updatedAt": "2026-09-05T22:24:22+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -44,6 +44,11 @@ window.HUB = {
    "short": "Liverpool",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/liverpool.34999937ef.svg"
   },
+  "newcastle-united": {
+   "name": "Newcastle United",
+   "short": "Newcastle",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/newcastle-united.45e2739dd9.svg"
+  },
   "brentford": {
    "name": "Brentford",
    "short": "Brentford",
@@ -54,20 +59,10 @@ window.HUB = {
    "short": "Everton",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/everton.38c006ac78.svg"
   },
-  "newcastle-united": {
-   "name": "Newcastle United",
-   "short": "Newcastle",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/newcastle-united.45e2739dd9.svg"
-  },
   "leeds-united": {
    "name": "Leeds United",
    "short": "Leeds",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/leeds-united.6eb48daff9.svg"
-  },
-  "afc-bournemouth": {
-   "name": "Bournemouth",
-   "short": "Bournemouth",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/afc-bournemouth.3e0ae7da8e.svg"
   },
   "brighton-and-hove-albion": {
    "name": "Brighton & Hove Albion",
@@ -88,6 +83,11 @@ window.HUB = {
    "name": "Ipswich Town",
    "short": "Ipswich",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/ipswich-town.016f53d3e1.svg"
+  },
+  "afc-bournemouth": {
+   "name": "Bournemouth",
+   "short": "Bournemouth",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/afc-bournemouth.3e0ae7da8e.svg"
   },
   "nottingham-forest": {
    "name": "Nottingham Forest",
@@ -2438,9 +2438,9 @@ window.HUB = {
     "short": "Bournemouth"
    },
    "status": "live",
-   "statusText": "79'",
+   "statusText": "90'+5",
    "score": {
-    "home": 1,
+    "home": 2,
     "away": 2
    },
    "winner": null,
@@ -2450,6 +2450,16 @@ window.HUB = {
       "name": "H. Barnes",
       "times": [
        "37'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "J. Ramsey",
+      "times": [
+       "88'"
       ],
       "types": [
        "goal"
@@ -14178,6 +14188,30 @@ window.HUB = {
   },
   {
    "rank": 6,
+   "key": "newcastle-united",
+   "name": "Newcastle United",
+   "short": "Newcastle",
+   "played": 3,
+   "won": 1,
+   "drawn": 2,
+   "lost": 0,
+   "gf": 6,
+   "ga": 4,
+   "gd": 2,
+   "points": 5,
+   "form": [
+    "-",
+    "-",
+    "-",
+    "-",
+    "D",
+    "W"
+   ],
+   "zone": "",
+   "rankPrev": 6
+  },
+  {
+   "rank": 7,
    "key": "brentford",
    "name": "Brentford",
    "short": "Brentford",
@@ -14201,7 +14235,7 @@ window.HUB = {
    "rankPrev": 5
   },
   {
-   "rank": 7,
+   "rank": 8,
    "key": "everton",
    "name": "Everton",
    "short": "Everton",
@@ -14223,30 +14257,6 @@ window.HUB = {
    ],
    "zone": "",
    "rankPrev": 7
-  },
-  {
-   "rank": 8,
-   "key": "newcastle-united",
-   "name": "Newcastle United",
-   "short": "Newcastle",
-   "played": 3,
-   "won": 1,
-   "drawn": 1,
-   "lost": 1,
-   "gf": 5,
-   "ga": 4,
-   "gd": 1,
-   "points": 4,
-   "form": [
-    "-",
-    "-",
-    "-",
-    "-",
-    "D",
-    "W"
-   ],
-   "zone": "",
-   "rankPrev": 6
   },
   {
    "rank": 9,
@@ -14274,30 +14284,6 @@ window.HUB = {
   },
   {
    "rank": 10,
-   "key": "afc-bournemouth",
-   "name": "Bournemouth",
-   "short": "Bournemouth",
-   "played": 3,
-   "won": 1,
-   "drawn": 1,
-   "lost": 1,
-   "gf": 4,
-   "ga": 4,
-   "gd": 0,
-   "points": 4,
-   "form": [
-    "-",
-    "-",
-    "-",
-    "-",
-    "L",
-    "D"
-   ],
-   "zone": "",
-   "rankPrev": 14
-  },
-  {
-   "rank": 11,
    "key": "brighton-and-hove-albion",
    "name": "Brighton & Hove Albion",
    "short": "Brighton",
@@ -14321,7 +14307,7 @@ window.HUB = {
    "rankPrev": 9
   },
   {
-   "rank": 12,
+   "rank": 11,
    "key": "manchester-united",
    "name": "Manchester United",
    "short": "Man Utd",
@@ -14345,7 +14331,7 @@ window.HUB = {
    "rankPrev": 10
   },
   {
-   "rank": 13,
+   "rank": 12,
    "key": "sunderland",
    "name": "Sunderland",
    "short": "Sunderland",
@@ -14369,7 +14355,7 @@ window.HUB = {
    "rankPrev": 11
   },
   {
-   "rank": 14,
+   "rank": 13,
    "key": "ipswich-town",
    "name": "Ipswich Town",
    "short": "Ipswich",
@@ -14391,6 +14377,30 @@ window.HUB = {
    ],
    "zone": "",
    "rankPrev": 12
+  },
+  {
+   "rank": 14,
+   "key": "afc-bournemouth",
+   "name": "Bournemouth",
+   "short": "Bournemouth",
+   "played": 3,
+   "won": 0,
+   "drawn": 2,
+   "lost": 1,
+   "gf": 4,
+   "ga": 5,
+   "gd": -1,
+   "points": 2,
+   "form": [
+    "-",
+    "-",
+    "-",
+    "-",
+    "L",
+    "D"
+   ],
+   "zone": "",
+   "rankPrev": 14
   },
   {
    "rank": 15,
