@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-06T00:24:49+09:00",
+  "updatedAt": "2026-09-06T00:38:26+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -28,11 +28,6 @@ window.HUB = {
    "name": "Brentford",
    "short": "Brentford",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/brentford.aa0256ca6b.svg"
-  },
-  "leeds-united": {
-   "name": "Leeds United",
-   "short": "Leeds",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/leeds-united.6eb48daff9.svg"
   },
   "arsenal": {
    "name": "Arsenal",
@@ -59,20 +54,20 @@ window.HUB = {
    "short": "Newcastle",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/newcastle-united.45e2739dd9.svg"
   },
-  "everton": {
-   "name": "Everton",
-   "short": "Everton",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/everton.38c006ac78.svg"
-  },
-  "nottingham-forest": {
-   "name": "Nottingham Forest",
-   "short": "N Forest",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/nottingham-forest.f0fc0fc962.svg"
+  "leeds-united": {
+   "name": "Leeds United",
+   "short": "Leeds",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/leeds-united.6eb48daff9.svg"
   },
   "brighton-and-hove-albion": {
    "name": "Brighton & Hove Albion",
    "short": "Brighton",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/brighton-and-hove-albion.4522a78440.svg"
+  },
+  "everton": {
+   "name": "Everton",
+   "short": "Everton",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/everton.38c006ac78.svg"
   },
   "manchester-united": {
    "name": "Manchester United",
@@ -94,6 +89,11 @@ window.HUB = {
    "short": "Bournemouth",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/afc-bournemouth.3e0ae7da8e.svg"
   },
+  "nottingham-forest": {
+   "name": "Nottingham Forest",
+   "short": "N Forest",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/nottingham-forest.f0fc0fc962.svg"
+  },
   "fulham": {
    "name": "Fulham",
    "short": "Fulham",
@@ -104,6 +104,11 @@ window.HUB = {
    "short": "C Palace",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/crystal-palace.9e5ab01a7b.svg"
   },
+  "tottenham-hotspur": {
+   "name": "Tottenham Hotspur",
+   "short": "Spurs",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/tottenham-hotspur.f1c704ee3b.svg"
+  },
   "aston-villa": {
    "name": "Aston Villa",
    "short": "A Villa",
@@ -113,11 +118,6 @@ window.HUB = {
    "name": "Coventry City",
    "short": "Coventry",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/coventry-city.2b26ca0838.svg"
-  },
-  "tottenham-hotspur": {
-   "name": "Tottenham Hotspur",
-   "short": "Spurs",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/tottenham-hotspur.f1c704ee3b.svg"
   }
  },
  "fixtures": [
@@ -2514,14 +2514,25 @@ window.HUB = {
     "short": "Sunderland"
    },
    "status": "live",
-   "statusText": "HT",
+   "statusText": "73'",
    "score": {
-    "home": 0,
+    "home": 1,
     "away": 0
    },
    "winner": null,
    "scorers": {
-    "home": [],
+    "home": [
+     {
+      "name": "V. Janelt",
+      "times": [
+       "57'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ],
     "away": []
    },
    "mu": false,
@@ -2548,14 +2559,25 @@ window.HUB = {
     "short": "Leeds"
    },
    "status": "live",
-   "statusText": "51'",
+   "statusText": "79'",
    "score": {
-    "home": 0,
+    "home": 1,
     "away": 1
    },
    "winner": null,
    "scorers": {
-    "home": [],
+    "home": [
+     {
+      "name": "L. Vušković",
+      "times": [
+       "71'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ],
     "away": [
      {
       "name": "J. Bogle",
@@ -2593,10 +2615,10 @@ window.HUB = {
     "short": "C Palace"
    },
    "status": "live",
-   "statusText": "49'",
+   "statusText": "77'",
    "score": {
     "home": 2,
-    "away": 1
+    "away": 2
    },
    "winner": null,
    "scorers": {
@@ -2626,9 +2648,11 @@ window.HUB = {
      {
       "name": "T. Mitchell",
       "times": [
-       "35'"
+       "35'",
+       "54'"
       ],
       "types": [
+       "goal",
        "goal"
       ],
       "type": "goal"
@@ -2659,7 +2683,7 @@ window.HUB = {
     "short": "Coventry"
    },
    "status": "live",
-   "statusText": "52'",
+   "statusText": "80'",
    "score": {
     "home": 1,
     "away": 0
@@ -2704,7 +2728,7 @@ window.HUB = {
     "short": "Spurs"
    },
    "status": "live",
-   "statusText": "53'",
+   "statusText": "80'",
    "score": {
     "home": 0,
     "away": 0
@@ -14185,30 +14209,6 @@ window.HUB = {
   },
   {
    "rank": 3,
-   "key": "leeds-united",
-   "name": "Leeds United",
-   "short": "Leeds",
-   "played": 3,
-   "won": 2,
-   "drawn": 1,
-   "lost": 0,
-   "gf": 3,
-   "ga": 1,
-   "gd": 2,
-   "points": 7,
-   "form": [
-    "-",
-    "-",
-    "-",
-    "-",
-    "W",
-    "D"
-   ],
-   "zone": "UEFA Champions League",
-   "rankPrev": 9
-  },
-  {
-   "rank": 4,
    "key": "arsenal",
    "name": "Arsenal",
    "short": "Arsenal",
@@ -14232,7 +14232,7 @@ window.HUB = {
    "rankPrev": 2
   },
   {
-   "rank": 5,
+   "rank": 4,
    "key": "hull-city",
    "name": "Hull City",
    "short": "Hull City",
@@ -14252,11 +14252,11 @@ window.HUB = {
     "W",
     "W"
    ],
-   "zone": "UEFA Europa League",
+   "zone": "UEFA Champions League",
    "rankPrev": 3
   },
   {
-   "rank": 6,
+   "rank": 5,
    "key": "chelsea",
    "name": "Chelsea",
    "short": "Chelsea",
@@ -14276,11 +14276,11 @@ window.HUB = {
     "W",
     "W"
    ],
-   "zone": "",
+   "zone": "UEFA Europa League",
    "rankPrev": 4
   },
   {
-   "rank": 7,
+   "rank": 6,
    "key": "liverpool",
    "name": "Liverpool",
    "short": "Liverpool",
@@ -14304,7 +14304,7 @@ window.HUB = {
    "rankPrev": 5
   },
   {
-   "rank": 8,
+   "rank": 7,
    "key": "newcastle-united",
    "name": "Newcastle United",
    "short": "Newcastle",
@@ -14328,7 +14328,55 @@ window.HUB = {
    "rankPrev": 7
   },
   {
+   "rank": 8,
+   "key": "leeds-united",
+   "name": "Leeds United",
+   "short": "Leeds",
+   "played": 3,
+   "won": 1,
+   "drawn": 2,
+   "lost": 0,
+   "gf": 3,
+   "ga": 2,
+   "gd": 1,
+   "points": 5,
+   "form": [
+    "-",
+    "-",
+    "-",
+    "-",
+    "W",
+    "D"
+   ],
+   "zone": "",
+   "rankPrev": 9
+  },
+  {
    "rank": 9,
+   "key": "brighton-and-hove-albion",
+   "name": "Brighton & Hove Albion",
+   "short": "Brighton",
+   "played": 3,
+   "won": 1,
+   "drawn": 1,
+   "lost": 1,
+   "gf": 8,
+   "ga": 5,
+   "gd": 3,
+   "points": 4,
+   "form": [
+    "-",
+    "-",
+    "-",
+    "-",
+    "W",
+    "L"
+   ],
+   "zone": "",
+   "rankPrev": 10
+  },
+  {
+   "rank": 10,
    "key": "everton",
    "name": "Everton",
    "short": "Everton",
@@ -14352,55 +14400,7 @@ window.HUB = {
    "rankPrev": 8
   },
   {
-   "rank": 10,
-   "key": "nottingham-forest",
-   "name": "Nottingham Forest",
-   "short": "N Forest",
-   "played": 3,
-   "won": 1,
-   "drawn": 1,
-   "lost": 1,
-   "gf": 3,
-   "ga": 3,
-   "gd": 0,
-   "points": 4,
-   "form": [
-    "-",
-    "-",
-    "-",
-    "-",
-    "L",
-    "D"
-   ],
-   "zone": "",
-   "rankPrev": 15
-  },
-  {
    "rank": 11,
-   "key": "brighton-and-hove-albion",
-   "name": "Brighton & Hove Albion",
-   "short": "Brighton",
-   "played": 3,
-   "won": 1,
-   "drawn": 0,
-   "lost": 2,
-   "gf": 7,
-   "ga": 5,
-   "gd": 2,
-   "points": 3,
-   "form": [
-    "-",
-    "-",
-    "-",
-    "-",
-    "W",
-    "L"
-   ],
-   "zone": "",
-   "rankPrev": 10
-  },
-  {
-   "rank": 12,
    "key": "manchester-united",
    "name": "Manchester United",
    "short": "Man Utd",
@@ -14424,7 +14424,7 @@ window.HUB = {
    "rankPrev": 11
   },
   {
-   "rank": 13,
+   "rank": 12,
    "key": "sunderland",
    "name": "Sunderland",
    "short": "Sunderland",
@@ -14448,7 +14448,7 @@ window.HUB = {
    "rankPrev": 12
   },
   {
-   "rank": 14,
+   "rank": 13,
    "key": "ipswich-town",
    "name": "Ipswich Town",
    "short": "Ipswich",
@@ -14472,7 +14472,7 @@ window.HUB = {
    "rankPrev": 13
   },
   {
-   "rank": 15,
+   "rank": 14,
    "key": "afc-bournemouth",
    "name": "Bournemouth",
    "short": "Bournemouth",
@@ -14494,6 +14494,30 @@ window.HUB = {
    ],
    "zone": "",
    "rankPrev": 14
+  },
+  {
+   "rank": 15,
+   "key": "nottingham-forest",
+   "name": "Nottingham Forest",
+   "short": "N Forest",
+   "played": 3,
+   "won": 0,
+   "drawn": 2,
+   "lost": 1,
+   "gf": 2,
+   "ga": 3,
+   "gd": -1,
+   "points": 2,
+   "form": [
+    "-",
+    "-",
+    "-",
+    "-",
+    "L",
+    "D"
+   ],
+   "zone": "",
+   "rankPrev": 15
   },
   {
    "rank": 16,
@@ -14545,6 +14569,30 @@ window.HUB = {
   },
   {
    "rank": 18,
+   "key": "tottenham-hotspur",
+   "name": "Tottenham Hotspur",
+   "short": "Spurs",
+   "played": 3,
+   "won": 0,
+   "drawn": 1,
+   "lost": 2,
+   "gf": 0,
+   "ga": 5,
+   "gd": -5,
+   "points": 1,
+   "form": [
+    "-",
+    "-",
+    "-",
+    "-",
+    "L",
+    "L"
+   ],
+   "zone": "Relegation",
+   "rankPrev": 20
+  },
+  {
+   "rank": 19,
    "key": "aston-villa",
    "name": "Aston Villa",
    "short": "A Villa",
@@ -14568,7 +14616,7 @@ window.HUB = {
    "rankPrev": 19
   },
   {
-   "rank": 19,
+   "rank": 20,
    "key": "coventry-city",
    "name": "Coventry City",
    "short": "Coventry",
@@ -14590,30 +14638,6 @@ window.HUB = {
    ],
    "zone": "Relegation",
    "rankPrev": 17
-  },
-  {
-   "rank": 20,
-   "key": "tottenham-hotspur",
-   "name": "Tottenham Hotspur",
-   "short": "Spurs",
-   "played": 3,
-   "won": 0,
-   "drawn": 0,
-   "lost": 3,
-   "gf": 0,
-   "ga": 6,
-   "gd": -6,
-   "points": 0,
-   "form": [
-    "-",
-    "-",
-    "-",
-    "-",
-    "L",
-    "L"
-   ],
-   "zone": "Relegation",
-   "rankPrev": 20
   }
  ],
  "scorers": [
