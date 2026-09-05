@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-05T22:24:22+09:00",
+  "updatedAt": "2026-09-05T22:37:10+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -2437,13 +2437,13 @@ window.HUB = {
     "name": "Bournemouth",
     "short": "Bournemouth"
    },
-   "status": "live",
-   "statusText": "90'+5",
+   "status": "post",
+   "statusText": "FT",
    "score": {
     "home": 2,
     "away": 2
    },
-   "winner": null,
+   "winner": "draw",
    "scorers": {
     "home": [
      {
@@ -14088,7 +14088,7 @@ window.HUB = {
     "W"
    ],
    "zone": "UEFA Champions League",
-   "rankPrev": 1
+   "rankPrev": 8
   },
   {
    "rank": 2,
@@ -14136,7 +14136,7 @@ window.HUB = {
     "W"
    ],
    "zone": "UEFA Champions League",
-   "rankPrev": 3
+   "rankPrev": 5
   },
   {
    "rank": 4,
@@ -14160,7 +14160,7 @@ window.HUB = {
     "W"
    ],
    "zone": "UEFA Champions League",
-   "rankPrev": 4
+   "rankPrev": 6
   },
   {
    "rank": 5,
@@ -14184,7 +14184,7 @@ window.HUB = {
     "W"
    ],
    "zone": "UEFA Europa League",
-   "rankPrev": 13
+   "rankPrev": 10
   },
   {
    "rank": 6,
@@ -14203,12 +14203,12 @@ window.HUB = {
     "-",
     "-",
     "-",
-    "-",
     "D",
-    "W"
+    "W",
+    "D"
    ],
    "zone": "",
-   "rankPrev": 6
+   "rankPrev": 11
   },
   {
    "rank": 7,
@@ -14232,7 +14232,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 5
+   "rankPrev": 3
   },
   {
    "rank": 8,
@@ -14256,7 +14256,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 7
+   "rankPrev": 4
   },
   {
    "rank": 9,
@@ -14280,7 +14280,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 8
+   "rankPrev": 9
   },
   {
    "rank": 10,
@@ -14304,7 +14304,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 9
+   "rankPrev": 1
   },
   {
    "rank": 11,
@@ -14328,7 +14328,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 10
+   "rankPrev": 17
   },
   {
    "rank": 12,
@@ -14352,7 +14352,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 11
+   "rankPrev": 14
   },
   {
    "rank": 13,
@@ -14376,7 +14376,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 12
+   "rankPrev": 7
   },
   {
    "rank": 14,
@@ -14395,12 +14395,12 @@ window.HUB = {
     "-",
     "-",
     "-",
-    "-",
     "L",
+    "D",
     "D"
    ],
    "zone": "",
-   "rankPrev": 14
+   "rankPrev": 13
   },
   {
    "rank": 15,
@@ -14448,7 +14448,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 16
+   "rankPrev": 12
   },
   {
    "rank": 17,
@@ -14472,7 +14472,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 17
+   "rankPrev": 18
   },
   {
    "rank": 18,
@@ -14496,7 +14496,7 @@ window.HUB = {
     "L"
    ],
    "zone": "Relegation",
-   "rankPrev": 18
+   "rankPrev": 16
   },
   {
    "rank": 19,
@@ -14520,7 +14520,7 @@ window.HUB = {
     "L"
    ],
    "zone": "Relegation",
-   "rankPrev": 19
+   "rankPrev": 20
   },
   {
    "rank": 20,
@@ -14544,7 +14544,7 @@ window.HUB = {
     "L"
    ],
    "zone": "Relegation",
-   "rankPrev": 20
+   "rankPrev": 19
   }
  ],
  "scorers": [
