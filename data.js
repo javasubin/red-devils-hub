@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-06T21:13:56+09:00",
+  "updatedAt": "2026-09-06T22:25:29+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -54,6 +54,11 @@ window.HUB = {
    "short": "Newcastle",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/newcastle-united.45e2739dd9.svg"
   },
+  "everton": {
+   "name": "Everton",
+   "short": "Everton",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/everton.38c006ac78.svg"
+  },
   "leeds-united": {
    "name": "Leeds United",
    "short": "Leeds",
@@ -64,20 +69,15 @@ window.HUB = {
    "short": "Brighton",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/brighton-and-hove-albion.4522a78440.svg"
   },
-  "everton": {
-   "name": "Everton",
-   "short": "Everton",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/everton.38c006ac78.svg"
+  "manchester-united": {
+   "name": "Manchester United",
+   "short": "Man Utd",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/manchester-united.80807495b5.svg"
   },
   "sunderland": {
    "name": "Sunderland",
    "short": "Sunderland",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/sunderland.6fb24a6b29.svg"
-  },
-  "manchester-united": {
-   "name": "Manchester United",
-   "short": "Man Utd",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/manchester-united.80807495b5.svg"
   },
   "crystal-palace": {
    "name": "Crystal Palace",
@@ -14205,7 +14205,7 @@ window.HUB = {
     "W"
    ],
    "zone": "UEFA Champions League",
-   "rankPrev": 8
+   "rankPrev": 1
   },
   {
    "rank": 2,
@@ -14229,7 +14229,7 @@ window.HUB = {
     "D"
    ],
    "zone": "UEFA Champions League",
-   "rankPrev": 5
+   "rankPrev": 3
   },
   {
    "rank": 3,
@@ -14277,7 +14277,7 @@ window.HUB = {
     "W"
    ],
    "zone": "UEFA Champions League",
-   "rankPrev": 6
+   "rankPrev": 4
   },
   {
    "rank": 5,
@@ -14301,7 +14301,7 @@ window.HUB = {
     "D"
    ],
    "zone": "UEFA Europa League",
-   "rankPrev": 3
+   "rankPrev": 5
   },
   {
    "rank": 6,
@@ -14325,7 +14325,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 10
+   "rankPrev": 13
   },
   {
    "rank": 7,
@@ -14349,10 +14349,34 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 11
+   "rankPrev": 6
   },
   {
    "rank": 8,
+   "key": "everton",
+   "name": "Everton",
+   "short": "Everton",
+   "played": 3,
+   "won": 1,
+   "drawn": 2,
+   "lost": 0,
+   "gf": 3,
+   "ga": 1,
+   "gd": 2,
+   "points": 5,
+   "form": [
+    "-",
+    "-",
+    "-",
+    "-",
+    "W",
+    "D"
+   ],
+   "zone": "",
+   "rankPrev": 7
+  },
+  {
+   "rank": 9,
    "key": "leeds-united",
    "name": "Leeds United",
    "short": "Leeds",
@@ -14373,10 +14397,10 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 9
+   "rankPrev": 8
   },
   {
-   "rank": 9,
+   "rank": 10,
    "key": "brighton-and-hove-albion",
    "name": "Brighton & Hove Albion",
    "short": "Brighton",
@@ -14397,34 +14421,34 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 1
+   "rankPrev": 9
   },
   {
-   "rank": 10,
-   "key": "everton",
-   "name": "Everton",
-   "short": "Everton",
-   "played": 2,
+   "rank": 11,
+   "key": "manchester-united",
+   "name": "Manchester United",
+   "short": "Man Utd",
+   "played": 3,
    "won": 1,
    "drawn": 1,
-   "lost": 0,
-   "gf": 3,
-   "ga": 1,
-   "gd": 2,
+   "lost": 1,
+   "gf": 5,
+   "ga": 4,
+   "gd": 1,
    "points": 4,
    "form": [
     "-",
     "-",
     "-",
     "-",
-    "W",
-    "D"
+    "L",
+    "W"
    ],
    "zone": "",
-   "rankPrev": 4
+   "rankPrev": 10
   },
   {
-   "rank": 11,
+   "rank": 12,
    "key": "sunderland",
    "name": "Sunderland",
    "short": "Sunderland",
@@ -14445,31 +14469,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 14
-  },
-  {
-   "rank": 12,
-   "key": "manchester-united",
-   "name": "Manchester United",
-   "short": "Man Utd",
-   "played": 2,
-   "won": 1,
-   "drawn": 0,
-   "lost": 1,
-   "gf": 5,
-   "ga": 4,
-   "gd": 1,
-   "points": 3,
-   "form": [
-    "-",
-    "-",
-    "-",
-    "-",
-    "L",
-    "W"
-   ],
-   "zone": "",
-   "rankPrev": 17
+   "rankPrev": 11
   },
   {
    "rank": 13,
@@ -14493,7 +14493,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 16
+   "rankPrev": 18
   },
   {
    "rank": 14,
@@ -14517,7 +14517,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 7
+   "rankPrev": 12
   },
   {
    "rank": 15,
@@ -14541,7 +14541,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 13
+   "rankPrev": 14
   },
   {
    "rank": 16,
@@ -14589,7 +14589,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 20
+   "rankPrev": 19
   },
   {
    "rank": 18,
@@ -14613,7 +14613,7 @@ window.HUB = {
     "D"
    ],
    "zone": "Relegation",
-   "rankPrev": 19
+   "rankPrev": 20
   },
   {
    "rank": 19,
@@ -14637,7 +14637,7 @@ window.HUB = {
     "L"
    ],
    "zone": "Relegation",
-   "rankPrev": 12
+   "rankPrev": 16
   },
   {
    "rank": 20,
@@ -14661,7 +14661,7 @@ window.HUB = {
     "L"
    ],
    "zone": "Relegation",
-   "rankPrev": 18
+   "rankPrev": 17
   }
  ],
  "scorers": [
