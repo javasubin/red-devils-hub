@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-07T02:09:48+09:00",
+  "updatedAt": "2026-09-07T02:23:42+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -2897,9 +2897,9 @@ window.HUB = {
     "short": "Chelsea"
    },
    "status": "live",
-   "statusText": "HT",
+   "statusText": "90'+1",
    "score": {
-    "home": 1,
+    "home": 2,
     "away": 1
    },
    "winner": null,
@@ -2909,6 +2909,16 @@ window.HUB = {
       "name": "K. Havertz",
       "times": [
        "25'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "M. Ødegaard",
+      "times": [
+       "50'"
       ],
       "types": [
        "goal"
