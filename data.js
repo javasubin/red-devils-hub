@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-07T02:37:36+09:00",
+  "updatedAt": "2026-09-07T02:50:55+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -16,7 +16,7 @@ window.HUB = {
   ],
   "matchweeks": 38,
   "source": "BBC Sport",
-  "currentMw": 3
+  "currentMw": 4
  },
  "teams": {
   "manchester-city": {
@@ -2896,13 +2896,13 @@ window.HUB = {
     "name": "Chelsea",
     "short": "Chelsea"
    },
-   "status": "live",
-   "statusText": "90'+1",
+   "status": "post",
+   "statusText": "FT",
    "score": {
     "home": 2,
     "away": 1
    },
-   "winner": null,
+   "winner": "home",
    "scorers": {
     "home": [
      {
