@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-06T23:10:42+09:00",
+  "updatedAt": "2026-09-06T23:25:43+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -2819,7 +2819,7 @@ window.HUB = {
     "short": "Man Utd"
    },
    "status": "live",
-   "statusText": "48'",
+   "statusText": "65'",
    "score": {
     "home": 0,
     "away": 1
