@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-06T22:51:13+09:00",
+  "updatedAt": "2026-09-06T23:10:42+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -39,6 +39,11 @@ window.HUB = {
    "short": "Chelsea",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/chelsea.b96b403b5f.svg"
   },
+  "manchester-united": {
+   "name": "Manchester United",
+   "short": "Man Utd",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/manchester-united.80807495b5.svg"
+  },
   "brentford": {
    "name": "Brentford",
    "short": "Brentford",
@@ -54,11 +59,6 @@ window.HUB = {
    "short": "Newcastle",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/newcastle-united.45e2739dd9.svg"
   },
-  "everton": {
-   "name": "Everton",
-   "short": "Everton",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/everton.38c006ac78.svg"
-  },
   "leeds-united": {
    "name": "Leeds United",
    "short": "Leeds",
@@ -69,10 +69,10 @@ window.HUB = {
    "short": "Brighton",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/brighton-and-hove-albion.4522a78440.svg"
   },
-  "manchester-united": {
-   "name": "Manchester United",
-   "short": "Man Utd",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/manchester-united.80807495b5.svg"
+  "everton": {
+   "name": "Everton",
+   "short": "Everton",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/everton.38c006ac78.svg"
   },
   "sunderland": {
    "name": "Sunderland",
@@ -2819,15 +2819,26 @@ window.HUB = {
     "short": "Man Utd"
    },
    "status": "live",
-   "statusText": "HT",
+   "statusText": "48'",
    "score": {
     "home": 0,
-    "away": 0
+    "away": 1
    },
    "winner": null,
    "scorers": {
     "home": [],
-    "away": []
+    "away": [
+     {
+      "name": "B. Mbeumo",
+      "times": [
+       "46'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ]
    },
    "mu": true,
    "fav": [
@@ -14284,6 +14295,30 @@ window.HUB = {
   },
   {
    "rank": 5,
+   "key": "manchester-united",
+   "name": "Manchester United",
+   "short": "Man Utd",
+   "played": 3,
+   "won": 2,
+   "drawn": 0,
+   "lost": 1,
+   "gf": 6,
+   "ga": 4,
+   "gd": 2,
+   "points": 6,
+   "form": [
+    "-",
+    "-",
+    "-",
+    "-",
+    "L",
+    "W"
+   ],
+   "zone": "UEFA Europa League",
+   "rankPrev": 10
+  },
+  {
+   "rank": 6,
    "key": "brentford",
    "name": "Brentford",
    "short": "Brentford",
@@ -14303,11 +14338,11 @@ window.HUB = {
     "D",
     "D"
    ],
-   "zone": "UEFA Europa League",
+   "zone": "",
    "rankPrev": 5
   },
   {
-   "rank": 6,
+   "rank": 7,
    "key": "liverpool",
    "name": "Liverpool",
    "short": "Liverpool",
@@ -14331,7 +14366,7 @@ window.HUB = {
    "rankPrev": 13
   },
   {
-   "rank": 7,
+   "rank": 8,
    "key": "newcastle-united",
    "name": "Newcastle United",
    "short": "Newcastle",
@@ -14353,30 +14388,6 @@ window.HUB = {
    ],
    "zone": "",
    "rankPrev": 6
-  },
-  {
-   "rank": 8,
-   "key": "everton",
-   "name": "Everton",
-   "short": "Everton",
-   "played": 3,
-   "won": 1,
-   "drawn": 2,
-   "lost": 0,
-   "gf": 3,
-   "ga": 1,
-   "gd": 2,
-   "points": 5,
-   "form": [
-    "-",
-    "-",
-    "-",
-    "-",
-    "W",
-    "D"
-   ],
-   "zone": "",
-   "rankPrev": 7
   },
   {
    "rank": 9,
@@ -14428,15 +14439,15 @@ window.HUB = {
   },
   {
    "rank": 11,
-   "key": "manchester-united",
-   "name": "Manchester United",
-   "short": "Man Utd",
+   "key": "everton",
+   "name": "Everton",
+   "short": "Everton",
    "played": 3,
    "won": 1,
    "drawn": 1,
    "lost": 1,
-   "gf": 5,
-   "ga": 4,
+   "gf": 3,
+   "ga": 2,
    "gd": 1,
    "points": 4,
    "form": [
@@ -14444,11 +14455,11 @@ window.HUB = {
     "-",
     "-",
     "-",
-    "L",
-    "W"
+    "W",
+    "D"
    ],
    "zone": "",
-   "rankPrev": 10
+   "rankPrev": 7
   },
   {
    "rank": 12,
