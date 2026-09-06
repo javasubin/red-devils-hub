@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-07T00:10:16+09:00",
+  "updatedAt": "2026-09-07T00:25:20+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -2818,58 +2818,16 @@ window.HUB = {
     "name": "Manchester United",
     "short": "Man Utd"
    },
-   "status": "post",
-   "statusText": "FT",
+   "status": "live",
+   "statusText": "24'",
    "score": {
-    "home": 2,
-    "away": 2
+    "home": 0,
+    "away": 0
    },
-   "winner": "draw",
+   "winner": null,
    "scorers": {
-    "home": [
-     {
-      "name": "T. George",
-      "times": [
-       "83'"
-      ],
-      "types": [
-       "goal"
-      ],
-      "type": "goal"
-     },
-     {
-      "name": "A. Maitland-Niles",
-      "times": [
-       "90'+6"
-      ],
-      "types": [
-       "goal"
-      ],
-      "type": "goal"
-     }
-    ],
-    "away": [
-     {
-      "name": "B. Mbeumo",
-      "times": [
-       "46'"
-      ],
-      "types": [
-       "goal"
-      ],
-      "type": "goal"
-     },
-     {
-      "name": "B. Šeško",
-      "times": [
-       "88'"
-      ],
-      "types": [
-       "goal"
-      ],
-      "type": "goal"
-     }
-    ]
+    "home": [],
+    "away": []
    },
    "mu": true,
    "fav": [
