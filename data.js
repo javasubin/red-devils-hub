@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-07T01:40:54+09:00",
+  "updatedAt": "2026-09-07T01:51:27+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -2897,25 +2897,14 @@ window.HUB = {
     "short": "Chelsea"
    },
    "status": "live",
-   "statusText": "48'",
+   "statusText": "8'",
    "score": {
-    "home": 1,
+    "home": 0,
     "away": 1
    },
    "winner": null,
    "scorers": {
-    "home": [
-     {
-      "name": "K. Havertz",
-      "times": [
-       "25'"
-      ],
-      "types": [
-       "goal"
-      ],
-      "type": "goal"
-     }
-    ],
+    "home": [],
     "away": [
      {
       "name": "M. Rogers",
@@ -14283,13 +14272,13 @@ window.HUB = {
    "name": "Arsenal",
    "short": "Arsenal",
    "played": 3,
-   "won": 2,
-   "drawn": 1,
+   "won": 3,
+   "drawn": 0,
    "lost": 0,
-   "gf": 5,
+   "gf": 6,
    "ga": 1,
-   "gd": 4,
-   "points": 7,
+   "gd": 5,
+   "points": 9,
    "form": [
     "-",
     "-",
@@ -14332,12 +14321,12 @@ window.HUB = {
    "short": "Chelsea",
    "played": 3,
    "won": 2,
-   "drawn": 1,
-   "lost": 0,
+   "drawn": 0,
+   "lost": 1,
    "gf": 8,
-   "ga": 6,
-   "gd": 2,
-   "points": 7,
+   "ga": 7,
+   "gd": 1,
+   "points": 6,
    "form": [
     "-",
     "-",
