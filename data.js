@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-06T23:39:21+09:00",
+  "updatedAt": "2026-09-06T23:51:05+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -2819,15 +2819,47 @@ window.HUB = {
     "short": "Man Utd"
    },
    "status": "live",
-   "statusText": "HT",
+   "statusText": "90'+1",
    "score": {
-    "home": 0,
-    "away": 0
+    "home": 1,
+    "away": 2
    },
    "winner": null,
    "scorers": {
-    "home": [],
-    "away": []
+    "home": [
+     {
+      "name": "T. George",
+      "times": [
+       "83'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ],
+    "away": [
+     {
+      "name": "B. Mbeumo",
+      "times": [
+       "46'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "B. Šeško",
+      "times": [
+       "88'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ]
    },
    "mu": true,
    "fav": [
@@ -14291,8 +14323,8 @@ window.HUB = {
    "won": 2,
    "drawn": 0,
    "lost": 1,
-   "gf": 6,
-   "ga": 4,
+   "gf": 7,
+   "ga": 5,
    "gd": 2,
    "points": 6,
    "form": [
@@ -14435,8 +14467,8 @@ window.HUB = {
    "won": 1,
    "drawn": 1,
    "lost": 1,
-   "gf": 3,
-   "ga": 2,
+   "gf": 4,
+   "ga": 3,
    "gd": 1,
    "points": 4,
    "form": [
