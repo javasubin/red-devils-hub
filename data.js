@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-07T00:25:20+09:00",
+  "updatedAt": "2026-09-07T00:39:04+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -24,6 +24,11 @@ window.HUB = {
    "short": "Man City",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/manchester-city.30c4b22e90.svg"
   },
+  "chelsea": {
+   "name": "Chelsea",
+   "short": "Chelsea",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/chelsea.b96b403b5f.svg"
+  },
   "hull-city": {
    "name": "Hull City",
    "short": "Hull City",
@@ -33,11 +38,6 @@ window.HUB = {
    "name": "Arsenal",
    "short": "Arsenal",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/arsenal.5a62ec890e.svg"
-  },
-  "chelsea": {
-   "name": "Chelsea",
-   "short": "Chelsea",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/chelsea.b96b403b5f.svg"
   },
   "brentford": {
    "name": "Brentford",
@@ -2819,15 +2819,26 @@ window.HUB = {
     "short": "Man Utd"
    },
    "status": "live",
-   "statusText": "24'",
+   "statusText": "77'",
    "score": {
     "home": 0,
-    "away": 0
+    "away": 1
    },
    "winner": null,
    "scorers": {
     "home": [],
-    "away": []
+    "away": [
+     {
+      "name": "B. Mbeumo",
+      "times": [
+       "46'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ]
    },
    "mu": true,
    "fav": [
@@ -14208,10 +14219,34 @@ window.HUB = {
     "W"
    ],
    "zone": "UEFA Champions League",
-   "rankPrev": 8
+   "rankPrev": 1
   },
   {
    "rank": 2,
+   "key": "chelsea",
+   "name": "Chelsea",
+   "short": "Chelsea",
+   "played": 3,
+   "won": 3,
+   "drawn": 0,
+   "lost": 0,
+   "gf": 8,
+   "ga": 5,
+   "gd": 3,
+   "points": 9,
+   "form": [
+    "-",
+    "-",
+    "-",
+    "-",
+    "W",
+    "W"
+   ],
+   "zone": "UEFA Champions League",
+   "rankPrev": 4
+  },
+  {
+   "rank": 3,
    "key": "hull-city",
    "name": "Hull City",
    "short": "Hull City",
@@ -14232,44 +14267,20 @@ window.HUB = {
     "D"
    ],
    "zone": "UEFA Champions League",
-   "rankPrev": 5
-  },
-  {
-   "rank": 3,
-   "key": "arsenal",
-   "name": "Arsenal",
-   "short": "Arsenal",
-   "played": 2,
-   "won": 2,
-   "drawn": 0,
-   "lost": 0,
-   "gf": 4,
-   "ga": 0,
-   "gd": 4,
-   "points": 6,
-   "form": [
-    "-",
-    "-",
-    "-",
-    "-",
-    "W",
-    "W"
-   ],
-   "zone": "UEFA Champions League",
    "rankPrev": 2
   },
   {
    "rank": 4,
-   "key": "chelsea",
-   "name": "Chelsea",
-   "short": "Chelsea",
-   "played": 2,
+   "key": "arsenal",
+   "name": "Arsenal",
+   "short": "Arsenal",
+   "played": 3,
    "won": 2,
    "drawn": 0,
-   "lost": 0,
-   "gf": 7,
-   "ga": 5,
-   "gd": 2,
+   "lost": 1,
+   "gf": 4,
+   "ga": 1,
+   "gd": 3,
    "points": 6,
    "form": [
     "-",
@@ -14280,7 +14291,7 @@ window.HUB = {
     "W"
    ],
    "zone": "UEFA Champions League",
-   "rankPrev": 6
+   "rankPrev": 3
   },
   {
    "rank": 5,
@@ -14304,7 +14315,7 @@ window.HUB = {
     "D"
    ],
    "zone": "UEFA Europa League",
-   "rankPrev": 3
+   "rankPrev": 5
   },
   {
    "rank": 6,
@@ -14328,7 +14339,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 10
+   "rankPrev": 6
   },
   {
    "rank": 7,
@@ -14352,7 +14363,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 11
+   "rankPrev": 7
   },
   {
    "rank": 8,
@@ -14376,7 +14387,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 4
+   "rankPrev": 10
   },
   {
    "rank": 9,
@@ -14400,7 +14411,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 9
+   "rankPrev": 8
   },
   {
    "rank": 10,
@@ -14424,7 +14435,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 1
+   "rankPrev": 9
   },
   {
    "rank": 11,
@@ -14448,7 +14459,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 17
+   "rankPrev": 12
   },
   {
    "rank": 12,
@@ -14472,7 +14483,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 14
+   "rankPrev": 11
   },
   {
    "rank": 13,
@@ -14496,7 +14507,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 16
+   "rankPrev": 13
   },
   {
    "rank": 14,
@@ -14520,7 +14531,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 7
+   "rankPrev": 14
   },
   {
    "rank": 15,
@@ -14544,7 +14555,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 13
+   "rankPrev": 15
   },
   {
    "rank": 16,
@@ -14568,7 +14579,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 15
+   "rankPrev": 16
   },
   {
    "rank": 17,
@@ -14592,7 +14603,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 20
+   "rankPrev": 17
   },
   {
    "rank": 18,
@@ -14616,7 +14627,7 @@ window.HUB = {
     "D"
    ],
    "zone": "Relegation",
-   "rankPrev": 19
+   "rankPrev": 18
   },
   {
    "rank": 19,
@@ -14640,7 +14651,7 @@ window.HUB = {
     "L"
    ],
    "zone": "Relegation",
-   "rankPrev": 12
+   "rankPrev": 19
   },
   {
    "rank": 20,
@@ -14664,7 +14675,7 @@ window.HUB = {
     "L"
    ],
    "zone": "Relegation",
-   "rankPrev": 18
+   "rankPrev": 20
   }
  ],
  "scorers": [
