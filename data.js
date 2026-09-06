@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-07T00:51:15+09:00",
+  "updatedAt": "2026-09-07T01:11:29+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -24,20 +24,20 @@ window.HUB = {
    "short": "Man City",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/manchester-city.30c4b22e90.svg"
   },
-  "chelsea": {
-   "name": "Chelsea",
-   "short": "Chelsea",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/chelsea.b96b403b5f.svg"
+  "arsenal": {
+   "name": "Arsenal",
+   "short": "Arsenal",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/arsenal.5a62ec890e.svg"
   },
   "hull-city": {
    "name": "Hull City",
    "short": "Hull City",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/hull-city.7187a4b4b5.svg"
   },
-  "arsenal": {
-   "name": "Arsenal",
-   "short": "Arsenal",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/arsenal.5a62ec890e.svg"
+  "chelsea": {
+   "name": "Chelsea",
+   "short": "Chelsea",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/chelsea.b96b403b5f.svg"
   },
   "brentford": {
    "name": "Brentford",
@@ -2897,14 +2897,25 @@ window.HUB = {
     "short": "Chelsea"
    },
    "status": "live",
-   "statusText": "20'",
+   "statusText": "38'",
    "score": {
-    "home": 0,
+    "home": 1,
     "away": 1
    },
    "winner": null,
    "scorers": {
-    "home": [],
+    "home": [
+     {
+      "name": "K. Havertz",
+      "times": [
+       "25'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ],
     "away": [
      {
       "name": "M. Rogers",
@@ -14268,17 +14279,17 @@ window.HUB = {
   },
   {
    "rank": 2,
-   "key": "chelsea",
-   "name": "Chelsea",
-   "short": "Chelsea",
+   "key": "arsenal",
+   "name": "Arsenal",
+   "short": "Arsenal",
    "played": 3,
-   "won": 3,
-   "drawn": 0,
+   "won": 2,
+   "drawn": 1,
    "lost": 0,
-   "gf": 8,
-   "ga": 5,
-   "gd": 3,
-   "points": 9,
+   "gf": 5,
+   "ga": 1,
+   "gd": 4,
+   "points": 7,
    "form": [
     "-",
     "-",
@@ -14288,7 +14299,7 @@ window.HUB = {
     "W"
    ],
    "zone": "UEFA Champions League",
-   "rankPrev": 4
+   "rankPrev": 3
   },
   {
    "rank": 3,
@@ -14316,17 +14327,17 @@ window.HUB = {
   },
   {
    "rank": 4,
-   "key": "arsenal",
-   "name": "Arsenal",
-   "short": "Arsenal",
+   "key": "chelsea",
+   "name": "Chelsea",
+   "short": "Chelsea",
    "played": 3,
    "won": 2,
-   "drawn": 0,
-   "lost": 1,
-   "gf": 4,
-   "ga": 1,
-   "gd": 3,
-   "points": 6,
+   "drawn": 1,
+   "lost": 0,
+   "gf": 8,
+   "ga": 6,
+   "gd": 2,
+   "points": 7,
    "form": [
     "-",
     "-",
@@ -14336,7 +14347,7 @@ window.HUB = {
     "W"
    ],
    "zone": "UEFA Champions League",
-   "rankPrev": 3
+   "rankPrev": 4
   },
   {
    "rank": 5,
