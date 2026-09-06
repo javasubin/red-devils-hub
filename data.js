@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-06T23:51:05+09:00",
+  "updatedAt": "2026-09-07T00:10:16+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -39,11 +39,6 @@ window.HUB = {
    "short": "Chelsea",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/chelsea.b96b403b5f.svg"
   },
-  "manchester-united": {
-   "name": "Manchester United",
-   "short": "Man Utd",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/manchester-united.80807495b5.svg"
-  },
   "brentford": {
    "name": "Brentford",
    "short": "Brentford",
@@ -59,6 +54,11 @@ window.HUB = {
    "short": "Newcastle",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/newcastle-united.45e2739dd9.svg"
   },
+  "everton": {
+   "name": "Everton",
+   "short": "Everton",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/everton.38c006ac78.svg"
+  },
   "leeds-united": {
    "name": "Leeds United",
    "short": "Leeds",
@@ -69,10 +69,10 @@ window.HUB = {
    "short": "Brighton",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/brighton-and-hove-albion.4522a78440.svg"
   },
-  "everton": {
-   "name": "Everton",
-   "short": "Everton",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/everton.38c006ac78.svg"
+  "manchester-united": {
+   "name": "Manchester United",
+   "short": "Man Utd",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/manchester-united.80807495b5.svg"
   },
   "sunderland": {
    "name": "Sunderland",
@@ -2818,19 +2818,29 @@ window.HUB = {
     "name": "Manchester United",
     "short": "Man Utd"
    },
-   "status": "live",
-   "statusText": "90'+1",
+   "status": "post",
+   "statusText": "FT",
    "score": {
-    "home": 1,
+    "home": 2,
     "away": 2
    },
-   "winner": null,
+   "winner": "draw",
    "scorers": {
     "home": [
      {
       "name": "T. George",
       "times": [
        "83'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "A. Maitland-Niles",
+      "times": [
+       "90'+6"
       ],
       "types": [
        "goal"
@@ -14240,7 +14250,7 @@ window.HUB = {
     "W"
    ],
    "zone": "UEFA Champions League",
-   "rankPrev": 1
+   "rankPrev": 8
   },
   {
    "rank": 2,
@@ -14264,7 +14274,7 @@ window.HUB = {
     "D"
    ],
    "zone": "UEFA Champions League",
-   "rankPrev": 3
+   "rankPrev": 5
   },
   {
    "rank": 3,
@@ -14312,34 +14322,10 @@ window.HUB = {
     "W"
    ],
    "zone": "UEFA Champions League",
-   "rankPrev": 4
+   "rankPrev": 6
   },
   {
    "rank": 5,
-   "key": "manchester-united",
-   "name": "Manchester United",
-   "short": "Man Utd",
-   "played": 3,
-   "won": 2,
-   "drawn": 0,
-   "lost": 1,
-   "gf": 7,
-   "ga": 5,
-   "gd": 2,
-   "points": 6,
-   "form": [
-    "-",
-    "-",
-    "-",
-    "-",
-    "L",
-    "W"
-   ],
-   "zone": "UEFA Europa League",
-   "rankPrev": 10
-  },
-  {
-   "rank": 6,
    "key": "brentford",
    "name": "Brentford",
    "short": "Brentford",
@@ -14359,11 +14345,11 @@ window.HUB = {
     "D",
     "D"
    ],
-   "zone": "",
-   "rankPrev": 5
+   "zone": "UEFA Europa League",
+   "rankPrev": 3
   },
   {
-   "rank": 7,
+   "rank": 6,
    "key": "liverpool",
    "name": "Liverpool",
    "short": "Liverpool",
@@ -14384,10 +14370,10 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 13
+   "rankPrev": 10
   },
   {
-   "rank": 8,
+   "rank": 7,
    "key": "newcastle-united",
    "name": "Newcastle United",
    "short": "Newcastle",
@@ -14408,7 +14394,31 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 6
+   "rankPrev": 11
+  },
+  {
+   "rank": 8,
+   "key": "everton",
+   "name": "Everton",
+   "short": "Everton",
+   "played": 3,
+   "won": 1,
+   "drawn": 2,
+   "lost": 0,
+   "gf": 5,
+   "ga": 3,
+   "gd": 2,
+   "points": 5,
+   "form": [
+    "-",
+    "-",
+    "-",
+    "W",
+    "D",
+    "D"
+   ],
+   "zone": "",
+   "rankPrev": 4
   },
   {
    "rank": 9,
@@ -14432,7 +14442,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 8
+   "rankPrev": 9
   },
   {
    "rank": 10,
@@ -14456,31 +14466,31 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 9
+   "rankPrev": 1
   },
   {
    "rank": 11,
-   "key": "everton",
-   "name": "Everton",
-   "short": "Everton",
+   "key": "manchester-united",
+   "name": "Manchester United",
+   "short": "Man Utd",
    "played": 3,
    "won": 1,
    "drawn": 1,
    "lost": 1,
-   "gf": 4,
-   "ga": 3,
+   "gf": 7,
+   "ga": 6,
    "gd": 1,
    "points": 4,
    "form": [
     "-",
     "-",
     "-",
-    "-",
+    "L",
     "W",
     "D"
    ],
    "zone": "",
-   "rankPrev": 7
+   "rankPrev": 17
   },
   {
    "rank": 12,
@@ -14504,7 +14514,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 11
+   "rankPrev": 14
   },
   {
    "rank": 13,
@@ -14528,7 +14538,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 18
+   "rankPrev": 16
   },
   {
    "rank": 14,
@@ -14552,7 +14562,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 12
+   "rankPrev": 7
   },
   {
    "rank": 15,
@@ -14576,7 +14586,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 14
+   "rankPrev": 13
   },
   {
    "rank": 16,
@@ -14624,7 +14634,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 19
+   "rankPrev": 20
   },
   {
    "rank": 18,
@@ -14648,7 +14658,7 @@ window.HUB = {
     "D"
    ],
    "zone": "Relegation",
-   "rankPrev": 20
+   "rankPrev": 19
   },
   {
    "rank": 19,
@@ -14672,7 +14682,7 @@ window.HUB = {
     "L"
    ],
    "zone": "Relegation",
-   "rankPrev": 16
+   "rankPrev": 12
   },
   {
    "rank": 20,
@@ -14696,7 +14706,7 @@ window.HUB = {
     "L"
    ],
    "zone": "Relegation",
-   "rankPrev": 17
+   "rankPrev": 18
   }
  ],
  "scorers": [
