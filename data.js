@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-07T00:39:04+09:00",
+  "updatedAt": "2026-09-07T00:51:15+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -2818,20 +2818,51 @@ window.HUB = {
     "name": "Manchester United",
     "short": "Man Utd"
    },
-   "status": "live",
-   "statusText": "77'",
+   "status": "post",
+   "statusText": "FT",
    "score": {
-    "home": 0,
-    "away": 1
+    "home": 2,
+    "away": 2
    },
-   "winner": null,
+   "winner": "draw",
    "scorers": {
-    "home": [],
+    "home": [
+     {
+      "name": "T. George",
+      "times": [
+       "83'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "A. Maitland-Niles",
+      "times": [
+       "90'+6"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ],
     "away": [
      {
       "name": "B. Mbeumo",
       "times": [
        "46'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "B. Šeško",
+      "times": [
+       "88'"
       ],
       "types": [
        "goal"
@@ -2865,13 +2896,27 @@ window.HUB = {
     "name": "Chelsea",
     "short": "Chelsea"
    },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
+   "status": "live",
+   "statusText": "20'",
+   "score": {
+    "home": 0,
+    "away": 1
+   },
    "winner": null,
    "scorers": {
     "home": [],
-    "away": []
+    "away": [
+     {
+      "name": "M. Rogers",
+      "times": [
+       "2'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ]
    },
    "mu": false,
    "fav": [],
