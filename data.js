@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-08T00:44:19+09:00",
+  "updatedAt": "2026-09-09T20:11:46+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -2974,7 +2974,7 @@ window.HUB = {
    "fav": [
     "manchester-united"
    ],
-   "url": null
+   "url": "https://www.bbc.com/sport/football/live/c67830ezxn4xt"
   },
   {
    "id": "s-46keym6q0h6l0kgzluk84he6s",
@@ -3005,7 +3005,7 @@ window.HUB = {
    },
    "mu": false,
    "fav": [],
-   "url": null
+   "url": "https://www.bbc.com/sport/football/live/cj62e519x7zpt"
   },
   {
    "id": "s-46wtoyb4dsmnjq9kw2652pwd0",
@@ -3036,7 +3036,7 @@ window.HUB = {
    },
    "mu": false,
    "fav": [],
-   "url": null
+   "url": "https://www.bbc.com/sport/football/live/cmgjqgx8pyv4t"
   },
   {
    "id": "s-47987470fmi9lh22nm3ovpl3o",
@@ -3067,7 +3067,7 @@ window.HUB = {
    },
    "mu": false,
    "fav": [],
-   "url": null
+   "url": "https://www.bbc.com/sport/football/live/c6rr4q87p272t"
   },
   {
    "id": "s-47y7rm3fy0wp7vx8vj89hxt04",
@@ -3098,7 +3098,7 @@ window.HUB = {
    },
    "mu": false,
    "fav": [],
-   "url": null
+   "url": "https://www.bbc.com/sport/football/live/cmr4vw7zpeelt"
   },
   {
    "id": "s-48mw1s8v0qhii5if1m4yvf3f8",
@@ -3129,7 +3129,7 @@ window.HUB = {
    },
    "mu": false,
    "fav": [],
-   "url": null
+   "url": "https://www.bbc.com/sport/football/live/cv5yj7z2xp2kt"
   },
   {
    "id": "s-49nqhm11erhj0q7ktzt7bcdg4",
@@ -3162,7 +3162,7 @@ window.HUB = {
    "fav": [
     "tottenham-hotspur"
    ],
-   "url": null
+   "url": "https://www.bbc.com/sport/football/live/cqx2zkde1xpet"
   },
   {
    "id": "s-49bge6tbymd5aaw88zl3trgno",
@@ -3193,7 +3193,7 @@ window.HUB = {
    },
    "mu": false,
    "fav": [],
-   "url": null
+   "url": "https://www.bbc.com/sport/football/live/cw23xgym2p5zt"
   },
   {
    "id": "s-47lty5binhtq56cij0a1ibi1g",
