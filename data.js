@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-10T20:11:30+09:00",
+  "updatedAt": "2026-09-10T23:13:33+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -7294,9 +7294,9 @@ window.HUB = {
    "compName": "Premier League",
    "round": null,
    "mw": 17,
-   "kickoff": "2026-12-26T15:00:00Z",
+   "kickoff": "2026-12-26T12:30:00Z",
    "dateUK": "2026-12-26",
-   "timeUK": "15:00",
+   "timeUK": "12:30",
    "home": {
     "key": "aston-villa",
     "name": "Aston Villa",
@@ -7306,68 +7306,6 @@ window.HUB = {
     "key": "leeds-united",
     "name": "Leeds United",
     "short": "Leeds"
-   },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
-   "winner": null,
-   "scorers": {
-    "home": [],
-    "away": []
-   },
-   "mu": false,
-   "fav": [],
-   "url": null
-  },
-  {
-   "id": "s-5fsam5dr4sedvr99z8il9rfv8",
-   "comp": "PL",
-   "compName": "Premier League",
-   "round": null,
-   "mw": 17,
-   "kickoff": "2026-12-26T15:00:00Z",
-   "dateUK": "2026-12-26",
-   "timeUK": "15:00",
-   "home": {
-    "key": "coventry-city",
-    "name": "Coventry City",
-    "short": "Coventry"
-   },
-   "away": {
-    "key": "chelsea",
-    "name": "Chelsea",
-    "short": "Chelsea"
-   },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
-   "winner": null,
-   "scorers": {
-    "home": [],
-    "away": []
-   },
-   "mu": false,
-   "fav": [],
-   "url": null
-  },
-  {
-   "id": "s-5g4ndt2olustigl6demznb95g",
-   "comp": "PL",
-   "compName": "Premier League",
-   "round": null,
-   "mw": 17,
-   "kickoff": "2026-12-26T15:00:00Z",
-   "dateUK": "2026-12-26",
-   "timeUK": "15:00",
-   "home": {
-    "key": "crystal-palace",
-    "name": "Crystal Palace",
-    "short": "C Palace"
-   },
-   "away": {
-    "key": "arsenal",
-    "name": "Arsenal",
-    "short": "Arsenal"
    },
    "status": "pre",
    "statusText": "Scheduled",
@@ -7444,37 +7382,6 @@ window.HUB = {
    "url": null
   },
   {
-   "id": "s-5h67xupg12axj9m0v6e9t4ro4",
-   "comp": "PL",
-   "compName": "Premier League",
-   "round": null,
-   "mw": 17,
-   "kickoff": "2026-12-26T15:00:00Z",
-   "dateUK": "2026-12-26",
-   "timeUK": "15:00",
-   "home": {
-    "key": "hull-city",
-    "name": "Hull City",
-    "short": "Hull City"
-   },
-   "away": {
-    "key": "liverpool",
-    "name": "Liverpool",
-    "short": "Liverpool"
-   },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
-   "winner": null,
-   "scorers": {
-    "home": [],
-    "away": []
-   },
-   "mu": false,
-   "fav": [],
-   "url": null
-  },
-  {
    "id": "s-5hiibs83bel1lssctvx4hgg0k",
    "comp": "PL",
    "compName": "Premier League",
@@ -7492,70 +7399,6 @@ window.HUB = {
     "key": "brentford",
     "name": "Brentford",
     "short": "Brentford"
-   },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
-   "winner": null,
-   "scorers": {
-    "home": [],
-    "away": []
-   },
-   "mu": false,
-   "fav": [],
-   "url": null
-  },
-  {
-   "id": "s-5hus55kbhcz9ubuaihuqahudw",
-   "comp": "PL",
-   "compName": "Premier League",
-   "round": null,
-   "mw": 17,
-   "kickoff": "2026-12-26T15:00:00Z",
-   "dateUK": "2026-12-26",
-   "timeUK": "15:00",
-   "home": {
-    "key": "manchester-united",
-    "name": "Manchester United",
-    "short": "Man Utd"
-   },
-   "away": {
-    "key": "nottingham-forest",
-    "name": "Nottingham Forest",
-    "short": "N Forest"
-   },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
-   "winner": null,
-   "scorers": {
-    "home": [],
-    "away": []
-   },
-   "mu": true,
-   "fav": [
-    "manchester-united"
-   ],
-   "url": null
-  },
-  {
-   "id": "s-5i74bt2qby9nu2j4gxiauo1zo",
-   "comp": "PL",
-   "compName": "Premier League",
-   "round": null,
-   "mw": 17,
-   "kickoff": "2026-12-26T15:00:00Z",
-   "dateUK": "2026-12-26",
-   "timeUK": "15:00",
-   "home": {
-    "key": "newcastle-united",
-    "name": "Newcastle United",
-    "short": "Newcastle"
-   },
-   "away": {
-    "key": "manchester-city",
-    "name": "Manchester City",
-    "short": "Man City"
    },
    "status": "pre",
    "statusText": "Scheduled",
@@ -7603,18 +7446,18 @@ window.HUB = {
    "url": null
   },
   {
-   "id": "s-5ivrpxr22fwm3jjae8v2d65g4",
+   "id": "s-5h67xupg12axj9m0v6e9t4ro4",
    "comp": "PL",
    "compName": "Premier League",
    "round": null,
-   "mw": 18,
-   "kickoff": "2026-12-30T20:00:00Z",
-   "dateUK": "2026-12-30",
-   "timeUK": "20:00",
+   "mw": 17,
+   "kickoff": "2026-12-26T17:30:00Z",
+   "dateUK": "2026-12-26",
+   "timeUK": "17:30",
    "home": {
-    "key": "aston-villa",
-    "name": "Aston Villa",
-    "short": "A Villa"
+    "key": "hull-city",
+    "name": "Hull City",
+    "short": "Hull City"
    },
    "away": {
     "key": "liverpool",
@@ -7634,14 +7477,235 @@ window.HUB = {
    "url": null
   },
   {
+   "id": "s-5i74bt2qby9nu2j4gxiauo1zo",
+   "comp": "PL",
+   "compName": "Premier League",
+   "round": null,
+   "mw": 17,
+   "kickoff": "2026-12-26T20:00:00Z",
+   "dateUK": "2026-12-26",
+   "timeUK": "20:00",
+   "home": {
+    "key": "newcastle-united",
+    "name": "Newcastle United",
+    "short": "Newcastle"
+   },
+   "away": {
+    "key": "manchester-city",
+    "name": "Manchester City",
+    "short": "Man City"
+   },
+   "status": "pre",
+   "statusText": "Scheduled",
+   "score": null,
+   "winner": null,
+   "scorers": {
+    "home": [],
+    "away": []
+   },
+   "mu": false,
+   "fav": [],
+   "url": null
+  },
+  {
+   "id": "s-5fsam5dr4sedvr99z8il9rfv8",
+   "comp": "PL",
+   "compName": "Premier League",
+   "round": null,
+   "mw": 17,
+   "kickoff": "2026-12-27T14:00:00Z",
+   "dateUK": "2026-12-27",
+   "timeUK": "14:00",
+   "home": {
+    "key": "coventry-city",
+    "name": "Coventry City",
+    "short": "Coventry"
+   },
+   "away": {
+    "key": "chelsea",
+    "name": "Chelsea",
+    "short": "Chelsea"
+   },
+   "status": "pre",
+   "statusText": "Scheduled",
+   "score": null,
+   "winner": null,
+   "scorers": {
+    "home": [],
+    "away": []
+   },
+   "mu": false,
+   "fav": [],
+   "url": null
+  },
+  {
+   "id": "s-5hus55kbhcz9ubuaihuqahudw",
+   "comp": "PL",
+   "compName": "Premier League",
+   "round": null,
+   "mw": 17,
+   "kickoff": "2026-12-27T16:30:00Z",
+   "dateUK": "2026-12-27",
+   "timeUK": "16:30",
+   "home": {
+    "key": "manchester-united",
+    "name": "Manchester United",
+    "short": "Man Utd"
+   },
+   "away": {
+    "key": "nottingham-forest",
+    "name": "Nottingham Forest",
+    "short": "N Forest"
+   },
+   "status": "pre",
+   "statusText": "Scheduled",
+   "score": null,
+   "winner": null,
+   "scorers": {
+    "home": [],
+    "away": []
+   },
+   "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
+   "url": null
+  },
+  {
+   "id": "s-5g4ndt2olustigl6demznb95g",
+   "comp": "PL",
+   "compName": "Premier League",
+   "round": null,
+   "mw": 17,
+   "kickoff": "2026-12-27T19:00:00Z",
+   "dateUK": "2026-12-27",
+   "timeUK": "19:00",
+   "home": {
+    "key": "crystal-palace",
+    "name": "Crystal Palace",
+    "short": "C Palace"
+   },
+   "away": {
+    "key": "arsenal",
+    "name": "Arsenal",
+    "short": "Arsenal"
+   },
+   "status": "pre",
+   "statusText": "Scheduled",
+   "score": null,
+   "winner": null,
+   "scorers": {
+    "home": [],
+    "away": []
+   },
+   "mu": false,
+   "fav": [],
+   "url": null
+  },
+  {
+   "id": "s-5kljw23kqbjkysivw19vpu13o",
+   "comp": "PL",
+   "compName": "Premier League",
+   "round": null,
+   "mw": 18,
+   "kickoff": "2026-12-29T19:30:00Z",
+   "dateUK": "2026-12-29",
+   "timeUK": "19:30",
+   "home": {
+    "key": "hull-city",
+    "name": "Hull City",
+    "short": "Hull City"
+   },
+   "away": {
+    "key": "leeds-united",
+    "name": "Leeds United",
+    "short": "Leeds"
+   },
+   "status": "pre",
+   "statusText": "Scheduled",
+   "score": null,
+   "winner": null,
+   "scorers": {
+    "home": [],
+    "away": []
+   },
+   "mu": false,
+   "fav": [],
+   "url": null
+  },
+  {
+   "id": "s-5lz9rztmdq37vjj4017qc2n84",
+   "comp": "PL",
+   "compName": "Premier League",
+   "round": null,
+   "mw": 18,
+   "kickoff": "2026-12-29T19:30:00Z",
+   "dateUK": "2026-12-29",
+   "timeUK": "19:30",
+   "home": {
+    "key": "tottenham-hotspur",
+    "name": "Tottenham Hotspur",
+    "short": "Spurs"
+   },
+   "away": {
+    "key": "brighton-and-hove-albion",
+    "name": "Brighton & Hove Albion",
+    "short": "Brighton"
+   },
+   "status": "pre",
+   "statusText": "Scheduled",
+   "score": null,
+   "winner": null,
+   "scorers": {
+    "home": [],
+    "away": []
+   },
+   "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
+   "url": null
+  },
+  {
+   "id": "s-5jwvtvkjnau94j6w7q0ytwnx0",
+   "comp": "PL",
+   "compName": "Premier League",
+   "round": null,
+   "mw": 18,
+   "kickoff": "2026-12-29T20:15:00Z",
+   "dateUK": "2026-12-29",
+   "timeUK": "20:15",
+   "home": {
+    "key": "everton",
+    "name": "Everton",
+    "short": "Everton"
+   },
+   "away": {
+    "key": "manchester-city",
+    "name": "Manchester City",
+    "short": "Man City"
+   },
+   "status": "pre",
+   "statusText": "Scheduled",
+   "score": null,
+   "winner": null,
+   "scorers": {
+    "home": [],
+    "away": []
+   },
+   "mu": false,
+   "fav": [],
+   "url": null
+  },
+  {
    "id": "s-5j846ncmq6iv3t0zewvgvxu6s",
    "comp": "PL",
    "compName": "Premier League",
    "round": null,
    "mw": 18,
-   "kickoff": "2026-12-30T20:00:00Z",
+   "kickoff": "2026-12-30T19:30:00Z",
    "dateUK": "2026-12-30",
-   "timeUK": "20:00",
+   "timeUK": "19:30",
    "home": {
     "key": "coventry-city",
     "name": "Coventry City",
@@ -7670,9 +7734,9 @@ window.HUB = {
    "compName": "Premier League",
    "round": null,
    "mw": 18,
-   "kickoff": "2026-12-30T20:00:00Z",
+   "kickoff": "2026-12-30T19:30:00Z",
    "dateUK": "2026-12-30",
-   "timeUK": "20:00",
+   "timeUK": "19:30",
    "home": {
     "key": "crystal-palace",
     "name": "Crystal Palace",
@@ -7696,45 +7760,14 @@ window.HUB = {
    "url": null
   },
   {
-   "id": "s-5jwvtvkjnau94j6w7q0ytwnx0",
-   "comp": "PL",
-   "compName": "Premier League",
-   "round": null,
-   "mw": 18,
-   "kickoff": "2026-12-30T20:00:00Z",
-   "dateUK": "2026-12-30",
-   "timeUK": "20:00",
-   "home": {
-    "key": "everton",
-    "name": "Everton",
-    "short": "Everton"
-   },
-   "away": {
-    "key": "manchester-city",
-    "name": "Manchester City",
-    "short": "Man City"
-   },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
-   "winner": null,
-   "scorers": {
-    "home": [],
-    "away": []
-   },
-   "mu": false,
-   "fav": [],
-   "url": null
-  },
-  {
    "id": "s-5k98u10rvrdf6gp4vnc5fndas",
    "comp": "PL",
    "compName": "Premier League",
    "round": null,
    "mw": 18,
-   "kickoff": "2026-12-30T20:00:00Z",
+   "kickoff": "2026-12-30T19:30:00Z",
    "dateUK": "2026-12-30",
-   "timeUK": "20:00",
+   "timeUK": "19:30",
    "home": {
     "key": "fulham",
     "name": "Fulham",
@@ -7758,76 +7791,14 @@ window.HUB = {
    "url": null
   },
   {
-   "id": "s-5kljw23kqbjkysivw19vpu13o",
-   "comp": "PL",
-   "compName": "Premier League",
-   "round": null,
-   "mw": 18,
-   "kickoff": "2026-12-30T20:00:00Z",
-   "dateUK": "2026-12-30",
-   "timeUK": "20:00",
-   "home": {
-    "key": "hull-city",
-    "name": "Hull City",
-    "short": "Hull City"
-   },
-   "away": {
-    "key": "leeds-united",
-    "name": "Leeds United",
-    "short": "Leeds"
-   },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
-   "winner": null,
-   "scorers": {
-    "home": [],
-    "away": []
-   },
-   "mu": false,
-   "fav": [],
-   "url": null
-  },
-  {
-   "id": "s-5kxygexjnsjgg77hml9mv0is4",
-   "comp": "PL",
-   "compName": "Premier League",
-   "round": null,
-   "mw": 18,
-   "kickoff": "2026-12-30T20:00:00Z",
-   "dateUK": "2026-12-30",
-   "timeUK": "20:00",
-   "home": {
-    "key": "ipswich-town",
-    "name": "Ipswich Town",
-    "short": "Ipswich"
-   },
-   "away": {
-    "key": "chelsea",
-    "name": "Chelsea",
-    "short": "Chelsea"
-   },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
-   "winner": null,
-   "scorers": {
-    "home": [],
-    "away": []
-   },
-   "mu": false,
-   "fav": [],
-   "url": null
-  },
-  {
    "id": "s-5la8l0tig69lnukmmmhy7ias4",
    "comp": "PL",
    "compName": "Premier League",
    "round": null,
    "mw": 18,
-   "kickoff": "2026-12-30T20:00:00Z",
+   "kickoff": "2026-12-30T19:30:00Z",
    "dateUK": "2026-12-30",
-   "timeUK": "20:00",
+   "timeUK": "19:30",
    "home": {
     "key": "manchester-united",
     "name": "Manchester United",
@@ -7858,9 +7829,9 @@ window.HUB = {
    "compName": "Premier League",
    "round": null,
    "mw": 18,
-   "kickoff": "2026-12-30T20:00:00Z",
+   "kickoff": "2026-12-30T19:30:00Z",
    "dateUK": "2026-12-30",
-   "timeUK": "20:00",
+   "timeUK": "19:30",
    "home": {
     "key": "newcastle-united",
     "name": "Newcastle United",
@@ -7884,56 +7855,23 @@ window.HUB = {
    "url": null
   },
   {
-   "id": "s-5lz9rztmdq37vjj4017qc2n84",
+   "id": "s-5ivrpxr22fwm3jjae8v2d65g4",
    "comp": "PL",
    "compName": "Premier League",
    "round": null,
    "mw": 18,
-   "kickoff": "2026-12-30T20:00:00Z",
+   "kickoff": "2026-12-30T20:15:00Z",
    "dateUK": "2026-12-30",
-   "timeUK": "20:00",
+   "timeUK": "20:15",
    "home": {
-    "key": "tottenham-hotspur",
-    "name": "Tottenham Hotspur",
-    "short": "Spurs"
-   },
-   "away": {
-    "key": "brighton-and-hove-albion",
-    "name": "Brighton & Hove Albion",
-    "short": "Brighton"
-   },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
-   "winner": null,
-   "scorers": {
-    "home": [],
-    "away": []
-   },
-   "mu": false,
-   "fav": [
-    "tottenham-hotspur"
-   ],
-   "url": null
-  },
-  {
-   "id": "s-5mbo67e34fr1tnz5njrruo4d0",
-   "comp": "PL",
-   "compName": "Premier League",
-   "round": null,
-   "mw": 19,
-   "kickoff": "2027-01-02T15:00:00Z",
-   "dateUK": "2027-01-02",
-   "timeUK": "15:00",
-   "home": {
-    "key": "afc-bournemouth",
-    "name": "Bournemouth",
-    "short": "Bournemouth"
-   },
-   "away": {
     "key": "aston-villa",
     "name": "Aston Villa",
     "short": "A Villa"
+   },
+   "away": {
+    "key": "liverpool",
+    "name": "Liverpool",
+    "short": "Liverpool"
    },
    "status": "pre",
    "statusText": "Scheduled",
@@ -7945,6 +7883,101 @@ window.HUB = {
    },
    "mu": false,
    "fav": [],
+   "url": null
+  },
+  {
+   "id": "s-5kxygexjnsjgg77hml9mv0is4",
+   "comp": "PL",
+   "compName": "Premier League",
+   "round": null,
+   "mw": 18,
+   "kickoff": "2026-12-30T20:15:00Z",
+   "dateUK": "2026-12-30",
+   "timeUK": "20:15",
+   "home": {
+    "key": "ipswich-town",
+    "name": "Ipswich Town",
+    "short": "Ipswich"
+   },
+   "away": {
+    "key": "chelsea",
+    "name": "Chelsea",
+    "short": "Chelsea"
+   },
+   "status": "pre",
+   "statusText": "Scheduled",
+   "score": null,
+   "winner": null,
+   "scorers": {
+    "home": [],
+    "away": []
+   },
+   "mu": false,
+   "fav": [],
+   "url": null
+  },
+  {
+   "id": "s-5o1jbjdl9dgssrir56ilccums",
+   "comp": "PL",
+   "compName": "Premier League",
+   "round": null,
+   "mw": 19,
+   "kickoff": "2027-01-01T20:00:00Z",
+   "dateUK": "2027-01-01",
+   "timeUK": "20:00",
+   "home": {
+    "key": "leeds-united",
+    "name": "Leeds United",
+    "short": "Leeds"
+   },
+   "away": {
+    "key": "everton",
+    "name": "Everton",
+    "short": "Everton"
+   },
+   "status": "pre",
+   "statusText": "Scheduled",
+   "score": null,
+   "winner": null,
+   "scorers": {
+    "home": [],
+    "away": []
+   },
+   "mu": false,
+   "fav": [],
+   "url": null
+  },
+  {
+   "id": "s-5ncutcyqm37dim21ztr2n5qtw",
+   "comp": "PL",
+   "compName": "Premier League",
+   "round": null,
+   "mw": 19,
+   "kickoff": "2027-01-02T12:30:00Z",
+   "dateUK": "2027-01-02",
+   "timeUK": "12:30",
+   "home": {
+    "key": "brighton-and-hove-albion",
+    "name": "Brighton & Hove Albion",
+    "short": "Brighton"
+   },
+   "away": {
+    "key": "manchester-united",
+    "name": "Manchester United",
+    "short": "Man Utd"
+   },
+   "status": "pre",
+   "statusText": "Scheduled",
+   "score": null,
+   "winner": null,
+   "scorers": {
+    "home": [],
+    "away": []
+   },
+   "mu": true,
+   "fav": [
+    "manchester-united"
+   ],
    "url": null
   },
   {
@@ -8010,101 +8043,6 @@ window.HUB = {
    "url": null
   },
   {
-   "id": "s-5ncutcyqm37dim21ztr2n5qtw",
-   "comp": "PL",
-   "compName": "Premier League",
-   "round": null,
-   "mw": 19,
-   "kickoff": "2027-01-02T15:00:00Z",
-   "dateUK": "2027-01-02",
-   "timeUK": "15:00",
-   "home": {
-    "key": "brighton-and-hove-albion",
-    "name": "Brighton & Hove Albion",
-    "short": "Brighton"
-   },
-   "away": {
-    "key": "manchester-united",
-    "name": "Manchester United",
-    "short": "Man Utd"
-   },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
-   "winner": null,
-   "scorers": {
-    "home": [],
-    "away": []
-   },
-   "mu": true,
-   "fav": [
-    "manchester-united"
-   ],
-   "url": null
-  },
-  {
-   "id": "s-5np4xblfzp79c0j9btw7jpes4",
-   "comp": "PL",
-   "compName": "Premier League",
-   "round": null,
-   "mw": 19,
-   "kickoff": "2027-01-02T15:00:00Z",
-   "dateUK": "2027-01-02",
-   "timeUK": "15:00",
-   "home": {
-    "key": "chelsea",
-    "name": "Chelsea",
-    "short": "Chelsea"
-   },
-   "away": {
-    "key": "newcastle-united",
-    "name": "Newcastle United",
-    "short": "Newcastle"
-   },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
-   "winner": null,
-   "scorers": {
-    "home": [],
-    "away": []
-   },
-   "mu": false,
-   "fav": [],
-   "url": null
-  },
-  {
-   "id": "s-5o1jbjdl9dgssrir56ilccums",
-   "comp": "PL",
-   "compName": "Premier League",
-   "round": null,
-   "mw": 19,
-   "kickoff": "2027-01-02T15:00:00Z",
-   "dateUK": "2027-01-02",
-   "timeUK": "15:00",
-   "home": {
-    "key": "leeds-united",
-    "name": "Leeds United",
-    "short": "Leeds"
-   },
-   "away": {
-    "key": "everton",
-    "name": "Everton",
-    "short": "Everton"
-   },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
-   "winner": null,
-   "scorers": {
-    "home": [],
-    "away": []
-   },
-   "mu": false,
-   "fav": [],
-   "url": null
-  },
-  {
    "id": "s-5odu2x8s5mlxcl271nnq0jkes",
    "comp": "PL",
    "compName": "Premier League",
@@ -8133,39 +8071,6 @@ window.HUB = {
    },
    "mu": false,
    "fav": [],
-   "url": null
-  },
-  {
-   "id": "s-5oqa4vd1i84x3co6djnmj3klw",
-   "comp": "PL",
-   "compName": "Premier League",
-   "round": null,
-   "mw": 19,
-   "kickoff": "2027-01-02T15:00:00Z",
-   "dateUK": "2027-01-02",
-   "timeUK": "15:00",
-   "home": {
-    "key": "manchester-city",
-    "name": "Manchester City",
-    "short": "Man City"
-   },
-   "away": {
-    "key": "tottenham-hotspur",
-    "name": "Tottenham Hotspur",
-    "short": "Spurs"
-   },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
-   "winner": null,
-   "scorers": {
-    "home": [],
-    "away": []
-   },
-   "mu": false,
-   "fav": [
-    "tottenham-hotspur"
-   ],
    "url": null
   },
   {
@@ -8231,14 +8136,109 @@ window.HUB = {
    "url": null
   },
   {
+   "id": "s-5mbo67e34fr1tnz5njrruo4d0",
+   "comp": "PL",
+   "compName": "Premier League",
+   "round": null,
+   "mw": 19,
+   "kickoff": "2027-01-02T17:30:00Z",
+   "dateUK": "2027-01-02",
+   "timeUK": "17:30",
+   "home": {
+    "key": "afc-bournemouth",
+    "name": "Bournemouth",
+    "short": "Bournemouth"
+   },
+   "away": {
+    "key": "aston-villa",
+    "name": "Aston Villa",
+    "short": "A Villa"
+   },
+   "status": "pre",
+   "statusText": "Scheduled",
+   "score": null,
+   "winner": null,
+   "scorers": {
+    "home": [],
+    "away": []
+   },
+   "mu": false,
+   "fav": [],
+   "url": null
+  },
+  {
+   "id": "s-5np4xblfzp79c0j9btw7jpes4",
+   "comp": "PL",
+   "compName": "Premier League",
+   "round": null,
+   "mw": 19,
+   "kickoff": "2027-01-03T14:00:00Z",
+   "dateUK": "2027-01-03",
+   "timeUK": "14:00",
+   "home": {
+    "key": "chelsea",
+    "name": "Chelsea",
+    "short": "Chelsea"
+   },
+   "away": {
+    "key": "newcastle-united",
+    "name": "Newcastle United",
+    "short": "Newcastle"
+   },
+   "status": "pre",
+   "statusText": "Scheduled",
+   "score": null,
+   "winner": null,
+   "scorers": {
+    "home": [],
+    "away": []
+   },
+   "mu": false,
+   "fav": [],
+   "url": null
+  },
+  {
+   "id": "s-5oqa4vd1i84x3co6djnmj3klw",
+   "comp": "PL",
+   "compName": "Premier League",
+   "round": null,
+   "mw": 19,
+   "kickoff": "2027-01-03T16:30:00Z",
+   "dateUK": "2027-01-03",
+   "timeUK": "16:30",
+   "home": {
+    "key": "manchester-city",
+    "name": "Manchester City",
+    "short": "Man City"
+   },
+   "away": {
+    "key": "tottenham-hotspur",
+    "name": "Tottenham Hotspur",
+    "short": "Spurs"
+   },
+   "status": "pre",
+   "statusText": "Scheduled",
+   "score": null,
+   "winner": null,
+   "scorers": {
+    "home": [],
+    "away": []
+   },
+   "mu": false,
+   "fav": [
+    "tottenham-hotspur"
+   ],
+   "url": null
+  },
+  {
    "id": "s-5prc4y9luqzf0nopn2hwbgkd0",
    "comp": "PL",
    "compName": "Premier League",
    "round": null,
    "mw": 20,
-   "kickoff": "2027-01-06T20:00:00Z",
-   "dateUK": "2027-01-06",
-   "timeUK": "20:00",
+   "kickoff": "2027-01-05T19:30:00Z",
+   "dateUK": "2027-01-05",
+   "timeUK": "19:30",
    "home": {
     "key": "arsenal",
     "name": "Arsenal",
@@ -8267,9 +8267,9 @@ window.HUB = {
    "compName": "Premier League",
    "round": null,
    "mw": 20,
-   "kickoff": "2027-01-06T20:00:00Z",
-   "dateUK": "2027-01-06",
-   "timeUK": "20:00",
+   "kickoff": "2027-01-05T19:30:00Z",
+   "dateUK": "2027-01-05",
+   "timeUK": "19:30",
    "home": {
     "key": "brighton-and-hove-albion",
     "name": "Brighton & Hove Albion",
@@ -8293,45 +8293,14 @@ window.HUB = {
    "url": null
   },
   {
-   "id": "s-5qg2fhfzeov65762qdczl4f10",
-   "comp": "PL",
-   "compName": "Premier League",
-   "round": null,
-   "mw": 20,
-   "kickoff": "2027-01-06T20:00:00Z",
-   "dateUK": "2027-01-06",
-   "timeUK": "20:00",
-   "home": {
-    "key": "crystal-palace",
-    "name": "Crystal Palace",
-    "short": "C Palace"
-   },
-   "away": {
-    "key": "chelsea",
-    "name": "Chelsea",
-    "short": "Chelsea"
-   },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
-   "winner": null,
-   "scorers": {
-    "home": [],
-    "away": []
-   },
-   "mu": false,
-   "fav": [],
-   "url": null
-  },
-  {
    "id": "s-5qsfs53qz9rxw8llefvvhzv9w",
    "comp": "PL",
    "compName": "Premier League",
    "round": null,
    "mw": 20,
-   "kickoff": "2027-01-06T20:00:00Z",
-   "dateUK": "2027-01-06",
-   "timeUK": "20:00",
+   "kickoff": "2027-01-05T19:30:00Z",
+   "dateUK": "2027-01-05",
+   "timeUK": "19:30",
    "home": {
     "key": "everton",
     "name": "Everton",
@@ -8355,14 +8324,107 @@ window.HUB = {
    "url": null
   },
   {
+   "id": "s-5sjghl2duu3e3sx1x1z1x9r10",
+   "comp": "PL",
+   "compName": "Premier League",
+   "round": null,
+   "mw": 20,
+   "kickoff": "2027-01-05T19:30:00Z",
+   "dateUK": "2027-01-05",
+   "timeUK": "19:30",
+   "home": {
+    "key": "nottingham-forest",
+    "name": "Nottingham Forest",
+    "short": "N Forest"
+   },
+   "away": {
+    "key": "hull-city",
+    "name": "Hull City",
+    "short": "Hull City"
+   },
+   "status": "pre",
+   "statusText": "Scheduled",
+   "score": null,
+   "winner": null,
+   "scorers": {
+    "home": [],
+    "away": []
+   },
+   "mu": false,
+   "fav": [],
+   "url": null
+  },
+  {
+   "id": "s-5sw99vgpykkktj0zryw8rfor8",
+   "comp": "PL",
+   "compName": "Premier League",
+   "round": null,
+   "mw": 20,
+   "kickoff": "2027-01-05T20:15:00Z",
+   "dateUK": "2027-01-05",
+   "timeUK": "20:15",
+   "home": {
+    "key": "sunderland",
+    "name": "Sunderland",
+    "short": "Sunderland"
+   },
+   "away": {
+    "key": "liverpool",
+    "name": "Liverpool",
+    "short": "Liverpool"
+   },
+   "status": "pre",
+   "statusText": "Scheduled",
+   "score": null,
+   "winner": null,
+   "scorers": {
+    "home": [],
+    "away": []
+   },
+   "mu": false,
+   "fav": [],
+   "url": null
+  },
+  {
+   "id": "s-5qg2fhfzeov65762qdczl4f10",
+   "comp": "PL",
+   "compName": "Premier League",
+   "round": null,
+   "mw": 20,
+   "kickoff": "2027-01-06T19:30:00Z",
+   "dateUK": "2027-01-06",
+   "timeUK": "19:30",
+   "home": {
+    "key": "crystal-palace",
+    "name": "Crystal Palace",
+    "short": "C Palace"
+   },
+   "away": {
+    "key": "chelsea",
+    "name": "Chelsea",
+    "short": "Chelsea"
+   },
+   "status": "pre",
+   "statusText": "Scheduled",
+   "score": null,
+   "winner": null,
+   "scorers": {
+    "home": [],
+    "away": []
+   },
+   "mu": false,
+   "fav": [],
+   "url": null
+  },
+  {
    "id": "s-5r4qmkn4lkvedvtsm6gbq893o",
    "comp": "PL",
    "compName": "Premier League",
    "round": null,
    "mw": 20,
-   "kickoff": "2027-01-06T20:00:00Z",
+   "kickoff": "2027-01-06T19:30:00Z",
    "dateUK": "2027-01-06",
-   "timeUK": "20:00",
+   "timeUK": "19:30",
    "home": {
     "key": "fulham",
     "name": "Fulham",
@@ -8393,9 +8455,9 @@ window.HUB = {
    "compName": "Premier League",
    "round": null,
    "mw": 20,
-   "kickoff": "2027-01-06T20:00:00Z",
+   "kickoff": "2027-01-06T19:30:00Z",
    "dateUK": "2027-01-06",
-   "timeUK": "20:00",
+   "timeUK": "19:30",
    "home": {
     "key": "ipswich-town",
     "name": "Ipswich Town",
@@ -8424,9 +8486,9 @@ window.HUB = {
    "compName": "Premier League",
    "round": null,
    "mw": 20,
-   "kickoff": "2027-01-06T20:00:00Z",
+   "kickoff": "2027-01-06T20:15:00Z",
    "dateUK": "2027-01-06",
-   "timeUK": "20:00",
+   "timeUK": "20:15",
    "home": {
     "key": "leeds-united",
     "name": "Leeds United",
@@ -8455,8 +8517,8 @@ window.HUB = {
    "compName": "Premier League",
    "round": null,
    "mw": 20,
-   "kickoff": "2027-01-06T20:00:00Z",
-   "dateUK": "2027-01-06",
+   "kickoff": "2027-01-07T20:00:00Z",
+   "dateUK": "2027-01-07",
    "timeUK": "20:00",
    "home": {
     "key": "manchester-united",
@@ -8480,68 +8542,6 @@ window.HUB = {
    "fav": [
     "manchester-united"
    ],
-   "url": null
-  },
-  {
-   "id": "s-5sjghl2duu3e3sx1x1z1x9r10",
-   "comp": "PL",
-   "compName": "Premier League",
-   "round": null,
-   "mw": 20,
-   "kickoff": "2027-01-06T20:00:00Z",
-   "dateUK": "2027-01-06",
-   "timeUK": "20:00",
-   "home": {
-    "key": "nottingham-forest",
-    "name": "Nottingham Forest",
-    "short": "N Forest"
-   },
-   "away": {
-    "key": "hull-city",
-    "name": "Hull City",
-    "short": "Hull City"
-   },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
-   "winner": null,
-   "scorers": {
-    "home": [],
-    "away": []
-   },
-   "mu": false,
-   "fav": [],
-   "url": null
-  },
-  {
-   "id": "s-5sw99vgpykkktj0zryw8rfor8",
-   "comp": "PL",
-   "compName": "Premier League",
-   "round": null,
-   "mw": 20,
-   "kickoff": "2027-01-06T20:00:00Z",
-   "dateUK": "2027-01-06",
-   "timeUK": "20:00",
-   "home": {
-    "key": "sunderland",
-    "name": "Sunderland",
-    "short": "Sunderland"
-   },
-   "away": {
-    "key": "liverpool",
-    "name": "Liverpool",
-    "short": "Liverpool"
-   },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
-   "winner": null,
-   "scorers": {
-    "home": [],
-    "away": []
-   },
-   "mu": false,
-   "fav": [],
    "url": null
   },
   {
