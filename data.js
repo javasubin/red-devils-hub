@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-11T05:41:22+09:00",
+  "updatedAt": "2026-09-11T05:53:08+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -2962,19 +2962,49 @@ window.HUB = {
     "name": "Sabah",
     "short": "Sabah"
    },
-   "status": "live",
-   "statusText": "35'",
+   "status": "post",
+   "statusText": "FT",
    "score": {
-    "home": 1,
+    "home": 4,
     "away": 0
    },
-   "winner": null,
+   "winner": "home",
    "scorers": {
     "home": [
      {
       "name": "Matheus Cunha",
       "times": [
        "27'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "Bruno Fernandes",
+      "times": [
+       "42'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "B. Šeško",
+      "times": [
+       "45'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "L. Martínez",
+      "times": [
+       "68'"
       ],
       "types": [
        "goal"
