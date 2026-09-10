@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-11T05:11:05+09:00",
+  "updatedAt": "2026-09-11T05:26:21+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -2963,7 +2963,7 @@ window.HUB = {
     "short": "Sabah"
    },
    "status": "live",
-   "statusText": "48'",
+   "statusText": "66'",
    "score": {
     "home": 3,
     "away": 0
