@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-11T06:39:18+09:00",
+  "updatedAt": "2026-09-11T20:11:20+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -2959,8 +2959,8 @@ window.HUB = {
    },
    "away": {
     "key": "sabah-az",
-    "name": "Sabah",
-    "short": "Sabah"
+    "name": "Sabah FK",
+    "short": "Sabah FK"
    },
    "status": "post",
    "statusText": "FT",
@@ -3332,7 +3332,7 @@ window.HUB = {
    },
    "mu": false,
    "fav": [],
-   "url": null
+   "url": "https://www.bbc.com/sport/football/live/ckz7z14eelwjt"
   },
   {
    "id": "s-aww81ttqs5kz81yzm5tuf5p90",
