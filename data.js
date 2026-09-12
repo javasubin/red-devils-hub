@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-13T05:44:19+09:00",
+  "updatedAt": "2026-09-13T05:56:45+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -3407,15 +3407,26 @@ window.HUB = {
     "name": "Arsenal",
     "short": "Arsenal"
    },
-   "status": "live",
-   "statusText": "87'",
+   "status": "post",
+   "statusText": "FT",
    "score": {
     "home": 0,
-    "away": 1
+    "away": 2
    },
-   "winner": null,
+   "winner": "away",
    "scorers": {
-    "home": [],
+    "home": [
+     {
+      "name": "Reinildo Mandava",
+      "times": [
+       "90'+6"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ],
     "away": [
      {
       "name": "Bruno Guimarães",
@@ -3426,6 +3437,16 @@ window.HUB = {
        "goal"
       ],
       "type": "goal"
+     },
+     {
+      "name": "B. Saka",
+      "times": [
+       "90'+7"
+      ],
+      "types": [
+       "pen"
+      ],
+      "type": "pen"
      }
     ]
    },
@@ -14510,14 +14531,14 @@ window.HUB = {
    "won": 4,
    "drawn": 0,
    "lost": 0,
-   "gf": 7,
+   "gf": 8,
    "ga": 1,
-   "gd": 6,
+   "gd": 7,
    "points": 12,
    "form": [
     "-",
     "-",
-    "-",
+    "W",
     "W",
     "W",
     "W"
@@ -14643,7 +14664,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 6
+   "rankPrev": 13
   },
   {
    "rank": 7,
@@ -14667,7 +14688,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 8
+   "rankPrev": 7
   },
   {
    "rank": 8,
@@ -14691,7 +14712,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 14
+   "rankPrev": 12
   },
   {
    "rank": 9,
@@ -14715,7 +14736,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 7
+   "rankPrev": 6
   },
   {
    "rank": 10,
@@ -14739,7 +14760,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 9
+   "rankPrev": 8
   },
   {
    "rank": 11,
@@ -14763,7 +14784,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 16
+   "rankPrev": 15
   },
   {
    "rank": 12,
@@ -14787,7 +14808,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 10
+   "rankPrev": 9
   },
   {
    "rank": 13,
@@ -14811,7 +14832,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 11
+   "rankPrev": 10
   },
   {
    "rank": 14,
@@ -14823,19 +14844,19 @@ window.HUB = {
    "drawn": 1,
    "lost": 2,
    "gf": 3,
-   "ga": 4,
-   "gd": -1,
+   "ga": 5,
+   "gd": -2,
    "points": 4,
    "form": [
     "-",
     "-",
-    "-",
     "L",
     "W",
-    "D"
+    "D",
+    "L"
    ],
    "zone": "",
-   "rankPrev": 12
+   "rankPrev": 11
   },
   {
    "rank": 15,
@@ -14859,7 +14880,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 15
+   "rankPrev": 14
   },
   {
    "rank": 16,
@@ -14883,7 +14904,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 13
+   "rankPrev": 18
   },
   {
    "rank": 17,
@@ -14907,7 +14928,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 18
+   "rankPrev": 20
   },
   {
    "rank": 18,
@@ -14931,7 +14952,7 @@ window.HUB = {
     "D"
    ],
    "zone": "Relegation",
-   "rankPrev": 19
+   "rankPrev": 16
   },
   {
    "rank": 19,
@@ -14955,7 +14976,7 @@ window.HUB = {
     "L"
    ],
    "zone": "Relegation",
-   "rankPrev": 17
+   "rankPrev": 19
   },
   {
    "rank": 20,
@@ -14979,7 +15000,7 @@ window.HUB = {
     "L"
    ],
    "zone": "Relegation",
-   "rankPrev": 20
+   "rankPrev": 17
   }
  ],
  "scorers": [
