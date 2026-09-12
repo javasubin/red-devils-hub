@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-13T03:12:18+09:00",
+  "updatedAt": "2026-09-13T03:29:03+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -3371,13 +3371,13 @@ window.HUB = {
     "name": "Everton",
     "short": "Everton"
    },
-   "status": "live",
-   "statusText": "84'",
+   "status": "post",
+   "statusText": "FT",
    "score": {
     "home": 0,
     "away": 0
    },
-   "winner": null,
+   "winner": "draw",
    "scorers": {
     "home": [],
     "away": []
@@ -14629,7 +14629,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 6
+   "rankPrev": 13
   },
   {
    "rank": 7,
@@ -14647,13 +14647,13 @@ window.HUB = {
    "form": [
     "-",
     "-",
-    "-",
     "W",
+    "D",
     "D",
     "D"
    ],
    "zone": "",
-   "rankPrev": 8
+   "rankPrev": 7
   },
   {
    "rank": 8,
@@ -14677,7 +14677,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 14
+   "rankPrev": 12
   },
   {
    "rank": 9,
@@ -14701,7 +14701,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 7
+   "rankPrev": 6
   },
   {
    "rank": 10,
@@ -14725,7 +14725,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 9
+   "rankPrev": 8
   },
   {
    "rank": 11,
@@ -14749,7 +14749,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 16
+   "rankPrev": 15
   },
   {
    "rank": 12,
@@ -14773,7 +14773,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 10
+   "rankPrev": 9
   },
   {
    "rank": 13,
@@ -14797,7 +14797,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 11
+   "rankPrev": 10
   },
   {
    "rank": 14,
@@ -14821,7 +14821,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 12
+   "rankPrev": 11
   },
   {
    "rank": 15,
@@ -14845,7 +14845,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 15
+   "rankPrev": 14
   },
   {
    "rank": 16,
@@ -14869,7 +14869,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 13
+   "rankPrev": 18
   },
   {
    "rank": 17,
@@ -14887,13 +14887,13 @@ window.HUB = {
    "form": [
     "-",
     "-",
-    "-",
     "L",
     "L",
+    "D",
     "D"
    ],
    "zone": "",
-   "rankPrev": 18
+   "rankPrev": 20
   },
   {
    "rank": 18,
@@ -14917,7 +14917,7 @@ window.HUB = {
     "D"
    ],
    "zone": "Relegation",
-   "rankPrev": 19
+   "rankPrev": 16
   },
   {
    "rank": 19,
@@ -14941,7 +14941,7 @@ window.HUB = {
     "L"
    ],
    "zone": "Relegation",
-   "rankPrev": 17
+   "rankPrev": 19
   },
   {
    "rank": 20,
@@ -14965,7 +14965,7 @@ window.HUB = {
     "L"
    ],
    "zone": "Relegation",
-   "rankPrev": 20
+   "rankPrev": 17
   }
  ],
  "scorers": [
