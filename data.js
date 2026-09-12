@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-13T06:27:46+09:00",
+  "updatedAt": "2026-09-13T06:41:43+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -15567,6 +15567,17 @@ window.HUB = {
   },
   {
    "rank": 22,
+   "name": "R. Lavia",
+   "team": "chelsea",
+   "teamShort": "Chelsea",
+   "goals": 1,
+   "assists": 0,
+   "played": 4,
+   "minutes": 262,
+   "shots": 2
+  },
+  {
+   "rank": 22,
    "name": "D. Ndoye",
    "team": "nottingham-forest",
    "teamShort": "N Forest",
@@ -15575,17 +15586,6 @@ window.HUB = {
    "played": 4,
    "minutes": 262,
    "shots": 8
-  },
-  {
-   "rank": 22,
-   "name": "R. Lavia",
-   "team": "chelsea",
-   "teamShort": "Chelsea",
-   "goals": 1,
-   "assists": 0,
-   "played": 4,
-   "minutes": 263,
-   "shots": 2
   },
   {
    "rank": 22,
