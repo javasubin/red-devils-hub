@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-13T00:10:19+09:00",
+  "updatedAt": "2026-09-13T00:25:05+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -3040,7 +3040,7 @@ window.HUB = {
     "short": "Brentford"
    },
    "status": "live",
-   "statusText": "45'+7",
+   "statusText": "47'",
    "score": {
     "home": 1,
     "away": 1
@@ -3096,15 +3096,26 @@ window.HUB = {
     "short": "N Forest"
    },
    "status": "live",
-   "statusText": "HT",
+   "statusText": "48'",
    "score": {
     "home": 0,
-    "away": 0
+    "away": 1
    },
    "winner": null,
    "scorers": {
     "home": [],
-    "away": []
+    "away": [
+     {
+      "name": "L. Delap",
+      "times": [
+       "46'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ]
    },
    "mu": false,
    "fav": [],
@@ -3130,7 +3141,7 @@ window.HUB = {
     "short": "Hull City"
    },
    "status": "live",
-   "statusText": "HT",
+   "statusText": "52'",
    "score": {
     "home": 1,
     "away": 2
@@ -3188,7 +3199,7 @@ window.HUB = {
     "short": "Ipswich"
    },
    "status": "live",
-   "statusText": "HT",
+   "statusText": "47'",
    "score": {
     "home": 1,
     "away": 2
@@ -3264,7 +3275,7 @@ window.HUB = {
     "short": "Fulham"
    },
    "status": "live",
-   "statusText": "HT",
+   "statusText": "53'",
    "score": {
     "home": 0,
     "away": 0
@@ -14491,8 +14502,8 @@ window.HUB = {
    "won": 1,
    "drawn": 3,
    "lost": 0,
-   "gf": 6,
-   "ga": 3,
+   "gf": 7,
+   "ga": 4,
    "gd": 3,
    "points": 6,
    "form": [
@@ -14755,8 +14766,8 @@ window.HUB = {
    "won": 0,
    "drawn": 3,
    "lost": 1,
-   "gf": 5,
-   "ga": 6,
+   "gf": 6,
+   "ga": 7,
    "gd": -1,
    "points": 3,
    "form": [
