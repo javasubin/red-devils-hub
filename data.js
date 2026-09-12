@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-13T02:37:30+09:00",
+  "updatedAt": "2026-09-13T02:51:07+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -3372,7 +3372,7 @@ window.HUB = {
     "short": "Everton"
    },
    "status": "live",
-   "statusText": "49'",
+   "statusText": "59'",
    "score": {
     "home": 0,
     "away": 0
