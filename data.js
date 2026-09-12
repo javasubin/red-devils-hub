@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-13T03:29:03+09:00",
+  "updatedAt": "2026-09-13T04:09:14+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -19,15 +19,15 @@ window.HUB = {
   "currentMw": 4
  },
  "teams": {
-  "manchester-city": {
-   "name": "Manchester City",
-   "short": "Man City",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/manchester-city.30c4b22e90.svg"
-  },
   "arsenal": {
    "name": "Arsenal",
    "short": "Arsenal",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/arsenal.5a62ec890e.svg"
+  },
+  "manchester-city": {
+   "name": "Manchester City",
+   "short": "Man City",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/manchester-city.30c4b22e90.svg"
   },
   "hull-city": {
    "name": "Hull City",
@@ -74,6 +74,11 @@ window.HUB = {
    "short": "N Forest",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/nottingham-forest.f0fc0fc962.svg"
   },
+  "sunderland": {
+   "name": "Sunderland",
+   "short": "Sunderland",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/sunderland.6fb24a6b29.svg"
+  },
   "brighton-and-hove-albion": {
    "name": "Brighton & Hove Albion",
    "short": "Brighton",
@@ -83,11 +88,6 @@ window.HUB = {
    "name": "Manchester United",
    "short": "Man Utd",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/manchester-united.80807495b5.svg"
-  },
-  "sunderland": {
-   "name": "Sunderland",
-   "short": "Sunderland",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/sunderland.6fb24a6b29.svg"
   },
   "afc-bournemouth": {
    "name": "Bournemouth",
@@ -3407,9 +3407,12 @@ window.HUB = {
     "name": "Arsenal",
     "short": "Arsenal"
    },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
+   "status": "live",
+   "statusText": "9'",
+   "score": {
+    "home": 0,
+    "away": 0
+   },
    "winner": null,
    "scorers": {
     "home": [],
@@ -14489,6 +14492,30 @@ window.HUB = {
  "standings": [
   {
    "rank": 1,
+   "key": "arsenal",
+   "name": "Arsenal",
+   "short": "Arsenal",
+   "played": 4,
+   "won": 3,
+   "drawn": 1,
+   "lost": 0,
+   "gf": 6,
+   "ga": 1,
+   "gd": 5,
+   "points": 10,
+   "form": [
+    "-",
+    "-",
+    "-",
+    "W",
+    "W",
+    "W"
+   ],
+   "zone": "UEFA Champions League",
+   "rankPrev": 2
+  },
+  {
+   "rank": 2,
    "key": "manchester-city",
    "name": "Manchester City",
    "short": "Man City",
@@ -14510,30 +14537,6 @@ window.HUB = {
    ],
    "zone": "UEFA Champions League",
    "rankPrev": 1
-  },
-  {
-   "rank": 2,
-   "key": "arsenal",
-   "name": "Arsenal",
-   "short": "Arsenal",
-   "played": 3,
-   "won": 3,
-   "drawn": 0,
-   "lost": 0,
-   "gf": 6,
-   "ga": 1,
-   "gd": 5,
-   "points": 9,
-   "form": [
-    "-",
-    "-",
-    "-",
-    "W",
-    "W",
-    "W"
-   ],
-   "zone": "UEFA Champions League",
-   "rankPrev": 2
   },
   {
    "rank": 3,
@@ -14629,7 +14632,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 13
+   "rankPrev": 6
   },
   {
    "rank": 7,
@@ -14653,7 +14656,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 7
+   "rankPrev": 8
   },
   {
    "rank": 8,
@@ -14677,7 +14680,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 12
+   "rankPrev": 14
   },
   {
    "rank": 9,
@@ -14701,7 +14704,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 6
+   "rankPrev": 7
   },
   {
    "rank": 10,
@@ -14725,7 +14728,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 8
+   "rankPrev": 9
   },
   {
    "rank": 11,
@@ -14749,10 +14752,34 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 15
+   "rankPrev": 16
   },
   {
    "rank": 12,
+   "key": "sunderland",
+   "name": "Sunderland",
+   "short": "Sunderland",
+   "played": 4,
+   "won": 1,
+   "drawn": 2,
+   "lost": 1,
+   "gf": 3,
+   "ga": 3,
+   "gd": 0,
+   "points": 5,
+   "form": [
+    "-",
+    "-",
+    "-",
+    "L",
+    "W",
+    "D"
+   ],
+   "zone": "",
+   "rankPrev": 12
+  },
+  {
+   "rank": 13,
    "key": "brighton-and-hove-albion",
    "name": "Brighton & Hove Albion",
    "short": "Brighton",
@@ -14773,10 +14800,10 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 9
+   "rankPrev": 10
   },
   {
-   "rank": 13,
+   "rank": 14,
    "key": "manchester-united",
    "name": "Manchester United",
    "short": "Man Utd",
@@ -14787,30 +14814,6 @@ window.HUB = {
    "gf": 7,
    "ga": 6,
    "gd": 1,
-   "points": 4,
-   "form": [
-    "-",
-    "-",
-    "-",
-    "L",
-    "W",
-    "D"
-   ],
-   "zone": "",
-   "rankPrev": 10
-  },
-  {
-   "rank": 14,
-   "key": "sunderland",
-   "name": "Sunderland",
-   "short": "Sunderland",
-   "played": 3,
-   "won": 1,
-   "drawn": 1,
-   "lost": 1,
-   "gf": 3,
-   "ga": 3,
-   "gd": 0,
    "points": 4,
    "form": [
     "-",
@@ -14845,7 +14848,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 14
+   "rankPrev": 15
   },
   {
    "rank": 16,
@@ -14869,7 +14872,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 18
+   "rankPrev": 13
   },
   {
    "rank": 17,
@@ -14893,7 +14896,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 20
+   "rankPrev": 18
   },
   {
    "rank": 18,
@@ -14917,7 +14920,7 @@ window.HUB = {
     "D"
    ],
    "zone": "Relegation",
-   "rankPrev": 16
+   "rankPrev": 19
   },
   {
    "rank": 19,
@@ -14941,7 +14944,7 @@ window.HUB = {
     "L"
    ],
    "zone": "Relegation",
-   "rankPrev": 19
+   "rankPrev": 17
   },
   {
    "rank": 20,
@@ -14965,7 +14968,7 @@ window.HUB = {
     "L"
    ],
    "zone": "Relegation",
-   "rankPrev": 17
+   "rankPrev": 20
   }
  ],
  "scorers": [
