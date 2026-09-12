@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-12T23:41:28+09:00",
+  "updatedAt": "2026-09-12T23:52:24+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -49,6 +49,11 @@ window.HUB = {
    "short": "Chelsea",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/chelsea.b96b403b5f.svg"
   },
+  "ipswich-town": {
+   "name": "Ipswich Town",
+   "short": "Ipswich",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/ipswich-town.016f53d3e1.svg"
+  },
   "newcastle-united": {
    "name": "Newcastle United",
    "short": "Newcastle",
@@ -79,16 +84,6 @@ window.HUB = {
    "short": "Sunderland",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/sunderland.6fb24a6b29.svg"
   },
-  "crystal-palace": {
-   "name": "Crystal Palace",
-   "short": "C Palace",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/crystal-palace.9e5ab01a7b.svg"
-  },
-  "ipswich-town": {
-   "name": "Ipswich Town",
-   "short": "Ipswich",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/ipswich-town.016f53d3e1.svg"
-  },
   "afc-bournemouth": {
    "name": "Bournemouth",
    "short": "Bournemouth",
@@ -98,6 +93,11 @@ window.HUB = {
    "name": "Nottingham Forest",
    "short": "N Forest",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/nottingham-forest.f0fc0fc962.svg"
+  },
+  "crystal-palace": {
+   "name": "Crystal Palace",
+   "short": "C Palace",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/crystal-palace.9e5ab01a7b.svg"
   },
   "aston-villa": {
    "name": "Aston Villa",
@@ -3039,13 +3039,38 @@ window.HUB = {
     "name": "Brentford",
     "short": "Brentford"
    },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
+   "status": "live",
+   "statusText": "45'+7",
+   "score": {
+    "home": 1,
+    "away": 1
+   },
    "winner": null,
    "scorers": {
-    "home": [],
-    "away": []
+    "home": [
+     {
+      "name": "J. Kluivert",
+      "times": [
+       "38'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ],
+    "away": [
+     {
+      "name": "K. Schade",
+      "times": [
+       "34'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ]
    },
    "mu": false,
    "fav": [],
@@ -3070,9 +3095,12 @@ window.HUB = {
     "name": "Nottingham Forest",
     "short": "N Forest"
    },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
+   "status": "live",
+   "statusText": "HT",
+   "score": {
+    "home": 0,
+    "away": 0
+   },
    "winner": null,
    "scorers": {
     "home": [],
@@ -3101,13 +3129,40 @@ window.HUB = {
     "name": "Hull City",
     "short": "Hull City"
    },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
+   "status": "live",
+   "statusText": "HT",
+   "score": {
+    "home": 1,
+    "away": 2
+   },
    "winner": null,
    "scorers": {
-    "home": [],
-    "away": []
+    "home": [
+     {
+      "name": "M. Rogers",
+      "times": [
+       "7'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ],
+    "away": [
+     {
+      "name": "M. Belloumi",
+      "times": [
+       "28'",
+       "34'"
+      ],
+      "types": [
+       "goal",
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ]
    },
    "mu": false,
    "fav": [],
@@ -3132,13 +3187,58 @@ window.HUB = {
     "name": "Ipswich Town",
     "short": "Ipswich"
    },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
+   "status": "live",
+   "statusText": "HT",
+   "score": {
+    "home": 1,
+    "away": 2
+   },
    "winner": null,
    "scorers": {
-    "home": [],
-    "away": []
+    "home": [
+     {
+      "name": "A. Khalaili",
+      "times": [
+       "14'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "A. Disasi",
+      "times": [
+       "34'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ],
+    "away": [
+     {
+      "name": "Emersonn",
+      "times": [
+       "23'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "L. Davis",
+      "times": [
+       "45'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ]
    },
    "mu": false,
    "fav": [],
@@ -3163,9 +3263,12 @@ window.HUB = {
     "name": "Fulham",
     "short": "Fulham"
    },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
+   "status": "live",
+   "statusText": "HT",
+   "score": {
+    "home": 0,
+    "away": 0
+   },
    "winner": null,
    "scorers": {
     "home": [],
@@ -14453,6 +14556,30 @@ window.HUB = {
   },
   {
    "rank": 7,
+   "key": "ipswich-town",
+   "name": "Ipswich Town",
+   "short": "Ipswich",
+   "played": 4,
+   "won": 2,
+   "drawn": 0,
+   "lost": 2,
+   "gf": 6,
+   "ga": 9,
+   "gd": -3,
+   "points": 6,
+   "form": [
+    "-",
+    "-",
+    "-",
+    "W",
+    "L",
+    "L"
+   ],
+   "zone": "",
+   "rankPrev": 12
+  },
+  {
+   "rank": 8,
    "key": "newcastle-united",
    "name": "Newcastle United",
    "short": "Newcastle",
@@ -14476,7 +14603,7 @@ window.HUB = {
    "rankPrev": 6
   },
   {
-   "rank": 8,
+   "rank": 9,
    "key": "everton",
    "name": "Everton",
    "short": "Everton",
@@ -14500,7 +14627,7 @@ window.HUB = {
    "rankPrev": 7
   },
   {
-   "rank": 9,
+   "rank": 10,
    "key": "leeds-united",
    "name": "Leeds United",
    "short": "Leeds",
@@ -14524,7 +14651,7 @@ window.HUB = {
    "rankPrev": 8
   },
   {
-   "rank": 10,
+   "rank": 11,
    "key": "brighton-and-hove-albion",
    "name": "Brighton & Hove Albion",
    "short": "Brighton",
@@ -14548,7 +14675,7 @@ window.HUB = {
    "rankPrev": 9
   },
   {
-   "rank": 11,
+   "rank": 12,
    "key": "manchester-united",
    "name": "Manchester United",
    "short": "Man Utd",
@@ -14572,7 +14699,7 @@ window.HUB = {
    "rankPrev": 10
   },
   {
-   "rank": 12,
+   "rank": 13,
    "key": "sunderland",
    "name": "Sunderland",
    "short": "Sunderland",
@@ -14596,55 +14723,7 @@ window.HUB = {
    "rankPrev": 11
   },
   {
-   "rank": 13,
-   "key": "crystal-palace",
-   "name": "Crystal Palace",
-   "short": "C Palace",
-   "played": 4,
-   "won": 1,
-   "drawn": 1,
-   "lost": 2,
-   "gf": 5,
-   "ga": 9,
-   "gd": -4,
-   "points": 4,
-   "form": [
-    "-",
-    "-",
-    "-",
-    "L",
-    "L",
-    "W"
-   ],
-   "zone": "",
-   "rankPrev": 18
-  },
-  {
    "rank": 14,
-   "key": "ipswich-town",
-   "name": "Ipswich Town",
-   "short": "Ipswich",
-   "played": 4,
-   "won": 1,
-   "drawn": 1,
-   "lost": 2,
-   "gf": 5,
-   "ga": 9,
-   "gd": -4,
-   "points": 4,
-   "form": [
-    "-",
-    "-",
-    "-",
-    "W",
-    "L",
-    "L"
-   ],
-   "zone": "",
-   "rankPrev": 12
-  },
-  {
-   "rank": 15,
    "key": "afc-bournemouth",
    "name": "Bournemouth",
    "short": "Bournemouth",
@@ -14668,7 +14747,7 @@ window.HUB = {
    "rankPrev": 14
   },
   {
-   "rank": 16,
+   "rank": 15,
    "key": "nottingham-forest",
    "name": "Nottingham Forest",
    "short": "N Forest",
@@ -14690,6 +14769,30 @@ window.HUB = {
    ],
    "zone": "",
    "rankPrev": 15
+  },
+  {
+   "rank": 16,
+   "key": "crystal-palace",
+   "name": "Crystal Palace",
+   "short": "C Palace",
+   "played": 4,
+   "won": 1,
+   "drawn": 0,
+   "lost": 3,
+   "gf": 5,
+   "ga": 10,
+   "gd": -5,
+   "points": 3,
+   "form": [
+    "-",
+    "-",
+    "-",
+    "L",
+    "L",
+    "W"
+   ],
+   "zone": "",
+   "rankPrev": 18
   },
   {
    "rank": 17,
