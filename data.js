@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-13T04:09:14+09:00",
+  "updatedAt": "2026-09-13T04:23:30+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -3371,13 +3371,13 @@ window.HUB = {
     "name": "Everton",
     "short": "Everton"
    },
-   "status": "post",
-   "statusText": "FT",
+   "status": "live",
+   "statusText": "84'",
    "score": {
     "home": 0,
     "away": 0
    },
-   "winner": "draw",
+   "winner": null,
    "scorers": {
     "home": [],
     "away": []
@@ -3407,12 +3407,9 @@ window.HUB = {
     "name": "Arsenal",
     "short": "Arsenal"
    },
-   "status": "live",
-   "statusText": "9'",
-   "score": {
-    "home": 0,
-    "away": 0
-   },
+   "status": "pre",
+   "statusText": "Scheduled",
+   "score": null,
    "winner": null,
    "scorers": {
     "home": [],
