@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-13T00:38:35+09:00",
+  "updatedAt": "2026-09-13T00:50:43+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -49,11 +49,6 @@ window.HUB = {
    "short": "Liverpool",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/liverpool.34999937ef.svg"
   },
-  "ipswich-town": {
-   "name": "Ipswich Town",
-   "short": "Ipswich",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/ipswich-town.016f53d3e1.svg"
-  },
   "newcastle-united": {
    "name": "Newcastle United",
    "short": "Newcastle",
@@ -68,6 +63,11 @@ window.HUB = {
    "name": "Leeds United",
    "short": "Leeds",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/leeds-united.6eb48daff9.svg"
+  },
+  "nottingham-forest": {
+   "name": "Nottingham Forest",
+   "short": "N Forest",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/nottingham-forest.f0fc0fc962.svg"
   },
   "brighton-and-hove-albion": {
    "name": "Brighton & Hove Albion",
@@ -84,25 +84,20 @@ window.HUB = {
    "short": "Sunderland",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/sunderland.6fb24a6b29.svg"
   },
-  "afc-bournemouth": {
-   "name": "Bournemouth",
-   "short": "Bournemouth",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/afc-bournemouth.3e0ae7da8e.svg"
-  },
-  "nottingham-forest": {
-   "name": "Nottingham Forest",
-   "short": "N Forest",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/nottingham-forest.f0fc0fc962.svg"
-  },
   "crystal-palace": {
    "name": "Crystal Palace",
    "short": "C Palace",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/crystal-palace.9e5ab01a7b.svg"
   },
-  "aston-villa": {
-   "name": "Aston Villa",
-   "short": "A Villa",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/aston-villa.7462c0d498.svg"
+  "ipswich-town": {
+   "name": "Ipswich Town",
+   "short": "Ipswich",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/ipswich-town.016f53d3e1.svg"
+  },
+  "afc-bournemouth": {
+   "name": "Bournemouth",
+   "short": "Bournemouth",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/afc-bournemouth.3e0ae7da8e.svg"
   },
   "fulham": {
    "name": "Fulham",
@@ -113,6 +108,11 @@ window.HUB = {
    "name": "Tottenham Hotspur",
    "short": "Spurs",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/tottenham-hotspur.f1c704ee3b.svg"
+  },
+  "aston-villa": {
+   "name": "Aston Villa",
+   "short": "A Villa",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/aston-villa.7462c0d498.svg"
   },
   "coventry-city": {
    "name": "Coventry City",
@@ -3040,10 +3040,10 @@ window.HUB = {
     "short": "Brentford"
    },
    "status": "live",
-   "statusText": "41'",
+   "statusText": "88'",
    "score": {
-    "home": 1,
-    "away": 1
+    "home": 2,
+    "away": 2
    },
    "winner": null,
    "scorers": {
@@ -3057,15 +3057,27 @@ window.HUB = {
        "goal"
       ],
       "type": "goal"
+     },
+     {
+      "name": "M. Tavernier",
+      "times": [
+       "52'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
      }
     ],
     "away": [
      {
       "name": "K. Schade",
       "times": [
-       "34'"
+       "34'",
+       "56'"
       ],
       "types": [
+       "goal",
        "goal"
       ],
       "type": "goal"
@@ -3096,15 +3108,47 @@ window.HUB = {
     "short": "N Forest"
    },
    "status": "live",
-   "statusText": "41'",
+   "statusText": "90'",
    "score": {
-    "home": 0,
-    "away": 0
+    "home": 1,
+    "away": 2
    },
    "winner": null,
    "scorers": {
-    "home": [],
-    "away": []
+    "home": [
+     {
+      "name": "Alysson",
+      "times": [
+       "74'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ],
+    "away": [
+     {
+      "name": "L. Delap",
+      "times": [
+       "46'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "Igor Jesus",
+      "times": [
+       "88'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ]
    },
    "mu": false,
    "fav": [],
@@ -3130,9 +3174,9 @@ window.HUB = {
     "short": "Hull City"
    },
    "status": "live",
-   "statusText": "40'",
+   "statusText": "90'+2",
    "score": {
-    "home": 1,
+    "home": 2,
     "away": 2
    },
    "winner": null,
@@ -3142,6 +3186,16 @@ window.HUB = {
       "name": "M. Rogers",
       "times": [
        "7'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "João Pedro",
+      "times": [
+       "66'"
       ],
       "types": [
        "goal"
@@ -3188,10 +3242,10 @@ window.HUB = {
     "short": "Ipswich"
    },
    "status": "live",
-   "statusText": "38'",
+   "statusText": "87'",
    "score": {
-    "home": 1,
-    "away": 1
+    "home": 2,
+    "away": 2
    },
    "winner": null,
    "scorers": {
@@ -3215,6 +3269,16 @@ window.HUB = {
        "goal"
       ],
       "type": "goal"
+     },
+     {
+      "name": "J. Strand Larsen",
+      "times": [
+       "75'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
      }
     ],
     "away": [
@@ -3222,6 +3286,16 @@ window.HUB = {
       "name": "Emersonn",
       "times": [
        "23'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "L. Davis",
+      "times": [
+       "45'"
       ],
       "types": [
        "goal"
@@ -3254,7 +3328,7 @@ window.HUB = {
     "short": "Fulham"
    },
    "status": "live",
-   "statusText": "40'",
+   "statusText": "90'+4",
    "score": {
     "home": 0,
     "away": 0
@@ -14546,30 +14620,6 @@ window.HUB = {
   },
   {
    "rank": 7,
-   "key": "ipswich-town",
-   "name": "Ipswich Town",
-   "short": "Ipswich",
-   "played": 4,
-   "won": 2,
-   "drawn": 0,
-   "lost": 2,
-   "gf": 6,
-   "ga": 9,
-   "gd": -3,
-   "points": 6,
-   "form": [
-    "-",
-    "-",
-    "-",
-    "W",
-    "L",
-    "L"
-   ],
-   "zone": "",
-   "rankPrev": 12
-  },
-  {
-   "rank": 8,
    "key": "newcastle-united",
    "name": "Newcastle United",
    "short": "Newcastle",
@@ -14593,7 +14643,7 @@ window.HUB = {
    "rankPrev": 6
   },
   {
-   "rank": 9,
+   "rank": 8,
    "key": "everton",
    "name": "Everton",
    "short": "Everton",
@@ -14617,7 +14667,7 @@ window.HUB = {
    "rankPrev": 7
   },
   {
-   "rank": 10,
+   "rank": 9,
    "key": "leeds-united",
    "name": "Leeds United",
    "short": "Leeds",
@@ -14639,6 +14689,30 @@ window.HUB = {
    ],
    "zone": "",
    "rankPrev": 8
+  },
+  {
+   "rank": 10,
+   "key": "nottingham-forest",
+   "name": "Nottingham Forest",
+   "short": "N Forest",
+   "played": 4,
+   "won": 1,
+   "drawn": 2,
+   "lost": 1,
+   "gf": 4,
+   "ga": 4,
+   "gd": 0,
+   "points": 5,
+   "form": [
+    "-",
+    "-",
+    "-",
+    "L",
+    "D",
+    "D"
+   ],
+   "zone": "",
+   "rankPrev": 15
   },
   {
    "rank": 11,
@@ -14714,6 +14788,54 @@ window.HUB = {
   },
   {
    "rank": 14,
+   "key": "crystal-palace",
+   "name": "Crystal Palace",
+   "short": "C Palace",
+   "played": 4,
+   "won": 1,
+   "drawn": 1,
+   "lost": 2,
+   "gf": 6,
+   "ga": 10,
+   "gd": -4,
+   "points": 4,
+   "form": [
+    "-",
+    "-",
+    "-",
+    "L",
+    "L",
+    "W"
+   ],
+   "zone": "",
+   "rankPrev": 18
+  },
+  {
+   "rank": 15,
+   "key": "ipswich-town",
+   "name": "Ipswich Town",
+   "short": "Ipswich",
+   "played": 4,
+   "won": 1,
+   "drawn": 1,
+   "lost": 2,
+   "gf": 6,
+   "ga": 10,
+   "gd": -4,
+   "points": 4,
+   "form": [
+    "-",
+    "-",
+    "-",
+    "W",
+    "L",
+    "L"
+   ],
+   "zone": "",
+   "rankPrev": 12
+  },
+  {
+   "rank": 16,
    "key": "afc-bournemouth",
    "name": "Bournemouth",
    "short": "Bournemouth",
@@ -14737,79 +14859,7 @@ window.HUB = {
    "rankPrev": 14
   },
   {
-   "rank": 15,
-   "key": "nottingham-forest",
-   "name": "Nottingham Forest",
-   "short": "N Forest",
-   "played": 4,
-   "won": 0,
-   "drawn": 3,
-   "lost": 1,
-   "gf": 3,
-   "ga": 4,
-   "gd": -1,
-   "points": 3,
-   "form": [
-    "-",
-    "-",
-    "-",
-    "L",
-    "D",
-    "D"
-   ],
-   "zone": "",
-   "rankPrev": 15
-  },
-  {
-   "rank": 16,
-   "key": "crystal-palace",
-   "name": "Crystal Palace",
-   "short": "C Palace",
-   "played": 4,
-   "won": 1,
-   "drawn": 0,
-   "lost": 3,
-   "gf": 5,
-   "ga": 10,
-   "gd": -5,
-   "points": 3,
-   "form": [
-    "-",
-    "-",
-    "-",
-    "L",
-    "L",
-    "W"
-   ],
-   "zone": "",
-   "rankPrev": 18
-  },
-  {
    "rank": 17,
-   "key": "aston-villa",
-   "name": "Aston Villa",
-   "short": "A Villa",
-   "played": 4,
-   "won": 0,
-   "drawn": 2,
-   "lost": 2,
-   "gf": 1,
-   "ga": 6,
-   "gd": -5,
-   "points": 2,
-   "form": [
-    "-",
-    "-",
-    "-",
-    "L",
-    "L",
-    "D"
-   ],
-   "zone": "",
-   "rankPrev": 19
-  },
-  {
-   "rank": 18,
    "key": "fulham",
    "name": "Fulham",
    "short": "Fulham",
@@ -14829,11 +14879,11 @@ window.HUB = {
     "L",
     "L"
    ],
-   "zone": "Relegation",
+   "zone": "",
    "rankPrev": 16
   },
   {
-   "rank": 19,
+   "rank": 18,
    "key": "tottenham-hotspur",
    "name": "Tottenham Hotspur",
    "short": "Spurs",
@@ -14855,6 +14905,30 @@ window.HUB = {
    ],
    "zone": "Relegation",
    "rankPrev": 20
+  },
+  {
+   "rank": 19,
+   "key": "aston-villa",
+   "name": "Aston Villa",
+   "short": "A Villa",
+   "played": 4,
+   "won": 0,
+   "drawn": 1,
+   "lost": 3,
+   "gf": 1,
+   "ga": 7,
+   "gd": -6,
+   "points": 1,
+   "form": [
+    "-",
+    "-",
+    "-",
+    "L",
+    "L",
+    "D"
+   ],
+   "zone": "Relegation",
+   "rankPrev": 19
   },
   {
    "rank": 20,
