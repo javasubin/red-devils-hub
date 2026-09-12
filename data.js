@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-13T05:27:36+09:00",
+  "updatedAt": "2026-09-13T05:44:19+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -3408,15 +3408,26 @@ window.HUB = {
     "short": "Arsenal"
    },
    "status": "live",
-   "statusText": "21'",
+   "statusText": "87'",
    "score": {
     "home": 0,
-    "away": 0
+    "away": 1
    },
    "winner": null,
    "scorers": {
     "home": [],
-    "away": []
+    "away": [
+     {
+      "name": "Bruno Guimarães",
+      "times": [
+       "58'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ]
    },
    "mu": false,
    "fav": [],
