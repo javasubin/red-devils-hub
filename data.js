@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-13T04:50:44+09:00",
+  "updatedAt": "2026-09-13T05:11:05+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -3408,7 +3408,7 @@ window.HUB = {
     "short": "Arsenal"
    },
    "status": "live",
-   "statusText": "HT",
+   "statusText": "52'",
    "score": {
     "home": 0,
     "away": 0
