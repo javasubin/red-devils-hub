@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-12T23:26:33+09:00",
+  "updatedAt": "2026-09-12T23:41:28+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -19,6 +19,11 @@ window.HUB = {
   "currentMw": 4
  },
  "teams": {
+  "hull-city": {
+   "name": "Hull City",
+   "short": "Hull City",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/hull-city.7187a4b4b5.svg"
+  },
   "manchester-city": {
    "name": "Manchester City",
    "short": "Man City",
@@ -29,16 +34,6 @@ window.HUB = {
    "short": "Arsenal",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/arsenal.5a62ec890e.svg"
   },
-  "chelsea": {
-   "name": "Chelsea",
-   "short": "Chelsea",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/chelsea.b96b403b5f.svg"
-  },
-  "hull-city": {
-   "name": "Hull City",
-   "short": "Hull City",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/hull-city.7187a4b4b5.svg"
-  },
   "brentford": {
    "name": "Brentford",
    "short": "Brentford",
@@ -48,6 +43,11 @@ window.HUB = {
    "name": "Liverpool",
    "short": "Liverpool",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/liverpool.34999937ef.svg"
+  },
+  "chelsea": {
+   "name": "Chelsea",
+   "short": "Chelsea",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/chelsea.b96b403b5f.svg"
   },
   "newcastle-united": {
    "name": "Newcastle United",
@@ -3039,12 +3039,9 @@ window.HUB = {
     "name": "Brentford",
     "short": "Brentford"
    },
-   "status": "live",
-   "statusText": "10'",
-   "score": {
-    "home": 0,
-    "away": 0
-   },
+   "status": "pre",
+   "statusText": "Scheduled",
+   "score": null,
    "winner": null,
    "scorers": {
     "home": [],
@@ -3073,12 +3070,9 @@ window.HUB = {
     "name": "Nottingham Forest",
     "short": "N Forest"
    },
-   "status": "live",
-   "statusText": "9'",
-   "score": {
-    "home": 0,
-    "away": 0
-   },
+   "status": "pre",
+   "statusText": "Scheduled",
+   "score": null,
    "winner": null,
    "scorers": {
     "home": [],
@@ -3107,26 +3101,12 @@ window.HUB = {
     "name": "Hull City",
     "short": "Hull City"
    },
-   "status": "live",
-   "statusText": "10'",
-   "score": {
-    "home": 1,
-    "away": 0
-   },
+   "status": "pre",
+   "statusText": "Scheduled",
+   "score": null,
    "winner": null,
    "scorers": {
-    "home": [
-     {
-      "name": "M. Rogers",
-      "times": [
-       "7'"
-      ],
-      "types": [
-       "goal"
-      ],
-      "type": "goal"
-     }
-    ],
+    "home": [],
     "away": []
    },
    "mu": false,
@@ -3152,12 +3132,9 @@ window.HUB = {
     "name": "Ipswich Town",
     "short": "Ipswich"
    },
-   "status": "live",
-   "statusText": "8'",
-   "score": {
-    "home": 0,
-    "away": 0
-   },
+   "status": "pre",
+   "statusText": "Scheduled",
+   "score": null,
    "winner": null,
    "scorers": {
     "home": [],
@@ -3186,12 +3163,9 @@ window.HUB = {
     "name": "Fulham",
     "short": "Fulham"
    },
-   "status": "live",
-   "statusText": "10'",
-   "score": {
-    "home": 0,
-    "away": 0
-   },
+   "status": "pre",
+   "statusText": "Scheduled",
+   "score": null,
    "winner": null,
    "scorers": {
     "home": [],
@@ -14335,6 +14309,30 @@ window.HUB = {
  "standings": [
   {
    "rank": 1,
+   "key": "hull-city",
+   "name": "Hull City",
+   "short": "Hull City",
+   "played": 4,
+   "won": 3,
+   "drawn": 1,
+   "lost": 0,
+   "gf": 5,
+   "ga": 1,
+   "gd": 4,
+   "points": 10,
+   "form": [
+    "-",
+    "-",
+    "-",
+    "W",
+    "W",
+    "D"
+   ],
+   "zone": "UEFA Champions League",
+   "rankPrev": 3
+  },
+  {
+   "rank": 2,
    "key": "manchester-city",
    "name": "Manchester City",
    "short": "Man City",
@@ -14358,7 +14356,7 @@ window.HUB = {
    "rankPrev": 1
   },
   {
-   "rank": 2,
+   "rank": 3,
    "key": "arsenal",
    "name": "Arsenal",
    "short": "Arsenal",
@@ -14382,55 +14380,7 @@ window.HUB = {
    "rankPrev": 2
   },
   {
-   "rank": 3,
-   "key": "chelsea",
-   "name": "Chelsea",
-   "short": "Chelsea",
-   "played": 4,
-   "won": 3,
-   "drawn": 0,
-   "lost": 1,
-   "gf": 9,
-   "ga": 7,
-   "gd": 2,
-   "points": 9,
-   "form": [
-    "-",
-    "-",
-    "-",
-    "W",
-    "W",
-    "L"
-   ],
-   "zone": "UEFA Champions League",
-   "rankPrev": 4
-  },
-  {
    "rank": 4,
-   "key": "hull-city",
-   "name": "Hull City",
-   "short": "Hull City",
-   "played": 4,
-   "won": 2,
-   "drawn": 1,
-   "lost": 1,
-   "gf": 3,
-   "ga": 1,
-   "gd": 2,
-   "points": 7,
-   "form": [
-    "-",
-    "-",
-    "-",
-    "W",
-    "W",
-    "D"
-   ],
-   "zone": "UEFA Champions League",
-   "rankPrev": 3
-  },
-  {
-   "rank": 5,
    "key": "brentford",
    "name": "Brentford",
    "short": "Brentford",
@@ -14438,8 +14388,8 @@ window.HUB = {
    "won": 1,
    "drawn": 3,
    "lost": 0,
-   "gf": 5,
-   "ga": 2,
+   "gf": 6,
+   "ga": 3,
    "gd": 3,
    "points": 6,
    "form": [
@@ -14450,11 +14400,11 @@ window.HUB = {
     "D",
     "D"
    ],
-   "zone": "UEFA Europa League",
+   "zone": "UEFA Champions League",
    "rankPrev": 5
   },
   {
-   "rank": 6,
+   "rank": 5,
    "key": "liverpool",
    "name": "Liverpool",
    "short": "Liverpool",
@@ -14474,8 +14424,32 @@ window.HUB = {
     "D",
     "W"
    ],
-   "zone": "",
+   "zone": "UEFA Europa League",
    "rankPrev": 13
+  },
+  {
+   "rank": 6,
+   "key": "chelsea",
+   "name": "Chelsea",
+   "short": "Chelsea",
+   "played": 4,
+   "won": 2,
+   "drawn": 0,
+   "lost": 2,
+   "gf": 9,
+   "ga": 9,
+   "gd": 0,
+   "points": 6,
+   "form": [
+    "-",
+    "-",
+    "-",
+    "W",
+    "W",
+    "L"
+   ],
+   "zone": "",
+   "rankPrev": 4
   },
   {
    "rank": 7,
@@ -14678,8 +14652,8 @@ window.HUB = {
    "won": 0,
    "drawn": 3,
    "lost": 1,
-   "gf": 4,
-   "ga": 5,
+   "gf": 5,
+   "ga": 6,
    "gd": -1,
    "points": 3,
    "form": [
