@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-13T05:11:05+09:00",
+  "updatedAt": "2026-09-13T05:27:36+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -74,11 +74,6 @@ window.HUB = {
    "short": "N Forest",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/nottingham-forest.f0fc0fc962.svg"
   },
-  "sunderland": {
-   "name": "Sunderland",
-   "short": "Sunderland",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/sunderland.6fb24a6b29.svg"
-  },
   "brighton-and-hove-albion": {
    "name": "Brighton & Hove Albion",
    "short": "Brighton",
@@ -88,6 +83,11 @@ window.HUB = {
    "name": "Manchester United",
    "short": "Man Utd",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/manchester-united.80807495b5.svg"
+  },
+  "sunderland": {
+   "name": "Sunderland",
+   "short": "Sunderland",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/sunderland.6fb24a6b29.svg"
   },
   "afc-bournemouth": {
    "name": "Bournemouth",
@@ -3408,7 +3408,7 @@ window.HUB = {
     "short": "Arsenal"
    },
    "status": "live",
-   "statusText": "52'",
+   "statusText": "21'",
    "score": {
     "home": 0,
     "away": 0
@@ -14496,13 +14496,13 @@ window.HUB = {
    "name": "Arsenal",
    "short": "Arsenal",
    "played": 4,
-   "won": 3,
-   "drawn": 1,
+   "won": 4,
+   "drawn": 0,
    "lost": 0,
-   "gf": 6,
+   "gf": 7,
    "ga": 1,
-   "gd": 5,
-   "points": 10,
+   "gd": 6,
+   "points": 12,
    "form": [
     "-",
     "-",
@@ -14756,30 +14756,6 @@ window.HUB = {
   },
   {
    "rank": 12,
-   "key": "sunderland",
-   "name": "Sunderland",
-   "short": "Sunderland",
-   "played": 4,
-   "won": 1,
-   "drawn": 2,
-   "lost": 1,
-   "gf": 3,
-   "ga": 3,
-   "gd": 0,
-   "points": 5,
-   "form": [
-    "-",
-    "-",
-    "-",
-    "L",
-    "W",
-    "D"
-   ],
-   "zone": "",
-   "rankPrev": 12
-  },
-  {
-   "rank": 13,
    "key": "brighton-and-hove-albion",
    "name": "Brighton & Hove Albion",
    "short": "Brighton",
@@ -14803,7 +14779,7 @@ window.HUB = {
    "rankPrev": 10
   },
   {
-   "rank": 14,
+   "rank": 13,
    "key": "manchester-united",
    "name": "Manchester United",
    "short": "Man Utd",
@@ -14825,6 +14801,30 @@ window.HUB = {
    ],
    "zone": "",
    "rankPrev": 11
+  },
+  {
+   "rank": 14,
+   "key": "sunderland",
+   "name": "Sunderland",
+   "short": "Sunderland",
+   "played": 4,
+   "won": 1,
+   "drawn": 1,
+   "lost": 2,
+   "gf": 3,
+   "ga": 4,
+   "gd": -1,
+   "points": 4,
+   "form": [
+    "-",
+    "-",
+    "-",
+    "L",
+    "W",
+    "D"
+   ],
+   "zone": "",
+   "rankPrev": 12
   },
   {
    "rank": 15,
