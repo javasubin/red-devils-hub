@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-14T01:43:13+09:00",
+  "updatedAt": "2026-09-14T01:54:11+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -69,11 +69,6 @@ window.HUB = {
    "short": "Newcastle",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/newcastle-united.45e2739dd9.svg"
   },
-  "manchester-united": {
-   "name": "Manchester United",
-   "short": "Man Utd",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/manchester-united.80807495b5.svg"
-  },
   "leeds-united": {
    "name": "Leeds United",
    "short": "Leeds",
@@ -83,6 +78,11 @@ window.HUB = {
    "name": "Nottingham Forest",
    "short": "N Forest",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/nottingham-forest.f0fc0fc962.svg"
+  },
+  "manchester-united": {
+   "name": "Manchester United",
+   "short": "Man Utd",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/manchester-united.80807495b5.svg"
   },
   "sunderland": {
    "name": "Sunderland",
@@ -3570,10 +3570,10 @@ window.HUB = {
     "short": "Man City"
    },
    "status": "live",
-   "statusText": "55'",
+   "statusText": "66'",
    "score": {
     "home": 0,
-    "away": 0
+    "away": 1
    },
    "winner": null,
    "scorers": {
@@ -3583,6 +3583,16 @@ window.HUB = {
       "name": "P. Foden",
       "times": [
        "23'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "E. Haaland",
+      "times": [
+       "60'"
       ],
       "types": [
        "goal"
@@ -14631,13 +14641,13 @@ window.HUB = {
    "name": "Manchester City",
    "short": "Man City",
    "played": 4,
-   "won": 3,
-   "drawn": 1,
+   "won": 4,
+   "drawn": 0,
    "lost": 0,
-   "gf": 7,
+   "gf": 8,
    "ga": 2,
-   "gd": 5,
-   "points": 10,
+   "gd": 6,
+   "points": 12,
    "form": [
     "-",
     "-",
@@ -14843,30 +14853,6 @@ window.HUB = {
   },
   {
    "rank": 11,
-   "key": "manchester-united",
-   "name": "Manchester United",
-   "short": "Man Utd",
-   "played": 4,
-   "won": 1,
-   "drawn": 2,
-   "lost": 1,
-   "gf": 7,
-   "ga": 6,
-   "gd": 1,
-   "points": 5,
-   "form": [
-    "-",
-    "-",
-    "-",
-    "L",
-    "W",
-    "D"
-   ],
-   "zone": "",
-   "rankPrev": 13
-  },
-  {
-   "rank": 12,
    "key": "leeds-united",
    "name": "Leeds United",
    "short": "Leeds",
@@ -14890,7 +14876,7 @@ window.HUB = {
    "rankPrev": 10
   },
   {
-   "rank": 13,
+   "rank": 12,
    "key": "nottingham-forest",
    "name": "Nottingham Forest",
    "short": "N Forest",
@@ -14912,6 +14898,30 @@ window.HUB = {
    ],
    "zone": "",
    "rankPrev": 11
+  },
+  {
+   "rank": 13,
+   "key": "manchester-united",
+   "name": "Manchester United",
+   "short": "Man Utd",
+   "played": 4,
+   "won": 1,
+   "drawn": 1,
+   "lost": 2,
+   "gf": 7,
+   "ga": 7,
+   "gd": 0,
+   "points": 4,
+   "form": [
+    "-",
+    "-",
+    "-",
+    "L",
+    "W",
+    "D"
+   ],
+   "zone": "",
+   "rankPrev": 13
   },
   {
    "rank": 14,
