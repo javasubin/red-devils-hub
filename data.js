@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-13T23:10:55+09:00",
+  "updatedAt": "2026-09-13T23:26:09+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -3473,13 +3473,37 @@ window.HUB = {
     "name": "Brighton & Hove Albion",
     "short": "Brighton"
    },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
+   "status": "live",
+   "statusText": "52'",
+   "score": {
+    "home": 0,
+    "away": 2
+   },
    "winner": null,
    "scorers": {
     "home": [],
-    "away": []
+    "away": [
+     {
+      "name": "C. Kostoulas",
+      "times": [
+       "35'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "M. Yalcouyé",
+      "times": [
+       "51'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ]
    },
    "mu": false,
    "fav": [],
@@ -14603,9 +14627,9 @@ window.HUB = {
    "won": 2,
    "drawn": 1,
    "lost": 1,
-   "gf": 9,
+   "gf": 10,
    "ga": 5,
-   "gd": 4,
+   "gd": 5,
    "points": 7,
    "form": [
     "-",
@@ -14988,8 +15012,8 @@ window.HUB = {
    "drawn": 0,
    "lost": 4,
    "gf": 0,
-   "ga": 6,
-   "gd": -6,
+   "ga": 7,
+   "gd": -7,
    "points": 0,
    "form": [
     "-",
