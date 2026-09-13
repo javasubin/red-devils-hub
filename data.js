@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-14T01:11:42+09:00",
+  "updatedAt": "2026-09-14T01:27:46+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -3570,7 +3570,7 @@ window.HUB = {
     "short": "Man City"
    },
    "status": "live",
-   "statusText": "38'",
+   "statusText": "HT",
    "score": {
     "home": 0,
     "away": 0
