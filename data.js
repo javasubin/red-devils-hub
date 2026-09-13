@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-13T23:51:23+09:00",
+  "updatedAt": "2026-09-14T00:10:55+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -3473,13 +3473,13 @@ window.HUB = {
     "name": "Brighton & Hove Albion",
     "short": "Brighton"
    },
-   "status": "live",
-   "statusText": "90'+3",
+   "status": "post",
+   "statusText": "FT",
    "score": {
     "home": 0,
-    "away": 4
+    "away": 5
    },
-   "winner": null,
+   "winner": "away",
    "scorers": {
     "home": [
      {
@@ -3528,6 +3528,16 @@ window.HUB = {
       "name": "L. Dunk",
       "times": [
        "83'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "Y. Ayari",
+      "times": [
+       "90'+4"
       ],
       "types": [
        "goal"
@@ -14658,20 +14668,20 @@ window.HUB = {
    "won": 2,
    "drawn": 1,
    "lost": 1,
-   "gf": 12,
+   "gf": 13,
    "ga": 5,
-   "gd": 7,
+   "gd": 8,
    "points": 7,
    "form": [
     "-",
     "-",
-    "-",
     "W",
     "L",
-    "D"
+    "D",
+    "W"
    ],
    "zone": "UEFA Champions League",
-   "rankPrev": 10
+   "rankPrev": 9
   },
   {
    "rank": 5,
@@ -14743,7 +14753,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 6
+   "rankPrev": 13
   },
   {
    "rank": 8,
@@ -14767,7 +14777,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 8
+   "rankPrev": 7
   },
   {
    "rank": 9,
@@ -14791,7 +14801,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 14
+   "rankPrev": 12
   },
   {
    "rank": 10,
@@ -14815,7 +14825,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 7
+   "rankPrev": 6
   },
   {
    "rank": 11,
@@ -14839,7 +14849,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 9
+   "rankPrev": 8
   },
   {
    "rank": 12,
@@ -14863,7 +14873,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 16
+   "rankPrev": 15
   },
   {
    "rank": 13,
@@ -14887,7 +14897,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 11
+   "rankPrev": 10
   },
   {
    "rank": 14,
@@ -14911,7 +14921,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 12
+   "rankPrev": 11
   },
   {
    "rank": 15,
@@ -14935,7 +14945,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 15
+   "rankPrev": 14
   },
   {
    "rank": 16,
@@ -14959,7 +14969,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 13
+   "rankPrev": 18
   },
   {
    "rank": 17,
@@ -14983,7 +14993,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 18
+   "rankPrev": 20
   },
   {
    "rank": 18,
@@ -15007,7 +15017,7 @@ window.HUB = {
     "D"
    ],
    "zone": "Relegation",
-   "rankPrev": 19
+   "rankPrev": 16
   },
   {
    "rank": 19,
@@ -15031,7 +15041,7 @@ window.HUB = {
     "L"
    ],
    "zone": "Relegation",
-   "rankPrev": 17
+   "rankPrev": 19
   },
   {
    "rank": 20,
@@ -15043,19 +15053,19 @@ window.HUB = {
    "drawn": 0,
    "lost": 4,
    "gf": 0,
-   "ga": 9,
-   "gd": -9,
+   "ga": 10,
+   "gd": -10,
    "points": 0,
    "form": [
     "-",
     "-",
-    "-",
+    "L",
     "L",
     "L",
     "L"
    ],
    "zone": "Relegation",
-   "rankPrev": 20
+   "rankPrev": 17
   }
  ],
  "scorers": [
