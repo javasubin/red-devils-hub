@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-14T00:51:07+09:00",
+  "updatedAt": "2026-09-14T01:11:42+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -3473,13 +3473,13 @@ window.HUB = {
     "name": "Brighton & Hove Albion",
     "short": "Brighton"
    },
-   "status": "live",
-   "statusText": "68'",
+   "status": "post",
+   "statusText": "FT",
    "score": {
     "home": 0,
-    "away": 2
+    "away": 5
    },
-   "winner": null,
+   "winner": "away",
    "scorers": {
     "home": [
      {
@@ -3513,6 +3513,36 @@ window.HUB = {
        "goal"
       ],
       "type": "goal"
+     },
+     {
+      "name": "P. Groß",
+      "times": [
+       "70'"
+      ],
+      "types": [
+       "pen"
+      ],
+      "type": "pen"
+     },
+     {
+      "name": "L. Dunk",
+      "times": [
+       "83'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "Y. Ayari",
+      "times": [
+       "90'+4"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
      }
     ]
    },
@@ -3539,13 +3569,27 @@ window.HUB = {
     "name": "Manchester City",
     "short": "Man City"
    },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
+   "status": "live",
+   "statusText": "38'",
+   "score": {
+    "home": 0,
+    "away": 0
+   },
    "winner": null,
    "scorers": {
     "home": [],
-    "away": []
+    "away": [
+     {
+      "name": "P. Foden",
+      "times": [
+       "23'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ]
    },
    "mu": true,
    "fav": [
