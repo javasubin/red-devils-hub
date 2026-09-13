@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-13T23:26:09+09:00",
+  "updatedAt": "2026-09-13T23:39:53+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -3474,14 +3474,25 @@ window.HUB = {
     "short": "Brighton"
    },
    "status": "live",
-   "statusText": "52'",
+   "statusText": "81'",
    "score": {
     "home": 0,
-    "away": 2
+    "away": 3
    },
    "winner": null,
    "scorers": {
-    "home": [],
+    "home": [
+     {
+      "name": "T. Awoniyi",
+      "times": [
+       "53'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ],
     "away": [
      {
       "name": "C. Kostoulas",
@@ -3502,6 +3513,16 @@ window.HUB = {
        "goal"
       ],
       "type": "goal"
+     },
+     {
+      "name": "P. Groß",
+      "times": [
+       "70'"
+      ],
+      "types": [
+       "pen"
+      ],
+      "type": "pen"
      }
     ]
    },
@@ -14627,9 +14648,9 @@ window.HUB = {
    "won": 2,
    "drawn": 1,
    "lost": 1,
-   "gf": 10,
+   "gf": 11,
    "ga": 5,
-   "gd": 5,
+   "gd": 6,
    "points": 7,
    "form": [
     "-",
@@ -15012,8 +15033,8 @@ window.HUB = {
    "drawn": 0,
    "lost": 4,
    "gf": 0,
-   "ga": 7,
-   "gd": -7,
+   "ga": 8,
+   "gd": -8,
    "points": 0,
    "form": [
     "-",
