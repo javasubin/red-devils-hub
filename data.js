@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-14T00:10:55+09:00",
+  "updatedAt": "2026-09-14T00:40:02+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -69,6 +69,11 @@ window.HUB = {
    "short": "Newcastle",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/newcastle-united.45e2739dd9.svg"
   },
+  "manchester-united": {
+   "name": "Manchester United",
+   "short": "Man Utd",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/manchester-united.80807495b5.svg"
+  },
   "leeds-united": {
    "name": "Leeds United",
    "short": "Leeds",
@@ -78,11 +83,6 @@ window.HUB = {
    "name": "Nottingham Forest",
    "short": "N Forest",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/nottingham-forest.f0fc0fc962.svg"
-  },
-  "manchester-united": {
-   "name": "Manchester United",
-   "short": "Man Utd",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/manchester-united.80807495b5.svg"
   },
   "sunderland": {
    "name": "Sunderland",
@@ -3569,9 +3569,12 @@ window.HUB = {
     "name": "Manchester City",
     "short": "Man City"
    },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
+   "status": "live",
+   "statusText": "10'",
+   "score": {
+    "home": 0,
+    "away": 0
+   },
    "winner": null,
    "scorers": {
     "home": [],
@@ -14609,21 +14612,21 @@ window.HUB = {
     "W"
    ],
    "zone": "UEFA Champions League",
-   "rankPrev": 2
+   "rankPrev": 1
   },
   {
    "rank": 2,
    "key": "manchester-city",
    "name": "Manchester City",
    "short": "Man City",
-   "played": 3,
+   "played": 4,
    "won": 3,
-   "drawn": 0,
+   "drawn": 1,
    "lost": 0,
    "gf": 7,
    "ga": 2,
    "gd": 5,
-   "points": 9,
+   "points": 10,
    "form": [
     "-",
     "-",
@@ -14633,7 +14636,7 @@ window.HUB = {
     "W"
    ],
    "zone": "UEFA Champions League",
-   "rankPrev": 1
+   "rankPrev": 2
   },
   {
    "rank": 3,
@@ -14681,7 +14684,7 @@ window.HUB = {
     "W"
    ],
    "zone": "UEFA Champions League",
-   "rankPrev": 9
+   "rankPrev": 12
   },
   {
    "rank": 5,
@@ -14753,7 +14756,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 13
+   "rankPrev": 6
   },
   {
    "rank": 8,
@@ -14801,7 +14804,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 12
+   "rankPrev": 8
   },
   {
    "rank": 10,
@@ -14825,10 +14828,34 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 6
+   "rankPrev": 9
   },
   {
    "rank": 11,
+   "key": "manchester-united",
+   "name": "Manchester United",
+   "short": "Man Utd",
+   "played": 4,
+   "won": 1,
+   "drawn": 2,
+   "lost": 1,
+   "gf": 7,
+   "ga": 6,
+   "gd": 1,
+   "points": 5,
+   "form": [
+    "-",
+    "-",
+    "-",
+    "L",
+    "W",
+    "D"
+   ],
+   "zone": "",
+   "rankPrev": 13
+  },
+  {
+   "rank": 12,
    "key": "leeds-united",
    "name": "Leeds United",
    "short": "Leeds",
@@ -14849,10 +14876,10 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 8
+   "rankPrev": 10
   },
   {
-   "rank": 12,
+   "rank": 13,
    "key": "nottingham-forest",
    "name": "Nottingham Forest",
    "short": "N Forest",
@@ -14873,31 +14900,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 15
-  },
-  {
-   "rank": 13,
-   "key": "manchester-united",
-   "name": "Manchester United",
-   "short": "Man Utd",
-   "played": 3,
-   "won": 1,
-   "drawn": 1,
-   "lost": 1,
-   "gf": 7,
-   "ga": 6,
-   "gd": 1,
-   "points": 4,
-   "form": [
-    "-",
-    "-",
-    "-",
-    "L",
-    "W",
-    "D"
-   ],
-   "zone": "",
-   "rankPrev": 10
+   "rankPrev": 11
   },
   {
    "rank": 14,
@@ -14921,7 +14924,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 11
+   "rankPrev": 14
   },
   {
    "rank": 15,
@@ -14945,7 +14948,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 14
+   "rankPrev": 15
   },
   {
    "rank": 16,
@@ -14969,7 +14972,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 18
+   "rankPrev": 16
   },
   {
    "rank": 17,
@@ -14993,7 +14996,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 20
+   "rankPrev": 17
   },
   {
    "rank": 18,
@@ -15017,7 +15020,7 @@ window.HUB = {
     "D"
    ],
    "zone": "Relegation",
-   "rankPrev": 16
+   "rankPrev": 18
   },
   {
    "rank": 19,
@@ -15065,7 +15068,7 @@ window.HUB = {
     "L"
    ],
    "zone": "Relegation",
-   "rankPrev": 17
+   "rankPrev": 20
   }
  ],
  "scorers": [
