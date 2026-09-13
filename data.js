@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-13T23:39:53+09:00",
+  "updatedAt": "2026-09-13T23:51:23+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -3474,10 +3474,10 @@ window.HUB = {
     "short": "Brighton"
    },
    "status": "live",
-   "statusText": "81'",
+   "statusText": "90'+3",
    "score": {
     "home": 0,
-    "away": 3
+    "away": 4
    },
    "winner": null,
    "scorers": {
@@ -3523,6 +3523,16 @@ window.HUB = {
        "pen"
       ],
       "type": "pen"
+     },
+     {
+      "name": "L. Dunk",
+      "times": [
+       "83'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
      }
     ]
    },
@@ -14648,9 +14658,9 @@ window.HUB = {
    "won": 2,
    "drawn": 1,
    "lost": 1,
-   "gf": 11,
+   "gf": 12,
    "ga": 5,
-   "gd": 6,
+   "gd": 7,
    "points": 7,
    "form": [
     "-",
@@ -15033,8 +15043,8 @@ window.HUB = {
    "drawn": 0,
    "lost": 4,
    "gf": 0,
-   "ga": 8,
-   "gd": -8,
+   "ga": 9,
+   "gd": -9,
    "points": 0,
    "form": [
     "-",
