@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-13T22:50:48+09:00",
+  "updatedAt": "2026-09-13T23:10:55+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -3473,27 +3473,13 @@ window.HUB = {
     "name": "Brighton & Hove Albion",
     "short": "Brighton"
    },
-   "status": "live",
-   "statusText": "HT",
-   "score": {
-    "home": 0,
-    "away": 1
-   },
+   "status": "pre",
+   "statusText": "Scheduled",
+   "score": null,
    "winner": null,
    "scorers": {
     "home": [],
-    "away": [
-     {
-      "name": "C. Kostoulas",
-      "times": [
-       "35'"
-      ],
-      "types": [
-       "goal"
-      ],
-      "type": "goal"
-     }
-    ]
+    "away": []
    },
    "mu": false,
    "fav": [],
