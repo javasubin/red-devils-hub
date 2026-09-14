@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-15T04:15:05+09:00",
+  "updatedAt": "2026-09-15T04:31:32+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -3627,7 +3627,7 @@ window.HUB = {
     "short": "Newcastle"
    },
    "status": "live",
-   "statusText": "14'",
+   "statusText": "31'",
    "score": {
     "home": 0,
     "away": 0
