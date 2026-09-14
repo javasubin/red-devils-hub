@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-15T04:52:26+09:00",
+  "updatedAt": "2026-09-15T05:12:23+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -3627,7 +3627,7 @@ window.HUB = {
     "short": "Newcastle"
    },
    "status": "live",
-   "statusText": "HT",
+   "statusText": "54'",
    "score": {
     "home": 3,
     "away": 0
@@ -3646,13 +3646,21 @@ window.HUB = {
       "type": "og"
      },
      {
+      "name": "J. Bogle",
+      "times": [
+       "34'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
       "name": "D. Calvert-Lewin",
       "times": [
-       "34'",
        "45'+1"
       ],
       "types": [
-       "goal",
        "goal"
       ],
       "type": "goal"
