@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-15T05:12:23+09:00",
+  "updatedAt": "2026-09-15T05:28:49+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -3627,9 +3627,9 @@ window.HUB = {
     "short": "Newcastle"
    },
    "status": "live",
-   "statusText": "54'",
+   "statusText": "70'",
    "score": {
-    "home": 3,
+    "home": 4,
     "away": 0
    },
    "winner": null,
@@ -3659,6 +3659,16 @@ window.HUB = {
       "name": "D. Calvert-Lewin",
       "times": [
        "45'+1"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "N. Okafor",
+      "times": [
+       "59'"
       ],
       "types": [
        "goal"
@@ -14702,9 +14712,9 @@ window.HUB = {
    "won": 2,
    "drawn": 2,
    "lost": 0,
-   "gf": 6,
+   "gf": 7,
    "ga": 2,
-   "gd": 4,
+   "gd": 5,
    "points": 8,
    "form": [
     "-",
@@ -14919,8 +14929,8 @@ window.HUB = {
    "drawn": 2,
    "lost": 1,
    "gf": 6,
-   "ga": 7,
-   "gd": -1,
+   "ga": 8,
+   "gd": -2,
    "points": 5,
    "form": [
     "-",
