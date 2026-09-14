@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-15T05:44:14+09:00",
+  "updatedAt": "2026-09-15T05:56:44+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -16,7 +16,7 @@ window.HUB = {
   ],
   "matchweeks": 38,
   "source": "BBC Sport",
-  "currentMw": 4
+  "currentMw": 5
  },
  "teams": {
   "arsenal": {
@@ -3626,13 +3626,13 @@ window.HUB = {
     "name": "Newcastle United",
     "short": "Newcastle"
    },
-   "status": "live",
-   "statusText": "86'",
+   "status": "post",
+   "statusText": "FT",
    "score": {
     "home": 4,
-    "away": 0
+    "away": 1
    },
-   "winner": null,
+   "winner": "home",
    "scorers": {
     "home": [
      {
@@ -3676,7 +3676,18 @@ window.HUB = {
       "type": "goal"
      }
     ],
-    "away": []
+    "away": [
+     {
+      "name": "B. Touré",
+      "times": [
+       "90'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ]
    },
    "mu": false,
    "fav": [],
@@ -14713,16 +14724,16 @@ window.HUB = {
    "drawn": 2,
    "lost": 0,
    "gf": 7,
-   "ga": 2,
-   "gd": 5,
+   "ga": 3,
+   "gd": 4,
    "points": 8,
    "form": [
     "-",
     "-",
-    "-",
     "W",
     "D",
-    "D"
+    "D",
+    "W"
    ],
    "zone": "UEFA Champions League",
    "rankPrev": 9
@@ -14928,17 +14939,17 @@ window.HUB = {
    "won": 1,
    "drawn": 2,
    "lost": 1,
-   "gf": 6,
+   "gf": 7,
    "ga": 8,
-   "gd": -2,
+   "gd": -1,
    "points": 5,
    "form": [
     "-",
     "-",
-    "-",
     "D",
     "W",
-    "D"
+    "D",
+    "L"
    ],
    "zone": "",
    "rankPrev": 7
