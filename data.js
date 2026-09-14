@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-15T03:14:23+09:00",
+  "updatedAt": "2026-09-15T04:15:05+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -54,25 +54,25 @@ window.HUB = {
    "short": "Liverpool",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/liverpool.34999937ef.svg"
   },
-  "everton": {
-   "name": "Everton",
-   "short": "Everton",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/everton.38c006ac78.svg"
-  },
-  "ipswich-town": {
-   "name": "Ipswich Town",
-   "short": "Ipswich",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/ipswich-town.016f53d3e1.svg"
-  },
   "newcastle-united": {
    "name": "Newcastle United",
    "short": "Newcastle",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/newcastle-united.45e2739dd9.svg"
   },
+  "everton": {
+   "name": "Everton",
+   "short": "Everton",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/everton.38c006ac78.svg"
+  },
   "leeds-united": {
    "name": "Leeds United",
    "short": "Leeds",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/leeds-united.6eb48daff9.svg"
+  },
+  "ipswich-town": {
+   "name": "Ipswich Town",
+   "short": "Ipswich",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/ipswich-town.016f53d3e1.svg"
   },
   "nottingham-forest": {
    "name": "Nottingham Forest",
@@ -3626,9 +3626,12 @@ window.HUB = {
     "name": "Newcastle United",
     "short": "Newcastle"
    },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
+   "status": "live",
+   "statusText": "14'",
+   "score": {
+    "home": 0,
+    "away": 0
+   },
    "winner": null,
    "scorers": {
     "home": [],
@@ -14705,7 +14708,7 @@ window.HUB = {
     "W"
    ],
    "zone": "UEFA Champions League",
-   "rankPrev": 9
+   "rankPrev": 10
   },
   {
    "rank": 5,
@@ -14777,10 +14780,34 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 13
+   "rankPrev": 6
   },
   {
    "rank": 8,
+   "key": "newcastle-united",
+   "name": "Newcastle United",
+   "short": "Newcastle",
+   "played": 4,
+   "won": 1,
+   "drawn": 3,
+   "lost": 0,
+   "gf": 6,
+   "ga": 4,
+   "gd": 2,
+   "points": 6,
+   "form": [
+    "-",
+    "-",
+    "-",
+    "D",
+    "W",
+    "D"
+   ],
+   "zone": "",
+   "rankPrev": 7
+  },
+  {
+   "rank": 9,
    "key": "everton",
    "name": "Everton",
    "short": "Everton",
@@ -14801,10 +14828,34 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 7
+   "rankPrev": 8
   },
   {
-   "rank": 9,
+   "rank": 10,
+   "key": "leeds-united",
+   "name": "Leeds United",
+   "short": "Leeds",
+   "played": 4,
+   "won": 1,
+   "drawn": 3,
+   "lost": 0,
+   "gf": 3,
+   "ga": 2,
+   "gd": 1,
+   "points": 6,
+   "form": [
+    "-",
+    "-",
+    "-",
+    "W",
+    "D",
+    "D"
+   ],
+   "zone": "",
+   "rankPrev": 9
+  },
+  {
+   "rank": 11,
    "key": "ipswich-town",
    "name": "Ipswich Town",
    "short": "Ipswich",
@@ -14825,55 +14876,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 12
-  },
-  {
-   "rank": 10,
-   "key": "newcastle-united",
-   "name": "Newcastle United",
-   "short": "Newcastle",
-   "played": 3,
-   "won": 1,
-   "drawn": 2,
-   "lost": 0,
-   "gf": 6,
-   "ga": 4,
-   "gd": 2,
-   "points": 5,
-   "form": [
-    "-",
-    "-",
-    "-",
-    "D",
-    "W",
-    "D"
-   ],
-   "zone": "",
-   "rankPrev": 6
-  },
-  {
-   "rank": 11,
-   "key": "leeds-united",
-   "name": "Leeds United",
-   "short": "Leeds",
-   "played": 3,
-   "won": 1,
-   "drawn": 2,
-   "lost": 0,
-   "gf": 3,
-   "ga": 2,
-   "gd": 1,
-   "points": 5,
-   "form": [
-    "-",
-    "-",
-    "-",
-    "W",
-    "D",
-    "D"
-   ],
-   "zone": "",
-   "rankPrev": 8
+   "rankPrev": 14
   },
   {
    "rank": 12,
@@ -14897,7 +14900,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 15
+   "rankPrev": 16
   },
   {
    "rank": 13,
@@ -14921,7 +14924,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 10
+   "rankPrev": 11
   },
   {
    "rank": 14,
@@ -14945,7 +14948,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 11
+   "rankPrev": 12
   },
   {
    "rank": 15,
@@ -14969,7 +14972,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 14
+   "rankPrev": 15
   },
   {
    "rank": 16,
@@ -14993,7 +14996,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 18
+   "rankPrev": 13
   },
   {
    "rank": 17,
@@ -15017,7 +15020,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 20
+   "rankPrev": 18
   },
   {
    "rank": 18,
@@ -15041,7 +15044,7 @@ window.HUB = {
     "D"
    ],
    "zone": "Relegation",
-   "rankPrev": 16
+   "rankPrev": 19
   },
   {
    "rank": 19,
@@ -15065,7 +15068,7 @@ window.HUB = {
     "L"
    ],
    "zone": "Relegation",
-   "rankPrev": 19
+   "rankPrev": 17
   },
   {
    "rank": 20,
@@ -15089,7 +15092,7 @@ window.HUB = {
     "L"
    ],
    "zone": "Relegation",
-   "rankPrev": 17
+   "rankPrev": 20
   }
  ],
  "scorers": [
