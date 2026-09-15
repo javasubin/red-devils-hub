@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-16T05:11:58+09:00",
+  "updatedAt": "2026-09-16T05:27:35+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -3713,9 +3713,9 @@ window.HUB = {
     "short": "Spurs"
    },
    "status": "live",
-   "statusText": "51'",
+   "statusText": "68'",
    "score": {
-    "home": 1,
+    "home": 2,
     "away": 0
    },
    "winner": null,
@@ -3725,6 +3725,16 @@ window.HUB = {
       "name": "A. Mac Allister",
       "times": [
        "21'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "C. Gakpo",
+      "times": [
+       "54'"
       ],
       "types": [
        "goal"
