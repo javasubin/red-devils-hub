@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-16T04:25:45+09:00",
+  "updatedAt": "2026-09-16T04:40:20+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -3713,7 +3713,7 @@ window.HUB = {
     "short": "Spurs"
    },
    "status": "live",
-   "statusText": "25'",
+   "statusText": "40'",
    "score": {
     "home": 1,
     "away": 0
