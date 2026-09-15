@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-16T05:27:35+09:00",
+  "updatedAt": "2026-09-16T05:54:27+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -3712,13 +3712,13 @@ window.HUB = {
     "name": "Tottenham Hotspur",
     "short": "Spurs"
    },
-   "status": "live",
-   "statusText": "68'",
+   "status": "post",
+   "statusText": "FT",
    "score": {
-    "home": 2,
-    "away": 0
+    "home": 3,
+    "away": 1
    },
-   "winner": null,
+   "winner": "home",
    "scorers": {
     "home": [
      {
@@ -3740,9 +3740,30 @@ window.HUB = {
        "goal"
       ],
       "type": "goal"
+     },
+     {
+      "name": "D. Szoboszlai",
+      "times": [
+       "90'+1"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
      }
     ],
-    "away": []
+    "away": [
+     {
+      "name": "C. Gallagher",
+      "times": [
+       "69'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ]
    },
    "mu": false,
    "fav": [
