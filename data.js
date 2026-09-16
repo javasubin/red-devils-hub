@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-17T04:26:57+09:00",
+  "updatedAt": "2026-09-17T04:40:32+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -3783,7 +3783,7 @@ window.HUB = {
     "short": "Brighton"
    },
    "status": "live",
-   "statusText": "26'",
+   "statusText": "41'",
    "score": {
     "home": 2,
     "away": 0
