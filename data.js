@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-17T05:56:33+09:00",
+  "updatedAt": "2026-09-17T06:14:44+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -3782,13 +3782,13 @@ window.HUB = {
     "name": "Brighton & Hove Albion",
     "short": "Brighton"
    },
-   "status": "post",
-   "statusText": "FT",
+   "status": "live",
+   "statusText": "52'",
    "score": {
     "home": 2,
-    "away": 3
+    "away": 1
    },
-   "winner": "away",
+   "winner": null,
    "scorers": {
     "home": [
      {
@@ -3817,26 +3817,6 @@ window.HUB = {
       "name": "C. Kostoulas",
       "times": [
        "45'+1"
-      ],
-      "types": [
-       "goal"
-      ],
-      "type": "goal"
-     },
-     {
-      "name": "P. Groß",
-      "times": [
-       "65'"
-      ],
-      "types": [
-       "goal"
-      ],
-      "type": "goal"
-     },
-     {
-      "name": "M. De Cuyper",
-      "times": [
-       "69'"
       ],
       "types": [
        "goal"
