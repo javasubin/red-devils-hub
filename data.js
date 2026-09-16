@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-17T05:12:08+09:00",
+  "updatedAt": "2026-09-17T05:29:00+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -3783,10 +3783,10 @@ window.HUB = {
     "short": "Brighton"
    },
    "status": "live",
-   "statusText": "11'",
+   "statusText": "70'",
    "score": {
     "home": 2,
-    "away": 0
+    "away": 2
    },
    "winner": null,
    "scorers": {
@@ -3812,7 +3812,38 @@ window.HUB = {
       "type": "goal"
      }
     ],
-    "away": []
+    "away": [
+     {
+      "name": "C. Kostoulas",
+      "times": [
+       "45'+1"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "P. Groß",
+      "times": [
+       "65'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "M. De Cuyper",
+      "times": [
+       "70'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ]
    },
    "mu": true,
    "fav": [
