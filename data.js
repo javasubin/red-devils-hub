@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-17T02:25:23+09:00",
+  "updatedAt": "2026-09-17T02:40:19+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -3646,21 +3646,13 @@ window.HUB = {
       "type": "og"
      },
      {
-      "name": "J. Bogle",
-      "times": [
-       "34'"
-      ],
-      "types": [
-       "goal"
-      ],
-      "type": "goal"
-     },
-     {
       "name": "D. Calvert-Lewin",
       "times": [
+       "34'",
        "45'+1"
       ],
       "types": [
+       "goal",
        "goal"
       ],
       "type": "goal"
