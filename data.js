@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-17T05:45:06+09:00",
+  "updatedAt": "2026-09-17T05:56:33+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -3782,13 +3782,13 @@ window.HUB = {
     "name": "Brighton & Hove Albion",
     "short": "Brighton"
    },
-   "status": "live",
-   "statusText": "85'",
+   "status": "post",
+   "statusText": "FT",
    "score": {
     "home": 2,
     "away": 3
    },
-   "winner": null,
+   "winner": "away",
    "scorers": {
     "home": [
      {
