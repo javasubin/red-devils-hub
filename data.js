@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-17T04:51:10+09:00",
+  "updatedAt": "2026-09-17T05:12:08+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -3783,10 +3783,10 @@ window.HUB = {
     "short": "Brighton"
    },
    "status": "live",
-   "statusText": "HT",
+   "statusText": "11'",
    "score": {
     "home": 2,
-    "away": 1
+    "away": 0
    },
    "winner": null,
    "scorers": {
@@ -3812,18 +3812,7 @@ window.HUB = {
       "type": "goal"
      }
     ],
-    "away": [
-     {
-      "name": "C. Kostoulas",
-      "times": [
-       "45'+1"
-      ],
-      "types": [
-       "goal"
-      ],
-      "type": "goal"
-     }
-    ]
+    "away": []
    },
    "mu": true,
    "fav": [
