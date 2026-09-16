@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-17T05:29:00+09:00",
+  "updatedAt": "2026-09-17T05:45:06+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -3783,10 +3783,10 @@ window.HUB = {
     "short": "Brighton"
    },
    "status": "live",
-   "statusText": "70'",
+   "statusText": "85'",
    "score": {
     "home": 2,
-    "away": 2
+    "away": 3
    },
    "winner": null,
    "scorers": {
@@ -3836,7 +3836,7 @@ window.HUB = {
      {
       "name": "M. De Cuyper",
       "times": [
-       "70'"
+       "69'"
       ],
       "types": [
        "goal"
