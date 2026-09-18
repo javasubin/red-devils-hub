@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-19T05:11:09+09:00",
+  "updatedAt": "2026-09-19T05:26:40+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -29,6 +29,11 @@ window.HUB = {
    "short": "Man City",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/manchester-city.30c4b22e90.svg"
   },
+  "brentford": {
+   "name": "Brentford",
+   "short": "Brentford",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/brentford.aa0256ca6b.svg"
+  },
   "leeds-united": {
    "name": "Leeds United",
    "short": "Leeds",
@@ -39,20 +44,15 @@ window.HUB = {
    "short": "Hull City",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/hull-city.7187a4b4b5.svg"
   },
-  "chelsea": {
-   "name": "Chelsea",
-   "short": "Chelsea",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/chelsea.b96b403b5f.svg"
-  },
   "brighton-and-hove-albion": {
    "name": "Brighton & Hove Albion",
    "short": "Brighton",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/brighton-and-hove-albion.4522a78440.svg"
   },
-  "brentford": {
-   "name": "Brentford",
-   "short": "Brentford",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/brentford.aa0256ca6b.svg"
+  "chelsea": {
+   "name": "Chelsea",
+   "short": "Chelsea",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/chelsea.b96b403b5f.svg"
   },
   "liverpool": {
    "name": "Liverpool",
@@ -14811,6 +14811,30 @@ window.HUB = {
   },
   {
    "rank": 3,
+   "key": "brentford",
+   "name": "Brentford",
+   "short": "Brentford",
+   "played": 5,
+   "won": 2,
+   "drawn": 3,
+   "lost": 0,
+   "gf": 8,
+   "ga": 4,
+   "gd": 4,
+   "points": 9,
+   "form": [
+    "-",
+    "-",
+    "W",
+    "D",
+    "D",
+    "D"
+   ],
+   "zone": "UEFA Champions League",
+   "rankPrev": 5
+  },
+  {
+   "rank": 4,
    "key": "leeds-united",
    "name": "Leeds United",
    "short": "Leeds",
@@ -14834,7 +14858,7 @@ window.HUB = {
    "rankPrev": 9
   },
   {
-   "rank": 4,
+   "rank": 5,
    "key": "hull-city",
    "name": "Hull City",
    "short": "Hull City",
@@ -14854,32 +14878,8 @@ window.HUB = {
     "D",
     "D"
    ],
-   "zone": "UEFA Champions League",
-   "rankPrev": 3
-  },
-  {
-   "rank": 5,
-   "key": "chelsea",
-   "name": "Chelsea",
-   "short": "Chelsea",
-   "played": 5,
-   "won": 2,
-   "drawn": 2,
-   "lost": 1,
-   "gf": 10,
-   "ga": 9,
-   "gd": 1,
-   "points": 8,
-   "form": [
-    "-",
-    "-",
-    "W",
-    "W",
-    "L",
-    "D"
-   ],
    "zone": "UEFA Europa League",
-   "rankPrev": 4
+   "rankPrev": 3
   },
   {
    "rank": 6,
@@ -14907,27 +14907,27 @@ window.HUB = {
   },
   {
    "rank": 7,
-   "key": "brentford",
-   "name": "Brentford",
-   "short": "Brentford",
+   "key": "chelsea",
+   "name": "Chelsea",
+   "short": "Chelsea",
    "played": 5,
-   "won": 1,
-   "drawn": 4,
-   "lost": 0,
-   "gf": 7,
-   "ga": 4,
-   "gd": 3,
+   "won": 2,
+   "drawn": 1,
+   "lost": 2,
+   "gf": 10,
+   "ga": 10,
+   "gd": 0,
    "points": 7,
    "form": [
     "-",
     "-",
     "W",
-    "D",
-    "D",
+    "W",
+    "L",
     "D"
    ],
    "zone": "",
-   "rankPrev": 5
+   "rankPrev": 4
   },
   {
    "rank": 8,
