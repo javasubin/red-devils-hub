@@ -1,11 +1,11 @@
 // ============================================================
 //  RED DEVILS HUB 데이터 — scripts/update-data.mjs 가 BBC Sport에서 생성합니다. 손으로 고치지 마세요.
-//  경기 404 · 순위표 20팀 · 득점 74명 (생성 시각은 meta.updatedAt)
+//  경기 404 · 순위표 20팀 · 득점 77명 (생성 시각은 meta.updatedAt)
 //  구조: SCHEMA.md
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-19T05:51:50+09:00",
+  "updatedAt": "2026-09-19T06:10:35+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -3804,7 +3804,7 @@ window.HUB = {
      {
       "name": "M. Mount",
       "times": [
-       "10'"
+       "9'"
       ],
       "types": [
        "goal"
@@ -3870,15 +3870,46 @@ window.HUB = {
     "name": "Chelsea",
     "short": "Chelsea"
    },
-   "status": "live",
-   "statusText": "10'",
+   "status": "post",
+   "statusText": "FT",
    "score": {
-    "home": 0,
+    "home": 3,
     "away": 0
    },
-   "winner": null,
+   "winner": "home",
    "scorers": {
-    "home": [],
+    "home": [
+     {
+      "name": "J. Anthony",
+      "times": [
+       "61'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "Igor Thiago",
+      "times": [
+       "83'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "Fábio Carvalho",
+      "times": [
+       "90'+4"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ],
     "away": []
    },
    "mu": false,
@@ -14818,17 +14849,17 @@ window.HUB = {
    "won": 2,
    "drawn": 3,
    "lost": 0,
-   "gf": 9,
+   "gf": 10,
    "ga": 4,
-   "gd": 5,
+   "gd": 6,
    "points": 9,
    "form": [
-    "-",
     "-",
     "W",
     "D",
     "D",
-    "D"
+    "D",
+    "W"
    ],
    "zone": "UEFA Champions League",
    "rankPrev": 5
@@ -14915,16 +14946,16 @@ window.HUB = {
    "drawn": 1,
    "lost": 2,
    "gf": 10,
-   "ga": 11,
-   "gd": -1,
+   "ga": 12,
+   "gd": -2,
    "points": 7,
    "form": [
-    "-",
     "-",
     "W",
     "W",
     "L",
-    "D"
+    "D",
+    "L"
    ],
    "zone": "",
    "rankPrev": 4
@@ -15267,17 +15298,6 @@ window.HUB = {
   },
   {
    "rank": 2,
-   "name": "M. Rogers",
-   "team": "chelsea",
-   "teamShort": "Chelsea",
-   "goals": 3,
-   "assists": 1,
-   "played": 4,
-   "minutes": 349,
-   "shots": 11
-  },
-  {
-   "rank": 2,
    "name": "Bruno Fernandes",
    "team": "manchester-united",
    "teamShort": "Man Utd",
@@ -15286,6 +15306,17 @@ window.HUB = {
    "played": 4,
    "minutes": 360,
    "shots": 16
+  },
+  {
+   "rank": 2,
+   "name": "M. Rogers",
+   "team": "chelsea",
+   "teamShort": "Chelsea",
+   "goals": 3,
+   "assists": 1,
+   "played": 5,
+   "minutes": 439,
+   "shots": 15
   },
   {
    "rank": 2,
@@ -15338,9 +15369,9 @@ window.HUB = {
    "teamShort": "Brentford",
    "goals": 3,
    "assists": 0,
-   "played": 4,
-   "minutes": 358,
-   "shots": 10
+   "played": 5,
+   "minutes": 448,
+   "shots": 13
   },
   {
    "rank": 10,
@@ -15355,17 +15386,6 @@ window.HUB = {
   },
   {
    "rank": 10,
-   "name": "C. Palmer",
-   "team": "chelsea",
-   "teamShort": "Chelsea",
-   "goals": 2,
-   "assists": 2,
-   "played": 4,
-   "minutes": 353,
-   "shots": 15
-  },
-  {
-   "rank": 10,
    "name": "P. Groß",
    "team": "brighton-and-hove-albion",
    "teamShort": "Brighton",
@@ -15374,6 +15394,17 @@ window.HUB = {
    "played": 4,
    "minutes": 360,
    "shots": 8
+  },
+  {
+   "rank": 10,
+   "name": "C. Palmer",
+   "team": "chelsea",
+   "teamShort": "Chelsea",
+   "goals": 2,
+   "assists": 2,
+   "played": 5,
+   "minutes": 443,
+   "shots": 17
   },
   {
    "rank": 10,
@@ -15487,17 +15518,6 @@ window.HUB = {
   },
   {
    "rank": 10,
-   "name": "V. Janelt",
-   "team": "brentford",
-   "teamShort": "Brentford",
-   "goals": 2,
-   "assists": 0,
-   "played": 4,
-   "minutes": 360,
-   "shots": 3
-  },
-  {
-   "rank": 10,
    "name": "B. Mbeumo",
    "team": "manchester-united",
    "teamShort": "Man Utd",
@@ -15506,6 +15526,17 @@ window.HUB = {
    "played": 4,
    "minutes": 360,
    "shots": 14
+  },
+  {
+   "rank": 10,
+   "name": "V. Janelt",
+   "team": "brentford",
+   "teamShort": "Brentford",
+   "goals": 2,
+   "assists": 0,
+   "played": 5,
+   "minutes": 450,
+   "shots": 4
   },
   {
    "rank": 25,
@@ -15542,17 +15573,6 @@ window.HUB = {
   },
   {
    "rank": 25,
-   "name": "K. Lewis-Potter",
-   "team": "brentford",
-   "teamShort": "Brentford",
-   "goals": 1,
-   "assists": 1,
-   "played": 4,
-   "minutes": 328,
-   "shots": 7
-  },
-  {
-   "rank": 25,
    "name": "J. Gvardiol",
    "team": "manchester-city",
    "teamShort": "Man City",
@@ -15572,6 +15592,28 @@ window.HUB = {
    "played": 4,
    "minutes": 351,
    "shots": 7
+  },
+  {
+   "rank": 25,
+   "name": "K. Lewis-Potter",
+   "team": "brentford",
+   "teamShort": "Brentford",
+   "goals": 1,
+   "assists": 1,
+   "played": 5,
+   "minutes": 409,
+   "shots": 9
+  },
+  {
+   "rank": 25,
+   "name": "Fábio Carvalho",
+   "team": "brentford",
+   "teamShort": "Brentford",
+   "goals": 1,
+   "assists": 0,
+   "played": 1,
+   "minutes": 3,
+   "shots": 1
   },
   {
    "rank": 25,
@@ -15773,17 +15815,6 @@ window.HUB = {
   },
   {
    "rank": 25,
-   "name": "M. Kayode",
-   "team": "brentford",
-   "teamShort": "Brentford",
-   "goals": 1,
-   "assists": 0,
-   "played": 4,
-   "minutes": 228,
-   "shots": 6
-  },
-  {
-   "rank": 25,
    "name": "Víctor Muñoz",
    "team": "liverpool",
    "teamShort": "Liverpool",
@@ -15803,17 +15834,6 @@ window.HUB = {
    "played": 3,
    "minutes": 244,
    "shots": 8
-  },
-  {
-   "rank": 25,
-   "name": "Pedro Neto",
-   "team": "chelsea",
-   "teamShort": "Chelsea",
-   "goals": 1,
-   "assists": 0,
-   "played": 4,
-   "minutes": 249,
-   "shots": 5
   },
   {
    "rank": 25,
@@ -15861,6 +15881,17 @@ window.HUB = {
   },
   {
    "rank": 25,
+   "name": "J. Anthony",
+   "team": "brentford",
+   "teamShort": "Brentford",
+   "goals": 1,
+   "assists": 0,
+   "played": 5,
+   "minutes": 270,
+   "shots": 5
+  },
+  {
+   "rank": 25,
    "name": "C. Kostoulas",
    "team": "brighton-and-hove-albion",
    "teamShort": "Brighton",
@@ -15880,6 +15911,17 @@ window.HUB = {
    "played": 4,
    "minutes": 290,
    "shots": 7
+  },
+  {
+   "rank": 25,
+   "name": "M. Kayode",
+   "team": "brentford",
+   "teamShort": "Brentford",
+   "goals": 1,
+   "assists": 0,
+   "played": 5,
+   "minutes": 297,
+   "shots": 6
   },
   {
    "rank": 25,
@@ -15935,6 +15977,17 @@ window.HUB = {
    "played": 4,
    "minutes": 334,
    "shots": 2
+  },
+  {
+   "rank": 25,
+   "name": "Pedro Neto",
+   "team": "chelsea",
+   "teamShort": "Chelsea",
+   "goals": 1,
+   "assists": 0,
+   "played": 5,
+   "minutes": 336,
+   "shots": 7
   },
   {
    "rank": 25,
@@ -16056,6 +16109,17 @@ window.HUB = {
    "played": 4,
    "minutes": 360,
    "shots": 11
+  },
+  {
+   "rank": 25,
+   "name": "Igor Thiago",
+   "team": "brentford",
+   "teamShort": "Brentford",
+   "goals": 1,
+   "assists": 0,
+   "played": 5,
+   "minutes": 443,
+   "shots": 13
   }
  ]
 };
