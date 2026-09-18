@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-19T03:12:52+09:00",
+  "updatedAt": "2026-09-19T04:11:09+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -39,15 +39,15 @@ window.HUB = {
    "short": "Hull City",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/hull-city.7187a4b4b5.svg"
   },
-  "brighton-and-hove-albion": {
-   "name": "Brighton & Hove Albion",
-   "short": "Brighton",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/brighton-and-hove-albion.4522a78440.svg"
-  },
   "chelsea": {
    "name": "Chelsea",
    "short": "Chelsea",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/chelsea.b96b403b5f.svg"
+  },
+  "brighton-and-hove-albion": {
+   "name": "Brighton & Hove Albion",
+   "short": "Brighton",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/brighton-and-hove-albion.4522a78440.svg"
   },
   "brentford": {
    "name": "Brentford",
@@ -3870,9 +3870,12 @@ window.HUB = {
     "name": "Chelsea",
     "short": "Chelsea"
    },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
+   "status": "live",
+   "statusText": "10'",
+   "score": {
+    "home": 0,
+    "away": 0
+   },
    "winner": null,
    "scorers": {
     "home": [],
@@ -14856,6 +14859,30 @@ window.HUB = {
   },
   {
    "rank": 5,
+   "key": "chelsea",
+   "name": "Chelsea",
+   "short": "Chelsea",
+   "played": 5,
+   "won": 2,
+   "drawn": 2,
+   "lost": 1,
+   "gf": 10,
+   "ga": 9,
+   "gd": 1,
+   "points": 8,
+   "form": [
+    "-",
+    "-",
+    "W",
+    "W",
+    "L",
+    "D"
+   ],
+   "zone": "UEFA Europa League",
+   "rankPrev": 4
+  },
+  {
+   "rank": 6,
    "key": "brighton-and-hove-albion",
    "name": "Brighton & Hove Albion",
    "short": "Brighton",
@@ -14875,46 +14902,22 @@ window.HUB = {
     "D",
     "W"
    ],
-   "zone": "UEFA Europa League",
-   "rankPrev": 10
-  },
-  {
-   "rank": 6,
-   "key": "chelsea",
-   "name": "Chelsea",
-   "short": "Chelsea",
-   "played": 4,
-   "won": 2,
-   "drawn": 1,
-   "lost": 1,
-   "gf": 10,
-   "ga": 9,
-   "gd": 1,
-   "points": 7,
-   "form": [
-    "-",
-    "-",
-    "W",
-    "W",
-    "L",
-    "D"
-   ],
    "zone": "",
-   "rankPrev": 4
+   "rankPrev": 10
   },
   {
    "rank": 7,
    "key": "brentford",
    "name": "Brentford",
    "short": "Brentford",
-   "played": 4,
+   "played": 5,
    "won": 1,
-   "drawn": 3,
+   "drawn": 4,
    "lost": 0,
    "gf": 7,
    "ga": 4,
    "gd": 3,
-   "points": 6,
+   "points": 7,
    "form": [
     "-",
     "-",
