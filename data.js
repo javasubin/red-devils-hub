@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-19T05:40:52+09:00",
+  "updatedAt": "2026-09-19T05:51:50+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -3804,7 +3804,7 @@ window.HUB = {
      {
       "name": "M. Mount",
       "times": [
-       "9'"
+       "10'"
       ],
       "types": [
        "goal"
@@ -3871,35 +3871,14 @@ window.HUB = {
     "short": "Chelsea"
    },
    "status": "live",
-   "statusText": "83'",
+   "statusText": "10'",
    "score": {
-    "home": 2,
+    "home": 0,
     "away": 0
    },
    "winner": null,
    "scorers": {
-    "home": [
-     {
-      "name": "J. Anthony",
-      "times": [
-       "61'"
-      ],
-      "types": [
-       "goal"
-      ],
-      "type": "goal"
-     },
-     {
-      "name": "Igor Thiago",
-      "times": [
-       "83'"
-      ],
-      "types": [
-       "goal"
-      ],
-      "type": "goal"
-     }
-    ],
+    "home": [],
     "away": []
    },
    "mu": false,
@@ -14839,9 +14818,9 @@ window.HUB = {
    "won": 2,
    "drawn": 3,
    "lost": 0,
-   "gf": 8,
+   "gf": 9,
    "ga": 4,
-   "gd": 4,
+   "gd": 5,
    "points": 9,
    "form": [
     "-",
@@ -14936,8 +14915,8 @@ window.HUB = {
    "drawn": 1,
    "lost": 2,
    "gf": 10,
-   "ga": 10,
-   "gd": 0,
+   "ga": 11,
+   "gd": -1,
    "points": 7,
    "form": [
     "-",
