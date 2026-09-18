@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-19T04:36:57+09:00",
+  "updatedAt": "2026-09-19T04:50:35+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -3870,9 +3870,12 @@ window.HUB = {
     "name": "Chelsea",
     "short": "Chelsea"
    },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
+   "status": "live",
+   "statusText": "25'",
+   "score": {
+    "home": 0,
+    "away": 0
+   },
    "winner": null,
    "scorers": {
     "home": [],
