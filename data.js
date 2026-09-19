@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-20T01:40:04+09:00",
+  "updatedAt": "2026-09-20T01:51:55+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -4023,13 +4023,13 @@ window.HUB = {
     "name": "Arsenal",
     "short": "Arsenal"
    },
-   "status": "live",
-   "statusText": "80'",
+   "status": "post",
+   "statusText": "FT",
    "score": {
     "home": 3,
     "away": 0
    },
-   "winner": null,
+   "winner": "home",
    "scorers": {
     "home": [
      {
@@ -4088,13 +4088,13 @@ window.HUB = {
     "name": "Ipswich Town",
     "short": "Ipswich"
    },
-   "status": "live",
-   "statusText": "81'",
+   "status": "post",
+   "statusText": "FT",
    "score": {
     "home": 1,
     "away": 0
    },
-   "winner": null,
+   "winner": "home",
    "scorers": {
     "home": [
      {
@@ -4144,13 +4144,13 @@ window.HUB = {
     "name": "Hull City",
     "short": "Hull City"
    },
-   "status": "live",
-   "statusText": "75'",
+   "status": "post",
+   "statusText": "FT",
    "score": {
     "home": 2,
     "away": 1
    },
-   "winner": null,
+   "winner": "home",
    "scorers": {
     "home": [
      {
@@ -4210,9 +4210,12 @@ window.HUB = {
     "name": "Coventry City",
     "short": "Coventry"
    },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
+   "status": "live",
+   "statusText": "22'",
+   "score": {
+    "home": 0,
+    "away": 0
+   },
    "winner": null,
    "scorers": {
     "home": [],
