@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-20T00:38:31+09:00",
+  "updatedAt": "2026-09-20T00:50:43+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -4024,9 +4024,9 @@ window.HUB = {
     "short": "Arsenal"
    },
    "status": "live",
-   "statusText": "37'",
+   "statusText": "90'+2",
    "score": {
-    "home": 1,
+    "home": 3,
     "away": 0
    },
    "winner": null,
@@ -4036,6 +4036,26 @@ window.HUB = {
       "name": "P. Groß",
       "times": [
        "31'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "C. Kostoulas",
+      "times": [
+       "45'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "Chema Andrés",
+      "times": [
+       "57'"
       ],
       "types": [
        "goal"
@@ -4069,7 +4089,7 @@ window.HUB = {
     "short": "Ipswich"
    },
    "status": "live",
-   "statusText": "38'",
+   "statusText": "90'+3",
    "score": {
     "home": 1,
     "away": 0
@@ -4088,7 +4108,18 @@ window.HUB = {
       "type": "goal"
      }
     ],
-    "away": []
+    "away": [
+     {
+      "name": "A. Fatawu",
+      "times": [
+       "67'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ]
    },
    "mu": false,
    "fav": [],
@@ -4114,10 +4145,10 @@ window.HUB = {
     "short": "Hull City"
    },
    "status": "live",
-   "statusText": "37'",
+   "statusText": "89'",
    "score": {
     "home": 2,
-    "away": 0
+    "away": 1
    },
    "winner": null,
    "scorers": {
@@ -4143,7 +4174,18 @@ window.HUB = {
       "type": "goal"
      }
     ],
-    "away": []
+    "away": [
+     {
+      "name": "M. Cho",
+      "times": [
+       "67'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ]
    },
    "mu": false,
    "fav": [],
