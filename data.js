@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-20T02:36:45+09:00",
+  "updatedAt": "2026-09-20T02:51:11+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -69,15 +69,15 @@ window.HUB = {
    "short": "Liverpool",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/liverpool.34999937ef.svg"
   },
-  "nottingham-forest": {
-   "name": "Nottingham Forest",
-   "short": "N Forest",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/nottingham-forest.f0fc0fc962.svg"
-  },
   "ipswich-town": {
    "name": "Ipswich Town",
    "short": "Ipswich",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/ipswich-town.016f53d3e1.svg"
+  },
+  "nottingham-forest": {
+   "name": "Nottingham Forest",
+   "short": "N Forest",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/nottingham-forest.f0fc0fc962.svg"
   },
   "manchester-united": {
    "name": "Manchester United",
@@ -104,6 +104,11 @@ window.HUB = {
    "short": "C Palace",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/crystal-palace.9e5ab01a7b.svg"
   },
+  "coventry-city": {
+   "name": "Coventry City",
+   "short": "Coventry",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/coventry-city.2b26ca0838.svg"
+  },
   "tottenham-hotspur": {
    "name": "Tottenham Hotspur",
    "short": "Spurs",
@@ -113,11 +118,6 @@ window.HUB = {
    "name": "Fulham",
    "short": "Fulham",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/fulham.d16ec60bd3.svg"
-  },
-  "coventry-city": {
-   "name": "Coventry City",
-   "short": "Coventry",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/coventry-city.2b26ca0838.svg"
   }
  },
  "fixtures": [
@@ -4211,7 +4211,7 @@ window.HUB = {
     "short": "Coventry"
    },
    "status": "live",
-   "statusText": "HT",
+   "statusText": "10'",
    "score": {
     "home": 0,
     "away": 0
@@ -15186,30 +15186,6 @@ window.HUB = {
   },
   {
    "rank": 11,
-   "key": "nottingham-forest",
-   "name": "Nottingham Forest",
-   "short": "N Forest",
-   "played": 5,
-   "won": 1,
-   "drawn": 3,
-   "lost": 1,
-   "gf": 4,
-   "ga": 4,
-   "gd": 0,
-   "points": 6,
-   "form": [
-    "-",
-    "-",
-    "L",
-    "D",
-    "D",
-    "W"
-   ],
-   "zone": "",
-   "rankPrev": 11
-  },
-  {
-   "rank": 12,
    "key": "ipswich-town",
    "name": "Ipswich Town",
    "short": "Ipswich",
@@ -15231,6 +15207,30 @@ window.HUB = {
    ],
    "zone": "",
    "rankPrev": 10
+  },
+  {
+   "rank": 12,
+   "key": "nottingham-forest",
+   "name": "Nottingham Forest",
+   "short": "N Forest",
+   "played": 5,
+   "won": 1,
+   "drawn": 2,
+   "lost": 2,
+   "gf": 4,
+   "ga": 5,
+   "gd": -1,
+   "points": 5,
+   "form": [
+    "-",
+    "-",
+    "L",
+    "D",
+    "D",
+    "W"
+   ],
+   "zone": "",
+   "rankPrev": 11
   },
   {
    "rank": 13,
@@ -15354,6 +15354,30 @@ window.HUB = {
   },
   {
    "rank": 18,
+   "key": "coventry-city",
+   "name": "Coventry City",
+   "short": "Coventry",
+   "played": 5,
+   "won": 1,
+   "drawn": 0,
+   "lost": 4,
+   "gf": 1,
+   "ga": 10,
+   "gd": -9,
+   "points": 3,
+   "form": [
+    "-",
+    "-",
+    "L",
+    "L",
+    "L",
+    "L"
+   ],
+   "zone": "Relegation",
+   "rankPrev": 20
+  },
+  {
+   "rank": 19,
    "key": "tottenham-hotspur",
    "name": "Tottenham Hotspur",
    "short": "Spurs",
@@ -15377,7 +15401,7 @@ window.HUB = {
    "rankPrev": 17
   },
   {
-   "rank": 19,
+   "rank": 20,
    "key": "fulham",
    "name": "Fulham",
    "short": "Fulham",
@@ -15399,30 +15423,6 @@ window.HUB = {
    ],
    "zone": "Relegation",
    "rankPrev": 18
-  },
-  {
-   "rank": 20,
-   "key": "coventry-city",
-   "name": "Coventry City",
-   "short": "Coventry",
-   "played": 5,
-   "won": 0,
-   "drawn": 1,
-   "lost": 4,
-   "gf": 0,
-   "ga": 10,
-   "gd": -10,
-   "points": 1,
-   "form": [
-    "-",
-    "-",
-    "L",
-    "L",
-    "L",
-    "L"
-   ],
-   "zone": "Relegation",
-   "rankPrev": 20
   }
  ],
  "scorers": [
