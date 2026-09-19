@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-19T22:38:52+09:00",
+  "updatedAt": "2026-09-19T22:50:38+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -3935,19 +3935,29 @@ window.HUB = {
     "name": "Aston Villa",
     "short": "A Villa"
    },
-   "status": "live",
-   "statusText": "90'+1",
+   "status": "post",
+   "statusText": "FT",
    "score": {
-    "home": 1,
+    "home": 2,
     "away": 3
    },
-   "winner": null,
+   "winner": "away",
    "scorers": {
     "home": [
      {
       "name": "C. Gallagher",
       "times": [
        "86'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "J. van Hecke",
+      "times": [
+       "90'+8"
       ],
       "types": [
        "goal"
