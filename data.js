@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-19T21:33:19+09:00",
+  "updatedAt": "2026-09-19T21:53:40+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -3936,15 +3936,26 @@ window.HUB = {
     "short": "A Villa"
    },
    "status": "live",
-   "statusText": "43'",
+   "statusText": "60'",
    "score": {
     "home": 0,
-    "away": 0
+    "away": 1
    },
    "winner": null,
    "scorers": {
     "home": [],
-    "away": []
+    "away": [
+     {
+      "name": "J. Manzambi",
+      "times": [
+       "45'+4"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ]
    },
    "mu": false,
    "fav": [
