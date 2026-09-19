@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-20T02:51:11+09:00",
+  "updatedAt": "2026-09-20T03:12:25+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -4211,15 +4211,26 @@ window.HUB = {
     "short": "Coventry"
    },
    "status": "live",
-   "statusText": "10'",
+   "statusText": "85'",
    "score": {
     "home": 0,
-    "away": 0
+    "away": 1
    },
    "winner": null,
    "scorers": {
     "home": [],
-    "away": []
+    "away": [
+     {
+      "name": "J. Dasilva",
+      "times": [
+       "55'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ]
    },
    "mu": false,
    "fav": [],
