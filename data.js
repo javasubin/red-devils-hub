@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-20T02:09:49+09:00",
+  "updatedAt": "2026-09-20T02:36:45+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -4211,7 +4211,7 @@ window.HUB = {
     "short": "Coventry"
    },
    "status": "live",
-   "statusText": "39'",
+   "statusText": "HT",
    "score": {
     "home": 0,
     "away": 0
