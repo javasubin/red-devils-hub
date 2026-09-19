@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-19T23:50:57+09:00",
+  "updatedAt": "2026-09-20T00:10:31+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -4024,7 +4024,7 @@ window.HUB = {
     "short": "Arsenal"
    },
    "status": "live",
-   "statusText": "HT",
+   "statusText": "52'",
    "score": {
     "home": 2,
     "away": 0
@@ -4079,7 +4079,7 @@ window.HUB = {
     "short": "Ipswich"
    },
    "status": "live",
-   "statusText": "HT",
+   "statusText": "52'",
    "score": {
     "home": 1,
     "away": 0
@@ -4124,7 +4124,7 @@ window.HUB = {
     "short": "Hull City"
    },
    "status": "live",
-   "statusText": "45'+6",
+   "statusText": "49'",
    "score": {
     "home": 2,
     "away": 0
