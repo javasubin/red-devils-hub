@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-19T20:38:11+09:00",
+  "updatedAt": "2026-09-19T20:51:10+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -3936,7 +3936,7 @@ window.HUB = {
     "short": "A Villa"
    },
    "status": "live",
-   "statusText": "5'",
+   "statusText": "20'",
    "score": {
     "home": 0,
     "away": 0
