@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-20T00:25:13+09:00",
+  "updatedAt": "2026-09-20T00:38:31+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -49,15 +49,15 @@ window.HUB = {
    "short": "Leeds",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/leeds-united.6eb48daff9.svg"
   },
-  "newcastle-united": {
-   "name": "Newcastle United",
-   "short": "Newcastle",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/newcastle-united.45e2739dd9.svg"
-  },
   "hull-city": {
    "name": "Hull City",
    "short": "Hull City",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/hull-city.7187a4b4b5.svg"
+  },
+  "newcastle-united": {
+   "name": "Newcastle United",
+   "short": "Newcastle",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/newcastle-united.45e2739dd9.svg"
   },
   "chelsea": {
    "name": "Chelsea",
@@ -4024,9 +4024,9 @@ window.HUB = {
     "short": "Arsenal"
    },
    "status": "live",
-   "statusText": "67'",
+   "statusText": "37'",
    "score": {
-    "home": 3,
+    "home": 1,
     "away": 0
    },
    "winner": null,
@@ -4036,26 +4036,6 @@ window.HUB = {
       "name": "P. Groß",
       "times": [
        "31'"
-      ],
-      "types": [
-       "goal"
-      ],
-      "type": "goal"
-     },
-     {
-      "name": "C. Kostoulas",
-      "times": [
-       "45'"
-      ],
-      "types": [
-       "goal"
-      ],
-      "type": "goal"
-     },
-     {
-      "name": "Chema Andrés",
-      "times": [
-       "57'"
       ],
       "types": [
        "goal"
@@ -4089,7 +4069,7 @@ window.HUB = {
     "short": "Ipswich"
    },
    "status": "live",
-   "statusText": "67'",
+   "statusText": "38'",
    "score": {
     "home": 1,
     "away": 0
@@ -4108,18 +4088,7 @@ window.HUB = {
       "type": "goal"
      }
     ],
-    "away": [
-     {
-      "name": "A. Fatawu",
-      "times": [
-       "67'"
-      ],
-      "types": [
-       "goal"
-      ],
-      "type": "goal"
-     }
-    ]
+    "away": []
    },
    "mu": false,
    "fav": [],
@@ -4145,7 +4114,7 @@ window.HUB = {
     "short": "Hull City"
    },
    "status": "live",
-   "statusText": "64'",
+   "statusText": "37'",
    "score": {
     "home": 2,
     "away": 0
@@ -15076,30 +15045,6 @@ window.HUB = {
   },
   {
    "rank": 7,
-   "key": "newcastle-united",
-   "name": "Newcastle United",
-   "short": "Newcastle",
-   "played": 5,
-   "won": 2,
-   "drawn": 2,
-   "lost": 1,
-   "gf": 9,
-   "ga": 8,
-   "gd": 1,
-   "points": 8,
-   "form": [
-    "-",
-    "-",
-    "D",
-    "W",
-    "D",
-    "L"
-   ],
-   "zone": "",
-   "rankPrev": 12
-  },
-  {
-   "rank": 8,
    "key": "hull-city",
    "name": "Hull City",
    "short": "Hull City",
@@ -15107,9 +15052,9 @@ window.HUB = {
    "won": 2,
    "drawn": 2,
    "lost": 1,
-   "gf": 5,
+   "gf": 6,
    "ga": 4,
-   "gd": 1,
+   "gd": 2,
    "points": 8,
    "form": [
     "-",
@@ -15121,6 +15066,30 @@ window.HUB = {
    ],
    "zone": "",
    "rankPrev": 5
+  },
+  {
+   "rank": 8,
+   "key": "newcastle-united",
+   "name": "Newcastle United",
+   "short": "Newcastle",
+   "played": 5,
+   "won": 2,
+   "drawn": 2,
+   "lost": 1,
+   "gf": 9,
+   "ga": 9,
+   "gd": 0,
+   "points": 8,
+   "form": [
+    "-",
+    "-",
+    "D",
+    "W",
+    "D",
+    "L"
+   ],
+   "zone": "",
+   "rankPrev": 12
   },
   {
    "rank": 9,
