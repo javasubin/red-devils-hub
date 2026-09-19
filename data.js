@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-19T23:25:19+09:00",
+  "updatedAt": "2026-09-19T23:38:42+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -29,6 +29,11 @@ window.HUB = {
    "short": "Man City",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/manchester-city.30c4b22e90.svg"
   },
+  "brighton-and-hove-albion": {
+   "name": "Brighton & Hove Albion",
+   "short": "Brighton",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/brighton-and-hove-albion.4522a78440.svg"
+  },
   "brentford": {
    "name": "Brentford",
    "short": "Brentford",
@@ -38,11 +43,6 @@ window.HUB = {
    "name": "Everton",
    "short": "Everton",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/everton.38c006ac78.svg"
-  },
-  "brighton-and-hove-albion": {
-   "name": "Brighton & Hove Albion",
-   "short": "Brighton",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/brighton-and-hove-albion.4522a78440.svg"
   },
   "leeds-united": {
    "name": "Leeds United",
@@ -4023,12 +4023,9 @@ window.HUB = {
     "name": "Arsenal",
     "short": "Arsenal"
    },
-   "status": "live",
-   "statusText": "25'",
-   "score": {
-    "home": 0,
-    "away": 0
-   },
+   "status": "pre",
+   "statusText": "Scheduled",
+   "score": null,
    "winner": null,
    "scorers": {
     "home": [],
@@ -4057,26 +4054,12 @@ window.HUB = {
     "name": "Ipswich Town",
     "short": "Ipswich"
    },
-   "status": "live",
-   "statusText": "25'",
-   "score": {
-    "home": 1,
-    "away": 0
-   },
+   "status": "pre",
+   "statusText": "Scheduled",
+   "score": null,
    "winner": null,
    "scorers": {
-    "home": [
-     {
-      "name": "T. Barry",
-      "times": [
-       "11'"
-      ],
-      "types": [
-       "goal"
-      ],
-      "type": "goal"
-     }
-    ],
+    "home": [],
     "away": []
    },
    "mu": false,
@@ -4102,36 +4085,12 @@ window.HUB = {
     "name": "Hull City",
     "short": "Hull City"
    },
-   "status": "live",
-   "statusText": "25'",
-   "score": {
-    "home": 2,
-    "away": 0
-   },
+   "status": "pre",
+   "statusText": "Scheduled",
+   "score": null,
    "winner": null,
    "scorers": {
-    "home": [
-     {
-      "name": "J. Willock",
-      "times": [
-       "3'"
-      ],
-      "types": [
-       "goal"
-      ],
-      "type": "goal"
-     },
-     {
-      "name": "L. Hall",
-      "times": [
-       "7'"
-      ],
-      "types": [
-       "goal"
-      ],
-      "type": "goal"
-     }
-    ],
+    "home": [],
     "away": []
    },
    "mu": false,
@@ -14895,12 +14854,12 @@ window.HUB = {
    "short": "Arsenal",
    "played": 5,
    "won": 4,
-   "drawn": 1,
-   "lost": 0,
+   "drawn": 0,
+   "lost": 1,
    "gf": 8,
-   "ga": 1,
-   "gd": 7,
-   "points": 13,
+   "ga": 2,
+   "gd": 6,
+   "points": 12,
    "form": [
     "-",
     "-",
@@ -14938,6 +14897,30 @@ window.HUB = {
   },
   {
    "rank": 3,
+   "key": "brighton-and-hove-albion",
+   "name": "Brighton & Hove Albion",
+   "short": "Brighton",
+   "played": 5,
+   "won": 3,
+   "drawn": 1,
+   "lost": 1,
+   "gf": 14,
+   "ga": 5,
+   "gd": 9,
+   "points": 10,
+   "form": [
+    "-",
+    "-",
+    "W",
+    "L",
+    "D",
+    "W"
+   ],
+   "zone": "UEFA Champions League",
+   "rankPrev": 6
+  },
+  {
+   "rank": 4,
    "key": "brentford",
    "name": "Brentford",
    "short": "Brentford",
@@ -14961,7 +14944,7 @@ window.HUB = {
    "rankPrev": 3
   },
   {
-   "rank": 4,
+   "rank": 5,
    "key": "everton",
    "name": "Everton",
    "short": "Everton",
@@ -14981,32 +14964,8 @@ window.HUB = {
     "D",
     "D"
    ],
-   "zone": "UEFA Champions League",
-   "rankPrev": 9
-  },
-  {
-   "rank": 5,
-   "key": "brighton-and-hove-albion",
-   "name": "Brighton & Hove Albion",
-   "short": "Brighton",
-   "played": 5,
-   "won": 2,
-   "drawn": 2,
-   "lost": 1,
-   "gf": 13,
-   "ga": 5,
-   "gd": 8,
-   "points": 8,
-   "form": [
-    "-",
-    "-",
-    "W",
-    "L",
-    "D",
-    "W"
-   ],
    "zone": "UEFA Europa League",
-   "rankPrev": 6
+   "rankPrev": 9
   },
   {
    "rank": 6,
