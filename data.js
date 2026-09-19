@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-20T00:50:43+09:00",
+  "updatedAt": "2026-09-20T01:11:08+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -14963,7 +14963,7 @@ window.HUB = {
     "W"
    ],
    "zone": "UEFA Champions League",
-   "rankPrev": 2
+   "rankPrev": 1
   },
   {
    "rank": 2,
@@ -14980,14 +14980,14 @@ window.HUB = {
    "points": 12,
    "form": [
     "-",
-    "-",
     "W",
     "W",
     "W",
-    "W"
+    "W",
+    "L"
    ],
    "zone": "UEFA Champions League",
-   "rankPrev": 1
+   "rankPrev": 2
   },
   {
    "rank": 3,
@@ -15004,14 +15004,14 @@ window.HUB = {
    "points": 10,
    "form": [
     "-",
-    "-",
     "W",
     "L",
     "D",
+    "W",
     "W"
    ],
    "zone": "UEFA Champions League",
-   "rankPrev": 6
+   "rankPrev": 10
   },
   {
    "rank": 4,
@@ -15035,7 +15035,7 @@ window.HUB = {
     "W"
    ],
    "zone": "UEFA Champions League",
-   "rankPrev": 3
+   "rankPrev": 5
   },
   {
    "rank": 5,
@@ -15052,14 +15052,14 @@ window.HUB = {
    "points": 9,
    "form": [
     "-",
-    "-",
     "W",
     "D",
     "D",
-    "D"
+    "D",
+    "W"
    ],
    "zone": "UEFA Europa League",
-   "rankPrev": 9
+   "rankPrev": 8
   },
   {
    "rank": 6,
@@ -15083,7 +15083,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 4
+   "rankPrev": 9
   },
   {
    "rank": 7,
@@ -15100,14 +15100,14 @@ window.HUB = {
    "points": 8,
    "form": [
     "-",
-    "-",
     "W",
     "W",
     "D",
-    "D"
+    "D",
+    "L"
    ],
    "zone": "",
-   "rankPrev": 5
+   "rankPrev": 3
   },
   {
    "rank": 8,
@@ -15124,14 +15124,14 @@ window.HUB = {
    "points": 8,
    "form": [
     "-",
-    "-",
     "D",
     "W",
     "D",
-    "L"
+    "L",
+    "W"
    ],
    "zone": "",
-   "rankPrev": 12
+   "rankPrev": 7
   },
   {
    "rank": 9,
@@ -15155,7 +15155,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 7
+   "rankPrev": 4
   },
   {
    "rank": 10,
@@ -15179,7 +15179,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 8
+   "rankPrev": 6
   },
   {
    "rank": 11,
@@ -15196,14 +15196,14 @@ window.HUB = {
    "points": 6,
    "form": [
     "-",
-    "-",
     "W",
     "L",
     "L",
-    "W"
+    "W",
+    "L"
    ],
    "zone": "",
-   "rankPrev": 10
+   "rankPrev": 14
   },
   {
    "rank": 12,
@@ -15227,7 +15227,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 11
+   "rankPrev": 16
   },
   {
    "rank": 13,
@@ -15251,7 +15251,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 13
+   "rankPrev": 11
   },
   {
    "rank": 14,
@@ -15275,7 +15275,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 14
+   "rankPrev": 12
   },
   {
    "rank": 15,
@@ -15299,7 +15299,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 19
+   "rankPrev": 17
   },
   {
    "rank": 16,
@@ -15347,7 +15347,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 16
+   "rankPrev": 13
   },
   {
    "rank": 18,
@@ -15371,7 +15371,7 @@ window.HUB = {
     "L"
    ],
    "zone": "Relegation",
-   "rankPrev": 17
+   "rankPrev": 18
   },
   {
    "rank": 19,
@@ -15395,7 +15395,7 @@ window.HUB = {
     "D"
    ],
    "zone": "Relegation",
-   "rankPrev": 18
+   "rankPrev": 19
   },
   {
    "rank": 20,
