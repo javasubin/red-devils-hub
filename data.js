@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-19T21:13:45+09:00",
+  "updatedAt": "2026-09-19T21:33:19+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -89,6 +89,11 @@ window.HUB = {
    "short": "Sunderland",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/sunderland.6fb24a6b29.svg"
   },
+  "aston-villa": {
+   "name": "Aston Villa",
+   "short": "A Villa",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/aston-villa.7462c0d498.svg"
+  },
   "afc-bournemouth": {
    "name": "Bournemouth",
    "short": "Bournemouth",
@@ -103,11 +108,6 @@ window.HUB = {
    "name": "Tottenham Hotspur",
    "short": "Spurs",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/tottenham-hotspur.f1c704ee3b.svg"
-  },
-  "aston-villa": {
-   "name": "Aston Villa",
-   "short": "A Villa",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/aston-villa.7462c0d498.svg"
   },
   "fulham": {
    "name": "Fulham",
@@ -15133,6 +15133,30 @@ window.HUB = {
   },
   {
    "rank": 15,
+   "key": "aston-villa",
+   "name": "Aston Villa",
+   "short": "A Villa",
+   "played": 5,
+   "won": 1,
+   "drawn": 1,
+   "lost": 3,
+   "gf": 2,
+   "ga": 7,
+   "gd": -5,
+   "points": 4,
+   "form": [
+    "-",
+    "-",
+    "L",
+    "L",
+    "D",
+    "L"
+   ],
+   "zone": "",
+   "rankPrev": 19
+  },
+  {
+   "rank": 16,
    "key": "afc-bournemouth",
    "name": "Bournemouth",
    "short": "Bournemouth",
@@ -15156,7 +15180,7 @@ window.HUB = {
    "rankPrev": 15
   },
   {
-   "rank": 16,
+   "rank": 17,
    "key": "crystal-palace",
    "name": "Crystal Palace",
    "short": "C Palace",
@@ -15180,40 +15204,16 @@ window.HUB = {
    "rankPrev": 16
   },
   {
-   "rank": 17,
+   "rank": 18,
    "key": "tottenham-hotspur",
    "name": "Tottenham Hotspur",
    "short": "Spurs",
    "played": 5,
    "won": 0,
-   "drawn": 3,
-   "lost": 2,
-   "gf": 0,
-   "ga": 5,
-   "gd": -5,
-   "points": 3,
-   "form": [
-    "-",
-    "-",
-    "L",
-    "L",
-    "D",
-    "D"
-   ],
-   "zone": "",
-   "rankPrev": 17
-  },
-  {
-   "rank": 18,
-   "key": "aston-villa",
-   "name": "Aston Villa",
-   "short": "A Villa",
-   "played": 5,
-   "won": 0,
    "drawn": 2,
    "lost": 3,
-   "gf": 1,
-   "ga": 7,
+   "gf": 0,
+   "ga": 6,
    "gd": -6,
    "points": 2,
    "form": [
@@ -15222,10 +15222,10 @@ window.HUB = {
     "L",
     "L",
     "D",
-    "L"
+    "D"
    ],
    "zone": "Relegation",
-   "rankPrev": 19
+   "rankPrev": 17
   },
   {
    "rank": 19,
