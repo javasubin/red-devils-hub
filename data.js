@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-20T00:10:31+09:00",
+  "updatedAt": "2026-09-20T00:25:13+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -4024,9 +4024,9 @@ window.HUB = {
     "short": "Arsenal"
    },
    "status": "live",
-   "statusText": "52'",
+   "statusText": "67'",
    "score": {
-    "home": 2,
+    "home": 3,
     "away": 0
    },
    "winner": null,
@@ -4046,6 +4046,16 @@ window.HUB = {
       "name": "C. Kostoulas",
       "times": [
        "45'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "Chema Andrés",
+      "times": [
+       "57'"
       ],
       "types": [
        "goal"
@@ -4079,7 +4089,7 @@ window.HUB = {
     "short": "Ipswich"
    },
    "status": "live",
-   "statusText": "52'",
+   "statusText": "67'",
    "score": {
     "home": 1,
     "away": 0
@@ -4098,7 +4108,18 @@ window.HUB = {
       "type": "goal"
      }
     ],
-    "away": []
+    "away": [
+     {
+      "name": "A. Fatawu",
+      "times": [
+       "67'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ]
    },
    "mu": false,
    "fav": [],
@@ -4124,7 +4145,7 @@ window.HUB = {
     "short": "Hull City"
    },
    "status": "live",
-   "statusText": "49'",
+   "statusText": "64'",
    "score": {
     "home": 2,
     "away": 0
@@ -14943,8 +14964,8 @@ window.HUB = {
    "drawn": 0,
    "lost": 1,
    "gf": 8,
-   "ga": 3,
-   "gd": 5,
+   "ga": 4,
+   "gd": 4,
    "points": 12,
    "form": [
     "-",
@@ -14966,9 +14987,9 @@ window.HUB = {
    "won": 3,
    "drawn": 1,
    "lost": 1,
-   "gf": 15,
+   "gf": 16,
    "ga": 5,
-   "gd": 10,
+   "gd": 11,
    "points": 10,
    "form": [
     "-",
