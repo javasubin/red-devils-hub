@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-19T22:25:52+09:00",
+  "updatedAt": "2026-09-19T22:38:52+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -3936,19 +3936,50 @@ window.HUB = {
     "short": "A Villa"
    },
    "status": "live",
-   "statusText": "HT",
+   "statusText": "90'+1",
    "score": {
-    "home": 0,
-    "away": 1
+    "home": 1,
+    "away": 3
    },
    "winner": null,
    "scorers": {
-    "home": [],
+    "home": [
+     {
+      "name": "C. Gallagher",
+      "times": [
+       "86'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ],
     "away": [
      {
       "name": "J. Manzambi",
       "times": [
        "45'+4"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "N. Jackson",
+      "times": [
+       "67'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "E. Buendía",
+      "times": [
+       "79'"
       ],
       "types": [
        "goal"
@@ -14828,7 +14859,7 @@ window.HUB = {
     "W"
    ],
    "zone": "UEFA Champions League",
-   "rankPrev": 1
+   "rankPrev": 2
   },
   {
    "rank": 2,
@@ -14852,7 +14883,7 @@ window.HUB = {
     "W"
    ],
    "zone": "UEFA Champions League",
-   "rankPrev": 2
+   "rankPrev": 1
   },
   {
    "rank": 3,
@@ -14876,7 +14907,7 @@ window.HUB = {
     "W"
    ],
    "zone": "UEFA Champions League",
-   "rankPrev": 7
+   "rankPrev": 5
   },
   {
    "rank": 4,
@@ -14900,7 +14931,7 @@ window.HUB = {
     "W"
    ],
    "zone": "UEFA Champions League",
-   "rankPrev": 3
+   "rankPrev": 9
   },
   {
    "rank": 5,
@@ -14924,7 +14955,7 @@ window.HUB = {
     "D"
    ],
    "zone": "UEFA Europa League",
-   "rankPrev": 4
+   "rankPrev": 3
   },
   {
    "rank": 6,
@@ -14948,7 +14979,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 5
+   "rankPrev": 10
   },
   {
    "rank": 7,
@@ -14972,7 +15003,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 6
+   "rankPrev": 4
   },
   {
    "rank": 8,
@@ -14996,7 +15027,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 8
+   "rankPrev": 6
   },
   {
    "rank": 9,
@@ -15020,7 +15051,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 9
+   "rankPrev": 8
   },
   {
    "rank": 10,
@@ -15044,7 +15075,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 10
+   "rankPrev": 14
   },
   {
    "rank": 11,
@@ -15068,7 +15099,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 11
+   "rankPrev": 16
   },
   {
    "rank": 12,
@@ -15092,7 +15123,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 12
+   "rankPrev": 7
   },
   {
    "rank": 13,
@@ -15116,7 +15147,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 13
+   "rankPrev": 11
   },
   {
    "rank": 14,
@@ -15140,7 +15171,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 14
+   "rankPrev": 12
   },
   {
    "rank": 15,
@@ -15152,19 +15183,19 @@ window.HUB = {
    "drawn": 1,
    "lost": 3,
    "gf": 4,
-   "ga": 8,
-   "gd": -4,
+   "ga": 9,
+   "gd": -5,
    "points": 4,
    "form": [
-    "-",
     "-",
     "L",
     "L",
     "D",
-    "L"
+    "L",
+    "W"
    ],
    "zone": "",
-   "rankPrev": 19
+   "rankPrev": 17
   },
   {
    "rank": 16,
@@ -15212,7 +15243,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 16
+   "rankPrev": 13
   },
   {
    "rank": 18,
@@ -15223,20 +15254,20 @@ window.HUB = {
    "won": 0,
    "drawn": 2,
    "lost": 3,
-   "gf": 1,
+   "gf": 2,
    "ga": 8,
-   "gd": -7,
+   "gd": -6,
    "points": 2,
    "form": [
-    "-",
     "-",
     "L",
     "L",
     "D",
-    "D"
+    "D",
+    "L"
    ],
    "zone": "Relegation",
-   "rankPrev": 17
+   "rankPrev": 18
   },
   {
    "rank": 19,
@@ -15260,7 +15291,7 @@ window.HUB = {
     "D"
    ],
    "zone": "Relegation",
-   "rankPrev": 18
+   "rankPrev": 19
   },
   {
    "rank": 20,
