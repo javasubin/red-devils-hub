@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-20T01:26:36+09:00",
+  "updatedAt": "2026-09-20T01:40:04+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -69,15 +69,15 @@ window.HUB = {
    "short": "Liverpool",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/liverpool.34999937ef.svg"
   },
-  "ipswich-town": {
-   "name": "Ipswich Town",
-   "short": "Ipswich",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/ipswich-town.016f53d3e1.svg"
-  },
   "nottingham-forest": {
    "name": "Nottingham Forest",
    "short": "N Forest",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/nottingham-forest.f0fc0fc962.svg"
+  },
+  "ipswich-town": {
+   "name": "Ipswich Town",
+   "short": "Ipswich",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/ipswich-town.016f53d3e1.svg"
   },
   "manchester-united": {
    "name": "Manchester United",
@@ -4023,13 +4023,13 @@ window.HUB = {
     "name": "Arsenal",
     "short": "Arsenal"
    },
-   "status": "post",
-   "statusText": "FT",
+   "status": "live",
+   "statusText": "80'",
    "score": {
     "home": 3,
     "away": 0
    },
-   "winner": "home",
+   "winner": null,
    "scorers": {
     "home": [
      {
@@ -4088,13 +4088,13 @@ window.HUB = {
     "name": "Ipswich Town",
     "short": "Ipswich"
    },
-   "status": "post",
-   "statusText": "FT",
+   "status": "live",
+   "statusText": "81'",
    "score": {
     "home": 1,
     "away": 0
    },
-   "winner": "home",
+   "winner": null,
    "scorers": {
     "home": [
      {
@@ -4144,13 +4144,13 @@ window.HUB = {
     "name": "Hull City",
     "short": "Hull City"
    },
-   "status": "post",
-   "statusText": "FT",
+   "status": "live",
+   "statusText": "75'",
    "score": {
     "home": 2,
     "away": 1
    },
-   "winner": "home",
+   "winner": null,
    "scorers": {
     "home": [
      {
@@ -14963,7 +14963,7 @@ window.HUB = {
     "W"
    ],
    "zone": "UEFA Champions League",
-   "rankPrev": 1
+   "rankPrev": 2
   },
   {
    "rank": 2,
@@ -14987,7 +14987,7 @@ window.HUB = {
     "L"
    ],
    "zone": "UEFA Champions League",
-   "rankPrev": 2
+   "rankPrev": 1
   },
   {
    "rank": 3,
@@ -15011,7 +15011,7 @@ window.HUB = {
     "W"
    ],
    "zone": "UEFA Champions League",
-   "rankPrev": 10
+   "rankPrev": 6
   },
   {
    "rank": 4,
@@ -15035,7 +15035,7 @@ window.HUB = {
     "W"
    ],
    "zone": "UEFA Champions League",
-   "rankPrev": 5
+   "rankPrev": 3
   },
   {
    "rank": 5,
@@ -15059,7 +15059,7 @@ window.HUB = {
     "W"
    ],
    "zone": "UEFA Europa League",
-   "rankPrev": 8
+   "rankPrev": 9
   },
   {
    "rank": 6,
@@ -15083,7 +15083,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 9
+   "rankPrev": 4
   },
   {
    "rank": 7,
@@ -15107,7 +15107,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 3
+   "rankPrev": 5
   },
   {
    "rank": 8,
@@ -15131,7 +15131,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 7
+   "rankPrev": 12
   },
   {
    "rank": 9,
@@ -15155,7 +15155,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 4
+   "rankPrev": 7
   },
   {
    "rank": 10,
@@ -15179,10 +15179,34 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 6
+   "rankPrev": 8
   },
   {
    "rank": 11,
+   "key": "nottingham-forest",
+   "name": "Nottingham Forest",
+   "short": "N Forest",
+   "played": 5,
+   "won": 1,
+   "drawn": 3,
+   "lost": 1,
+   "gf": 4,
+   "ga": 4,
+   "gd": 0,
+   "points": 6,
+   "form": [
+    "-",
+    "-",
+    "L",
+    "D",
+    "D",
+    "W"
+   ],
+   "zone": "",
+   "rankPrev": 11
+  },
+  {
+   "rank": 12,
    "key": "ipswich-town",
    "name": "Ipswich Town",
    "short": "Ipswich",
@@ -15203,31 +15227,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 14
-  },
-  {
-   "rank": 12,
-   "key": "nottingham-forest",
-   "name": "Nottingham Forest",
-   "short": "N Forest",
-   "played": 4,
-   "won": 1,
-   "drawn": 2,
-   "lost": 1,
-   "gf": 4,
-   "ga": 4,
-   "gd": 0,
-   "points": 5,
-   "form": [
-    "-",
-    "-",
-    "L",
-    "D",
-    "D",
-    "W"
-   ],
-   "zone": "",
-   "rankPrev": 16
+   "rankPrev": 10
   },
   {
    "rank": 13,
@@ -15251,7 +15251,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 11
+   "rankPrev": 13
   },
   {
    "rank": 14,
@@ -15275,7 +15275,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 12
+   "rankPrev": 14
   },
   {
    "rank": 15,
@@ -15299,7 +15299,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 17
+   "rankPrev": 19
   },
   {
    "rank": 16,
@@ -15347,7 +15347,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 13
+   "rankPrev": 16
   },
   {
    "rank": 18,
@@ -15371,7 +15371,7 @@ window.HUB = {
     "L"
    ],
    "zone": "Relegation",
-   "rankPrev": 18
+   "rankPrev": 17
   },
   {
    "rank": 19,
@@ -15395,21 +15395,21 @@ window.HUB = {
     "D"
    ],
    "zone": "Relegation",
-   "rankPrev": 19
+   "rankPrev": 18
   },
   {
    "rank": 20,
    "key": "coventry-city",
    "name": "Coventry City",
    "short": "Coventry",
-   "played": 4,
+   "played": 5,
    "won": 0,
-   "drawn": 0,
+   "drawn": 1,
    "lost": 4,
    "gf": 0,
    "ga": 10,
    "gd": -10,
-   "points": 0,
+   "points": 1,
    "form": [
     "-",
     "-",
