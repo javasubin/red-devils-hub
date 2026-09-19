@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-19T23:38:42+09:00",
+  "updatedAt": "2026-09-19T23:50:57+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -19,15 +19,15 @@ window.HUB = {
   "currentMw": 5
  },
  "teams": {
-  "arsenal": {
-   "name": "Arsenal",
-   "short": "Arsenal",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/arsenal.5a62ec890e.svg"
-  },
   "manchester-city": {
    "name": "Manchester City",
    "short": "Man City",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/manchester-city.30c4b22e90.svg"
+  },
+  "arsenal": {
+   "name": "Arsenal",
+   "short": "Arsenal",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/arsenal.5a62ec890e.svg"
   },
   "brighton-and-hove-albion": {
    "name": "Brighton & Hove Albion",
@@ -4023,12 +4023,36 @@ window.HUB = {
     "name": "Arsenal",
     "short": "Arsenal"
    },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
+   "status": "live",
+   "statusText": "HT",
+   "score": {
+    "home": 2,
+    "away": 0
+   },
    "winner": null,
    "scorers": {
-    "home": [],
+    "home": [
+     {
+      "name": "P. Groß",
+      "times": [
+       "31'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "C. Kostoulas",
+      "times": [
+       "45'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ],
     "away": []
    },
    "mu": false,
@@ -4054,12 +4078,26 @@ window.HUB = {
     "name": "Ipswich Town",
     "short": "Ipswich"
    },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
+   "status": "live",
+   "statusText": "HT",
+   "score": {
+    "home": 1,
+    "away": 0
+   },
    "winner": null,
    "scorers": {
-    "home": [],
+    "home": [
+     {
+      "name": "T. Barry",
+      "times": [
+       "11'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ],
     "away": []
    },
    "mu": false,
@@ -4085,12 +4123,36 @@ window.HUB = {
     "name": "Hull City",
     "short": "Hull City"
    },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
+   "status": "live",
+   "statusText": "45'+6",
+   "score": {
+    "home": 2,
+    "away": 0
+   },
    "winner": null,
    "scorers": {
-    "home": [],
+    "home": [
+     {
+      "name": "J. Willock",
+      "times": [
+       "3'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "L. Hall",
+      "times": [
+       "7'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ],
     "away": []
    },
    "mu": false,
@@ -14849,30 +14911,6 @@ window.HUB = {
  "standings": [
   {
    "rank": 1,
-   "key": "arsenal",
-   "name": "Arsenal",
-   "short": "Arsenal",
-   "played": 5,
-   "won": 4,
-   "drawn": 0,
-   "lost": 1,
-   "gf": 8,
-   "ga": 2,
-   "gd": 6,
-   "points": 12,
-   "form": [
-    "-",
-    "-",
-    "W",
-    "W",
-    "W",
-    "W"
-   ],
-   "zone": "UEFA Champions League",
-   "rankPrev": 1
-  },
-  {
-   "rank": 2,
    "key": "manchester-city",
    "name": "Manchester City",
    "short": "Man City",
@@ -14896,6 +14934,30 @@ window.HUB = {
    "rankPrev": 2
   },
   {
+   "rank": 2,
+   "key": "arsenal",
+   "name": "Arsenal",
+   "short": "Arsenal",
+   "played": 5,
+   "won": 4,
+   "drawn": 0,
+   "lost": 1,
+   "gf": 8,
+   "ga": 3,
+   "gd": 5,
+   "points": 12,
+   "form": [
+    "-",
+    "-",
+    "W",
+    "W",
+    "W",
+    "W"
+   ],
+   "zone": "UEFA Champions League",
+   "rankPrev": 1
+  },
+  {
    "rank": 3,
    "key": "brighton-and-hove-albion",
    "name": "Brighton & Hove Albion",
@@ -14904,9 +14966,9 @@ window.HUB = {
    "won": 3,
    "drawn": 1,
    "lost": 1,
-   "gf": 14,
+   "gf": 15,
    "ga": 5,
-   "gd": 9,
+   "gd": 10,
    "points": 10,
    "form": [
     "-",
