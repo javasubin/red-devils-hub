@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-20T22:51:44+09:00",
+  "updatedAt": "2026-09-20T23:10:59+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -4256,7 +4256,7 @@ window.HUB = {
     "short": "Liverpool"
    },
    "status": "live",
-   "statusText": "HT",
+   "statusText": "54'",
    "score": {
     "home": 0,
     "away": 0
@@ -4290,15 +4290,26 @@ window.HUB = {
     "short": "C Palace"
    },
    "status": "live",
-   "statusText": "HT",
+   "statusText": "53'",
    "score": {
     "home": 0,
-    "away": 0
+    "away": 1
    },
    "winner": null,
    "scorers": {
     "home": [],
-    "away": []
+    "away": [
+     {
+      "name": "T. Mitchell",
+      "times": [
+       "52'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ]
    },
    "mu": false,
    "fav": [],
@@ -4324,7 +4335,7 @@ window.HUB = {
     "short": "Sunderland"
    },
    "status": "live",
-   "statusText": "45'+6",
+   "statusText": "48'",
    "score": {
     "home": 3,
     "away": 2
