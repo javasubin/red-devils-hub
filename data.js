@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-21T00:25:27+09:00",
+  "updatedAt": "2026-09-21T00:39:13+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -74,15 +74,15 @@ window.HUB = {
    "short": "Ipswich",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/ipswich-town.016f53d3e1.svg"
   },
-  "nottingham-forest": {
-   "name": "Nottingham Forest",
-   "short": "N Forest",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/nottingham-forest.f0fc0fc962.svg"
-  },
   "manchester-united": {
    "name": "Manchester United",
    "short": "Man Utd",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/manchester-united.80807495b5.svg"
+  },
+  "nottingham-forest": {
+   "name": "Nottingham Forest",
+   "short": "N Forest",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/nottingham-forest.f0fc0fc962.svg"
   },
   "sunderland": {
    "name": "Sunderland",
@@ -109,15 +109,15 @@ window.HUB = {
    "short": "Coventry",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/coventry-city.2b26ca0838.svg"
   },
-  "tottenham-hotspur": {
-   "name": "Tottenham Hotspur",
-   "short": "Spurs",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/tottenham-hotspur.f1c704ee3b.svg"
-  },
   "fulham": {
    "name": "Fulham",
    "short": "Fulham",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/fulham.d16ec60bd3.svg"
+  },
+  "tottenham-hotspur": {
+   "name": "Tottenham Hotspur",
+   "short": "Spurs",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/tottenham-hotspur.f1c704ee3b.svg"
   }
  },
  "fixtures": [
@@ -4426,9 +4426,12 @@ window.HUB = {
     "name": "Manchester United",
     "short": "Man Utd"
    },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
+   "status": "live",
+   "statusText": "9'",
+   "score": {
+    "home": 0,
+    "away": 0
+   },
    "winner": null,
    "scorers": {
     "home": [],
@@ -15103,7 +15106,7 @@ window.HUB = {
     "W"
    ],
    "zone": "UEFA Champions League",
-   "rankPrev": 10
+   "rankPrev": 3
   },
   {
    "rank": 4,
@@ -15127,7 +15130,7 @@ window.HUB = {
     "W"
    ],
    "zone": "UEFA Champions League",
-   "rankPrev": 5
+   "rankPrev": 4
   },
   {
    "rank": 5,
@@ -15151,7 +15154,7 @@ window.HUB = {
     "D"
    ],
    "zone": "UEFA Europa League",
-   "rankPrev": 9
+   "rankPrev": 6
   },
   {
    "rank": 6,
@@ -15175,7 +15178,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 6
+   "rankPrev": 10
   },
   {
    "rank": 7,
@@ -15199,7 +15202,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 8
+   "rankPrev": 5
   },
   {
    "rank": 8,
@@ -15223,7 +15226,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 3
+   "rankPrev": 7
   },
   {
    "rank": 9,
@@ -15247,7 +15250,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 7
+   "rankPrev": 8
   },
   {
    "rank": 10,
@@ -15271,7 +15274,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 4
+   "rankPrev": 9
   },
   {
    "rank": 11,
@@ -15295,10 +15298,34 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 14
+   "rankPrev": 11
   },
   {
    "rank": 12,
+   "key": "manchester-united",
+   "name": "Manchester United",
+   "short": "Man Utd",
+   "played": 5,
+   "won": 1,
+   "drawn": 2,
+   "lost": 2,
+   "gf": 7,
+   "ga": 7,
+   "gd": 0,
+   "points": 5,
+   "form": [
+    "-",
+    "-",
+    "L",
+    "W",
+    "D",
+    "L"
+   ],
+   "zone": "",
+   "rankPrev": 13
+  },
+  {
+   "rank": 13,
    "key": "nottingham-forest",
    "name": "Nottingham Forest",
    "short": "N Forest",
@@ -15319,31 +15346,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 16
-  },
-  {
-   "rank": 13,
-   "key": "manchester-united",
-   "name": "Manchester United",
-   "short": "Man Utd",
-   "played": 4,
-   "won": 1,
-   "drawn": 1,
-   "lost": 2,
-   "gf": 7,
-   "ga": 7,
-   "gd": 0,
-   "points": 4,
-   "form": [
-    "-",
-    "-",
-    "L",
-    "W",
-    "D",
-    "L"
-   ],
-   "zone": "",
-   "rankPrev": 11
+   "rankPrev": 12
   },
   {
    "rank": 14,
@@ -15367,7 +15370,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 12
+   "rankPrev": 14
   },
   {
    "rank": 15,
@@ -15391,7 +15394,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 13
+   "rankPrev": 17
   },
   {
    "rank": 16,
@@ -15415,7 +15418,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 17
+   "rankPrev": 15
   },
   {
    "rank": 17,
@@ -15439,7 +15442,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 15
+   "rankPrev": 16
   },
   {
    "rank": 18,
@@ -15463,10 +15466,34 @@ window.HUB = {
     "W"
    ],
    "zone": "Relegation",
-   "rankPrev": 20
+   "rankPrev": 18
   },
   {
    "rank": 19,
+   "key": "fulham",
+   "name": "Fulham",
+   "short": "Fulham",
+   "played": 5,
+   "won": 0,
+   "drawn": 2,
+   "lost": 3,
+   "gf": 4,
+   "ga": 7,
+   "gd": -3,
+   "points": 2,
+   "form": [
+    "-",
+    "-",
+    "L",
+    "L",
+    "L",
+    "D"
+   ],
+   "zone": "Relegation",
+   "rankPrev": 20
+  },
+  {
+   "rank": 20,
    "key": "tottenham-hotspur",
    "name": "Tottenham Hotspur",
    "short": "Spurs",
@@ -15485,30 +15512,6 @@ window.HUB = {
     "D",
     "D",
     "L"
-   ],
-   "zone": "Relegation",
-   "rankPrev": 18
-  },
-  {
-   "rank": 20,
-   "key": "fulham",
-   "name": "Fulham",
-   "short": "Fulham",
-   "played": 4,
-   "won": 0,
-   "drawn": 1,
-   "lost": 3,
-   "gf": 4,
-   "ga": 7,
-   "gd": -3,
-   "points": 1,
-   "form": [
-    "-",
-    "-",
-    "L",
-    "L",
-    "L",
-    "D"
    ],
    "zone": "Relegation",
    "rankPrev": 19
