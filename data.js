@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-20T22:09:57+09:00",
+  "updatedAt": "2026-09-20T22:25:39+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -4255,9 +4255,12 @@ window.HUB = {
     "name": "Liverpool",
     "short": "Liverpool"
    },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
+   "status": "live",
+   "statusText": "24'",
+   "score": {
+    "home": 0,
+    "away": 0
+   },
    "winner": null,
    "scorers": {
     "home": [],
@@ -4286,9 +4289,12 @@ window.HUB = {
     "name": "Crystal Palace",
     "short": "C Palace"
    },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
+   "status": "live",
+   "statusText": "25'",
+   "score": {
+    "home": 0,
+    "away": 0
+   },
    "winner": null,
    "scorers": {
     "home": [],
@@ -4317,13 +4323,38 @@ window.HUB = {
     "name": "Sunderland",
     "short": "Sunderland"
    },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
+   "status": "live",
+   "statusText": "24'",
+   "score": {
+    "home": 1,
+    "away": 1
+   },
    "winner": null,
    "scorers": {
-    "home": [],
-    "away": []
+    "home": [
+     {
+      "name": "E. Fernández",
+      "times": [
+       "9'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ],
+    "away": [
+     {
+      "name": "B. Brobbey",
+      "times": [
+       "12'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ]
    },
    "mu": false,
    "fav": [],
@@ -14964,8 +14995,8 @@ window.HUB = {
    "won": 4,
    "drawn": 1,
    "lost": 0,
-   "gf": 8,
-   "ga": 2,
+   "gf": 9,
+   "ga": 3,
    "gd": 6,
    "points": 13,
    "form": [
@@ -15252,8 +15283,8 @@ window.HUB = {
    "won": 1,
    "drawn": 2,
    "lost": 2,
-   "gf": 3,
-   "ga": 5,
+   "gf": 4,
+   "ga": 6,
    "gd": -2,
    "points": 5,
    "form": [
