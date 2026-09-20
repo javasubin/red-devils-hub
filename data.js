@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-20T23:25:42+09:00",
+  "updatedAt": "2026-09-20T23:51:12+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -4255,13 +4255,13 @@ window.HUB = {
     "name": "Liverpool",
     "short": "Liverpool"
    },
-   "status": "live",
-   "statusText": "70'",
+   "status": "post",
+   "statusText": "FT",
    "score": {
     "home": 0,
     "away": 1
    },
-   "winner": null,
+   "winner": "away",
    "scorers": {
     "home": [],
     "away": [
@@ -4301,7 +4301,7 @@ window.HUB = {
     "short": "C Palace"
    },
    "status": "live",
-   "statusText": "68'",
+   "statusText": "90'+3",
    "score": {
     "home": 0,
     "away": 0
@@ -4335,9 +4335,9 @@ window.HUB = {
     "short": "Sunderland"
    },
    "status": "live",
-   "statusText": "63'",
+   "statusText": "88'",
    "score": {
-    "home": 4,
+    "home": 5,
     "away": 3
    },
    "winner": null,
@@ -4371,6 +4371,16 @@ window.HUB = {
       ],
       "types": [
        "goal",
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "E. Haaland",
+      "times": [
+       "81'"
+      ],
+      "types": [
        "goal"
       ],
       "type": "goal"
@@ -15032,9 +15042,9 @@ window.HUB = {
    "won": 5,
    "drawn": 0,
    "lost": 0,
-   "gf": 12,
+   "gf": 13,
    "ga": 5,
-   "gd": 7,
+   "gd": 8,
    "points": 15,
    "form": [
     "-",
@@ -15345,8 +15355,8 @@ window.HUB = {
    "drawn": 1,
    "lost": 3,
    "gf": 6,
-   "ga": 9,
-   "gd": -3,
+   "ga": 10,
+   "gd": -4,
    "points": 4,
    "form": [
     "-",
