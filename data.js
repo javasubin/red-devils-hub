@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-21T01:41:35+09:00",
+  "updatedAt": "2026-09-21T01:52:54+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -74,15 +74,20 @@ window.HUB = {
    "short": "Ipswich",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/ipswich-town.016f53d3e1.svg"
   },
+  "nottingham-forest": {
+   "name": "Nottingham Forest",
+   "short": "N Forest",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/nottingham-forest.f0fc0fc962.svg"
+  },
   "manchester-united": {
    "name": "Manchester United",
    "short": "Man Utd",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/manchester-united.80807495b5.svg"
   },
-  "nottingham-forest": {
-   "name": "Nottingham Forest",
-   "short": "N Forest",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/nottingham-forest.f0fc0fc962.svg"
+  "fulham": {
+   "name": "Fulham",
+   "short": "Fulham",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/fulham.d16ec60bd3.svg"
   },
   "sunderland": {
    "name": "Sunderland",
@@ -108,11 +113,6 @@ window.HUB = {
    "name": "Coventry City",
    "short": "Coventry",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/coventry-city.2b26ca0838.svg"
-  },
-  "fulham": {
-   "name": "Fulham",
-   "short": "Fulham",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/fulham.d16ec60bd3.svg"
   },
   "tottenham-hotspur": {
    "name": "Tottenham Hotspur",
@@ -4427,14 +4427,25 @@ window.HUB = {
     "short": "Man Utd"
    },
    "status": "live",
-   "statusText": "56'",
+   "statusText": "67'",
    "score": {
-    "home": 0,
+    "home": 1,
     "away": 0
    },
    "winner": null,
    "scorers": {
-    "home": [],
+    "home": [
+     {
+      "name": "Lisandro Martínez",
+      "times": [
+       "63'"
+      ],
+      "types": [
+       "og"
+      ],
+      "type": "og"
+     }
+    ],
     "away": []
    },
    "mu": true,
@@ -15302,30 +15313,6 @@ window.HUB = {
   },
   {
    "rank": 12,
-   "key": "manchester-united",
-   "name": "Manchester United",
-   "short": "Man Utd",
-   "played": 5,
-   "won": 1,
-   "drawn": 2,
-   "lost": 2,
-   "gf": 7,
-   "ga": 7,
-   "gd": 0,
-   "points": 5,
-   "form": [
-    "-",
-    "-",
-    "L",
-    "W",
-    "D",
-    "L"
-   ],
-   "zone": "",
-   "rankPrev": 13
-  },
-  {
-   "rank": 13,
    "key": "nottingham-forest",
    "name": "Nottingham Forest",
    "short": "N Forest",
@@ -15349,7 +15336,55 @@ window.HUB = {
    "rankPrev": 12
   },
   {
+   "rank": 13,
+   "key": "manchester-united",
+   "name": "Manchester United",
+   "short": "Man Utd",
+   "played": 5,
+   "won": 1,
+   "drawn": 1,
+   "lost": 3,
+   "gf": 7,
+   "ga": 8,
+   "gd": -1,
+   "points": 4,
+   "form": [
+    "-",
+    "-",
+    "L",
+    "W",
+    "D",
+    "L"
+   ],
+   "zone": "",
+   "rankPrev": 13
+  },
+  {
    "rank": 14,
+   "key": "fulham",
+   "name": "Fulham",
+   "short": "Fulham",
+   "played": 5,
+   "won": 1,
+   "drawn": 1,
+   "lost": 3,
+   "gf": 5,
+   "ga": 7,
+   "gd": -2,
+   "points": 4,
+   "form": [
+    "-",
+    "-",
+    "L",
+    "L",
+    "L",
+    "D"
+   ],
+   "zone": "",
+   "rankPrev": 20
+  },
+  {
+   "rank": 15,
    "key": "sunderland",
    "name": "Sunderland",
    "short": "Sunderland",
@@ -15373,7 +15408,7 @@ window.HUB = {
    "rankPrev": 14
   },
   {
-   "rank": 15,
+   "rank": 16,
    "key": "crystal-palace",
    "name": "Crystal Palace",
    "short": "C Palace",
@@ -15397,7 +15432,7 @@ window.HUB = {
    "rankPrev": 17
   },
   {
-   "rank": 16,
+   "rank": 17,
    "key": "aston-villa",
    "name": "Aston Villa",
    "short": "A Villa",
@@ -15421,7 +15456,7 @@ window.HUB = {
    "rankPrev": 15
   },
   {
-   "rank": 17,
+   "rank": 18,
    "key": "afc-bournemouth",
    "name": "Bournemouth",
    "short": "Bournemouth",
@@ -15441,11 +15476,11 @@ window.HUB = {
     "D",
     "L"
    ],
-   "zone": "",
+   "zone": "Relegation",
    "rankPrev": 16
   },
   {
-   "rank": 18,
+   "rank": 19,
    "key": "coventry-city",
    "name": "Coventry City",
    "short": "Coventry",
@@ -15467,30 +15502,6 @@ window.HUB = {
    ],
    "zone": "Relegation",
    "rankPrev": 18
-  },
-  {
-   "rank": 19,
-   "key": "fulham",
-   "name": "Fulham",
-   "short": "Fulham",
-   "played": 5,
-   "won": 0,
-   "drawn": 2,
-   "lost": 3,
-   "gf": 4,
-   "ga": 7,
-   "gd": -3,
-   "points": 2,
-   "form": [
-    "-",
-    "-",
-    "L",
-    "L",
-    "L",
-    "D"
-   ],
-   "zone": "Relegation",
-   "rankPrev": 20
   },
   {
    "rank": 20,
