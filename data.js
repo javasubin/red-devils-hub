@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-20T22:25:39+09:00",
+  "updatedAt": "2026-09-20T22:39:06+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -4256,7 +4256,7 @@ window.HUB = {
     "short": "Liverpool"
    },
    "status": "live",
-   "statusText": "24'",
+   "statusText": "38'",
    "score": {
     "home": 0,
     "away": 0
@@ -4290,7 +4290,7 @@ window.HUB = {
     "short": "C Palace"
    },
    "status": "live",
-   "statusText": "25'",
+   "statusText": "39'",
    "score": {
     "home": 0,
     "away": 0
@@ -4324,10 +4324,10 @@ window.HUB = {
     "short": "Sunderland"
    },
    "status": "live",
-   "statusText": "24'",
+   "statusText": "37'",
    "score": {
-    "home": 1,
-    "away": 1
+    "home": 2,
+    "away": 2
    },
    "winner": null,
    "scorers": {
@@ -4341,15 +4341,27 @@ window.HUB = {
        "goal"
       ],
       "type": "goal"
+     },
+     {
+      "name": "R. Cherki",
+      "times": [
+       "29'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
      }
     ],
     "away": [
      {
       "name": "B. Brobbey",
       "times": [
-       "12'"
+       "12'",
+       "33'"
       ],
       "types": [
+       "goal",
        "goal"
       ],
       "type": "goal"
@@ -14995,8 +15007,8 @@ window.HUB = {
    "won": 4,
    "drawn": 1,
    "lost": 0,
-   "gf": 9,
-   "ga": 3,
+   "gf": 10,
+   "ga": 4,
    "gd": 6,
    "points": 13,
    "form": [
@@ -15283,8 +15295,8 @@ window.HUB = {
    "won": 1,
    "drawn": 2,
    "lost": 2,
-   "gf": 4,
-   "ga": 6,
+   "gf": 5,
+   "ga": 7,
    "gd": -2,
    "points": 5,
    "form": [
