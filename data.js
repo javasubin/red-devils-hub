@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-09-20T22:39:06+09:00",
+  "updatedAt": "2026-09-20T22:51:44+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -79,11 +79,6 @@ window.HUB = {
    "short": "N Forest",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/nottingham-forest.f0fc0fc962.svg"
   },
-  "sunderland": {
-   "name": "Sunderland",
-   "short": "Sunderland",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/sunderland.6fb24a6b29.svg"
-  },
   "manchester-united": {
    "name": "Manchester United",
    "short": "Man Utd",
@@ -93,6 +88,11 @@ window.HUB = {
    "name": "Bournemouth",
    "short": "Bournemouth",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/afc-bournemouth.3e0ae7da8e.svg"
+  },
+  "sunderland": {
+   "name": "Sunderland",
+   "short": "Sunderland",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/sunderland.6fb24a6b29.svg"
   },
   "crystal-palace": {
    "name": "Crystal Palace",
@@ -4256,7 +4256,7 @@ window.HUB = {
     "short": "Liverpool"
    },
    "status": "live",
-   "statusText": "38'",
+   "statusText": "HT",
    "score": {
     "home": 0,
     "away": 0
@@ -4290,7 +4290,7 @@ window.HUB = {
     "short": "C Palace"
    },
    "status": "live",
-   "statusText": "39'",
+   "statusText": "HT",
    "score": {
     "home": 0,
     "away": 0
@@ -4324,9 +4324,9 @@ window.HUB = {
     "short": "Sunderland"
    },
    "status": "live",
-   "statusText": "37'",
+   "statusText": "45'+6",
    "score": {
-    "home": 2,
+    "home": 3,
     "away": 2
    },
    "winner": null,
@@ -4346,6 +4346,16 @@ window.HUB = {
       "name": "R. Cherki",
       "times": [
        "29'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "A. Semenyo",
+      "times": [
+       "43'"
       ],
       "types": [
        "goal"
@@ -15004,13 +15014,13 @@ window.HUB = {
    "name": "Manchester City",
    "short": "Man City",
    "played": 5,
-   "won": 4,
-   "drawn": 1,
+   "won": 5,
+   "drawn": 0,
    "lost": 0,
-   "gf": 10,
+   "gf": 11,
    "ga": 4,
-   "gd": 6,
-   "points": 13,
+   "gd": 7,
+   "points": 15,
    "form": [
     "-",
     "-",
@@ -15288,30 +15298,6 @@ window.HUB = {
   },
   {
    "rank": 13,
-   "key": "sunderland",
-   "name": "Sunderland",
-   "short": "Sunderland",
-   "played": 5,
-   "won": 1,
-   "drawn": 2,
-   "lost": 2,
-   "gf": 5,
-   "ga": 7,
-   "gd": -2,
-   "points": 5,
-   "form": [
-    "-",
-    "-",
-    "L",
-    "W",
-    "D",
-    "L"
-   ],
-   "zone": "",
-   "rankPrev": 14
-  },
-  {
-   "rank": 14,
    "key": "manchester-united",
    "name": "Manchester United",
    "short": "Man Utd",
@@ -15335,7 +15321,7 @@ window.HUB = {
    "rankPrev": 13
   },
   {
-   "rank": 15,
+   "rank": 14,
    "key": "afc-bournemouth",
    "name": "Bournemouth",
    "short": "Bournemouth",
@@ -15357,6 +15343,30 @@ window.HUB = {
    ],
    "zone": "",
    "rankPrev": 15
+  },
+  {
+   "rank": 15,
+   "key": "sunderland",
+   "name": "Sunderland",
+   "short": "Sunderland",
+   "played": 5,
+   "won": 1,
+   "drawn": 1,
+   "lost": 3,
+   "gf": 5,
+   "ga": 8,
+   "gd": -3,
+   "points": 4,
+   "form": [
+    "-",
+    "-",
+    "L",
+    "W",
+    "D",
+    "L"
+   ],
+   "zone": "",
+   "rankPrev": 14
   },
   {
    "rank": 16,
