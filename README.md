@@ -50,7 +50,7 @@ node scripts/update-data.mjs
 
 ### 자동 갱신 (GitHub Actions — 기본)
 
-`.github/workflows/update.yml`이 GitHub에서 두 스크립트를 돌리고 변경이 있으면 커밋·푸시한다. PC가 꺼져 있어도 돌아간다.
+`.github/workflows/update.yml`이 GitHub에서 두 스크립트를 돌리고, 성공하면 매번 커밋·푸시한다(데이터가 같아도 갱신 시각은 새로 기록되므로 헤더의 "갱신"은 마지막으로 확인에 성공한 시각이다). PC가 꺼져 있어도 돌아간다.
 
 - 경기 시간대(한국 20시~다음날 08시)에는 **15분마다**: 라인업 발표(킥오프 약 1시간 전), 진행 중 스코어, 종료 후 최종 기록
 - 매일 **09시(KST)**: 전체 갱신

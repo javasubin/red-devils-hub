@@ -3,7 +3,7 @@ name: update-data
 # BBC Sport에서 경기·순위·득점(data.js)과 경기 상세(matches/)를 받아 커밋합니다.
 # - 경기 시간대(UTC 11~23시 = 한국 20시~다음날 8시)에는 15분마다: 라인업 발표·진행 상황·최종 기록
 # - 매일 UTC 0시(한국 09시)에 전체 갱신
-# 실행 후 변경이 있을 때만 커밋하며, GitHub Pages가 자동으로 다시 배포합니다.
+# 실행이 성공하면 매번 커밋합니다(데이터가 같아도 meta.updatedAt = 이번 확인 시각). GitHub Pages가 자동으로 다시 배포합니다.
 
 on:
   schedule:
@@ -45,9 +45,9 @@ jobs:
           git config user.name "red-devils-hub-bot"
           git config user.email "red-devils-hub-bot@users.noreply.github.com"
           git add data.js matches/
-          # meta.updatedAt 한 줄만 바뀐 경우는 커밋하지 않는다
-          if git diff --cached --quiet -I '"updatedAt":'; then
-            echo "no data changes"; exit 0
+          # 갱신 시각(meta.updatedAt)이 매번 바뀌므로 성공한 실행은 항상 커밋된다 — 헤더의 "갱신" 시각 = 마지막 성공 확인 시각
+          if git diff --cached --quiet; then
+            echo "nothing to commit"; exit 0
           fi
           git commit -m "data: $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M')"
           git push
