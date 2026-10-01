@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-10-01T21:21:28+09:00",
+  "updatedAt": "2026-10-01T21:49:44+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -3002,7 +3002,7 @@ window.HUB = {
       "type": "goal"
      },
      {
-      "name": "Lisandro Martínez",
+      "name": "L. Martínez",
       "times": [
        "68'"
       ],
@@ -4436,7 +4436,7 @@ window.HUB = {
    "scorers": {
     "home": [
      {
-      "name": "Lisandro Martínez",
+      "name": "L. Martínez",
       "times": [
        "63'"
       ],
