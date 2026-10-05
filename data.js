@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-10-05T13:35:56+09:00",
+  "updatedAt": "2026-10-06T04:41:02+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -62,7 +62,7 @@ window.HUB = {
   "newcastle-united": {
    "name": "Newcastle United",
    "short": "Newcastle",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/newcastle-united.45e2739dd9.svg"
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/newcastle-united.f3dd81408e.svg"
   },
   "chelsea": {
    "name": "Chelsea",
