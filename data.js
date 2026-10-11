@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-10-11T11:12:17+09:00",
+  "updatedAt": "2026-10-11T13:35:35+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -4916,7 +4916,7 @@ window.HUB = {
    },
    "mu": false,
    "fav": [],
-   "url": null
+   "url": "https://www.bbc.com/sport/football/live/c63el8xwn529t"
   },
   {
    "id": "s-4f5zpfadwx2i2gdvlssm52iac",
@@ -4947,7 +4947,7 @@ window.HUB = {
    },
    "mu": false,
    "fav": [],
-   "url": null
+   "url": "https://www.bbc.com/sport/football/live/cky83n1lgd21t"
   },
   {
    "id": "s-4funfoy0bxp3y7thhhbxnbk7o",
@@ -4978,7 +4978,7 @@ window.HUB = {
    },
    "mu": false,
    "fav": [],
-   "url": null
+   "url": "https://www.bbc.com/sport/football/live/cr3el8xwnnxkt"
   },
   {
    "id": "s-4egq70v53sjh7a2ll4qw3vz10",
