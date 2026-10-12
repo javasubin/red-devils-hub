@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-10-12T13:50:45+09:00",
+  "updatedAt": "2026-10-13T05:08:11+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -84,6 +84,11 @@ window.HUB = {
    "short": "Man Utd",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/manchester-united.80807495b5.svg"
   },
+  "coventry-city": {
+   "name": "Coventry City",
+   "short": "Coventry",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/coventry-city.2b26ca0838.svg"
+  },
   "nottingham-forest": {
    "name": "Nottingham Forest",
    "short": "N Forest",
@@ -108,11 +113,6 @@ window.HUB = {
    "name": "Tottenham Hotspur",
    "short": "Spurs",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/tottenham-hotspur.f1c704ee3b.svg"
-  },
-  "coventry-city": {
-   "name": "Coventry City",
-   "short": "Coventry",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/coventry-city.2b26ca0838.svg"
   },
   "fulham": {
    "name": "Fulham",
@@ -5134,12 +5134,36 @@ window.HUB = {
     "name": "Newcastle United",
     "short": "Newcastle"
    },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
+   "status": "live",
+   "statusText": "50'",
+   "score": {
+    "home": 2,
+    "away": 0
+   },
    "winner": null,
    "scorers": {
-    "home": [],
+    "home": [
+     {
+      "name": "J. Rudoni",
+      "times": [
+       "6'"
+      ],
+      "types": [
+       "pen"
+      ],
+      "type": "pen"
+     },
+     {
+      "name": "S. Cherif",
+      "times": [
+       "48'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ],
     "away": []
    },
    "mu": false,
@@ -15671,13 +15695,13 @@ window.HUB = {
    "key": "newcastle-united",
    "name": "Newcastle United",
    "short": "Newcastle",
-   "played": 5,
+   "played": 6,
    "won": 2,
    "drawn": 2,
-   "lost": 1,
+   "lost": 2,
    "gf": 9,
-   "ga": 9,
-   "gd": 0,
+   "ga": 11,
+   "gd": -2,
    "points": 8,
    "form": [
     "-",
@@ -15740,6 +15764,30 @@ window.HUB = {
   },
   {
    "rank": 14,
+   "key": "coventry-city",
+   "name": "Coventry City",
+   "short": "Coventry",
+   "played": 6,
+   "won": 2,
+   "drawn": 0,
+   "lost": 4,
+   "gf": 3,
+   "ga": 10,
+   "gd": -7,
+   "points": 6,
+   "form": [
+    "-",
+    "L",
+    "L",
+    "L",
+    "L",
+    "W"
+   ],
+   "zone": "",
+   "rankPrev": 18
+  },
+  {
+   "rank": 15,
    "key": "nottingham-forest",
    "name": "Nottingham Forest",
    "short": "N Forest",
@@ -15763,7 +15811,7 @@ window.HUB = {
    "rankPrev": 13
   },
   {
-   "rank": 15,
+   "rank": 16,
    "key": "aston-villa",
    "name": "Aston Villa",
    "short": "A Villa",
@@ -15787,7 +15835,7 @@ window.HUB = {
    "rankPrev": 16
   },
   {
-   "rank": 16,
+   "rank": 17,
    "key": "sunderland",
    "name": "Sunderland",
    "short": "Sunderland",
@@ -15811,7 +15859,7 @@ window.HUB = {
    "rankPrev": 14
   },
   {
-   "rank": 17,
+   "rank": 18,
    "key": "afc-bournemouth",
    "name": "Bournemouth",
    "short": "Bournemouth",
@@ -15831,11 +15879,11 @@ window.HUB = {
     "L",
     "L"
    ],
-   "zone": "",
+   "zone": "Relegation",
    "rankPrev": 17
   },
   {
-   "rank": 18,
+   "rank": 19,
    "key": "tottenham-hotspur",
    "name": "Tottenham Hotspur",
    "short": "Spurs",
@@ -15857,30 +15905,6 @@ window.HUB = {
    ],
    "zone": "Relegation",
    "rankPrev": 20
-  },
-  {
-   "rank": 19,
-   "key": "coventry-city",
-   "name": "Coventry City",
-   "short": "Coventry",
-   "played": 5,
-   "won": 1,
-   "drawn": 0,
-   "lost": 4,
-   "gf": 1,
-   "ga": 10,
-   "gd": -9,
-   "points": 3,
-   "form": [
-    "-",
-    "L",
-    "L",
-    "L",
-    "L",
-    "W"
-   ],
-   "zone": "Relegation",
-   "rankPrev": 18
   },
   {
    "rank": 20,
