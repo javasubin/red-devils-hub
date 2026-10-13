@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-10-13T05:08:11+09:00",
+  "updatedAt": "2026-10-13T11:00:56+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -16,7 +16,7 @@ window.HUB = {
   ],
   "matchweeks": 38,
   "source": "BBC Sport",
-  "currentMw": 6
+  "currentMw": 7
  },
  "teams": {
   "manchester-city": {
@@ -5134,13 +5134,13 @@ window.HUB = {
     "name": "Newcastle United",
     "short": "Newcastle"
    },
-   "status": "live",
-   "statusText": "50'",
+   "status": "post",
+   "statusText": "FT",
    "score": {
-    "home": 2,
-    "away": 0
+    "home": 4,
+    "away": 1
    },
-   "winner": null,
+   "winner": "home",
    "scorers": {
     "home": [
      {
@@ -5162,9 +5162,40 @@ window.HUB = {
        "goal"
       ],
       "type": "goal"
+     },
+     {
+      "name": "E. Simms",
+      "times": [
+       "81'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "S. Mfuni",
+      "times": [
+       "86'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
      }
     ],
-    "away": []
+    "away": [
+     {
+      "name": "S. Botman",
+      "times": [
+       "70'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ]
    },
    "mu": false,
    "fav": [],
@@ -15699,17 +15730,17 @@ window.HUB = {
    "won": 2,
    "drawn": 2,
    "lost": 2,
-   "gf": 9,
-   "ga": 11,
-   "gd": -2,
+   "gf": 10,
+   "ga": 13,
+   "gd": -3,
    "points": 8,
    "form": [
-    "-",
     "D",
     "W",
     "D",
     "L",
-    "W"
+    "W",
+    "L"
    ],
    "zone": "",
    "rankPrev": 9
@@ -15771,16 +15802,16 @@ window.HUB = {
    "won": 2,
    "drawn": 0,
    "lost": 4,
-   "gf": 3,
-   "ga": 10,
-   "gd": -7,
+   "gf": 5,
+   "ga": 11,
+   "gd": -6,
    "points": 6,
    "form": [
-    "-",
     "L",
     "L",
     "L",
     "L",
+    "W",
     "W"
    ],
    "zone": "",
@@ -16236,9 +16267,9 @@ window.HUB = {
    "teamShort": "Newcastle",
    "goals": 2,
    "assists": 0,
-   "played": 5,
-   "minutes": 287,
-   "shots": 10
+   "played": 6,
+   "minutes": 346,
+   "shots": 15
   },
   {
    "rank": 16,
