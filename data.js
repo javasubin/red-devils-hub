@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-10-20T02:20:58+09:00",
+  "updatedAt": "2026-10-20T06:39:46+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -16,7 +16,7 @@ window.HUB = {
   ],
   "matchweeks": 38,
   "source": "BBC Sport",
-  "currentMw": 7
+  "currentMw": 8
  },
  "teams": {
   "manchester-city": {
@@ -94,6 +94,11 @@ window.HUB = {
    "short": "Bournemouth",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/afc-bournemouth.3e0ae7da8e.svg"
   },
+  "tottenham-hotspur": {
+   "name": "Tottenham Hotspur",
+   "short": "Spurs",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/tottenham-hotspur.f1c704ee3b.svg"
+  },
   "coventry-city": {
    "name": "Coventry City",
    "short": "Coventry",
@@ -113,11 +118,6 @@ window.HUB = {
    "name": "Sunderland",
    "short": "Sunderland",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/sunderland.6fb24a6b29.svg"
-  },
-  "tottenham-hotspur": {
-   "name": "Tottenham Hotspur",
-   "short": "Spurs",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/tottenham-hotspur.f1c704ee3b.svg"
   }
  },
  "fixtures": [
@@ -5853,13 +5853,58 @@ window.HUB = {
     "name": "Coventry City",
     "short": "Coventry"
    },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
-   "winner": null,
+   "status": "post",
+   "statusText": "FT",
+   "score": {
+    "home": 3,
+    "away": 1
+   },
+   "winner": "home",
    "scorers": {
-    "home": [],
-    "away": []
+    "home": [
+     {
+      "name": "J. Maddison",
+      "times": [
+       "14'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "Omar Marmoush",
+      "times": [
+       "58'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "B. Davies",
+      "times": [
+       "90'+6"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ],
+    "away": [
+     {
+      "name": "J. Rudoni",
+      "times": [
+       "49'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ]
    },
    "mu": false,
    "fav": [
@@ -15894,7 +15939,7 @@ window.HUB = {
     "W"
    ],
    "zone": "UEFA Champions League",
-   "rankPrev": 10
+   "rankPrev": 6
   },
   {
    "rank": 5,
@@ -15918,7 +15963,7 @@ window.HUB = {
     "W"
    ],
    "zone": "UEFA Europa League",
-   "rankPrev": 6
+   "rankPrev": 9
   },
   {
    "rank": 6,
@@ -15966,7 +16011,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 5
+   "rankPrev": 7
   },
   {
    "rank": 8,
@@ -15990,7 +16035,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 7
+   "rankPrev": 5
   },
   {
    "rank": 9,
@@ -16038,7 +16083,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 11
+   "rankPrev": 10
   },
   {
    "rank": 11,
@@ -16062,7 +16107,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 9
+   "rankPrev": 11
   },
   {
    "rank": 12,
@@ -16110,7 +16155,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 12
+   "rankPrev": 13
   },
   {
    "rank": 14,
@@ -16134,7 +16179,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 15
+   "rankPrev": 12
   },
   {
    "rank": 15,
@@ -16158,34 +16203,58 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 17
+   "rankPrev": 18
   },
   {
    "rank": 16,
+   "key": "tottenham-hotspur",
+   "name": "Tottenham Hotspur",
+   "short": "Spurs",
+   "played": 7,
+   "won": 1,
+   "drawn": 3,
+   "lost": 3,
+   "gf": 6,
+   "ga": 10,
+   "gd": -4,
+   "points": 6,
+   "form": [
+    "L",
+    "D",
+    "D",
+    "L",
+    "D",
+    "W"
+   ],
+   "zone": "",
+   "rankPrev": 19
+  },
+  {
+   "rank": 17,
    "key": "coventry-city",
    "name": "Coventry City",
    "short": "Coventry",
-   "played": 6,
+   "played": 7,
    "won": 2,
    "drawn": 0,
-   "lost": 4,
-   "gf": 5,
-   "ga": 11,
-   "gd": -6,
+   "lost": 5,
+   "gf": 6,
+   "ga": 14,
+   "gd": -8,
    "points": 6,
    "form": [
     "L",
     "L",
     "L",
-    "L",
     "W",
-    "W"
+    "W",
+    "L"
    ],
    "zone": "",
-   "rankPrev": 18
+   "rankPrev": 14
   },
   {
-   "rank": 17,
+   "rank": 18,
    "key": "fulham",
    "name": "Fulham",
    "short": "Fulham",
@@ -16205,11 +16274,11 @@ window.HUB = {
     "L",
     "W"
    ],
-   "zone": "",
-   "rankPrev": 19
+   "zone": "Relegation",
+   "rankPrev": 20
   },
   {
-   "rank": 18,
+   "rank": 19,
    "key": "nottingham-forest",
    "name": "Nottingham Forest",
    "short": "N Forest",
@@ -16230,10 +16299,10 @@ window.HUB = {
     "L"
    ],
    "zone": "Relegation",
-   "rankPrev": 13
+   "rankPrev": 15
   },
   {
-   "rank": 19,
+   "rank": 20,
    "key": "sunderland",
    "name": "Sunderland",
    "short": "Sunderland",
@@ -16254,31 +16323,7 @@ window.HUB = {
     "L"
    ],
    "zone": "Relegation",
-   "rankPrev": 14
-  },
-  {
-   "rank": 20,
-   "key": "tottenham-hotspur",
-   "name": "Tottenham Hotspur",
-   "short": "Spurs",
-   "played": 6,
-   "won": 0,
-   "drawn": 3,
-   "lost": 3,
-   "gf": 3,
-   "ga": 9,
-   "gd": -6,
-   "points": 3,
-   "form": [
-    "L",
-    "L",
-    "D",
-    "D",
-    "L",
-    "D"
-   ],
-   "zone": "Relegation",
-   "rankPrev": 20
+   "rankPrev": 17
   }
  ],
  "scorers": [
