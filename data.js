@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-10-19T08:56:29+09:00",
+  "updatedAt": "2026-10-19T12:42:05+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -5865,7 +5865,7 @@ window.HUB = {
    "fav": [
     "tottenham-hotspur"
    ],
-   "url": null
+   "url": "https://www.bbc.com/sport/football/live/cq99z1401xljt"
   },
   {
    "id": "s-5n131k3n0if24bbatb372tmok",
