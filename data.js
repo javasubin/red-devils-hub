@@ -1,11 +1,11 @@
 // ============================================================
 //  RED DEVILS HUB 데이터 — scripts/update-data.mjs 가 BBC Sport에서 생성합니다. 손으로 고치지 마세요.
-//  경기 404 · 순위표 20팀 · 득점 42명 (생성 시각은 meta.updatedAt)
+//  경기 404 · 순위표 20팀 · 득점 43명 (생성 시각은 meta.updatedAt)
 //  구조: SCHEMA.md
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-10-20T09:40:53+09:00",
+  "updatedAt": "2026-10-20T12:52:53+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -5943,7 +5943,7 @@ window.HUB = {
    "fav": [
     "manchester-united"
    ],
-   "url": null
+   "url": "https://www.bbc.com/sport/football/live/cwe8l3zeexvvt"
   },
   {
    "id": "s-4menn6y99opv9bjtltni9faxg",
@@ -16722,6 +16722,17 @@ window.HUB = {
    "played": 6,
    "minutes": 469,
    "shots": 16
+  },
+  {
+   "rank": 19,
+   "name": "J. Rudoni",
+   "team": "coventry-city",
+   "teamShort": "Coventry",
+   "goals": 2,
+   "assists": 0,
+   "played": 7,
+   "minutes": 471,
+   "shots": 9
   },
   {
    "rank": 19,
