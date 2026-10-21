@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-10-22T00:50:39+09:00",
+  "updatedAt": "2026-10-22T04:56:22+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -5931,13 +5931,60 @@ window.HUB = {
     "name": "Manchester United",
     "short": "Man Utd"
    },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
-   "winner": null,
+   "status": "post",
+   "statusText": "FT",
+   "score": {
+    "home": 4,
+    "away": 1
+   },
+   "winner": "home",
    "scorers": {
-    "home": [],
-    "away": []
+    "home": [
+     {
+      "name": "N. Paz",
+      "times": [
+       "2'",
+       "57'"
+      ],
+      "types": [
+       "goal",
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "T. Douvikas",
+      "times": [
+       "49'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "Jacobo Ramón",
+      "times": [
+       "76'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ],
+    "away": [
+     {
+      "name": "J. Zirkzee",
+      "times": [
+       "90'+1"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ]
    },
    "mu": true,
    "fav": [
