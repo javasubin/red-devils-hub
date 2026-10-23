@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-10-24T00:38:53+09:00",
+  "updatedAt": "2026-10-24T04:33:05+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -69,6 +69,11 @@ window.HUB = {
    "short": "Ipswich",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/ipswich-town.016f53d3e1.svg"
   },
+  "nottingham-forest": {
+   "name": "Nottingham Forest",
+   "short": "N Forest",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/nottingham-forest.f0fc0fc962.svg"
+  },
   "newcastle-united": {
    "name": "Newcastle United",
    "short": "Newcastle",
@@ -108,11 +113,6 @@ window.HUB = {
    "name": "Fulham",
    "short": "Fulham",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/fulham.d16ec60bd3.svg"
-  },
-  "nottingham-forest": {
-   "name": "Nottingham Forest",
-   "short": "N Forest",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/nottingham-forest.f0fc0fc962.svg"
   },
   "sunderland": {
    "name": "Sunderland",
@@ -6011,13 +6011,27 @@ window.HUB = {
     "name": "Nottingham Forest",
     "short": "N Forest"
    },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
+   "status": "live",
+   "statusText": "32'",
+   "score": {
+    "home": 0,
+    "away": 1
+   },
    "winner": null,
    "scorers": {
     "home": [],
-    "away": []
+    "away": [
+     {
+      "name": "N. Williams",
+      "times": [
+       "13'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ]
    },
    "mu": false,
    "fav": [],
@@ -16113,13 +16127,13 @@ window.HUB = {
    "key": "ipswich-town",
    "name": "Ipswich Town",
    "short": "Ipswich",
-   "played": 7,
+   "played": 8,
    "won": 3,
    "drawn": 0,
-   "lost": 4,
+   "lost": 5,
    "gf": 11,
-   "ga": 15,
-   "gd": -4,
+   "ga": 16,
+   "gd": -5,
    "points": 9,
    "form": [
     "L",
@@ -16134,6 +16148,30 @@ window.HUB = {
   },
   {
    "rank": 11,
+   "key": "nottingham-forest",
+   "name": "Nottingham Forest",
+   "short": "N Forest",
+   "played": 8,
+   "won": 2,
+   "drawn": 2,
+   "lost": 4,
+   "gf": 6,
+   "ga": 9,
+   "gd": -3,
+   "points": 8,
+   "form": [
+    "D",
+    "D",
+    "W",
+    "L",
+    "L",
+    "L"
+   ],
+   "zone": "",
+   "rankPrev": 15
+  },
+  {
+   "rank": 12,
    "key": "newcastle-united",
    "name": "Newcastle United",
    "short": "Newcastle",
@@ -16157,7 +16195,7 @@ window.HUB = {
    "rankPrev": 11
   },
   {
-   "rank": 12,
+   "rank": 13,
    "key": "aston-villa",
    "name": "Aston Villa",
    "short": "A Villa",
@@ -16181,7 +16219,7 @@ window.HUB = {
    "rankPrev": 16
   },
   {
-   "rank": 13,
+   "rank": 14,
    "key": "manchester-united",
    "name": "Manchester United",
    "short": "Man Utd",
@@ -16205,7 +16243,7 @@ window.HUB = {
    "rankPrev": 13
   },
   {
-   "rank": 14,
+   "rank": 15,
    "key": "crystal-palace",
    "name": "Crystal Palace",
    "short": "C Palace",
@@ -16229,7 +16267,7 @@ window.HUB = {
    "rankPrev": 12
   },
   {
-   "rank": 15,
+   "rank": 16,
    "key": "afc-bournemouth",
    "name": "Bournemouth",
    "short": "Bournemouth",
@@ -16253,7 +16291,7 @@ window.HUB = {
    "rankPrev": 18
   },
   {
-   "rank": 16,
+   "rank": 17,
    "key": "tottenham-hotspur",
    "name": "Tottenham Hotspur",
    "short": "Spurs",
@@ -16277,7 +16315,7 @@ window.HUB = {
    "rankPrev": 19
   },
   {
-   "rank": 17,
+   "rank": 18,
    "key": "coventry-city",
    "name": "Coventry City",
    "short": "Coventry",
@@ -16297,11 +16335,11 @@ window.HUB = {
     "W",
     "L"
    ],
-   "zone": "",
+   "zone": "Relegation",
    "rankPrev": 14
   },
   {
-   "rank": 18,
+   "rank": 19,
    "key": "fulham",
    "name": "Fulham",
    "short": "Fulham",
@@ -16323,30 +16361,6 @@ window.HUB = {
    ],
    "zone": "Relegation",
    "rankPrev": 20
-  },
-  {
-   "rank": 19,
-   "key": "nottingham-forest",
-   "name": "Nottingham Forest",
-   "short": "N Forest",
-   "played": 7,
-   "won": 1,
-   "drawn": 2,
-   "lost": 4,
-   "gf": 5,
-   "ga": 9,
-   "gd": -4,
-   "points": 5,
-   "form": [
-    "D",
-    "D",
-    "W",
-    "L",
-    "L",
-    "L"
-   ],
-   "zone": "Relegation",
-   "rankPrev": 15
   },
   {
    "rank": 20,
