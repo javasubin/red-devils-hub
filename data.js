@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-10-25T23:51:39+09:00",
+  "updatedAt": "2026-10-26T03:11:01+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -44,16 +44,6 @@ window.HUB = {
    "short": "Chelsea",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/chelsea.b96b403b5f.svg"
   },
-  "hull-city": {
-   "name": "Hull City",
-   "short": "Hull City",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/hull-city.7187a4b4b5.svg"
-  },
-  "aston-villa": {
-   "name": "Aston Villa",
-   "short": "A Villa",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/aston-villa.7462c0d498.svg"
-  },
   "brentford": {
    "name": "Brentford",
    "short": "Brentford",
@@ -63,6 +53,21 @@ window.HUB = {
    "name": "Leeds United",
    "short": "Leeds",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/leeds-united.6eb48daff9.svg"
+  },
+  "newcastle-united": {
+   "name": "Newcastle United",
+   "short": "Newcastle",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/newcastle-united.f3dd81408e.svg"
+  },
+  "aston-villa": {
+   "name": "Aston Villa",
+   "short": "A Villa",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/aston-villa.7462c0d498.svg"
+  },
+  "hull-city": {
+   "name": "Hull City",
+   "short": "Hull City",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/hull-city.7187a4b4b5.svg"
   },
   "everton": {
    "name": "Everton",
@@ -84,25 +89,20 @@ window.HUB = {
    "short": "Spurs",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/tottenham-hotspur.f1c704ee3b.svg"
   },
-  "newcastle-united": {
-   "name": "Newcastle United",
-   "short": "Newcastle",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/newcastle-united.f3dd81408e.svg"
-  },
   "fulham": {
    "name": "Fulham",
    "short": "Fulham",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/fulham.d16ec60bd3.svg"
   },
-  "crystal-palace": {
-   "name": "Crystal Palace",
-   "short": "C Palace",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/crystal-palace.9e5ab01a7b.svg"
-  },
   "manchester-united": {
    "name": "Manchester United",
    "short": "Man Utd",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/manchester-united.80807495b5.svg"
+  },
+  "crystal-palace": {
+   "name": "Crystal Palace",
+   "short": "C Palace",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/crystal-palace.9e5ab01a7b.svg"
   },
   "nottingham-forest": {
    "name": "Nottingham Forest",
@@ -6293,16 +6293,37 @@ window.HUB = {
     "name": "Newcastle United",
     "short": "Newcastle"
    },
-   "status": "live",
-   "statusText": "HT",
+   "status": "post",
+   "statusText": "FT",
    "score": {
     "home": 0,
-    "away": 0
+    "away": 2
    },
-   "winner": null,
+   "winner": "away",
    "scorers": {
     "home": [],
-    "away": []
+    "away": [
+     {
+      "name": "W. Osula",
+      "times": [
+       "47'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "H. Barnes",
+      "times": [
+       "58'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ]
    },
    "mu": false,
    "fav": [],
@@ -6327,13 +6348,13 @@ window.HUB = {
     "name": "Brentford",
     "short": "Brentford"
    },
-   "status": "live",
-   "statusText": "HT",
+   "status": "post",
+   "statusText": "FT",
    "score": {
     "home": 1,
-    "away": 0
+    "away": 1
    },
-   "winner": null,
+   "winner": "draw",
    "scorers": {
     "home": [
      {
@@ -6347,7 +6368,18 @@ window.HUB = {
       "type": "pen"
      }
     ],
-    "away": []
+    "away": [
+     {
+      "name": "D. Ouattara",
+      "times": [
+       "63'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ]
    },
    "mu": false,
    "fav": [],
@@ -6372,13 +6404,13 @@ window.HUB = {
     "name": "Brighton & Hove Albion",
     "short": "Brighton"
    },
-   "status": "live",
-   "statusText": "HT",
+   "status": "post",
+   "statusText": "FT",
    "score": {
     "home": 2,
     "away": 0
    },
-   "winner": null,
+   "winner": "home",
    "scorers": {
     "home": [
      {
@@ -6427,13 +6459,13 @@ window.HUB = {
     "name": "Bournemouth",
     "short": "Bournemouth"
    },
-   "status": "live",
-   "statusText": "HT",
+   "status": "post",
+   "statusText": "FT",
    "score": {
     "home": 0,
-    "away": 2
+    "away": 3
    },
-   "winner": null,
+   "winner": "away",
    "scorers": {
     "home": [],
     "away": [
@@ -6451,6 +6483,16 @@ window.HUB = {
       "name": "M. Tavernier",
       "times": [
        "43'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "Evanilson",
+      "times": [
+       "71'"
       ],
       "types": [
        "goal"
@@ -6484,9 +6526,12 @@ window.HUB = {
     "name": "Leeds United",
     "short": "Leeds"
    },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
+   "status": "live",
+   "statusText": "83'",
+   "score": {
+    "home": 0,
+    "away": 0
+   },
    "winner": null,
    "scorers": {
     "home": [],
@@ -16144,12 +16189,12 @@ window.HUB = {
    "gd": 16,
    "points": 16,
    "form": [
-    "L",
     "D",
     "W",
     "W",
     "W",
-    "W"
+    "W",
+    "L"
    ],
    "zone": "UEFA Champions League",
    "rankPrev": 3
@@ -16168,11 +16213,11 @@ window.HUB = {
    "gd": 3,
    "points": 15,
    "form": [
-    "D",
     "W",
     "D",
     "W",
     "L",
+    "W",
     "W"
    ],
    "zone": "UEFA Champions League",
@@ -16204,30 +16249,78 @@ window.HUB = {
   },
   {
    "rank": 6,
-   "key": "hull-city",
-   "name": "Hull City",
-   "short": "Hull City",
+   "key": "brentford",
+   "name": "Brentford",
+   "short": "Brentford",
    "played": 8,
-   "won": 3,
-   "drawn": 3,
-   "lost": 2,
-   "gf": 9,
-   "ga": 7,
-   "gd": 2,
-   "points": 12,
+   "won": 2,
+   "drawn": 5,
+   "lost": 1,
+   "gf": 14,
+   "ga": 9,
+   "gd": 5,
+   "points": 11,
    "form": [
+    "D",
+    "D",
     "W",
     "D",
-    "D",
     "L",
-    "D",
-    "L"
+    "D"
    ],
    "zone": "",
-   "rankPrev": 9
+   "rankPrev": 7
   },
   {
    "rank": 7,
+   "key": "leeds-united",
+   "name": "Leeds United",
+   "short": "Leeds",
+   "played": 8,
+   "won": 2,
+   "drawn": 5,
+   "lost": 1,
+   "gf": 9,
+   "ga": 6,
+   "gd": 3,
+   "points": 11,
+   "form": [
+    "D",
+    "D",
+    "W",
+    "D",
+    "L",
+    "D"
+   ],
+   "zone": "",
+   "rankPrev": 8
+  },
+  {
+   "rank": 8,
+   "key": "newcastle-united",
+   "name": "Newcastle United",
+   "short": "Newcastle",
+   "played": 8,
+   "won": 3,
+   "drawn": 2,
+   "lost": 3,
+   "gf": 12,
+   "ga": 14,
+   "gd": -2,
+   "points": 11,
+   "form": [
+    "D",
+    "L",
+    "W",
+    "L",
+    "L",
+    "W"
+   ],
+   "zone": "",
+   "rankPrev": 14
+  },
+  {
+   "rank": 9,
    "key": "aston-villa",
    "name": "Aston Villa",
    "short": "A Villa",
@@ -16248,58 +16341,34 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 12
+   "rankPrev": 6
   },
   {
-   "rank": 8,
-   "key": "brentford",
-   "name": "Brentford",
-   "short": "Brentford",
+   "rank": 10,
+   "key": "hull-city",
+   "name": "Hull City",
+   "short": "Hull City",
    "played": 8,
    "won": 2,
    "drawn": 4,
    "lost": 2,
-   "gf": 13,
-   "ga": 9,
-   "gd": 4,
-   "points": 10,
-   "form": [
-    "D",
-    "D",
-    "D",
-    "W",
-    "D",
-    "L"
-   ],
-   "zone": "",
-   "rankPrev": 6
-  },
-  {
-   "rank": 9,
-   "key": "leeds-united",
-   "name": "Leeds United",
-   "short": "Leeds",
-   "played": 7,
-   "won": 2,
-   "drawn": 4,
-   "lost": 1,
    "gf": 9,
-   "ga": 6,
-   "gd": 3,
+   "ga": 8,
+   "gd": 1,
    "points": 10,
    "form": [
     "D",
     "D",
-    "W",
+    "L",
     "D",
     "L",
     "D"
    ],
    "zone": "",
-   "rankPrev": 7
+   "rankPrev": 11
   },
   {
-   "rank": 10,
+   "rank": 11,
    "key": "everton",
    "name": "Everton",
    "short": "Everton",
@@ -16320,10 +16389,10 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 8
+   "rankPrev": 9
   },
   {
-   "rank": 11,
+   "rank": 12,
    "key": "ipswich-town",
    "name": "Ipswich Town",
    "short": "Ipswich",
@@ -16347,7 +16416,7 @@ window.HUB = {
    "rankPrev": 10
   },
   {
-   "rank": 12,
+   "rank": 13,
    "key": "afc-bournemouth",
    "name": "Bournemouth",
    "short": "Bournemouth",
@@ -16355,23 +16424,23 @@ window.HUB = {
    "won": 2,
    "drawn": 3,
    "lost": 3,
-   "gf": 11,
+   "gf": 12,
    "ga": 13,
-   "gd": -2,
+   "gd": -1,
    "points": 9,
    "form": [
     "D",
     "D",
-    "D",
     "L",
     "L",
+    "W",
     "W"
    ],
    "zone": "",
-   "rankPrev": 15
+   "rankPrev": 17
   },
   {
-   "rank": 13,
+   "rank": 14,
    "key": "tottenham-hotspur",
    "name": "Tottenham Hotspur",
    "short": "Spurs",
@@ -16392,31 +16461,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 16
-  },
-  {
-   "rank": 14,
-   "key": "newcastle-united",
-   "name": "Newcastle United",
-   "short": "Newcastle",
-   "played": 8,
-   "won": 2,
-   "drawn": 3,
-   "lost": 3,
-   "gf": 10,
-   "ga": 14,
-   "gd": -4,
-   "points": 9,
-   "form": [
-    "W",
-    "D",
-    "L",
-    "W",
-    "L",
-    "L"
-   ],
-   "zone": "",
-   "rankPrev": 11
+   "rankPrev": 12
   },
   {
    "rank": 15,
@@ -16440,34 +16485,10 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 18
+   "rankPrev": 13
   },
   {
    "rank": 16,
-   "key": "crystal-palace",
-   "name": "Crystal Palace",
-   "short": "C Palace",
-   "played": 8,
-   "won": 2,
-   "drawn": 2,
-   "lost": 4,
-   "gf": 9,
-   "ga": 17,
-   "gd": -8,
-   "points": 8,
-   "form": [
-    "L",
-    "W",
-    "L",
-    "D",
-    "W",
-    "L"
-   ],
-   "zone": "",
-   "rankPrev": 14
-  },
-  {
-   "rank": 17,
    "key": "manchester-united",
    "name": "Manchester United",
    "short": "Man Utd",
@@ -16476,19 +16497,43 @@ window.HUB = {
    "drawn": 4,
    "lost": 3,
    "gf": 10,
-   "ga": 12,
-   "gd": -2,
+   "ga": 13,
+   "gd": -3,
    "points": 7,
    "form": [
-    "W",
     "D",
     "L",
     "D",
     "D",
-    "D"
+    "D",
+    "L"
    ],
    "zone": "",
-   "rankPrev": 13
+   "rankPrev": 15
+  },
+  {
+   "rank": 17,
+   "key": "crystal-palace",
+   "name": "Crystal Palace",
+   "short": "C Palace",
+   "played": 8,
+   "won": 2,
+   "drawn": 1,
+   "lost": 5,
+   "gf": 9,
+   "ga": 19,
+   "gd": -10,
+   "points": 7,
+   "form": [
+    "W",
+    "L",
+    "D",
+    "W",
+    "L",
+    "L"
+   ],
+   "zone": "",
+   "rankPrev": 16
   },
   {
    "rank": 18,
@@ -16512,7 +16557,7 @@ window.HUB = {
     "D"
    ],
    "zone": "Relegation",
-   "rankPrev": 19
+   "rankPrev": 18
   },
   {
    "rank": 19,
@@ -16536,21 +16581,21 @@ window.HUB = {
     "L"
    ],
    "zone": "Relegation",
-   "rankPrev": 17
+   "rankPrev": 19
   },
   {
    "rank": 20,
    "key": "sunderland",
    "name": "Sunderland",
    "short": "Sunderland",
-   "played": 7,
+   "played": 8,
    "won": 1,
-   "drawn": 1,
+   "drawn": 2,
    "lost": 5,
    "gf": 6,
    "ga": 14,
    "gd": -8,
-   "points": 4,
+   "points": 5,
    "form": [
     "W",
     "D",
