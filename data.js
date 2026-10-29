@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-10-30T02:19:14+09:00",
+  "updatedAt": "2026-10-30T06:55:55+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -511,7 +511,7 @@ window.HUB = {
    },
    "away": {
     "key": "atletico-madrid",
-    "name": "Atletico Madrid",
+    "name": "Atlético Madrid",
     "short": "Atlético"
    },
    "status": "post",
@@ -5212,7 +5212,7 @@ window.HUB = {
    "timeUK": "20:00",
    "home": {
     "key": "atletico-madrid",
-    "name": "Atletico Madrid",
+    "name": "Atlético Madrid",
     "short": "Atlético"
    },
    "away": {
