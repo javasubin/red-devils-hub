@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-11-02T02:00:18+09:00",
+  "updatedAt": "2026-11-02T06:11:13+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -7069,13 +7069,13 @@ window.HUB = {
     "name": "Arsenal",
     "short": "Arsenal"
    },
-   "status": "live",
-   "statusText": "30'",
+   "status": "post",
+   "statusText": "FT",
    "score": {
     "home": 0,
     "away": 1
    },
-   "winner": null,
+   "winner": "away",
    "scorers": {
     "home": [],
     "away": [
@@ -16413,8 +16413,8 @@ window.HUB = {
    "points": 24,
    "form": [
     "W",
-    "W",
     "L",
+    "W",
     "W",
     "W",
     "W"
@@ -16508,12 +16508,12 @@ window.HUB = {
    "gd": 2,
    "points": 15,
    "form": [
-    "W",
     "D",
     "W",
     "L",
     "W",
-    "W"
+    "W",
+    "L"
    ],
    "zone": "UEFA Europa League",
    "rankPrev": 4
@@ -16898,9 +16898,9 @@ window.HUB = {
    "teamShort": "Liverpool",
    "goals": 6,
    "assists": 0,
-   "played": 7,
-   "minutes": 571,
-   "shots": 20
+   "played": 8,
+   "minutes": 661,
+   "shots": 22
   },
   {
    "rank": 3,
@@ -17113,6 +17113,17 @@ window.HUB = {
   },
   {
    "rank": 11,
+   "name": "K. Havertz",
+   "team": "arsenal",
+   "teamShort": "Arsenal",
+   "goals": 3,
+   "assists": 0,
+   "played": 9,
+   "minutes": 673,
+   "shots": 15
+  },
+  {
+   "rank": 11,
    "name": "T. Barry",
    "team": "everton",
    "teamShort": "Everton",
@@ -17134,7 +17145,7 @@ window.HUB = {
    "shots": 18
   },
   {
-   "rank": 24,
+   "rank": 25,
    "name": "J. Manzambi",
    "team": "aston-villa",
    "teamShort": "A Villa",
@@ -17145,7 +17156,7 @@ window.HUB = {
    "shots": 17
   },
   {
-   "rank": 24,
+   "rank": 25,
    "name": "A. Semenyo",
    "team": "manchester-city",
    "teamShort": "Man City",
@@ -17156,7 +17167,7 @@ window.HUB = {
    "shots": 8
   },
   {
-   "rank": 24,
+   "rank": 25,
    "name": "M. De Cuyper",
    "team": "brighton-and-hove-albion",
    "teamShort": "Brighton",
@@ -17167,7 +17178,7 @@ window.HUB = {
    "shots": 12
   },
   {
-   "rank": 24,
+   "rank": 25,
    "name": "H. Barnes",
    "team": "newcastle-united",
    "teamShort": "Newcastle",
@@ -17178,7 +17189,7 @@ window.HUB = {
    "shots": 19
   },
   {
-   "rank": 24,
+   "rank": 25,
    "name": "J. Enciso",
    "team": "ipswich-town",
    "teamShort": "Ipswich",
@@ -17189,7 +17200,7 @@ window.HUB = {
    "shots": 28
   },
   {
-   "rank": 24,
+   "rank": 25,
    "name": "O. McBurnie",
    "team": "hull-city",
    "teamShort": "Hull City",
@@ -17200,7 +17211,7 @@ window.HUB = {
    "shots": 13
   },
   {
-   "rank": 24,
+   "rank": 25,
    "name": "Igor Thiago",
    "team": "brentford",
    "teamShort": "Brentford",
@@ -17211,7 +17222,7 @@ window.HUB = {
    "shots": 20
   },
   {
-   "rank": 24,
+   "rank": 25,
    "name": "J. Henderson",
    "team": "chelsea",
    "teamShort": "Chelsea",
@@ -17222,7 +17233,7 @@ window.HUB = {
    "shots": 6
   },
   {
-   "rank": 24,
+   "rank": 25,
    "name": "Emersonn",
    "team": "ipswich-town",
    "teamShort": "Ipswich",
@@ -17233,7 +17244,7 @@ window.HUB = {
    "shots": 16
   },
   {
-   "rank": 24,
+   "rank": 25,
    "name": "K. Dewsbury-Hall",
    "team": "everton",
    "teamShort": "Everton",
@@ -17244,7 +17255,7 @@ window.HUB = {
    "shots": 20
   },
   {
-   "rank": 24,
+   "rank": 25,
    "name": "K. Lewis-Potter",
    "team": "brentford",
    "teamShort": "Brentford",
@@ -17255,7 +17266,7 @@ window.HUB = {
    "shots": 13
   },
   {
-   "rank": 24,
+   "rank": 25,
    "name": "J. King",
    "team": "fulham",
    "teamShort": "Fulham",
@@ -17266,7 +17277,7 @@ window.HUB = {
    "shots": 21
   },
   {
-   "rank": 24,
+   "rank": 25,
    "name": "E. Le Fée",
    "team": "sunderland",
    "teamShort": "Sunderland",
@@ -17277,7 +17288,7 @@ window.HUB = {
    "shots": 16
   },
   {
-   "rank": 24,
+   "rank": 25,
    "name": "L. Davis",
    "team": "ipswich-town",
    "teamShort": "Ipswich",
@@ -17288,7 +17299,7 @@ window.HUB = {
    "shots": 7
   },
   {
-   "rank": 24,
+   "rank": 25,
    "name": "Z. Flemming",
    "team": "ipswich-town",
    "teamShort": "Ipswich",
@@ -17299,18 +17310,7 @@ window.HUB = {
    "shots": 7
   },
   {
-   "rank": 24,
-   "name": "Bruno Guimarães",
-   "team": "arsenal",
-   "teamShort": "Arsenal",
-   "goals": 2,
-   "assists": 0,
-   "played": 6,
-   "minutes": 239,
-   "shots": 3
-  },
-  {
-   "rank": 24,
+   "rank": 25,
    "name": "A. Elanga",
    "team": "newcastle-united",
    "teamShort": "Newcastle",
@@ -17321,7 +17321,18 @@ window.HUB = {
    "shots": 4
   },
   {
-   "rank": 24,
+   "rank": 25,
+   "name": "Bruno Guimarães",
+   "team": "arsenal",
+   "teamShort": "Arsenal",
+   "goals": 2,
+   "assists": 0,
+   "played": 7,
+   "minutes": 301,
+   "shots": 5
+  },
+  {
+   "rank": 25,
    "name": "M. Yalcouyé",
    "team": "brighton-and-hove-albion",
    "teamShort": "Brighton",
@@ -17332,18 +17343,18 @@ window.HUB = {
    "shots": 7
   },
   {
-   "rank": 24,
+   "rank": 25,
    "name": "Víctor Muñoz",
    "team": "liverpool",
    "teamShort": "Liverpool",
    "goals": 2,
    "assists": 0,
-   "played": 7,
-   "minutes": 428,
-   "shots": 12
+   "played": 8,
+   "minutes": 437,
+   "shots": 13
   },
   {
-   "rank": 24,
+   "rank": 25,
    "name": "J. Willock",
    "team": "newcastle-united",
    "teamShort": "Newcastle",
@@ -17354,18 +17365,7 @@ window.HUB = {
    "shots": 16
   },
   {
-   "rank": 24,
-   "name": "K. Havertz",
-   "team": "arsenal",
-   "teamShort": "Arsenal",
-   "goals": 2,
-   "assists": 0,
-   "played": 8,
-   "minutes": 589,
-   "shots": 14
-  },
-  {
-   "rank": 24,
+   "rank": 25,
    "name": "D. Ndoye",
    "team": "nottingham-forest",
    "teamShort": "N Forest",
@@ -17376,18 +17376,7 @@ window.HUB = {
    "shots": 20
   },
   {
-   "rank": 24,
-   "name": "M. Ødegaard",
-   "team": "arsenal",
-   "teamShort": "Arsenal",
-   "goals": 2,
-   "assists": 0,
-   "played": 8,
-   "minutes": 651,
-   "shots": 14
-  },
-  {
-   "rank": 24,
+   "rank": 25,
    "name": "V. Janelt",
    "team": "brentford",
    "teamShort": "Brentford",
@@ -17398,7 +17387,18 @@ window.HUB = {
    "shots": 4
   },
   {
-   "rank": 24,
+   "rank": 25,
+   "name": "M. Ødegaard",
+   "team": "arsenal",
+   "teamShort": "Arsenal",
+   "goals": 2,
+   "assists": 0,
+   "played": 9,
+   "minutes": 739,
+   "shots": 14
+  },
+  {
+   "rank": 25,
    "name": "T. Mitchell",
    "team": "crystal-palace",
    "teamShort": "C Palace",
@@ -17409,7 +17409,7 @@ window.HUB = {
    "shots": 7
   },
   {
-   "rank": 24,
+   "rank": 25,
    "name": "J. van Hecke",
    "team": "tottenham-hotspur",
    "teamShort": "Spurs",
