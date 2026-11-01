@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-11-01T13:53:12+09:00",
+  "updatedAt": "2026-11-02T02:00:18+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -19,15 +19,15 @@ window.HUB = {
   "currentMw": 9
  },
  "teams": {
-  "manchester-city": {
-   "name": "Manchester City",
-   "short": "Man City",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/manchester-city.30c4b22e90.svg"
-  },
   "arsenal": {
    "name": "Arsenal",
    "short": "Arsenal",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/arsenal.5a62ec890e.svg"
+  },
+  "manchester-city": {
+   "name": "Manchester City",
+   "short": "Man City",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/manchester-city.30c4b22e90.svg"
   },
   "brighton-and-hove-albion": {
    "name": "Brighton & Hove Albion",
@@ -7069,13 +7069,27 @@ window.HUB = {
     "name": "Arsenal",
     "short": "Arsenal"
    },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
+   "status": "live",
+   "statusText": "30'",
+   "score": {
+    "home": 0,
+    "away": 1
+   },
    "winner": null,
    "scorers": {
     "home": [],
-    "away": []
+    "away": [
+     {
+      "name": "K. Havertz",
+      "times": [
+       "16'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ]
    },
    "mu": false,
    "fav": [],
@@ -16386,6 +16400,30 @@ window.HUB = {
  "standings": [
   {
    "rank": 1,
+   "key": "arsenal",
+   "name": "Arsenal",
+   "short": "Arsenal",
+   "played": 9,
+   "won": 8,
+   "drawn": 0,
+   "lost": 1,
+   "gf": 14,
+   "ga": 5,
+   "gd": 9,
+   "points": 24,
+   "form": [
+    "W",
+    "W",
+    "L",
+    "W",
+    "W",
+    "W"
+   ],
+   "zone": "UEFA Champions League",
+   "rankPrev": 2
+  },
+  {
+   "rank": 2,
    "key": "manchester-city",
    "name": "Manchester City",
    "short": "Man City",
@@ -16407,30 +16445,6 @@ window.HUB = {
    ],
    "zone": "UEFA Champions League",
    "rankPrev": 1
-  },
-  {
-   "rank": 2,
-   "key": "arsenal",
-   "name": "Arsenal",
-   "short": "Arsenal",
-   "played": 8,
-   "won": 7,
-   "drawn": 0,
-   "lost": 1,
-   "gf": 13,
-   "ga": 5,
-   "gd": 8,
-   "points": 21,
-   "form": [
-    "W",
-    "W",
-    "L",
-    "W",
-    "W",
-    "W"
-   ],
-   "zone": "UEFA Champions League",
-   "rankPrev": 2
   },
   {
    "rank": 3,
@@ -16478,20 +16492,20 @@ window.HUB = {
     "W"
    ],
    "zone": "UEFA Champions League",
-   "rankPrev": 4
+   "rankPrev": 5
   },
   {
    "rank": 5,
    "key": "liverpool",
    "name": "Liverpool",
    "short": "Liverpool",
-   "played": 8,
+   "played": 9,
    "won": 4,
    "drawn": 3,
-   "lost": 1,
+   "lost": 2,
    "gf": 11,
-   "ga": 8,
-   "gd": 3,
+   "ga": 9,
+   "gd": 2,
    "points": 15,
    "form": [
     "W",
@@ -16502,7 +16516,7 @@ window.HUB = {
     "W"
    ],
    "zone": "UEFA Europa League",
-   "rankPrev": 5
+   "rankPrev": 4
   },
   {
    "rank": 6,
@@ -16550,7 +16564,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 15
+   "rankPrev": 13
   },
   {
    "rank": 8,
@@ -16574,7 +16588,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 16
+   "rankPrev": 14
   },
   {
    "rank": 9,
@@ -16598,7 +16612,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 12
+   "rankPrev": 9
   },
   {
    "rank": 10,
@@ -16622,7 +16636,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 9
+   "rankPrev": 10
   },
   {
    "rank": 11,
@@ -16670,7 +16684,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 11
+   "rankPrev": 8
   },
   {
    "rank": 13,
@@ -16694,7 +16708,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 10
+   "rankPrev": 12
   },
   {
    "rank": 14,
@@ -16718,7 +16732,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 8
+   "rankPrev": 11
   },
   {
    "rank": 15,
@@ -16742,7 +16756,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 18
+   "rankPrev": 15
   },
   {
    "rank": 16,
@@ -16766,7 +16780,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 17
+   "rankPrev": 19
   },
   {
    "rank": 17,
@@ -16790,7 +16804,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 13
+   "rankPrev": 16
   },
   {
    "rank": 18,
@@ -16814,7 +16828,7 @@ window.HUB = {
     "L"
    ],
    "zone": "Relegation",
-   "rankPrev": 14
+   "rankPrev": 17
   },
   {
    "rank": 19,
@@ -16838,7 +16852,7 @@ window.HUB = {
     "L"
    ],
    "zone": "Relegation",
-   "rankPrev": 19
+   "rankPrev": 18
   },
   {
    "rank": 20,
