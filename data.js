@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-11-01T11:14:18+09:00",
+  "updatedAt": "2026-11-01T13:53:12+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -7079,7 +7079,7 @@ window.HUB = {
    },
    "mu": false,
    "fav": [],
-   "url": null
+   "url": "https://www.bbc.com/sport/football/live/cqev37r8jvvxt"
   },
   {
    "id": "s-4qjixhdd2f9gezkf1h74ret5g",
