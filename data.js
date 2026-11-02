@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-11-02T09:46:00+09:00",
+  "updatedAt": "2026-11-02T13:54:17+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -7124,7 +7124,7 @@ window.HUB = {
    },
    "mu": false,
    "fav": [],
-   "url": null
+   "url": "https://www.bbc.com/sport/football/live/cq2d68r9y6kwt"
   },
   {
    "id": "s-5rqrsahzx7cf2ieal6ezzw9as",
@@ -7157,7 +7157,7 @@ window.HUB = {
    "fav": [
     "manchester-united"
    ],
-   "url": null
+   "url": "https://www.bbc.com/sport/football/live/cmj47pveql18t"
   },
   {
    "id": "s-4sbvntlrcii2yfgkq0rdnd1xw",
