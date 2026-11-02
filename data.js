@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-11-02T13:54:17+09:00",
+  "updatedAt": "2026-11-03T05:38:16+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -59,6 +59,11 @@ window.HUB = {
    "short": "Spurs",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/tottenham-hotspur.f1c704ee3b.svg"
   },
+  "newcastle-united": {
+   "name": "Newcastle United",
+   "short": "Newcastle",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/newcastle-united.f3dd81408e.svg"
+  },
   "aston-villa": {
    "name": "Aston Villa",
    "short": "A Villa",
@@ -74,20 +79,15 @@ window.HUB = {
    "short": "Leeds",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/leeds-united.6eb48daff9.svg"
   },
-  "newcastle-united": {
-   "name": "Newcastle United",
-   "short": "Newcastle",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/newcastle-united.f3dd81408e.svg"
+  "everton": {
+   "name": "Everton",
+   "short": "Everton",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/everton.38c006ac78.svg"
   },
   "ipswich-town": {
    "name": "Ipswich Town",
    "short": "Ipswich",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/ipswich-town.016f53d3e1.svg"
-  },
-  "everton": {
-   "name": "Everton",
-   "short": "Everton",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/everton.38c006ac78.svg"
   },
   "fulham": {
    "name": "Fulham",
@@ -7114,9 +7114,12 @@ window.HUB = {
     "name": "Everton",
     "short": "Everton"
    },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
+   "status": "live",
+   "statusText": "38'",
+   "score": {
+    "home": 0,
+    "away": 0
+   },
    "winner": null,
    "scorers": {
     "home": [],
@@ -16592,6 +16595,30 @@ window.HUB = {
   },
   {
    "rank": 9,
+   "key": "newcastle-united",
+   "name": "Newcastle United",
+   "short": "Newcastle",
+   "played": 9,
+   "won": 3,
+   "drawn": 3,
+   "lost": 3,
+   "gf": 12,
+   "ga": 14,
+   "gd": -2,
+   "points": 12,
+   "form": [
+    "D",
+    "L",
+    "W",
+    "L",
+    "L",
+    "W"
+   ],
+   "zone": "",
+   "rankPrev": 8
+  },
+  {
+   "rank": 10,
    "key": "aston-villa",
    "name": "Aston Villa",
    "short": "A Villa",
@@ -16615,7 +16642,7 @@ window.HUB = {
    "rankPrev": 9
   },
   {
-   "rank": 10,
+   "rank": 11,
    "key": "hull-city",
    "name": "Hull City",
    "short": "Hull City",
@@ -16639,7 +16666,7 @@ window.HUB = {
    "rankPrev": 10
   },
   {
-   "rank": 11,
+   "rank": 12,
    "key": "leeds-united",
    "name": "Leeds United",
    "short": "Leeds",
@@ -16663,31 +16690,31 @@ window.HUB = {
    "rankPrev": 7
   },
   {
-   "rank": 12,
-   "key": "newcastle-united",
-   "name": "Newcastle United",
-   "short": "Newcastle",
-   "played": 8,
-   "won": 3,
-   "drawn": 2,
-   "lost": 3,
-   "gf": 12,
-   "ga": 14,
-   "gd": -2,
+   "rank": 13,
+   "key": "everton",
+   "name": "Everton",
+   "short": "Everton",
+   "played": 9,
+   "won": 2,
+   "drawn": 5,
+   "lost": 2,
+   "gf": 8,
+   "ga": 9,
+   "gd": -1,
    "points": 11,
    "form": [
     "D",
-    "L",
+    "D",
     "W",
+    "D",
     "L",
-    "L",
-    "W"
+    "L"
    ],
    "zone": "",
-   "rankPrev": 8
+   "rankPrev": 11
   },
   {
-   "rank": 13,
+   "rank": 14,
    "key": "ipswich-town",
    "name": "Ipswich Town",
    "short": "Ipswich",
@@ -16709,30 +16736,6 @@ window.HUB = {
    ],
    "zone": "",
    "rankPrev": 12
-  },
-  {
-   "rank": 14,
-   "key": "everton",
-   "name": "Everton",
-   "short": "Everton",
-   "played": 8,
-   "won": 2,
-   "drawn": 4,
-   "lost": 2,
-   "gf": 8,
-   "ga": 9,
-   "gd": -1,
-   "points": 10,
-   "form": [
-    "D",
-    "D",
-    "W",
-    "D",
-    "L",
-    "L"
-   ],
-   "zone": "",
-   "rankPrev": 11
   },
   {
    "rank": 15,
