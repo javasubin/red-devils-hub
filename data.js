@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-11-04T03:14:52+09:00",
+  "updatedAt": "2026-11-04T08:29:11+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -7170,13 +7170,70 @@ window.HUB = {
     "name": "Roma",
     "short": "Roma"
    },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
-   "winner": null,
+   "status": "post",
+   "statusText": "FT",
+   "score": {
+    "home": 3,
+    "away": 2
+   },
+   "winner": "home",
    "scorers": {
-    "home": [],
-    "away": []
+    "home": [
+     {
+      "name": "Bruno Fernandes",
+      "times": [
+       "58'"
+      ],
+      "types": [
+       "pen"
+      ],
+      "type": "pen"
+     },
+     {
+      "name": "Matheus Cunha",
+      "times": [
+       "83'",
+       "86'"
+      ],
+      "types": [
+       "goal",
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "Matheus Cunha",
+      "times": [
+       "90'+1"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ],
+    "away": [
+     {
+      "name": "M. Soulé",
+      "times": [
+       "11'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "D. Malen",
+      "times": [
+       "17'"
+      ],
+      "types": [
+       "pen"
+      ],
+      "type": "pen"
+     }
+    ]
    },
    "mu": true,
    "fav": [
