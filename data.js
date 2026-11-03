@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-11-03T05:38:16+09:00",
+  "updatedAt": "2026-11-03T11:39:14+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -16,7 +16,7 @@ window.HUB = {
   ],
   "matchweeks": 38,
   "source": "BBC Sport",
-  "currentMw": 9
+  "currentMw": 10
  },
  "teams": {
   "arsenal": {
@@ -49,6 +49,11 @@ window.HUB = {
    "short": "Brentford",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/brentford.aa0256ca6b.svg"
   },
+  "everton": {
+   "name": "Everton",
+   "short": "Everton",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/everton.38c006ac78.svg"
+  },
   "afc-bournemouth": {
    "name": "Bournemouth",
    "short": "Bournemouth",
@@ -58,11 +63,6 @@ window.HUB = {
    "name": "Tottenham Hotspur",
    "short": "Spurs",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/tottenham-hotspur.f1c704ee3b.svg"
-  },
-  "newcastle-united": {
-   "name": "Newcastle United",
-   "short": "Newcastle",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/newcastle-united.f3dd81408e.svg"
   },
   "aston-villa": {
    "name": "Aston Villa",
@@ -79,10 +79,10 @@ window.HUB = {
    "short": "Leeds",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/leeds-united.6eb48daff9.svg"
   },
-  "everton": {
-   "name": "Everton",
-   "short": "Everton",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/everton.38c006ac78.svg"
+  "newcastle-united": {
+   "name": "Newcastle United",
+   "short": "Newcastle",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/newcastle-united.f3dd81408e.svg"
   },
   "ipswich-town": {
    "name": "Ipswich Town",
@@ -7114,16 +7114,38 @@ window.HUB = {
     "name": "Everton",
     "short": "Everton"
    },
-   "status": "live",
-   "statusText": "38'",
+   "status": "post",
+   "statusText": "FT",
    "score": {
     "home": 0,
-    "away": 0
+    "away": 1
    },
-   "winner": null,
+   "winner": "away",
    "scorers": {
-    "home": [],
-    "away": []
+    "home": [
+     {
+      "name": "J. Ramsey",
+      "times": [
+       "90'+8"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ],
+    "away": [
+     {
+      "name": "T. Barry",
+      "times": [
+       "49'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ]
    },
    "mu": false,
    "fav": [],
@@ -16547,6 +16569,30 @@ window.HUB = {
   },
   {
    "rank": 7,
+   "key": "everton",
+   "name": "Everton",
+   "short": "Everton",
+   "played": 9,
+   "won": 3,
+   "drawn": 4,
+   "lost": 2,
+   "gf": 9,
+   "ga": 9,
+   "gd": 0,
+   "points": 13,
+   "form": [
+    "D",
+    "W",
+    "D",
+    "L",
+    "L",
+    "W"
+   ],
+   "zone": "",
+   "rankPrev": 11
+  },
+  {
+   "rank": 8,
    "key": "afc-bournemouth",
    "name": "Bournemouth",
    "short": "Bournemouth",
@@ -16570,7 +16616,7 @@ window.HUB = {
    "rankPrev": 13
   },
   {
-   "rank": 8,
+   "rank": 9,
    "key": "tottenham-hotspur",
    "name": "Tottenham Hotspur",
    "short": "Spurs",
@@ -16592,30 +16638,6 @@ window.HUB = {
    ],
    "zone": "",
    "rankPrev": 14
-  },
-  {
-   "rank": 9,
-   "key": "newcastle-united",
-   "name": "Newcastle United",
-   "short": "Newcastle",
-   "played": 9,
-   "won": 3,
-   "drawn": 3,
-   "lost": 3,
-   "gf": 12,
-   "ga": 14,
-   "gd": -2,
-   "points": 12,
-   "form": [
-    "D",
-    "L",
-    "W",
-    "L",
-    "L",
-    "W"
-   ],
-   "zone": "",
-   "rankPrev": 8
   },
   {
    "rank": 10,
@@ -16691,27 +16713,27 @@ window.HUB = {
   },
   {
    "rank": 13,
-   "key": "everton",
-   "name": "Everton",
-   "short": "Everton",
+   "key": "newcastle-united",
+   "name": "Newcastle United",
+   "short": "Newcastle",
    "played": 9,
-   "won": 2,
-   "drawn": 5,
-   "lost": 2,
-   "gf": 8,
-   "ga": 9,
-   "gd": -1,
+   "won": 3,
+   "drawn": 2,
+   "lost": 4,
+   "gf": 12,
+   "ga": 15,
+   "gd": -3,
    "points": 11,
    "form": [
-    "D",
-    "D",
-    "W",
-    "D",
     "L",
+    "W",
+    "L",
+    "L",
+    "W",
     "L"
    ],
    "zone": "",
-   "rankPrev": 11
+   "rankPrev": 8
   },
   {
    "rank": 14,
@@ -16973,6 +16995,17 @@ window.HUB = {
   },
   {
    "rank": 7,
+   "name": "T. Barry",
+   "team": "everton",
+   "teamShort": "Everton",
+   "goals": 4,
+   "assists": 0,
+   "played": 9,
+   "minutes": 765,
+   "shots": 30
+  },
+  {
+   "rank": 7,
    "name": "D. Calvert-Lewin",
    "team": "leeds-united",
    "teamShort": "Leeds",
@@ -16994,7 +17027,7 @@ window.HUB = {
    "shots": 27
   },
   {
-   "rank": 11,
+   "rank": 12,
    "name": "P. Groß",
    "team": "brighton-and-hove-albion",
    "teamShort": "Brighton",
@@ -17005,7 +17038,7 @@ window.HUB = {
    "shots": 13
   },
   {
-   "rank": 11,
+   "rank": 12,
    "name": "C. Palmer",
    "team": "chelsea",
    "teamShort": "Chelsea",
@@ -17016,7 +17049,7 @@ window.HUB = {
    "shots": 29
   },
   {
-   "rank": 11,
+   "rank": 12,
    "name": "C. Kostoulas",
    "team": "brighton-and-hove-albion",
    "teamShort": "Brighton",
@@ -17027,7 +17060,7 @@ window.HUB = {
    "shots": 22
   },
   {
-   "rank": 11,
+   "rank": 12,
    "name": "M. Belloumi",
    "team": "hull-city",
    "teamShort": "Hull City",
@@ -17038,7 +17071,7 @@ window.HUB = {
    "shots": 23
   },
   {
-   "rank": 11,
+   "rank": 12,
    "name": "Pedro Neto",
    "team": "chelsea",
    "teamShort": "Chelsea",
@@ -17049,7 +17082,7 @@ window.HUB = {
    "shots": 17
   },
   {
-   "rank": 11,
+   "rank": 12,
    "name": "Bruno Fernandes",
    "team": "manchester-united",
    "teamShort": "Man Utd",
@@ -17060,7 +17093,7 @@ window.HUB = {
    "shots": 25
   },
   {
-   "rank": 11,
+   "rank": 12,
    "name": "J. Hinshelwood",
    "team": "brighton-and-hove-albion",
    "teamShort": "Brighton",
@@ -17071,7 +17104,7 @@ window.HUB = {
    "shots": 5
   },
   {
-   "rank": 11,
+   "rank": 12,
    "name": "B. Brobbey",
    "team": "sunderland",
    "teamShort": "Sunderland",
@@ -17082,7 +17115,7 @@ window.HUB = {
    "shots": 15
   },
   {
-   "rank": 11,
+   "rank": 12,
    "name": "B. Saka",
    "team": "arsenal",
    "teamShort": "Arsenal",
@@ -17093,7 +17126,7 @@ window.HUB = {
    "shots": 17
   },
   {
-   "rank": 11,
+   "rank": 12,
    "name": "J. Rudoni",
    "team": "coventry-city",
    "teamShort": "Coventry",
@@ -17104,7 +17137,7 @@ window.HUB = {
    "shots": 14
   },
   {
-   "rank": 11,
+   "rank": 12,
    "name": "Y. Ayari",
    "team": "brighton-and-hove-albion",
    "teamShort": "Brighton",
@@ -17115,7 +17148,7 @@ window.HUB = {
    "shots": 20
   },
   {
-   "rank": 11,
+   "rank": 12,
    "name": "K. Havertz",
    "team": "arsenal",
    "teamShort": "Arsenal",
@@ -17126,18 +17159,7 @@ window.HUB = {
    "shots": 15
   },
   {
-   "rank": 11,
-   "name": "T. Barry",
-   "team": "everton",
-   "teamShort": "Everton",
-   "goals": 3,
-   "assists": 0,
-   "played": 8,
-   "minutes": 685,
-   "shots": 27
-  },
-  {
-   "rank": 11,
+   "rank": 12,
    "name": "K. Schade",
    "team": "brentford",
    "teamShort": "Brentford",
@@ -17182,17 +17204,6 @@ window.HUB = {
   },
   {
    "rank": 25,
-   "name": "H. Barnes",
-   "team": "newcastle-united",
-   "teamShort": "Newcastle",
-   "goals": 2,
-   "assists": 2,
-   "played": 8,
-   "minutes": 706,
-   "shots": 19
-  },
-  {
-   "rank": 25,
    "name": "J. Enciso",
    "team": "ipswich-town",
    "teamShort": "Ipswich",
@@ -17201,6 +17212,17 @@ window.HUB = {
    "played": 9,
    "minutes": 739,
    "shots": 28
+  },
+  {
+   "rank": 25,
+   "name": "H. Barnes",
+   "team": "newcastle-united",
+   "teamShort": "Newcastle",
+   "goals": 2,
+   "assists": 2,
+   "played": 9,
+   "minutes": 796,
+   "shots": 20
   },
   {
    "rank": 25,
@@ -17248,17 +17270,6 @@ window.HUB = {
   },
   {
    "rank": 25,
-   "name": "K. Dewsbury-Hall",
-   "team": "everton",
-   "teamShort": "Everton",
-   "goals": 2,
-   "assists": 1,
-   "played": 8,
-   "minutes": 714,
-   "shots": 20
-  },
-  {
-   "rank": 25,
    "name": "K. Lewis-Potter",
    "team": "brentford",
    "teamShort": "Brentford",
@@ -17292,6 +17303,17 @@ window.HUB = {
   },
   {
    "rank": 25,
+   "name": "K. Dewsbury-Hall",
+   "team": "everton",
+   "teamShort": "Everton",
+   "goals": 2,
+   "assists": 1,
+   "played": 9,
+   "minutes": 804,
+   "shots": 23
+  },
+  {
+   "rank": 25,
    "name": "L. Davis",
    "team": "ipswich-town",
    "teamShort": "Ipswich",
@@ -17314,17 +17336,6 @@ window.HUB = {
   },
   {
    "rank": 25,
-   "name": "A. Elanga",
-   "team": "newcastle-united",
-   "teamShort": "Newcastle",
-   "goals": 2,
-   "assists": 0,
-   "played": 4,
-   "minutes": 248,
-   "shots": 4
-  },
-  {
-   "rank": 25,
    "name": "Bruno Guimarães",
    "team": "arsenal",
    "teamShort": "Arsenal",
@@ -17333,6 +17344,17 @@ window.HUB = {
    "played": 7,
    "minutes": 301,
    "shots": 5
+  },
+  {
+   "rank": 25,
+   "name": "A. Elanga",
+   "team": "newcastle-united",
+   "teamShort": "Newcastle",
+   "goals": 2,
+   "assists": 0,
+   "played": 5,
+   "minutes": 324,
+   "shots": 6
   },
   {
    "rank": 25,
@@ -17363,9 +17385,9 @@ window.HUB = {
    "teamShort": "Newcastle",
    "goals": 2,
    "assists": 0,
-   "played": 8,
-   "minutes": 479,
-   "shots": 16
+   "played": 9,
+   "minutes": 543,
+   "shots": 18
   },
   {
    "rank": 25,
