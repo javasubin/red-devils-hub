@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-11-04T14:16:45+09:00",
+  "updatedAt": "2026-11-05T03:30:14+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -9316,37 +9316,6 @@ window.HUB = {
    "url": null
   },
   {
-   "id": "s-5eqvg5gnv3uxa1yy7xun6e8t0",
-   "comp": "PL",
-   "compName": "Premier League",
-   "round": null,
-   "mw": 16,
-   "kickoff": "2026-12-19T15:00:00Z",
-   "dateUK": "2026-12-19",
-   "timeUK": "15:00",
-   "home": {
-    "key": "nottingham-forest",
-    "name": "Nottingham Forest",
-    "short": "N Forest"
-   },
-   "away": {
-    "key": "everton",
-    "name": "Everton",
-    "short": "Everton"
-   },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
-   "winner": null,
-   "scorers": {
-    "home": [],
-    "away": []
-   },
-   "mu": false,
-   "fav": [],
-   "url": null
-  },
-  {
    "id": "s-5e238cfa8puivg2aniwviz8yc",
    "comp": "PL",
    "compName": "Premier League",
@@ -9397,6 +9366,37 @@ window.HUB = {
     "key": "ipswich-town",
     "name": "Ipswich Town",
     "short": "Ipswich"
+   },
+   "status": "pre",
+   "statusText": "Scheduled",
+   "score": null,
+   "winner": null,
+   "scorers": {
+    "home": [],
+    "away": []
+   },
+   "mu": false,
+   "fav": [],
+   "url": null
+  },
+  {
+   "id": "s-5eqvg5gnv3uxa1yy7xun6e8t0",
+   "comp": "PL",
+   "compName": "Premier League",
+   "round": null,
+   "mw": 16,
+   "kickoff": "2026-12-20T14:00:00Z",
+   "dateUK": "2026-12-20",
+   "timeUK": "14:00",
+   "home": {
+    "key": "nottingham-forest",
+    "name": "Nottingham Forest",
+    "short": "N Forest"
+   },
+   "away": {
+    "key": "everton",
+    "name": "Everton",
+    "short": "Everton"
    },
    "status": "pre",
    "statusText": "Scheduled",
