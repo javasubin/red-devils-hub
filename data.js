@@ -1,11 +1,11 @@
 // ============================================================
 //  RED DEVILS HUB 데이터 — scripts/update-data.mjs 가 BBC Sport에서 생성합니다. 손으로 고치지 마세요.
-//  경기 404 · 순위표 20팀 · 득점 25명 (생성 시각은 meta.updatedAt)
+//  경기 404 · 순위표 20팀 · 득점 27명 (생성 시각은 meta.updatedAt)
 //  구조: SCHEMA.md
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-11-08T01:45:25+09:00",
+  "updatedAt": "2026-11-08T05:40:59+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -94,6 +94,11 @@ window.HUB = {
    "short": "Fulham",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/fulham.d16ec60bd3.svg"
   },
+  "nottingham-forest": {
+   "name": "Nottingham Forest",
+   "short": "N Forest",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/nottingham-forest.f0fc0fc962.svg"
+  },
   "coventry-city": {
    "name": "Coventry City",
    "short": "Coventry",
@@ -108,11 +113,6 @@ window.HUB = {
    "name": "Crystal Palace",
    "short": "C Palace",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/crystal-palace.9e5ab01a7b.svg"
-  },
-  "nottingham-forest": {
-   "name": "Nottingham Forest",
-   "short": "N Forest",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/nottingham-forest.f0fc0fc962.svg"
   },
   "sunderland": {
    "name": "Sunderland",
@@ -7375,13 +7375,13 @@ window.HUB = {
     "name": "Hull City",
     "short": "Hull City"
    },
-   "status": "live",
-   "statusText": "83'",
+   "status": "post",
+   "statusText": "FT",
    "score": {
     "home": 1,
     "away": 0
    },
-   "winner": null,
+   "winner": "home",
    "scorers": {
     "home": [
      {
@@ -7420,13 +7420,13 @@ window.HUB = {
     "name": "Newcastle United",
     "short": "Newcastle"
    },
-   "status": "live",
-   "statusText": "86'",
+   "status": "post",
+   "statusText": "FT",
    "score": {
     "home": 1,
     "away": 1
    },
-   "winner": null,
+   "winner": "draw",
    "scorers": {
     "home": [
      {
@@ -7476,13 +7476,50 @@ window.HUB = {
     "name": "Manchester City",
     "short": "Man City"
    },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
-   "winner": null,
+   "status": "post",
+   "statusText": "FT",
+   "score": {
+    "home": 3,
+    "away": 1
+   },
+   "winner": "home",
    "scorers": {
-    "home": [],
-    "away": []
+    "home": [
+     {
+      "name": "Jair Cunha",
+      "times": [
+       "6'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "L. Delap",
+      "times": [
+       "18'",
+       "73'"
+      ],
+      "types": [
+       "goal",
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ],
+    "away": [
+     {
+      "name": "R. Cherki",
+      "times": [
+       "52'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ]
    },
    "mu": false,
    "fav": [],
@@ -16584,39 +16621,39 @@ window.HUB = {
    "gd": 10,
    "points": 27,
    "form": [
-    "W",
     "L",
+    "W",
     "W",
     "W",
     "W",
     "W"
    ],
    "zone": "UEFA Champions League",
-   "rankPrev": 1
+   "rankPrev": 2
   },
   {
    "rank": 2,
    "key": "manchester-city",
    "name": "Manchester City",
    "short": "Man City",
-   "played": 9,
+   "played": 10,
    "won": 7,
    "drawn": 0,
-   "lost": 2,
-   "gf": 20,
-   "ga": 10,
-   "gd": 10,
+   "lost": 3,
+   "gf": 21,
+   "ga": 13,
+   "gd": 8,
    "points": 21,
    "form": [
     "W",
     "W",
     "W",
-    "W",
+    "L",
     "L",
     "L"
    ],
    "zone": "UEFA Champions League",
-   "rankPrev": 2
+   "rankPrev": 1
   },
   {
    "rank": 3,
@@ -16664,7 +16701,7 @@ window.HUB = {
     "W"
    ],
    "zone": "UEFA Champions League",
-   "rankPrev": 4
+   "rankPrev": 5
   },
   {
    "rank": 5,
@@ -16688,7 +16725,7 @@ window.HUB = {
     "W"
    ],
    "zone": "UEFA Europa League",
-   "rankPrev": 5
+   "rankPrev": 11
   },
   {
    "rank": 6,
@@ -16712,7 +16749,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 6
+   "rankPrev": 4
   },
   {
    "rank": 7,
@@ -16736,7 +16773,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 7
+   "rankPrev": 6
   },
   {
    "rank": 8,
@@ -16760,7 +16797,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 12
+   "rankPrev": 7
   },
   {
    "rank": 9,
@@ -16784,7 +16821,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 8
+   "rankPrev": 13
   },
   {
    "rank": 10,
@@ -16808,7 +16845,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 9
+   "rankPrev": 14
   },
   {
    "rank": 11,
@@ -16824,15 +16861,15 @@ window.HUB = {
    "gd": -3,
    "points": 12,
    "form": [
-    "L",
     "W",
     "L",
     "L",
     "W",
-    "L"
+    "L",
+    "D"
    ],
    "zone": "",
-   "rankPrev": 13
+   "rankPrev": 8
   },
   {
    "rank": 12,
@@ -16856,7 +16893,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 10
+   "rankPrev": 9
   },
   {
    "rank": 13,
@@ -16872,15 +16909,15 @@ window.HUB = {
    "gd": 0,
    "points": 11,
    "form": [
-    "D",
     "L",
     "D",
     "L",
     "D",
-    "D"
+    "D",
+    "L"
    ],
    "zone": "",
-   "rankPrev": 11
+   "rankPrev": 10
   },
   {
    "rank": 14,
@@ -16904,7 +16941,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 14
+   "rankPrev": 12
   },
   {
    "rank": 15,
@@ -16921,10 +16958,10 @@ window.HUB = {
    "points": 10,
    "form": [
     "D",
-    "D",
     "L",
     "W",
     "W",
+    "D",
     "D"
    ],
    "zone": "",
@@ -16932,6 +16969,30 @@ window.HUB = {
   },
   {
    "rank": 16,
+   "key": "nottingham-forest",
+   "name": "Nottingham Forest",
+   "short": "N Forest",
+   "played": 10,
+   "won": 2,
+   "drawn": 3,
+   "lost": 5,
+   "gf": 9,
+   "ga": 13,
+   "gd": -4,
+   "points": 9,
+   "form": [
+    "L",
+    "L",
+    "L",
+    "D",
+    "L",
+    "W"
+   ],
+   "zone": "",
+   "rankPrev": 18
+  },
+  {
+   "rank": 17,
    "key": "coventry-city",
    "name": "Coventry City",
    "short": "Coventry",
@@ -16952,10 +17013,10 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 16
+   "rankPrev": 19
   },
   {
-   "rank": 17,
+   "rank": 18,
    "key": "manchester-united",
    "name": "Manchester United",
    "short": "Man Utd",
@@ -16975,11 +17036,11 @@ window.HUB = {
     "L",
     "L"
    ],
-   "zone": "",
-   "rankPrev": 17
+   "zone": "Relegation",
+   "rankPrev": 16
   },
   {
-   "rank": 18,
+   "rank": 19,
    "key": "crystal-palace",
    "name": "Crystal Palace",
    "short": "C Palace",
@@ -17000,31 +17061,7 @@ window.HUB = {
     "L"
    ],
    "zone": "Relegation",
-   "rankPrev": 18
-  },
-  {
-   "rank": 19,
-   "key": "nottingham-forest",
-   "name": "Nottingham Forest",
-   "short": "N Forest",
-   "played": 9,
-   "won": 1,
-   "drawn": 3,
-   "lost": 5,
-   "gf": 6,
-   "ga": 12,
-   "gd": -6,
-   "points": 6,
-   "form": [
-    "W",
-    "L",
-    "L",
-    "L",
-    "D",
-    "L"
-   ],
-   "zone": "Relegation",
-   "rankPrev": 19
+   "rankPrev": 17
   },
   {
    "rank": 20,
@@ -17059,9 +17096,9 @@ window.HUB = {
    "teamShort": "Man City",
    "goals": 9,
    "assists": 0,
-   "played": 9,
-   "minutes": 800,
-   "shots": 34
+   "played": 10,
+   "minutes": 890,
+   "shots": 38
   },
   {
    "rank": 2,
@@ -17098,6 +17135,17 @@ window.HUB = {
   },
   {
    "rank": 4,
+   "name": "R. Cherki",
+   "team": "manchester-city",
+   "teamShort": "Man City",
+   "goals": 5,
+   "assists": 2,
+   "played": 9,
+   "minutes": 565,
+   "shots": 18
+  },
+  {
+   "rank": 4,
    "name": "M. Rogers",
    "team": "chelsea",
    "teamShort": "Chelsea",
@@ -17130,7 +17178,7 @@ window.HUB = {
    "shots": 19
   },
   {
-   "rank": 8,
+   "rank": 9,
    "name": "Evanilson",
    "team": "afc-bournemouth",
    "teamShort": "Bournemouth",
@@ -17141,29 +17189,7 @@ window.HUB = {
    "shots": 22
   },
   {
-   "rank": 8,
-   "name": "R. Cherki",
-   "team": "manchester-city",
-   "teamShort": "Man City",
-   "goals": 4,
-   "assists": 2,
-   "played": 8,
-   "minutes": 475,
-   "shots": 17
-  },
-  {
-   "rank": 8,
-   "name": "D. Calvert-Lewin",
-   "team": "leeds-united",
-   "teamShort": "Leeds",
-   "goals": 4,
-   "assists": 0,
-   "played": 9,
-   "minutes": 776,
-   "shots": 16
-  },
-  {
-   "rank": 8,
+   "rank": 9,
    "name": "B. Mbeumo",
    "team": "manchester-united",
    "teamShort": "Man Utd",
@@ -17172,6 +17198,17 @@ window.HUB = {
    "played": 9,
    "minutes": 810,
    "shots": 27
+  },
+  {
+   "rank": 9,
+   "name": "D. Calvert-Lewin",
+   "team": "leeds-united",
+   "teamShort": "Leeds",
+   "goals": 4,
+   "assists": 0,
+   "played": 10,
+   "minutes": 866,
+   "shots": 19
   },
   {
    "rank": 12,
@@ -17296,14 +17333,14 @@ window.HUB = {
   },
   {
    "rank": 12,
-   "name": "K. Havertz",
-   "team": "arsenal",
-   "teamShort": "Arsenal",
+   "name": "L. Delap",
+   "team": "nottingham-forest",
+   "teamShort": "N Forest",
    "goals": 3,
    "assists": 0,
    "played": 9,
-   "minutes": 673,
-   "shots": 15
+   "minutes": 680,
+   "shots": 27
   },
   {
    "rank": 12,
@@ -17318,6 +17355,17 @@ window.HUB = {
   },
   {
    "rank": 12,
+   "name": "K. Havertz",
+   "team": "arsenal",
+   "teamShort": "Arsenal",
+   "goals": 3,
+   "assists": 0,
+   "played": 10,
+   "minutes": 736,
+   "shots": 15
+  },
+  {
+   "rank": 12,
    "name": "J. Rudoni",
    "team": "coventry-city",
    "teamShort": "Coventry",
@@ -17326,6 +17374,17 @@ window.HUB = {
    "played": 10,
    "minutes": 737,
    "shots": 17
+  },
+  {
+   "rank": 12,
+   "name": "M. Ødegaard",
+   "team": "arsenal",
+   "teamShort": "Arsenal",
+   "goals": 3,
+   "assists": 0,
+   "played": 10,
+   "minutes": 829,
+   "shots": 16
   }
  ]
 };
