@@ -3,7 +3,8 @@ name: update-data
 # BBC Sport에서 경기·순위·득점(data.js)과 경기 상세(matches/)를 받아 커밋합니다.
 # - 경기 시간대(UTC 11~23시 = 한국 20시~다음날 8시)에는 15분마다: 라인업 발표·진행 상황·최종 기록
 # - 매일 UTC 0시(한국 09시)에 전체 갱신
-# 실행이 성공하면 매번 커밋합니다(데이터가 같아도 meta.updatedAt = 이번 확인 시각). GitHub Pages가 자동으로 다시 배포합니다.
+# 데이터가 바뀌면 커밋합니다. 갱신 시각(meta.updatedAt)만 바뀐 실행은 마지막 커밋 후 TIME_ONLY_COMMIT_INTERVAL_HOURS 시간이 지나야 커밋합니다.
+# 커밋되면 GitHub Pages가 자동으로 다시 배포합니다.
 
 on:
   schedule:
@@ -40,14 +41,27 @@ jobs:
       - name: Refresh match details (lineups, events, stats)
         run: node scripts/update-matches.mjs
 
-      - name: Commit and push if anything changed
+      - name: Commit and push (time-only changes at most once per interval)
+        env:
+          # 데이터는 그대로이고 갱신 시각만 바뀐 실행은, 마지막 커밋(사람이 푸시한 커밋 포함) 후 이 시간이 지나야 커밋한다.
+          # 그래서 헤더의 "갱신" 시각은 마지막 성공 확인보다 이만큼 늦을 수 있고, 그 사이에 다른 푸시가 끼면 더 늦어진다.
+          TIME_ONLY_COMMIT_INTERVAL_HOURS: 3
         run: |
           git config user.name "red-devils-hub-bot"
           git config user.email "red-devils-hub-bot@users.noreply.github.com"
           git add data.js matches/
-          # 갱신 시각(meta.updatedAt)이 매번 바뀌므로 성공한 실행은 항상 커밋된다 — 헤더의 "갱신" 시각 = 마지막 성공 확인 시각
+          # 안전장치: 스테이징된 변경이 없으면 git commit이 실패하므로 여기서 끝낸다.
           if git diff --cached --quiet; then
-            echo "nothing to commit"; exit 0
+            echo "nothing staged"; exit 0
+          fi
+          # "시각만 바뀜" = matches/는 그대로이고, data.js는 갱신 시각 줄만 바뀐 경우(-I: 그 줄의 변경은 무시).
+          # 이때는 마지막 커밋 후 간격이 지났을 때만 커밋한다.
+          if git diff --cached --quiet -- matches/ &&
+             git diff --cached --quiet -I '"updatedAt":' -- data.js; then
+            seconds_since_last_commit=$(( $(date +%s) - $(git log -1 --format=%ct) ))
+            if [ "$seconds_since_last_commit" -lt $(( TIME_ONLY_COMMIT_INTERVAL_HOURS * 3600 )) ]; then
+              echo "only updatedAt changed, last commit ${seconds_since_last_commit}s ago: skip"; exit 0
+            fi
           fi
           git commit -m "data: $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M')"
           git push

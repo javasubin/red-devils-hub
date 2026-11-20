@@ -50,10 +50,11 @@ node scripts/update-data.mjs
 
 ### 자동 갱신 (GitHub Actions — 기본)
 
-`.github/workflows/update.yml`이 GitHub에서 두 스크립트를 돌리고, 성공하면 매번 커밋·푸시한다(데이터가 같아도 갱신 시각은 새로 기록되므로 헤더의 "갱신"은 마지막으로 확인에 성공한 시각이다). PC가 꺼져 있어도 돌아간다.
+`.github/workflows/update.yml`이 GitHub에서 두 스크립트를 돌리고, 데이터가 바뀌면 커밋·푸시한다. PC가 꺼져 있어도 돌아간다.
 
 - 경기 시간대(한국 20시~다음날 08시)에는 **15분마다**: 라인업 발표(킥오프 약 1시간 전), 진행 중 스코어, 종료 후 최종 기록
 - 매일 **09시(KST)**: 전체 갱신
+- 데이터는 그대로이고 갱신 시각만 바뀐 실행은 마지막 커밋(사람이 푸시한 커밋 포함) 후 **3시간이 지나야** 커밋한다(간격은 `update.yml`의 `TIME_ONLY_COMMIT_INTERVAL_HOURS`). 그래서 헤더의 "갱신" 시각은 마지막으로 확인에 성공한 시각보다 3시간쯤 늦을 수 있고, 그 사이에 다른 푸시가 끼면 더 늦어진다
 - 저장소 Actions 탭에서 `update-data` 워크플로를 **Run workflow**로 수동 실행할 수도 있다
 - 커밋 메시지는 `data: YYYY-MM-DD HH:MM`, 작성자 `red-devils-hub-bot`
 
