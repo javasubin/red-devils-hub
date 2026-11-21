@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-11-21T09:43:53+09:00",
+  "updatedAt": "2026-11-21T14:59:58+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -7925,7 +7925,7 @@ window.HUB = {
    },
    "mu": false,
    "fav": [],
-   "url": null
+   "url": "https://www.bbc.com/sport/football/live/c3kgdxnggq7pt"
   },
   {
    "id": "s-4uq3dwjemb2o2xavhsk9wszdg",
@@ -7956,7 +7956,7 @@ window.HUB = {
    },
    "mu": false,
    "fav": [],
-   "url": null
+   "url": "https://www.bbc.com/sport/football/live/cr5y18vyynlxt"
   },
   {
    "id": "s-4v2b3zg4479svvku6mezupfro",
@@ -7987,7 +7987,7 @@ window.HUB = {
    },
    "mu": false,
    "fav": [],
-   "url": null
+   "url": "https://www.bbc.com/sport/football/live/ck7v2e0vvpzdt"
   },
   {
    "id": "s-4vqxpltefcdchpzkgwz3yr310",
@@ -8018,7 +8018,7 @@ window.HUB = {
    },
    "mu": false,
    "fav": [],
-   "url": null
+   "url": "https://www.bbc.com/sport/football/live/c3dx19jxx15zt"
   },
   {
    "id": "s-4w3atupelzlb2at14x7zk7578",
@@ -8049,7 +8049,7 @@ window.HUB = {
    },
    "mu": false,
    "fav": [],
-   "url": null
+   "url": "https://www.bbc.com/sport/football/live/c6pw42nwwgvjt"
   },
   {
    "id": "s-4xsnkddrdioejztg91k7ducyc",
@@ -8082,7 +8082,7 @@ window.HUB = {
    "fav": [
     "tottenham-hotspur"
    ],
-   "url": null
+   "url": "https://www.bbc.com/sport/football/live/c699exk99z54t"
   },
   {
    "id": "s-4xgd5lkdaorn0jxd9qsx1rqxg",
@@ -8113,7 +8113,7 @@ window.HUB = {
    },
    "mu": false,
    "fav": [],
-   "url": null
+   "url": "https://www.bbc.com/sport/football/live/cqd01ey009rxt"
   },
   {
    "id": "s-4wfi4qj9ndn19vvw8gc5e71n8",
