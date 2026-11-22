@@ -1,11 +1,11 @@
 // ============================================================
 //  RED DEVILS HUB 데이터 — scripts/update-data.mjs 가 BBC Sport에서 생성합니다. 손으로 고치지 마세요.
-//  경기 404 · 순위표 20팀 · 득점 30명 (생성 시각은 meta.updatedAt)
+//  경기 404 · 순위표 20팀 · 득점 32명 (생성 시각은 meta.updatedAt)
 //  구조: SCHEMA.md
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-11-23T03:15:10+09:00",
+  "updatedAt": "2026-11-23T08:39:17+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -8415,13 +8415,13 @@ window.HUB = {
     "name": "Manchester United",
     "short": "Man Utd"
    },
-   "status": "live",
-   "statusText": "86'",
+   "status": "post",
+   "statusText": "FT",
    "score": {
     "home": 4,
     "away": 0
    },
-   "winner": null,
+   "winner": "home",
    "scorers": {
     "home": [
      {
@@ -17212,15 +17212,15 @@ window.HUB = {
    "gd": 8,
    "points": 21,
    "form": [
-    "W",
     "L",
     "W",
     "W",
     "L",
+    "W",
     "W"
    ],
    "zone": "UEFA Champions League",
-   "rankPrev": 5
+   "rankPrev": 4
   },
   {
    "rank": 5,
@@ -17244,7 +17244,7 @@ window.HUB = {
     "W"
    ],
    "zone": "UEFA Europa League",
-   "rankPrev": 4
+   "rankPrev": 7
   },
   {
    "rank": 6,
@@ -17268,7 +17268,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 6
+   "rankPrev": 9
   },
   {
    "rank": 7,
@@ -17292,7 +17292,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 7
+   "rankPrev": 6
   },
   {
    "rank": 8,
@@ -17316,7 +17316,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 8
+   "rankPrev": 5
   },
   {
    "rank": 9,
@@ -17340,7 +17340,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 9
+   "rankPrev": 11
   },
   {
    "rank": 10,
@@ -17364,7 +17364,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 10
+   "rankPrev": 8
   },
   {
    "rank": 11,
@@ -17388,7 +17388,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 14
+   "rankPrev": 13
   },
   {
    "rank": 12,
@@ -17412,7 +17412,7 @@ window.HUB = {
     "D"
    ],
    "zone": "",
-   "rankPrev": 11
+   "rankPrev": 10
   },
   {
    "rank": 13,
@@ -17460,7 +17460,7 @@ window.HUB = {
     "W"
    ],
    "zone": "",
-   "rankPrev": 13
+   "rankPrev": 17
   },
   {
    "rank": 15,
@@ -17508,7 +17508,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 16
+   "rankPrev": 14
   },
   {
    "rank": 17,
@@ -17532,7 +17532,7 @@ window.HUB = {
     "L"
    ],
    "zone": "",
-   "rankPrev": 17
+   "rankPrev": 16
   },
   {
    "rank": 18,
@@ -17556,7 +17556,7 @@ window.HUB = {
     "D"
    ],
    "zone": "Relegation",
-   "rankPrev": 18
+   "rankPrev": 19
   },
   {
    "rank": 19,
@@ -17574,13 +17574,13 @@ window.HUB = {
    "form": [
     "D",
     "D",
+    "L",
+    "L",
     "D",
-    "L",
-    "L",
-    "D"
+    "L"
    ],
    "zone": "Relegation",
-   "rankPrev": 19
+   "rankPrev": 18
   },
   {
    "rank": 20,
@@ -17626,9 +17626,9 @@ window.HUB = {
    "teamShort": "Liverpool",
    "goals": 7,
    "assists": 0,
-   "played": 9,
-   "minutes": 750,
-   "shots": 25
+   "played": 10,
+   "minutes": 835,
+   "shots": 31
   },
   {
    "rank": 3,
@@ -17725,9 +17725,9 @@ window.HUB = {
    "teamShort": "Brighton",
    "goals": 4,
    "assists": 4,
-   "played": 10,
-   "minutes": 881,
-   "shots": 15
+   "played": 11,
+   "minutes": 971,
+   "shots": 16
   },
   {
    "rank": 11,
@@ -17736,9 +17736,20 @@ window.HUB = {
    "teamShort": "Man Utd",
    "goals": 4,
    "assists": 2,
-   "played": 9,
-   "minutes": 810,
-   "shots": 31
+   "played": 10,
+   "minutes": 900,
+   "shots": 35
+  },
+  {
+   "rank": 11,
+   "name": "O. McBurnie",
+   "team": "hull-city",
+   "teamShort": "Hull City",
+   "goals": 4,
+   "assists": 2,
+   "played": 11,
+   "minutes": 978,
+   "shots": 15
   },
   {
    "rank": 11,
@@ -17758,12 +17769,23 @@ window.HUB = {
    "teamShort": "Man Utd",
    "goals": 4,
    "assists": 0,
-   "played": 10,
-   "minutes": 893,
+   "played": 11,
+   "minutes": 915,
    "shots": 30
   },
   {
-   "rank": 15,
+   "rank": 16,
+   "name": "M. Belloumi",
+   "team": "hull-city",
+   "teamShort": "Hull City",
+   "goals": 3,
+   "assists": 3,
+   "played": 10,
+   "minutes": 780,
+   "shots": 26
+  },
+  {
+   "rank": 16,
    "name": "C. Palmer",
    "team": "chelsea",
    "teamShort": "Chelsea",
@@ -17774,29 +17796,18 @@ window.HUB = {
    "shots": 31
   },
   {
-   "rank": 15,
-   "name": "M. Belloumi",
-   "team": "hull-city",
-   "teamShort": "Hull City",
-   "goals": 3,
-   "assists": 2,
-   "played": 9,
-   "minutes": 690,
-   "shots": 23
-  },
-  {
-   "rank": 15,
+   "rank": 16,
    "name": "C. Kostoulas",
    "team": "brighton-and-hove-albion",
    "teamShort": "Brighton",
    "goals": 3,
    "assists": 2,
-   "played": 10,
-   "minutes": 731,
-   "shots": 25
+   "played": 11,
+   "minutes": 754,
+   "shots": 26
   },
   {
-   "rank": 15,
+   "rank": 16,
    "name": "J. Rudoni",
    "team": "coventry-city",
    "teamShort": "Coventry",
@@ -17807,7 +17818,7 @@ window.HUB = {
    "shots": 18
   },
   {
-   "rank": 15,
+   "rank": 16,
    "name": "H. Barnes",
    "team": "newcastle-united",
    "teamShort": "Newcastle",
@@ -17818,7 +17829,7 @@ window.HUB = {
    "shots": 25
   },
   {
-   "rank": 15,
+   "rank": 16,
    "name": "Pedro Neto",
    "team": "chelsea",
    "teamShort": "Chelsea",
@@ -17829,7 +17840,7 @@ window.HUB = {
    "shots": 18
   },
   {
-   "rank": 15,
+   "rank": 16,
    "name": "K. Havertz",
    "team": "arsenal",
    "teamShort": "Arsenal",
@@ -17840,7 +17851,7 @@ window.HUB = {
    "shots": 16
   },
   {
-   "rank": 15,
+   "rank": 16,
    "name": "K. Dewsbury-Hall",
    "team": "everton",
    "teamShort": "Everton",
@@ -17851,7 +17862,7 @@ window.HUB = {
    "shots": 25
   },
   {
-   "rank": 15,
+   "rank": 16,
    "name": "M. Ødegaard",
    "team": "arsenal",
    "teamShort": "Arsenal",
@@ -17862,7 +17873,7 @@ window.HUB = {
    "shots": 16
   },
   {
-   "rank": 15,
+   "rank": 16,
    "name": "E. Le Fée",
    "team": "sunderland",
    "teamShort": "Sunderland",
@@ -17873,18 +17884,29 @@ window.HUB = {
    "shots": 19
   },
   {
-   "rank": 15,
+   "rank": 16,
    "name": "J. Hinshelwood",
    "team": "brighton-and-hove-albion",
    "teamShort": "Brighton",
    "goals": 3,
    "assists": 0,
-   "played": 5,
-   "minutes": 158,
+   "played": 6,
+   "minutes": 181,
    "shots": 6
   },
   {
-   "rank": 15,
+   "rank": 16,
+   "name": "Víctor Muñoz",
+   "team": "liverpool",
+   "teamShort": "Liverpool",
+   "goals": 3,
+   "assists": 0,
+   "played": 10,
+   "minutes": 476,
+   "shots": 14
+  },
+  {
+   "rank": 16,
    "name": "B. Saka",
    "team": "arsenal",
    "teamShort": "Arsenal",
@@ -17895,7 +17917,7 @@ window.HUB = {
    "shots": 17
   },
   {
-   "rank": 15,
+   "rank": 16,
    "name": "B. Brobbey",
    "team": "sunderland",
    "teamShort": "Sunderland",
@@ -17906,18 +17928,7 @@ window.HUB = {
    "shots": 17
   },
   {
-   "rank": 15,
-   "name": "Y. Ayari",
-   "team": "brighton-and-hove-albion",
-   "teamShort": "Brighton",
-   "goals": 3,
-   "assists": 0,
-   "played": 9,
-   "minutes": 746,
-   "shots": 24
-  },
-  {
-   "rank": 15,
+   "rank": 16,
    "name": "L. Delap",
    "team": "nottingham-forest",
    "teamShort": "N Forest",
@@ -17928,7 +17939,7 @@ window.HUB = {
    "shots": 28
   },
   {
-   "rank": 15,
+   "rank": 16,
    "name": "K. Schade",
    "team": "brentford",
    "teamShort": "Brentford",
@@ -17937,6 +17948,17 @@ window.HUB = {
    "played": 10,
    "minutes": 781,
    "shots": 19
+  },
+  {
+   "rank": 16,
+   "name": "Y. Ayari",
+   "team": "brighton-and-hove-albion",
+   "teamShort": "Brighton",
+   "goals": 3,
+   "assists": 0,
+   "played": 10,
+   "minutes": 813,
+   "shots": 26
   }
  ]
 };
