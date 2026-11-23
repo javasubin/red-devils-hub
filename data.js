@@ -1,11 +1,11 @@
 // ============================================================
 //  RED DEVILS HUB 데이터 — scripts/update-data.mjs 가 BBC Sport에서 생성합니다. 손으로 고치지 마세요.
-//  경기 404 · 순위표 20팀 · 득점 32명 (생성 시각은 meta.updatedAt)
+//  경기 404 · 순위표 20팀 · 득점 34명 (생성 시각은 meta.updatedAt)
 //  구조: SCHEMA.md
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-11-23T13:00:31+09:00",
+  "updatedAt": "2026-11-24T07:27:51+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -16,7 +16,7 @@ window.HUB = {
   ],
   "matchweeks": 38,
   "source": "BBC Sport",
-  "currentMw": 11
+  "currentMw": 12
  },
  "teams": {
   "arsenal": {
@@ -44,30 +44,30 @@ window.HUB = {
    "short": "Bournemouth",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/afc-bournemouth.3e0ae7da8e.svg"
   },
+  "brentford": {
+   "name": "Brentford",
+   "short": "Brentford",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/brentford.aa0256ca6b.svg"
+  },
   "leeds-united": {
    "name": "Leeds United",
    "short": "Leeds",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/leeds-united.6eb48daff9.svg"
-  },
-  "everton": {
-   "name": "Everton",
-   "short": "Everton",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/everton.38c006ac78.svg"
   },
   "chelsea": {
    "name": "Chelsea",
    "short": "Chelsea",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/chelsea.b96b403b5f.svg"
   },
+  "everton": {
+   "name": "Everton",
+   "short": "Everton",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/everton.38c006ac78.svg"
+  },
   "tottenham-hotspur": {
    "name": "Tottenham Hotspur",
    "short": "Spurs",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/tottenham-hotspur.f1c704ee3b.svg"
-  },
-  "brentford": {
-   "name": "Brentford",
-   "short": "Brentford",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/brentford.aa0256ca6b.svg"
   },
   "hull-city": {
    "name": "Hull City",
@@ -8503,13 +8503,60 @@ window.HUB = {
     "name": "Everton",
     "short": "Everton"
    },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
-   "winner": null,
+   "status": "post",
+   "statusText": "FT",
+   "score": {
+    "home": 4,
+    "away": 0
+   },
+   "winner": "home",
    "scorers": {
-    "home": [],
-    "away": []
+    "home": [
+     {
+      "name": "K. Lewis-Potter",
+      "times": [
+       "23'",
+       "25'"
+      ],
+      "types": [
+       "goal",
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "V. Janelt",
+      "times": [
+       "67'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "Fábio Carvalho",
+      "times": [
+       "90'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ],
+    "away": [
+     {
+      "name": "J. Tarkowski",
+      "times": [
+       "40'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ]
    },
    "mu": false,
    "fav": [],
@@ -17248,6 +17295,30 @@ window.HUB = {
   },
   {
    "rank": 6,
+   "key": "brentford",
+   "name": "Brentford",
+   "short": "Brentford",
+   "played": 11,
+   "won": 4,
+   "drawn": 5,
+   "lost": 2,
+   "gf": 20,
+   "ga": 11,
+   "gd": 9,
+   "points": 17,
+   "form": [
+    "D",
+    "L",
+    "D",
+    "W",
+    "L",
+    "W"
+   ],
+   "zone": "",
+   "rankPrev": 8
+  },
+  {
+   "rank": 7,
    "key": "leeds-united",
    "name": "Leeds United",
    "short": "Leeds",
@@ -17269,30 +17340,6 @@ window.HUB = {
    ],
    "zone": "",
    "rankPrev": 9
-  },
-  {
-   "rank": 7,
-   "key": "everton",
-   "name": "Everton",
-   "short": "Everton",
-   "played": 10,
-   "won": 4,
-   "drawn": 4,
-   "lost": 2,
-   "gf": 12,
-   "ga": 10,
-   "gd": 2,
-   "points": 16,
-   "form": [
-    "W",
-    "D",
-    "L",
-    "L",
-    "W",
-    "W"
-   ],
-   "zone": "",
-   "rankPrev": 6
   },
   {
    "rank": 8,
@@ -17320,6 +17367,30 @@ window.HUB = {
   },
   {
    "rank": 9,
+   "key": "everton",
+   "name": "Everton",
+   "short": "Everton",
+   "played": 11,
+   "won": 4,
+   "drawn": 4,
+   "lost": 3,
+   "gf": 12,
+   "ga": 14,
+   "gd": -2,
+   "points": 16,
+   "form": [
+    "D",
+    "L",
+    "L",
+    "W",
+    "W",
+    "L"
+   ],
+   "zone": "",
+   "rankPrev": 6
+  },
+  {
+   "rank": 10,
    "key": "tottenham-hotspur",
    "name": "Tottenham Hotspur",
    "short": "Spurs",
@@ -17341,30 +17412,6 @@ window.HUB = {
    ],
    "zone": "",
    "rankPrev": 11
-  },
-  {
-   "rank": 10,
-   "key": "brentford",
-   "name": "Brentford",
-   "short": "Brentford",
-   "played": 10,
-   "won": 3,
-   "drawn": 5,
-   "lost": 2,
-   "gf": 16,
-   "ga": 11,
-   "gd": 5,
-   "points": 14,
-   "form": [
-    "W",
-    "D",
-    "L",
-    "D",
-    "W",
-    "L"
-   ],
-   "zone": "",
-   "rankPrev": 8
   },
   {
    "rank": 11,
@@ -17659,9 +17706,9 @@ window.HUB = {
    "teamShort": "Everton",
    "goals": 6,
    "assists": 1,
-   "played": 10,
-   "minutes": 855,
-   "shots": 36
+   "played": 11,
+   "minutes": 924,
+   "shots": 37
   },
   {
    "rank": 6,
@@ -17753,6 +17800,17 @@ window.HUB = {
   },
   {
    "rank": 11,
+   "name": "K. Lewis-Potter",
+   "team": "brentford",
+   "teamShort": "Brentford",
+   "goals": 4,
+   "assists": 1,
+   "played": 11,
+   "minutes": 854,
+   "shots": 21
+  },
+  {
+   "rank": 11,
    "name": "N. Okafor",
    "team": "leeds-united",
    "teamShort": "Leeds",
@@ -17774,7 +17832,7 @@ window.HUB = {
    "shots": 30
   },
   {
-   "rank": 16,
+   "rank": 17,
    "name": "M. Belloumi",
    "team": "hull-city",
    "teamShort": "Hull City",
@@ -17785,7 +17843,7 @@ window.HUB = {
    "shots": 26
   },
   {
-   "rank": 16,
+   "rank": 17,
    "name": "C. Palmer",
    "team": "chelsea",
    "teamShort": "Chelsea",
@@ -17796,7 +17854,7 @@ window.HUB = {
    "shots": 31
   },
   {
-   "rank": 16,
+   "rank": 17,
    "name": "C. Kostoulas",
    "team": "brighton-and-hove-albion",
    "teamShort": "Brighton",
@@ -17807,7 +17865,7 @@ window.HUB = {
    "shots": 26
   },
   {
-   "rank": 16,
+   "rank": 17,
    "name": "J. Rudoni",
    "team": "coventry-city",
    "teamShort": "Coventry",
@@ -17818,7 +17876,7 @@ window.HUB = {
    "shots": 18
   },
   {
-   "rank": 16,
+   "rank": 17,
    "name": "H. Barnes",
    "team": "newcastle-united",
    "teamShort": "Newcastle",
@@ -17829,7 +17887,7 @@ window.HUB = {
    "shots": 25
   },
   {
-   "rank": 16,
+   "rank": 17,
    "name": "Pedro Neto",
    "team": "chelsea",
    "teamShort": "Chelsea",
@@ -17840,7 +17898,7 @@ window.HUB = {
    "shots": 18
   },
   {
-   "rank": 16,
+   "rank": 17,
    "name": "K. Havertz",
    "team": "arsenal",
    "teamShort": "Arsenal",
@@ -17851,18 +17909,7 @@ window.HUB = {
    "shots": 16
   },
   {
-   "rank": 16,
-   "name": "K. Dewsbury-Hall",
-   "team": "everton",
-   "teamShort": "Everton",
-   "goals": 3,
-   "assists": 1,
-   "played": 10,
-   "minutes": 894,
-   "shots": 25
-  },
-  {
-   "rank": 16,
+   "rank": 17,
    "name": "M. Ødegaard",
    "team": "arsenal",
    "teamShort": "Arsenal",
@@ -17873,7 +17920,7 @@ window.HUB = {
    "shots": 16
   },
   {
-   "rank": 16,
+   "rank": 17,
    "name": "E. Le Fée",
    "team": "sunderland",
    "teamShort": "Sunderland",
@@ -17884,7 +17931,18 @@ window.HUB = {
    "shots": 19
   },
   {
-   "rank": 16,
+   "rank": 17,
+   "name": "K. Dewsbury-Hall",
+   "team": "everton",
+   "teamShort": "Everton",
+   "goals": 3,
+   "assists": 1,
+   "played": 11,
+   "minutes": 963,
+   "shots": 26
+  },
+  {
+   "rank": 17,
    "name": "J. Hinshelwood",
    "team": "brighton-and-hove-albion",
    "teamShort": "Brighton",
@@ -17895,7 +17953,7 @@ window.HUB = {
    "shots": 6
   },
   {
-   "rank": 16,
+   "rank": 17,
    "name": "Víctor Muñoz",
    "team": "liverpool",
    "teamShort": "Liverpool",
@@ -17906,7 +17964,7 @@ window.HUB = {
    "shots": 14
   },
   {
-   "rank": 16,
+   "rank": 17,
    "name": "B. Saka",
    "team": "arsenal",
    "teamShort": "Arsenal",
@@ -17917,7 +17975,7 @@ window.HUB = {
    "shots": 17
   },
   {
-   "rank": 16,
+   "rank": 17,
    "name": "B. Brobbey",
    "team": "sunderland",
    "teamShort": "Sunderland",
@@ -17928,7 +17986,7 @@ window.HUB = {
    "shots": 17
   },
   {
-   "rank": 16,
+   "rank": 17,
    "name": "L. Delap",
    "team": "nottingham-forest",
    "teamShort": "N Forest",
@@ -17939,18 +17997,18 @@ window.HUB = {
    "shots": 28
   },
   {
-   "rank": 16,
+   "rank": 17,
    "name": "K. Schade",
    "team": "brentford",
    "teamShort": "Brentford",
    "goals": 3,
    "assists": 0,
-   "played": 10,
-   "minutes": 781,
-   "shots": 19
+   "played": 11,
+   "minutes": 805,
+   "shots": 21
   },
   {
-   "rank": 16,
+   "rank": 17,
    "name": "Y. Ayari",
    "team": "brighton-and-hove-albion",
    "teamShort": "Brighton",
@@ -17959,6 +18017,17 @@ window.HUB = {
    "played": 10,
    "minutes": 813,
    "shots": 26
+  },
+  {
+   "rank": 17,
+   "name": "V. Janelt",
+   "team": "brentford",
+   "teamShort": "Brentford",
+   "goals": 3,
+   "assists": 0,
+   "played": 10,
+   "minutes": 892,
+   "shots": 5
   }
  ]
 };
