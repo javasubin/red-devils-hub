@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-11-24T07:27:51+09:00",
+  "updatedAt": "2026-11-24T15:18:27+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -8593,7 +8593,7 @@ window.HUB = {
    "fav": [
     "manchester-united"
    ],
-   "url": null
+   "url": "https://www.bbc.com/sport/football/live/crkgv8v0gdwkt"
   },
   {
    "id": "s-50voo5vk1cmq1r4gjo2dwh4pg",
