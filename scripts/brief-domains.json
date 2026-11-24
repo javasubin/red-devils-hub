@@ -1,0 +1,15 @@
+{
+  "설명": "브리핑이 기사 페이지를 열 수 있는 매체와 그 도메인 (ROUTINE.md 1-B 매체 표와 같다). brief-fetch.mjs(사람이 직접 돌릴 때도)와 무인 실행(brief-bot.mjs 가 만드는 WebFetch 허용 규칙 · 도구 가드 · push 전 링크 검사)이 이 도메인과 그 하위 도메인(www. 등)만 연다. 도메인은 실제 기사 주소로 확인했다. 매체를 늘리려면 여기와 ROUTINE.md 1-B 에 함께 추가한다. 이미지 CDN 은 넣지 않는다(봇은 이미지를 받지 않는다). 코드로 실행하지 않고 JSON 으로 읽는다.",
+  "media": [
+    { "name": "BBC Sport", "domains": ["bbc.com", "bbc.co.uk"] },
+    { "name": "Sky Sports", "domains": ["skysports.com"] },
+    { "name": "The Guardian", "domains": ["theguardian.com"] },
+    { "name": "The Independent", "domains": ["independent.co.uk"] },
+    { "name": "ESPN", "domains": ["espn.com", "espn.co.uk"] },
+    { "name": "Manchester Evening News", "domains": ["manchestereveningnews.co.uk"] },
+    { "name": "manutd.com", "domains": ["manutd.com"] },
+    { "name": "football.london", "domains": ["football.london"] },
+    { "name": "tottenhamhotspur.com", "domains": ["tottenhamhotspur.com"] },
+    { "name": "The Athletic", "domains": ["nytimes.com", "theathletic.com"] }
+  ]
+}

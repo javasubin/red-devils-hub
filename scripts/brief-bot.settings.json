@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "defaultMode": "dontAsk",
+    "allow": [
+      "WebSearch",
+      "Read(./**)",
+      "Edit(./briefings/epl-news-{{ISO}}-*.html)",
+      "Edit(./briefings.js)",
+      "Edit(./tmp-brief/**)",
+      "Bash(node scripts/brief-env.mjs)",
+      "Bash(node scripts/brief-env.mjs --clubs)",
+      "Bash(node scripts/brief-fetch.mjs *)",
+      "Bash(node scripts/check-briefing.mjs *)"
+    ],
+    "deny": [
+      "Read(./.git/**)",
+      "Read(./.git)",
+      "Read(~/.claude/**)",
+      "Edit(~/.claude/**)",
+      "Bash(git *)",
+      "Bash(git)"
+    ]
+  },
+  "autoMemoryEnabled": false,
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|WebFetch",
+        "hooks": [{ "type": "command", "command": "{{TOOL_GUARD}}" }]
+      }
+    ]
+  }
+}

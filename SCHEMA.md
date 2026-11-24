@@ -5,7 +5,7 @@
 | 파일 | 전역 | 누가 쓰나 | 갱신 주기 |
 |---|---|---|---|
 | `data.js` | `window.HUB` | `scripts/update-data.mjs` (BBC Sport 파싱, 파일 전체를 덮어씀) | 매일 |
-| `briefings.js` | `window.HUB_BRIEFINGS` | 브리핑 루틴 (`ROUTINE.md`) — 맨 앞에 항목 추가 | 브리핑 생성 시 |
+| `briefings.js` | `window.HUB_BRIEFINGS` | 브리핑 루틴 (`ROUTINE.md`) — 맨 앞에 항목 추가 (JSON 형식, 2절) | 브리핑 생성 시 |
 | `clubs.js` | `window.HUB_CLUBS` | 사람이 작성 (정적) | 시즌 초 · 필요 시 |
 
 팀 키(`key`)는 BBC의 팀 슬러그를 그대로 쓴다. 2026-27 시즌 20팀:
@@ -86,23 +86,28 @@ window.HUB = {
 
 ## 2. `briefings.js` → `window.HUB_BRIEFINGS`
 
+**JSON 형식**이다 — 맨 위 `//` 주석 줄 다음은 `window.HUB_BRIEFINGS = <JSON 배열>;` 한 문장뿐(키·문자열은 큰따옴표, 끝 쉼표 없음, 그 밖의 코드·주석 없음). 화면은 지금처럼 `<script src>`로 읽고, 검사기(`scripts/check-briefing.mjs --index`)와 실행 스크립트는 코드로 실행하지 않고 접두어를 떼어 `JSON.parse`로 읽는다. 무인 실행이 고쳐 쓰는 파일이라 코드가 섞이면 검사에서 떨어진다.
+
 ```js
 window.HUB_BRIEFINGS = [
-  // 최신이 맨 앞. 루틴이 unshift 한다. 날짜당 항목 하나, 그 안에 팀별 파일.
-  { date: "2026-09-05",
-    files: {
-      "manchester-united": { file: "briefings/epl-news-2026-09-05-manchester-united.html", count: 19, team: 6,
-                             headline: "카릭, 에버턴전 앞두고 로테이션 시사 · 이적시장 마감 정리 · PSR 개정안 통과" },
-      "tottenham-hotspur": { file: "briefings/epl-news-2026-09-05-tottenham-hotspur.html", count: 18, team: 5,
-                             headline: "데 제르비, 첫 북런던 더비 준비 · 이적시장 마감 정리 · PSR 개정안 통과" }
+  { "date": "2026-09-05",
+    "files": {
+      "manchester-united": { "file": "briefings/epl-news-2026-09-05-manchester-united.html", "count": 19, "team": 6,
+                             "headline": "카릭, 에버턴전 앞두고 로테이션 시사 · 이적시장 마감 정리 · PSR 개정안 통과" },
+      "tottenham-hotspur": { "file": "briefings/epl-news-2026-09-05-tottenham-hotspur.html", "count": 18, "team": 5,
+                             "headline": "데 제르비, 첫 북런던 더비 준비 · 이적시장 마감 정리 · PSR 개정안 통과" }
     } },
-  // 구버전(2026-09-03까지): { date, file, count, mu, headline } — 화면은 이 형태도 manchester-united 항목으로 읽는다.
-  { date: "2026-09-03", file: "briefings/epl-news-2026-09-03.html", count: 19, mu: 6, headline: "…" }
+  { "date": "2026-09-03",
+    "files": {
+      "manchester-united": { "file": "briefings/epl-news-2026-09-03.html", "count": 19, "team": 6, "headline": "…" }
+    } }
 ];
 ```
 
-- `count` 전체 기사 수, `team` 그 팀 섹션 기사 수(5 이상), `headline` 헤드라인 2~3개(` · ` 연결, 첫 번째는 그 팀 소식).
+- 최신이 맨 앞(루틴이 맨 앞에 넣는다). 날짜당 항목 하나, 그 안에 팀별 파일.
+- `date` `YYYY-MM-DD`, `file` `briefings/epl-news-<날짜>[-<팀키>].html`, `count` 전체 기사 수, `team` 그 팀 섹션 기사 수(5 이상), `headline` 헤드라인 2~3개(` · ` 연결, 첫 번째는 그 팀 소식). `count`·`team`은 0 이상 정수 — 검사기 `--index`가 이 모양을 본다(화면이 숫자를 HTML에, `file`을 링크 주소에 그대로 넣기 때문).
 - 화면은 선택 팀(`TEAM`)의 파일만 보여준다. 그날 그 팀 파일이 없으면 그 날짜는 목록에서 뺀다.
+- 구버전 항목 `{ date, file, count, mu, headline }`(files 없이 맨유 하나)도 화면은 manchester-united 항목으로 읽지만, 지금 파일에는 없고 검사기 `--index`는 `files` 형태만 통과시킨다.
 
 ## 3. `clubs.js` → `window.HUB_CLUBS`
 

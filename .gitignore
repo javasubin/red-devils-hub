@@ -13,6 +13,8 @@ desktop.ini
 *.bak
 ~$*
 *.log
+tmp-brief/
+logs/
 
 # tooling
 node_modules/
