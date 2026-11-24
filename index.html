@@ -143,6 +143,13 @@
   .brief { margin-top:auto; font-size:11px; font-weight:700; text-decoration:none; color:var(--text); background:var(--chip-bg); border:1px solid var(--border); padding:4px 6px; border-radius:8px; text-align:center; transition:.15s; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; letter-spacing:-0.02em; display:flex; align-items:center; justify-content:center; gap:5px; }
   .brief::before { content:""; width:6px; height:6px; border-radius:50%; background:var(--accent); flex:0 0 auto; }
   .brief:hover { border-color:var(--accent); background:var(--accent-soft); color:var(--accent); }
+  /* 폰 달력의 날짜 패널 #calDay — 폰 폭에서만 보인다(그 밖에서는 hidden). 줄 모양은 스코어보드(.sb)를 같이 쓴다 */
+  .cal-day { border-top:1px solid var(--border-soft); scroll-margin-top:64px; }   /* 상단 바(4단계 뒤 최대 56px)에 가리지 않게 */
+  .cal-day h3 { margin:0; padding:14px 16px 10px; font-size:15px; font-weight:800; letter-spacing:-0.02em; }
+  .cal-day h3.hint { font-size:13px; font-weight:600; color:var(--text-dim); }
+  .cal-day-act { display:flex; flex-wrap:wrap; gap:8px; padding:0 16px 12px; }
+  .cal-day-act:empty, .cal-day .sb:empty { display:none; }
+  .cal-day .sb { border-top:1px solid var(--border-soft); }
 
   /* ---------- 다음 경기 ---------- */
   .next-hero { padding:13px 14px; margin:-4px -4px 0; border-radius:14px; border:1px solid var(--border-soft); position:relative; overflow:hidden; isolation:isolate;
@@ -319,35 +326,91 @@
     .col3 { grid-column:1 / -1; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); align-items:start; gap:18px; }
     .col3.solo { grid-template-columns:minmax(0,1fr); }   /* 브리핑 카드가 없을 때 순위표가 폭을 다 쓴다 */
   }
+  /* 한 줄 배치(폰·세로 태블릿): 묶음 상자를 없애 카드 9개를 본문 바로 아래로 펴고, 보이는 순서를 order로 다시 매긴다.
+     HTML 순서는 PC 배치(3열·2열)가 쓰므로 그대로 둔다. */
   @media (max-width:860px) {
-    .grid { grid-template-columns:1fr; }
-    .col3 { grid-column:auto; display:flex; }
-    .row2 { grid-template-columns:1fr; }
+    /* body > 를 빼면 안 된다: 상단 바도 .wrap이라 같이 세로로 쌓이고, 640px 블록의 .wrap { padding:0 12px; }가 우선하게 되어 폰에서 위 여백 24px이 사라진다 */
+    body > .wrap { display:flex; flex-direction:column; gap:18px; padding-top:24px; }
+    .grid, .col2, .col3, .row2 { display:contents; }
+    /* 간격은 gap 18px 하나로 맞춘다: 상자가 없어진 .grid의 위 여백 24px은 위 padding-top이 넘겨받고, footer 위 여백은 원래 40px에서 gap을 뺀 22px */
+    .jserr { order:0; margin:0; }
+    #calCard { order:1; } #nextCard { order:2; } #upCard { order:3; } #recentCard { order:4; }
+    #standCard { order:5; } #mwCard { order:6; } #seasonCard { order:7; } #latestCard { order:8; }
+    #archCard { order:9; margin:0; }
+    footer { order:10; margin-top:22px; }
     .cell { min-height:104px; }
+    /* 상단 바(641~860px): 사이트 이름 + 팀 버튼 + 갱신 시각 + 구단 가이드가 한 줄에 안 들어가 페이지가 가로로 밀렸다(최대 73px).
+       자리가 모자랄 때만 갱신 시각이 줄어들며 말줄임된다 — 다른 항목은 줄이지 않고, 자리가 남으면 지금과 같다 */
+    .top .meta { min-width:0; overflow:hidden; text-overflow:ellipsis; }
   }
+  /* 640px은 스크립트의 PHONE(matchMedia)과 같은 값 — 달력은 이 폭 이하에서 폰 모양으로 그린다. 하나를 바꾸면 둘 다 바꾼다 */
   @media (max-width:640px) {
     .wrap { padding:0 12px; }
     .top .meta { display:none; }
-    .cell { min-height:88px; padding:6px 3px; }
-    .cell .d { font-size:12px; }
-    .mrow { font-size:8.5px; gap:1px; padding:1px 0; }
-    .mrow .sc { font-size:8px; }
-    .mwbar { font-size:9.5px; padding:0 5px; height:17px; margin-left:2px; margin-right:2px; }
-    .brief { font-size:9.5px; padding:3px 3px; }
+    /* 폰 달력 칸: 표시만 한다(날짜 · 브리핑 점 · 다른 경기 수 / 오늘 · 우리 팀 경기 상대 약칭). 누르면 아래 #calDay에 그날 경기.
+       세로 자리: 칸 위 여백 4px + 날짜 줄 17px + 간격 2px = 첫 띠 위치 23px, 띠 17px + 간격 2px = 띠 한 줄 19px — 스크립트의 BAR_PHONE과 맞물린다(하나를 바꾸면 같이).
+       글자는 전부 11px 이상, 말줄임 없음 — 360px 폭(칸 48px)에서도 들어가게 좌우 여백을 줄였다 */
+    .cell { min-height:61px; padding:4px 2px; gap:2px; cursor:pointer; }
+    .cell .d { font-size:13px; line-height:17px; gap:2px; }
+    .cell .bdot { flex:0 0 auto; width:5px; height:5px; border-radius:50%; background:var(--accent); }
+    .cell .cnt { margin-left:auto; font-size:11px; font-weight:700; color:var(--text-dim); letter-spacing:0; }
+    .cell .marks { display:flex; flex-wrap:wrap; gap:2px; }
+    .cell .opp { font-size:11px; font-weight:800; line-height:15px; padding:0 4px; border-radius:4px; letter-spacing:-0.01em; color:#fff; background:var(--accent); }   /* 옅은 색 띠(매치위크)와 구분되게 채운 칩 */
+    .cell.sel { box-shadow:inset 0 0 0 2px var(--accent); }   /* 고른 날짜 — 누른 뒤 남는 :hover 배경과 구분되게 테두리로 */
+    .cell.out.sel { opacity:.6; }
+    .cell:focus { outline:none; }
+    .cell:focus-visible { outline:2px solid var(--text-mid); outline-offset:-4px; }
+    .today-tag { font-size:11px; line-height:15px; padding:0 4px; }
+    /* 띠는 누를 수 없는 표시(span) — 누르면 그 아래 날짜 칸이 눌린다. 한 칸짜리 띠에서도 "MW 15"가 잘리지 않게 좌우 여백을 줄였다 */
+    .mwbar { font-size:11px; padding:0 2px; height:17px; margin-left:1px; margin-right:1px; line-height:15px; letter-spacing:-0.02em; pointer-events:none; }
+    #mwCard { scroll-margin-top:64px; }   /* 날짜 패널의 "MW n 스코어보드"로 내려올 때 상단 바(4단계 뒤 최대 56px)에 가리지 않게 */
     .cal-nav h2 { font-size:17px; min-width:104px; }
     .legend { display:none; }
     .arch-list li { flex-wrap:wrap; gap:6px 12px; }
     .arch-head { white-space:normal; flex-basis:100%; }
     .arch-date { min-width:96px; font-size:14px; }
-    .sb .when { width:60px; font-size:10px; }
     .top-inner { gap:8px; }
-    .brand { font-size:16px; min-width:0; }
+    .brand { font-size:16px; min-width:0; min-height:44px; }   /* 누르는 곳 높이 44px 이상 — 아래 '누르는 곳 크기' 참고 */
     .brand .yr { display:none; }
     .top .btn { padding:7px 9px; font-size:12px; white-space:nowrap; }
     /* 최근 경기: 득점자를 둘째 줄 전체 폭으로 (압축 표기) */
     .rec-a { flex-wrap:wrap; row-gap:2px; }
     .rec .op .g { display:none; }
     .rec .gline { display:block; flex-basis:100%; order:9; font-size:11.5px; color:var(--text-dim); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; padding-left:2px; }
+    /* 순위표(리그 테이블) 좌우 밀기: 앞 3칸(순위·막대·팀)을 왼쪽에 고정한다. 득점표 #tblS는 열 구성이 달라 #tblT만 대상.
+       폭 변수(--pos-w·--zb-w)는 그 칸의 width·min-width와 뒤 칸들의 left에 같이 쓴다.
+       min-width는 표가 최소 폭까지 줄 때 순위 칸이 width를 무시하고 20px로 줄어 뒤 칸들의 left와 어긋나는 것을 막는다.
+       고정 칸 배경은 불투명(뒤 칸이 비치지 않게), 응원팀 줄은 강조색을 카드색 위에 겹쳐 유지한다.
+       separate: 합쳐진 테두리가 고정 칸을 따라오지 않는 브라우저(Safari·Firefox) 대비 — 테두리가 아래쪽 한 줄뿐이라 모양은 같다.
+       will-change: 크롬은 로드에 따라 고정 칸 테두리를 1px 위로 그리기도 해, 밀면 뒤 칸 테두리가 고정 칸 아래로 비친다 — 이를 막는다. */
+    #tblT { --pos-w:24px; --zb-w:4px; border-collapse:separate; border-spacing:0; }   /* 막대 칸 4px = 빈 머리글 칸의 좌우 padding(.tbl th 2px×2). .tbl .zb의 3px보다 넓어 실제 열 폭은 4px */
+    #tblT tr > :nth-child(-n+3) { position:sticky; background:var(--card); z-index:1; will-change:transform; }
+    #tblT thead tr > :nth-child(-n+3) { z-index:2; }   /* 뒤쪽 머리글(.tbl th의 z-index:1)이 밀릴 때 고정 머리글 위로 오지 않게 */
+    #tblT tr.fav-row > :nth-child(-n+3) { background:linear-gradient(var(--fav-bg), var(--fav-bg)), var(--card); }
+    #tblT tr > :nth-child(1) { left:0; width:var(--pos-w); min-width:var(--pos-w); }
+    #tblT tr > :nth-child(2) { left:var(--pos-w); width:var(--zb-w); min-width:var(--zb-w); }
+    #tblT tr > :nth-child(3) { left:calc(var(--pos-w) + var(--zb-w)); box-shadow:inset -1px 0 var(--border-soft); }   /* 팀 칸 오른쪽 끝 옅은 구분선 */
+    /* 누르는 곳 크기: 독립 버튼 · 링크는 폭 · 높이 44px 이상, 표 안 링크는 높이 24px 이상.
+       상단 바는 세로 여백이 0이라(.wrap의 padding이 .top-inner의 것을 덮는다) 버튼을 44px로 키우면 바도 44px(+아래 테두리 1px)가 된다 */
+    .btn { min-height:44px; }   /* 홈의 모든 .btn */
+    .nav-btn { min-width:44px; min-height:44px; }
+    .cal-nav .sp { display:none; }   /* 폰에는 범례(.legend)가 없어 오른쪽으로 미는 빈 칸도 필요 없다 — 있으면 한 줄이 꽉 찼을 때(360px) 빈 둘째 줄이 생겨 8px 늘어난다 */
+    .tab, .seg button { min-height:44px; }
+    .mw-nav button { min-width:44px; min-height:44px; }
+    #mwCard .card-h { flex-wrap:wrap; }   /* 320px에서 제목 + 이전 · 다음 버튼이 한 줄에 안 들어가면 버튼을 아랫줄로 — 아니면 "다음"이 카드 밖으로 잘린다 */
+    /* 순위표 · 득점표 링크: 누르는 영역만 위아래로 넓히고 줄 높이는 그대로 둔다(순위표는 20줄이라 줄이 커지면 카드가 바로 길어진다).
+       순위표 팀 링크는 블록(flex)이라 같은 크기의 음수 margin으로 줄 높이를 지키고, 득점표 배지 링크는 인라인이라 위아래 padding이 줄 높이에 들어가지 않는다 */
+    #tblT .tm a { padding:4px 0; margin:-4px 0; }
+    #tblS td a { padding:6px 0; }
+    /* 스코어보드 · 날짜 목록 줄(.sb-r): 높이 44px 이상, 팀 이름은 말줄임 없이 필요한 만큼 줄바꿈 — 띄어쓰기에서만 끊고, 한 단어가 칸보다 길면 단어 안에서라도 끊어 넘치지 않게 한다.
+       이름 칸을 넓히려고 좌우 여백 · 간격 · 날짜 칸 · 점수 칸을 줄이고, ▾ 표시는 줄 흐름에서 빼 오른쪽 여백(18px)에 둔다 */
+    .sb-r { position:relative; min-height:44px; padding:9px 18px 9px 14px; gap:6px; }
+    .sb .when { width:52px; font-size:10px; }
+    .sb .side { gap:5px; }
+    .sb .side .nm { overflow:visible; text-overflow:clip; white-space:normal; word-break:keep-all; overflow-wrap:anywhere; line-height:1.35; }
+    .sb .res { min-width:42px; }
+    /* ▾ 가운데 맞춤: 4.5px는 ▾ 높이(match-view.css의 .mv-caret: 9px · line-height:1)의 절반. 펼칠 때 ▾를 돌리는 규칙(.mv-row[aria-expanded="true"] .mv-caret)이 transform을 써서 transform:translateY(-50%)로 맞추면 덮어써지니 calc로 한다. right:5px는 줄 오른쪽 여백(.sb-r의 padding 18px) 안에 놓는 값 */
+    .sb-r .mv-caret { position:absolute; right:5px; top:calc(50% - 4.5px); margin:0; }
   }
 </style>
 </head>
@@ -381,6 +444,12 @@
         </div>
       </div>
       <div class="cal" id="cal"></div>
+      <!-- 폰 달력: 누른 날짜의 경기 목록. 스크립트가 폰 폭(PHONE)에서만 보이게 한다 -->
+      <div class="cal-day" id="calDay" hidden>
+        <h3 id="calDayTitle" aria-live="polite"></h3>
+        <div class="cal-day-act" id="calDayAct"></div>
+        <ul class="sb" id="calDayList"></ul>
+      </div>
     </section>
 
     <!-- 사이드 -->
@@ -391,12 +460,12 @@
         <div class="card-b" id="nextBody"></div>
       </section>
 
-      <section class="card grow">
+      <section class="card grow" id="upCard">
         <div class="card-h"><h2>다가오는 일정</h2><span class="sub">이후 4경기 · 전 대회</span></div>
         <ul class="up" id="upcoming"></ul>
       </section>
 
-      <section class="card">
+      <section class="card" id="seasonCard">
         <div class="card-h"><h2>시즌 진행</h2><span class="sub" id="seasonSub"></span></div>
         <div class="card-b" id="seasonBody"></div>
       </section>
@@ -456,7 +525,7 @@
   </div>
 
   <!-- 아카이브 -->
-  <section class="card archive">
+  <section class="card archive" id="archCard">
     <div class="card-h"><h2>브리핑 아카이브</h2><span class="sub" id="archSub"></span></div>
     <ul class="arch-list" id="archList"></ul>
   </section>
@@ -682,6 +751,13 @@
 
   var cur = new Date(today.getFullYear(), today.getMonth(), 1);
   var calEl = document.getElementById('cal');
+  // 폰 달력: 이 폭 이하에서는 칸에 표시만 하고, 누른 날짜의 경기를 달력 아래 #calDay에 보인다.
+  // CSS의 @media (max-width:640px)과 같은 값이다 — 하나를 바꾸면 둘 다 바꾼다
+  var PHONE = window.matchMedia('(max-width:640px)');
+  var calSel = todayIso;                                // 폰 달력에서 고른 날짜(YYYY-MM-DD). ''이면 고르지 않음 — 월을 옮기면 비운다
+  // 매치위크 띠 자리(px). top: 주 맨 위에서 첫 띠까지(칸 위 여백 + 날짜 줄 + 간격), laneH: 띠 한 줄의 높이(띠 높이 + 간격).
+  // 칸은 날짜 줄 아래를 laneH × 띠 줄 수만큼 비워(--rsv) 띠가 글자를 가리지 않게 한다. 폰 값은 CSS 640px 블록의 .cell · .cell .d · .mwbar와 맞물린다
+  var BAR_PC = { top: 34, laneH: 24 }, BAR_PHONE = { top: 23, laneH: 19 };
 
   // 달력 한 줄: [홈 약칭] 스코어·시각 [원정 약칭] — 선택 팀은 팀 색으로, 컵·유럽은 대회 태그를 붙인다
   function mrow(f, hidden) {
@@ -696,7 +772,35 @@
       '<span class="an">' + esc(abbrOf(f.away.key, f.away)) + '</span></div>';
   }
 
+  // PC 칸 본문: 날짜 + 경기 줄(네 개까지, 나머지는 "+N" 안에 접는다) + 브리핑 링크
+  function pcCell(day) {
+    var body = '<div class="d">' + day.d.getDate() + (day.k === todayIso ? '<span class="today-tag">오늘</span>' : '') + '</div>';
+    if (day.list.length) {
+      body += '<div class="mx">';
+      day.list.forEach(function (f, n) { body += mrow(f, n >= 4); });
+      body += '</div>';
+      if (day.list.length > 4) body += '<button class="more" data-n="' + (day.list.length - 4) + '">+' + (day.list.length - 4) + '</button>';
+    }
+    if (day.br) body += '<a class="brief" href="' + esc(link(day.br.file)) + '" title="' + esc(day.br.headline || '') + '">브리핑</a>';
+    return body;
+  }
+  // 폰 칸(누르는 속성 포함): 날짜 · 브리핑 점 · 다른 경기 수(+N) / 오늘 · 선택 팀 경기의 상대 약칭.
+  // 경기 내용은 칸에 쓰지 않는다 — 누르면 pickDay가 #calDay에 그날 경기를 보인다
+  function phoneCell(day, cls, styleAttr) {
+    var opps = [], others = 0, sel = day.k === calSel, d = day.d;
+    day.list.forEach(function (f) { if (isFav(f)) opps.push(f.home.key === TEAM ? f.away : f.home); else others++; });
+    var label = (d.getMonth() + 1) + '월 ' + d.getDate() + '일 ' + DOW[d.getDay()] + '요일' + (day.k === todayIso ? ', 오늘' : '') +
+      opps.map(function (o) { return ', ' + koName(o.key, o.name) + '전'; }).join('') +
+      (others ? ', 다른 경기 ' + others + '개' : '') + (day.list.length ? '' : ', 경기 없음') + (day.br ? ', 브리핑 있음' : '');
+    var marks = (day.k === todayIso ? '<span class="today-tag">오늘</span>' : '') +
+      opps.map(function (o) { return '<span class="opp">' + esc(abbrOf(o.key, o)) + '</span>'; }).join('');
+    return '<div class="' + cls + (sel ? ' sel' : '') + '"' + styleAttr + ' role="button" tabindex="0" data-day="' + day.k + '" aria-pressed="' + sel + '" aria-label="' + esc(label) + '">' +
+      '<div class="d"><span class="dnum">' + d.getDate() + '</span>' + (day.br ? '<i class="bdot"></i>' : '') + (others ? '<span class="cnt">+' + others + '</span>' : '') + '</div>' +
+      (marks ? '<div class="marks">' + marks + '</div>' : '') + '</div>';
+  }
+
   function renderCal() {
+    var phone = PHONE.matches, barGeo = phone ? BAR_PHONE : BAR_PC;
     document.getElementById('calTitle').textContent = cur.getFullYear() + '년 ' + (cur.getMonth() + 1) + '월';
     var html = '<div class="dows">';
     ['월', '화', '수', '목', '금', '토', '일'].forEach(function (w, i) { html += '<div class="dow' + (i === 5 ? ' sat' : i === 6 ? ' sun' : '') + '">' + w + '</div>'; });
@@ -728,41 +832,94 @@
         while (lanes[li] != null && lanes[li] >= b.from) li++;
         lanes[li] = b.to; b.lane = li;
       });
-      var rsv = lanes.length * 24;                                     // 바가 앉을 자리를 날짜 아래에 비워 둔다
+      var rsv = lanes.length * barGeo.laneH;                           // 바가 앉을 자리를 날짜 아래에 비워 둔다
 
       // 3) 셀 + 바 렌더
       var wk = '';
       days.forEach(function (day, ci) {
         var cls = 'cell' + (day.out ? ' out' : '') + (day.k === todayIso ? ' today' : '') +
           (day.d.getDay() === 0 ? ' sun' : day.d.getDay() === 6 ? ' sat' : '');
-        var body = '<div class="d">' + day.d.getDate() + (day.k === todayIso ? '<span class="today-tag">오늘</span>' : '') + '</div>';
-        if (day.list.length) {
-          body += '<div class="mx">';
-          day.list.forEach(function (f, n) { body += mrow(f, n >= 4); });
-          body += '</div>';
-          if (day.list.length > 4) body += '<button class="more" data-n="' + (day.list.length - 4) + '">+' + (day.list.length - 4) + '</button>';
-        }
-        if (day.br) body += '<a class="brief" href="' + esc(link(day.br.file)) + '" title="' + esc(day.br.headline || '') + '">브리핑</a>';
-        wk += '<div class="' + cls + '" style="grid-column:' + (ci + 1) + ';--rsv:' + rsv + 'px">' + body + '</div>';
+        var styleAttr = ' style="grid-column:' + (ci + 1) + ';--rsv:' + rsv + 'px"';
+        wk += phone ? phoneCell(day, cls, styleAttr) : '<div class="' + cls + '"' + styleAttr + '>' + pcCell(day) + '</div>';
       });
       order.forEach(function (mw) {
-        var b = bars[mw], l = MWS[mw] || [], f0 = l[0], f1 = l[l.length - 1];
+        var b = bars[mw], pos = 'grid-column:' + b.from + ' / ' + (b.to + 1) + ';margin-top:' + (barGeo.top + b.lane * barGeo.laneH) + 'px';
+        // 폰: 누를 수 없는 표시 — 스코어보드로 가는 길은 날짜 패널의 "MW n 스코어보드" 버튼이 맡는다
+        if (phone) { wk += '<span class="mwbar' + (b.out ? ' out' : '') + '" style="' + pos + '" aria-hidden="true">MW ' + mw + '</span>'; return; }
+        var l = MWS[mw] || [], f0 = l[0], f1 = l[l.length - 1];
         var range = f0 ? (md(kd(f0)) + '–' + md(kd(f1))) : '';
-        wk += '<a class="mwbar' + (b.out ? ' out' : '') + '" href="#mwCard" data-mw="' + mw + '" style="grid-column:' + b.from + ' / ' + (b.to + 1) + ';margin-top:' + (34 + b.lane * 24) + 'px" title="매치위크 ' + mw + ' · ' + esc(range) + ' · 스코어보드 보기">MW ' + mw + '<span class="ar">스코어보드 →</span></a>';
+        wk += '<a class="mwbar' + (b.out ? ' out' : '') + '" href="#mwCard" data-mw="' + mw + '" style="' + pos + '" title="매치위크 ' + mw + ' · ' + esc(range) + ' · 스코어보드 보기">MW ' + mw + '<span class="ar">스코어보드 →</span></a>';
       });
       html += '<div class="week">' + wk + '</div>';
     }
     calEl.innerHTML = html;
+    safe('calDayList', renderDay);
   }
-  document.getElementById('prevM').onclick = function () { cur.setMonth(cur.getMonth() - 1); safe('cal', renderCal); };
-  document.getElementById('nextM').onclick = function () { cur.setMonth(cur.getMonth() + 1); safe('cal', renderCal); };
-  document.getElementById('todayBtn').onclick = function () { cur = new Date(today.getFullYear(), today.getMonth(), 1); safe('cal', renderCal); };
+
+  // 폰 달력의 날짜 패널: 고른 날짜의 경기를 칸과 같은 목록 · 같은 순서(byDay — 선택 팀 먼저)로, 매치위크 · 브리핑 버튼과 함께.
+  // 날짜를 킥오프 문자열로 다시 나누지 않는다(한국 시각 새벽 경기가 다른 날로 간다)
+  function renderDay() {
+    var box = document.getElementById('calDay');
+    box.hidden = !PHONE.matches;
+    if (box.hidden) return;
+    var title = document.getElementById('calDayTitle'), act = document.getElementById('calDayAct'), listEl = document.getElementById('calDayList');
+    title.className = calSel ? '' : 'hint';
+    if (!calSel) { title.textContent = '날짜를 누르면 그날 경기가 나옵니다'; act.innerHTML = ''; listEl.innerHTML = ''; return; }
+    var p = calSel.split('-'), d = new Date(+p[0], +p[1] - 1, +p[2]), l = byDay[calSel] || [], br = briefByDate[calSel];
+    title.textContent = (d.getMonth() + 1) + '월 ' + d.getDate() + '일 (' + DOW[d.getDay()] + ')' + (calSel === todayIso ? ' · 오늘' : '') + (l.length ? ' · ' + l.length + '경기' : '');
+    var mws = [], a = '';
+    l.forEach(function (f) { if (f.comp === 'PL' && f.mw && mws.indexOf(f.mw) < 0) mws.push(f.mw); });
+    mws.forEach(function (n) { a += '<button type="button" class="btn" data-mw="' + esc(n) + '">MW ' + esc(n) + ' 스코어보드</button>'; });
+    if (br) a += '<a class="btn" href="' + esc(link(br.file)) + '">브리핑 보기</a>';      // PC 칸의 브리핑 링크와 같은 주소(?team= 유지)
+    act.innerHTML = a;
+    listEl.innerHTML = l.length ? l.map(function (f) { return sbRow(f, 'mvd-', compTag(f.comp)); }).join('') : '<li class="empty">이날은 경기가 없습니다.</li>';
+  }
+  // 폰 날짜 칸을 눌렀을 때: 달력은 다시 그리지 않고(포커스 유지) 선택 표시만 옮긴 뒤 패널을 채운다
+  function pickDay(k) {
+    calSel = k;
+    Array.prototype.forEach.call(calEl.querySelectorAll('.cell[data-day]'), function (c) {
+      var on = c.getAttribute('data-day') === k;
+      c.classList.toggle('sel', on);
+      c.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    safe('calDayList', renderDay);
+    // 목록 제목이 화면 밖(또는 붙박이 상단 바 밑)이면 패널을 보이게 한다 — 상단 바에 가리지 않는 것은 .cal-day의 scroll-margin-top
+    var r = document.getElementById('calDayTitle').getBoundingClientRect(), bar = document.querySelector('.top');
+    if (r.top < (bar ? bar.getBoundingClientRect().bottom : 0) || r.bottom > window.innerHeight) document.getElementById('calDay').scrollIntoView({ block: 'nearest' });
+  }
+  document.getElementById('prevM').onclick = function () { cur.setMonth(cur.getMonth() - 1); calSel = ''; safe('cal', renderCal); };
+  document.getElementById('nextM').onclick = function () { cur.setMonth(cur.getMonth() + 1); calSel = ''; safe('cal', renderCal); };
+  document.getElementById('todayBtn').onclick = function () { cur = new Date(today.getFullYear(), today.getMonth(), 1); calSel = todayIso; safe('cal', renderCal); };
   calEl.addEventListener('click', function (e) {
     var more = e.target.closest && e.target.closest('.more');
     if (more) { var cell = more.closest('.cell'); var open = cell.classList.toggle('open'); more.textContent = open ? '접기' : '+' + more.getAttribute('data-n'); return; }
-    var bar = e.target.closest && e.target.closest('.mwbar');
+    var bar = e.target.closest && e.target.closest('a.mwbar');               // PC 띠만 (폰 띠는 누를 수 없는 span)
     if (bar) { e.preventDefault(); setMw(parseInt(bar.getAttribute('data-mw'), 10)); document.getElementById('mwCard').scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+    var pick = e.target.closest && e.target.closest('.cell[data-day]');     // 폰 날짜 칸 (PC 칸에는 data-day가 없다)
+    if (pick) pickDay(pick.getAttribute('data-day'));
   });
+  calEl.addEventListener('keydown', function (e) {                         // 폰 날짜 칸은 Enter · Space로도 고른다
+    if (e.key !== 'Enter' && e.key !== ' ' && e.key !== 'Spacebar') return;
+    var pick = e.target.closest && e.target.closest('.cell[data-day]');
+    if (!pick) return;
+    e.preventDefault();
+    pickDay(pick.getAttribute('data-day'));
+  });
+  // 날짜 패널의 "MW n 스코어보드": 그 매치위크로 바꾸고 스코어보드로 (폰에서는 #mwCard의 scroll-margin-top이 상단 바만큼 띄운다)
+  document.getElementById('calDayAct').addEventListener('click', function (e) {
+    var b = e.target.closest && e.target.closest('button[data-mw]');
+    if (!b) return;
+    setMw(parseInt(b.getAttribute('data-mw'), 10));
+    document.getElementById('mwCard').scrollIntoView({ block: 'start' });
+  });
+  wireRows(document.getElementById('calDayList'));                         // 목록 ul은 그대로 두고 안만 바꾸므로 한 번만 건다
+  // 폭이 640px 경계를 넘으면(화면 회전 등) 그 모양으로 다시 그린다. 다시 좁아졌는데 고른 날짜가 없으면 "오늘" 버튼처럼
+  function onPhoneChange() {
+    if (PHONE.matches && !calSel) { cur = new Date(today.getFullYear(), today.getMonth(), 1); calSel = todayIso; }
+    safe('cal', renderCal);
+  }
+  if (PHONE.addEventListener) PHONE.addEventListener('change', onPhoneChange);
+  else if (PHONE.addListener) PHONE.addListener(onPhoneChange);
 
   // ---------- 다음 경기 (선택 팀) ----------
   function renderNext() {
@@ -808,7 +965,9 @@
       h += '</div>';
     }
     if (oc.intro) {
-      var sents = String(oc.intro).split(/(?<=[.!?。])\s+/), brief = '';
+      // 문장 끝 기호(. ! ? 。) 뒤 공백에서 자르고 기호는 앞 문장에 남긴다. 정규식 뒤보기는 iOS 16.4 미만에서 문법 오류라
+      // 홈 스크립트 전체가 실행되지 않으므로, 그 공백을 문서에 나올 수 없는 구분자(\u0000)로 바꾼 뒤 그 구분자로 나눈다
+      var sents = String(oc.intro).replace(/([.!?。])\s+/g, '$1\u0000').split('\u0000'), brief = '';
       for (var si = 0; si < sents.length && brief.length < 70; si++) brief += (brief ? ' ' : '') + sents[si];
       h += '<div class="oppo-i">' + esc(brief) + '</div>';
     } else if (!linked) {
@@ -954,6 +1113,24 @@
   wireRows(document.getElementById('recentList'));
 
   // ---------- 매치위크 스코어보드 ----------
+  // 스코어보드 줄(li) 하나 — 매치위크 스코어보드와 폰 달력의 날짜 목록(#calDayList)이 같이 쓴다.
+  // pre: 상세 패널 id 접두어(스코어보드 mvs- · 날짜 목록 mvd- — 최근 경기 mvr-와도 겹치지 않게), when: 왼쪽 칸 HTML(스코어보드는 날짜, 날짜 목록은 대회 태그)
+  function sbRow(f, pre, when) {
+    var fav = isFav(f), fin = f.status === 'post' || f.status === 'live', k = kd(f);
+    var gs = ['home', 'away'].map(function (s) {
+      return goals(f.scorers && f.scorers[s]).map(function (x) { return x.name + ' ' + (x.times || []).join(','); }).join(', ');
+    }).filter(Boolean).join(' | ');
+    var res = f.status === 'postponed' ? '<span class="res t">연기</span>'
+      : (fin ? '<span class="res">' + esc(scoreTxt(f)) + '</span>' : '<span class="res t">' + hhmm(k) + '</span>');
+    return '<li' + (fav ? ' class="fav-row"' : '') + '>' +
+      '<div class="sb-r mv-row"' + rowAttrs(pre, f, gs) + '>' +
+      '<span class="when">' + when + '</span>' +
+      '<span class="side h"><span class="nm">' + esc(shortOf(f.home)) + '</span>' + badge(f.home.key, 20, f.home) + '</span>' +
+      res +
+      '<span class="side"><span>' + badge(f.away.key, 20, f.away) + '</span><span class="nm">' + esc(shortOf(f.away)) + '</span></span>' +
+      '<span class="mv-caret" aria-hidden="true">▾</span>' +
+      '</div>' + panelHtml(pre, f) + '</li>';
+  }
   var mwCur = (H.meta && H.meta.currentMw) || 1;
   function setMw(n) {
     if (!(n >= 1 && n <= MWN)) return;
@@ -969,22 +1146,7 @@
         ? ((kd(f0).getMonth() + 1) + '월 ' + kd(f0).getDate() + '일 – ' + (kd(f1).getMonth() + 1) + '월 ' + kd(f1).getDate() + '일 · ' + doneN + '/' + l.length + '경기 종료')
         : '경기 없음';
       var h = '';
-      l.forEach(function (f) {
-        var fav = isFav(f), fin = f.status === 'post' || f.status === 'live', k = kd(f);
-        var gs = ['home', 'away'].map(function (s) {
-          return goals(f.scorers && f.scorers[s]).map(function (x) { return x.name + ' ' + (x.times || []).join(','); }).join(', ');
-        }).filter(Boolean).join(' | ');
-        var res = f.status === 'postponed' ? '<span class="res t">연기</span>'
-          : (fin ? '<span class="res">' + esc(scoreTxt(f)) + '</span>' : '<span class="res t">' + hhmm(k) + '</span>');
-        h += '<li' + (fav ? ' class="fav-row"' : '') + '>' +
-          '<div class="sb-r mv-row"' + rowAttrs('mvs-', f, gs) + '>' +
-          '<span class="when">' + md(k) + ' (' + DOW[k.getDay()] + ')</span>' +
-          '<span class="side h"><span class="nm">' + esc(shortOf(f.home)) + '</span>' + badge(f.home.key, 20, f.home) + '</span>' +
-          res +
-          '<span class="side"><span>' + badge(f.away.key, 20, f.away) + '</span><span class="nm">' + esc(shortOf(f.away)) + '</span></span>' +
-          '<span class="mv-caret" aria-hidden="true">▾</span>' +
-          '</div>' + panelHtml('mvs-', f) + '</li>';
-      });
+      l.forEach(function (f) { var k = kd(f); h += sbRow(f, 'mvs-', md(k) + ' (' + DOW[k.getDay()] + ')'); });
       document.getElementById('mwList').innerHTML = h || '<li class="empty">경기가 없습니다.</li>';
     });
   }

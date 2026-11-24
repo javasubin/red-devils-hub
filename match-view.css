@@ -26,9 +26,14 @@
 .tsw-o.on .ck { opacity:1; }
 .tsw-o.on .t b { color:var(--accent); }
 @media (max-width:640px) {
-  .tsw-b { padding:5px 7px 5px 6px; gap:5px; }
+  .tsw-b { padding:5px 7px 5px 6px; gap:5px; min-width:44px; min-height:44px; }   /* 누르는 곳은 폭 · 높이 44px 이상 */
   .tsw-nm { display:none; }                                /* 좁은 화면에선 배지 + 화살표만 */
-  .tsw-m { left:auto; right:0; min-width:0; width:min(252px, calc(100vw - 28px)); }
+  /* 메뉴의 기준을 버튼(.tsw)이 아니라 붙박이 상단 바(.top)로 옮겨 버튼 위치와 상관없이 화면 왼쪽 12px에 놓는다(예전엔 버튼 오른쪽 끝에 맞춰 320px에서 왼쪽 밖으로 나갔다).
+     DOM은 그대로 둔다 — 옮기면 바깥 클릭 판정(el.contains)이 깨진다. position:fixed는 상단 바의 backdrop-filter가 기준을 바꿔 쓰지 않는다 */
+  .tsw { position:static; }
+  .tsw-m { left:12px; right:auto; min-width:0; width:min(252px, calc(100vw - 28px)); }
+  .mv-lu-tg { min-height:44px; }                           /* 라인업 펼치기 */
+  .mv-bbc { padding:4px 0; margin-top:-4px; margin-bottom:-4px; }   /* BBC 링크: 누르는 영역만 높이 24px 이상으로 — 같은 크기의 음수 margin으로 정보 줄 높이는 그대로 */
 }
 
 /* ---------- 펼치는 줄 ---------- */

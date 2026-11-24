@@ -146,4 +146,13 @@ footer a { color:var(--text-dim); }
   .sec-head h2 { font-size:17px; }
   .bar-inner { flex-wrap:nowrap; flex-direction:column; align-items:stretch; }
   .chips { flex-wrap:nowrap; overflow-x:auto; width:100%; }
+  /* 누르는 곳 높이 44px 이상(폭은 이미 44px 이상) */
+  .chip, details.more > summary, .go { min-height:44px; }
+  /* 홈 링크: 누르는 곳 높이 44px 이상(줄 19.8px + 13px×2 = 45.8px).
+     같은 크기의 음수 margin으로 머리 줄(.kicker) 높이는 그대로 둔다.
+     margin-left:auto(오른쪽 끝 맞춤)를 지키려고 margin 단축 속성 대신 위아래만 쓴다. */
+  .kicker .home { padding:13px 0; margin-top:-13px; margin-bottom:-13px; }
+  /* 주소의 #섹션으로 들어올 때 칩 바(.bar)에 가리지 않게, 칩 바 높이보다 여유 있게.
+     칩 바 73px = 칩 44 + .chips 위아래 2×2 + .bar 위아래 12×2 + 아래 테두리 1 */
+  section { scroll-margin-top:80px; }
 }
