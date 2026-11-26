@@ -5,7 +5,7 @@
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-11-26T05:23:17+09:00",
+  "updatedAt": "2026-11-26T11:59:01+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -8581,16 +8581,52 @@ window.HUB = {
     "name": "Manchester United",
     "short": "Man Utd"
    },
-   "status": "live",
-   "statusText": "23'",
+   "status": "post",
+   "statusText": "FT",
    "score": {
-    "home": 0,
-    "away": 0
+    "home": 2,
+    "away": 2
    },
-   "winner": null,
+   "winner": "draw",
    "scorers": {
-    "home": [],
-    "away": []
+    "home": [
+     {
+      "name": "L. Suárez",
+      "times": [
+       "33'",
+       "80'"
+      ],
+      "types": [
+       "pen",
+       "goal"
+      ],
+      "type": "pen"
+     }
+    ],
+    "away": [
+     {
+      "name": "Bruno Fernandes",
+      "times": [
+       "48'",
+       "50'"
+      ],
+      "types": [
+       "pen",
+       "goal"
+      ],
+      "type": "pen"
+     },
+     {
+      "name": "Y. Tielemans",
+      "times": [
+       "90'+3"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ]
    },
    "mu": true,
    "fav": [
