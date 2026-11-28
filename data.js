@@ -1,11 +1,11 @@
 // ============================================================
 //  RED DEVILS HUB 데이터 — scripts/update-data.mjs 가 BBC Sport에서 생성합니다. 손으로 고치지 마세요.
-//  경기 404 · 순위표 20팀 · 득점 34명 (생성 시각은 meta.updatedAt)
+//  경기 404 · 순위표 20팀 · 득점 36명 (생성 시각은 meta.updatedAt)
 //  구조: SCHEMA.md
 // ============================================================
 window.HUB = {
  "meta": {
-  "updatedAt": "2026-11-28T04:48:53+09:00",
+  "updatedAt": "2026-11-28T11:30:24+09:00",
   "season": "2026-27",
   "seasonStart": "2026-08-01",
   "seasonEnd": "2027-05-31",
@@ -84,6 +84,11 @@ window.HUB = {
    "short": "Newcastle",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/newcastle-united.f3dd81408e.svg"
   },
+  "nottingham-forest": {
+   "name": "Nottingham Forest",
+   "short": "N Forest",
+   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/nottingham-forest.f0fc0fc962.svg"
+  },
   "coventry-city": {
    "name": "Coventry City",
    "short": "Coventry",
@@ -98,11 +103,6 @@ window.HUB = {
    "name": "Ipswich Town",
    "short": "Ipswich",
    "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/ipswich-town.016f53d3e1.svg"
-  },
-  "nottingham-forest": {
-   "name": "Nottingham Forest",
-   "short": "N Forest",
-   "badge": "https://static.files.bbci.co.uk/core/website/assets/static/sport/football/nottingham-forest.f0fc0fc962.svg"
   },
   "sunderland": {
    "name": "Sunderland",
@@ -8653,13 +8653,52 @@ window.HUB = {
     "name": "Chelsea",
     "short": "Chelsea"
    },
-   "status": "pre",
-   "statusText": "Scheduled",
-   "score": null,
-   "winner": null,
+   "status": "post",
+   "statusText": "FT",
+   "score": {
+    "home": 3,
+    "away": 2
+   },
+   "winner": "home",
    "scorers": {
-    "home": [],
-    "away": []
+    "home": [
+     {
+      "name": "Igor Jesus",
+      "times": [
+       "5'"
+      ],
+      "types": [
+       "goal"
+      ],
+      "type": "goal"
+     },
+     {
+      "name": "M. Gibbs-White",
+      "times": [
+       "51'",
+       "72'"
+      ],
+      "types": [
+       "pen",
+       "goal"
+      ],
+      "type": "pen"
+     }
+    ],
+    "away": [
+     {
+      "name": "E. Emegha",
+      "times": [
+       "54'",
+       "89'"
+      ],
+      "types": [
+       "goal",
+       "goal"
+      ],
+      "type": "goal"
+     }
+    ]
    },
    "mu": false,
    "fav": [],
@@ -17385,19 +17424,19 @@ window.HUB = {
    "key": "chelsea",
    "name": "Chelsea",
    "short": "Chelsea",
-   "played": 11,
+   "played": 12,
    "won": 5,
    "drawn": 1,
-   "lost": 5,
-   "gf": 20,
-   "ga": 20,
-   "gd": 0,
+   "lost": 6,
+   "gf": 22,
+   "ga": 23,
+   "gd": -1,
    "points": 16,
    "form": [
     "W",
-    "W",
     "L",
     "W",
+    "L",
     "L",
     "L"
    ],
@@ -17526,6 +17565,30 @@ window.HUB = {
   },
   {
    "rank": 14,
+   "key": "nottingham-forest",
+   "name": "Nottingham Forest",
+   "short": "N Forest",
+   "played": 12,
+   "won": 3,
+   "drawn": 3,
+   "lost": 6,
+   "gf": 12,
+   "ga": 17,
+   "gd": -5,
+   "points": 12,
+   "form": [
+    "L",
+    "D",
+    "L",
+    "W",
+    "L",
+    "W"
+   ],
+   "zone": "",
+   "rankPrev": 16
+  },
+  {
+   "rank": 15,
    "key": "coventry-city",
    "name": "Coventry City",
    "short": "Coventry",
@@ -17549,7 +17612,7 @@ window.HUB = {
    "rankPrev": 17
   },
   {
-   "rank": 15,
+   "rank": 16,
    "key": "fulham",
    "name": "Fulham",
    "short": "Fulham",
@@ -17573,7 +17636,7 @@ window.HUB = {
    "rankPrev": 15
   },
   {
-   "rank": 16,
+   "rank": 17,
    "key": "ipswich-town",
    "name": "Ipswich Town",
    "short": "Ipswich",
@@ -17595,30 +17658,6 @@ window.HUB = {
    ],
    "zone": "",
    "rankPrev": 14
-  },
-  {
-   "rank": 17,
-   "key": "nottingham-forest",
-   "name": "Nottingham Forest",
-   "short": "N Forest",
-   "played": 11,
-   "won": 2,
-   "drawn": 3,
-   "lost": 6,
-   "gf": 9,
-   "ga": 15,
-   "gd": -6,
-   "points": 9,
-   "form": [
-    "L",
-    "L",
-    "D",
-    "L",
-    "W",
-    "L"
-   ],
-   "zone": "",
-   "rankPrev": 16
   },
   {
    "rank": 18,
@@ -17778,9 +17817,9 @@ window.HUB = {
    "teamShort": "Chelsea",
    "goals": 5,
    "assists": 2,
-   "played": 11,
-   "minutes": 973,
-   "shots": 28
+   "played": 12,
+   "minutes": 1063,
+   "shots": 30
   },
   {
    "rank": 6,
@@ -17883,13 +17922,24 @@ window.HUB = {
   },
   {
    "rank": 17,
+   "name": "M. Gibbs-White",
+   "team": "nottingham-forest",
+   "teamShort": "N Forest",
+   "goals": 3,
+   "assists": 3,
+   "played": 11,
+   "minutes": 990,
+   "shots": 24
+  },
+  {
+   "rank": 17,
    "name": "C. Palmer",
    "team": "chelsea",
    "teamShort": "Chelsea",
    "goals": 3,
    "assists": 3,
-   "played": 11,
-   "minutes": 970,
+   "played": 12,
+   "minutes": 1060,
    "shots": 31
   },
   {
@@ -17916,6 +17966,17 @@ window.HUB = {
   },
   {
    "rank": 17,
+   "name": "Pedro Neto",
+   "team": "chelsea",
+   "teamShort": "Chelsea",
+   "goals": 3,
+   "assists": 2,
+   "played": 12,
+   "minutes": 861,
+   "shots": 19
+  },
+  {
+   "rank": 17,
    "name": "H. Barnes",
    "team": "newcastle-united",
    "teamShort": "Newcastle",
@@ -17924,17 +17985,6 @@ window.HUB = {
    "played": 11,
    "minutes": 976,
    "shots": 25
-  },
-  {
-   "rank": 17,
-   "name": "Pedro Neto",
-   "team": "chelsea",
-   "teamShort": "Chelsea",
-   "goals": 3,
-   "assists": 1,
-   "played": 11,
-   "minutes": 771,
-   "shots": 18
   },
   {
    "rank": 17,
@@ -17982,6 +18032,17 @@ window.HUB = {
   },
   {
    "rank": 17,
+   "name": "E. Emegha",
+   "team": "chelsea",
+   "teamShort": "Chelsea",
+   "goals": 3,
+   "assists": 0,
+   "played": 3,
+   "minutes": 112,
+   "shots": 3
+  },
+  {
+   "rank": 17,
    "name": "J. Hinshelwood",
    "team": "brighton-and-hove-albion",
    "teamShort": "Brighton",
@@ -18026,17 +18087,6 @@ window.HUB = {
   },
   {
    "rank": 17,
-   "name": "L. Delap",
-   "team": "nottingham-forest",
-   "teamShort": "N Forest",
-   "goals": 3,
-   "assists": 0,
-   "played": 10,
-   "minutes": 770,
-   "shots": 28
-  },
-  {
-   "rank": 17,
    "name": "K. Schade",
    "team": "brentford",
    "teamShort": "Brentford",
@@ -18056,6 +18106,17 @@ window.HUB = {
    "played": 10,
    "minutes": 813,
    "shots": 26
+  },
+  {
+   "rank": 17,
+   "name": "L. Delap",
+   "team": "nottingham-forest",
+   "teamShort": "N Forest",
+   "goals": 3,
+   "assists": 0,
+   "played": 11,
+   "minutes": 854,
+   "shots": 29
   },
   {
    "rank": 17,
